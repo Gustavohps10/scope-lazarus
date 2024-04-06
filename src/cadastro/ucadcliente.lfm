@@ -1,0 +1,38 @@
+inherited CadClienteF: TCadClienteF
+  Left = 579
+  Top = 248
+  Caption = 'Clientes'
+  inherited pgcPrincipal: TPageControl
+    inherited tbPesquisa: TTabSheet
+      inherited DBGrid1: TDBGrid
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Tipo'
+            FieldName = 'tipo_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'CPF / CNPJ'
+            FieldName = 'cpf_cnpj_cliente'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Nome'
+            FieldName = 'nome_cliente'
+          end>
+      end
+    end
+  end
+  inherited qryCad: TZQuery
+    Active = True
+    SQL.Strings = (
+      'select * from cliente'
+    )
+  end
+end

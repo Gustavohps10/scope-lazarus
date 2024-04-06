@@ -1,0 +1,953 @@
+object CadModeloF: TCadModeloF
+  Left = 329
+  Height = 527
+  Top = 111
+  Width = 790
+  Caption = 'CadModeloF'
+  ClientHeight = 527
+  ClientWidth = 790
+  Color = 16514043
+  Font.Name = 'Segoe UI'
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '3.2.0.0'
+  object pnlCabecalho: TPanel
+    Left = 0
+    Height = 64
+    Top = 0
+    Width = 790
+    Align = alTop
+    BevelOuter = bvNone
+    Color = 5126436
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+  end
+  object pgcPrincipal: TPageControl
+    Left = 0
+    Height = 463
+    Top = 64
+    Width = 790
+    ActivePage = tbCadastro
+    Align = alClient
+    ParentFont = False
+    TabIndex = 1
+    TabOrder = 1
+    object tbPesquisa: TTabSheet
+      Caption = 'Pesquisa'
+      ClientHeight = 435
+      ClientWidth = 782
+      object pnlCabecalhoConteudo: TPanel
+        Left = 0
+        Height = 56
+        Top = 0
+        Width = 782
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 56
+        ClientWidth = 782
+        ParentBackground = False
+        TabOrder = 0
+        object edtPesquisar: TEdit
+          Left = 56
+          Height = 21
+          Top = 16
+          Width = 232
+          BorderStyle = bsNone
+          Color = 16514043
+          Font.Height = -16
+          ParentFont = False
+          TabOrder = 0
+        end
+        object pnlBordaPesquisa: TPanel
+          Left = 56
+          Height = 2
+          Top = 39
+          Width = 232
+          Color = 10461087
+          ParentBackground = False
+          ParentColor = False
+          TabOrder = 1
+        end
+        object btnPesquisar: TBCButton
+          Cursor = crHandPoint
+          Left = 8
+          Height = 33
+          Top = 8
+          Width = 36
+          StateClicked.Background.Color = 2600856
+          StateClicked.Background.Gradient1.StartColor = 8404992
+          StateClicked.Background.Gradient1.EndColor = 4194304
+          StateClicked.Background.Gradient1.GradientType = gtRadial
+          StateClicked.Background.Gradient1.Point1XPercent = 50
+          StateClicked.Background.Gradient1.Point1YPercent = 100
+          StateClicked.Background.Gradient1.Point2XPercent = 0
+          StateClicked.Background.Gradient1.Point2YPercent = 0
+          StateClicked.Background.Gradient2.StartColor = clWhite
+          StateClicked.Background.Gradient2.EndColor = clBlack
+          StateClicked.Background.Gradient2.GradientType = gtLinear
+          StateClicked.Background.Gradient2.Point1XPercent = 0
+          StateClicked.Background.Gradient2.Point1YPercent = 0
+          StateClicked.Background.Gradient2.Point2XPercent = 0
+          StateClicked.Background.Gradient2.Point2YPercent = 100
+          StateClicked.Background.Gradient1EndPercent = 100
+          StateClicked.Background.Style = bbsColor
+          StateClicked.Border.Style = bboNone
+          StateClicked.FontEx.Color = 16770790
+          StateClicked.FontEx.FontQuality = fqSystemClearType
+          StateClicked.FontEx.Shadow = False
+          StateClicked.FontEx.ShadowRadius = 2
+          StateClicked.FontEx.ShadowOffsetX = 1
+          StateClicked.FontEx.ShadowOffsetY = 1
+          StateClicked.FontEx.Style = [fsBold]
+          StateHover.Background.Color = 2867110
+          StateHover.Background.Gradient1.StartColor = 4249019
+          StateHover.Background.Gradient1.DrawMode = dmLinearBlend
+          StateHover.Background.Gradient1.EndColor = 4249019
+          StateHover.Background.Gradient1.GradientType = gtRadial
+          StateHover.Background.Gradient1.Point1XPercent = 50
+          StateHover.Background.Gradient1.Point1YPercent = 100
+          StateHover.Background.Gradient1.Point2XPercent = 0
+          StateHover.Background.Gradient1.Point2YPercent = 0
+          StateHover.Background.Gradient2.StartColor = 4249019
+          StateHover.Background.Gradient2.EndColor = 4249019
+          StateHover.Background.Gradient2.GradientType = gtLinear
+          StateHover.Background.Gradient2.Point1XPercent = 0
+          StateHover.Background.Gradient2.Point1YPercent = 0
+          StateHover.Background.Gradient2.Point2XPercent = 0
+          StateHover.Background.Gradient2.Point2YPercent = 100
+          StateHover.Background.Gradient1EndPercent = 100
+          StateHover.Background.Style = bbsColor
+          StateHover.Border.Style = bboNone
+          StateHover.FontEx.Color = clWhite
+          StateHover.FontEx.FontQuality = fqSystemClearType
+          StateHover.FontEx.Shadow = False
+          StateHover.FontEx.ShadowRadius = 2
+          StateHover.FontEx.ShadowOffsetX = 1
+          StateHover.FontEx.ShadowOffsetY = 1
+          StateHover.FontEx.Style = [fsBold]
+          StateNormal.Background.Color = 4249019
+          StateNormal.Background.Gradient1.StartColor = 4249019
+          StateNormal.Background.Gradient1.EndColor = 4249019
+          StateNormal.Background.Gradient1.GradientType = gtAngular
+          StateNormal.Background.Gradient1.Point1XPercent = 0
+          StateNormal.Background.Gradient1.Point1YPercent = 0
+          StateNormal.Background.Gradient1.Point2XPercent = 0
+          StateNormal.Background.Gradient1.Point2YPercent = 100
+          StateNormal.Background.Gradient2.StartColor = 4249019
+          StateNormal.Background.Gradient2.EndColor = 4249019
+          StateNormal.Background.Gradient2.GradientType = gtRadial
+          StateNormal.Background.Gradient2.Point1XPercent = 50
+          StateNormal.Background.Gradient2.Point1YPercent = 100
+          StateNormal.Background.Gradient2.Point2XPercent = 0
+          StateNormal.Background.Gradient2.Point2YPercent = 0
+          StateNormal.Background.Gradient1EndPercent = 1
+          StateNormal.Background.Style = bbsColor
+          StateNormal.Border.Style = bboNone
+          StateNormal.FontEx.Color = clWhite
+          StateNormal.FontEx.FontQuality = fqSystemClearType
+          StateNormal.FontEx.Height = 14
+          StateNormal.FontEx.Name = 'Segoe UI'
+          StateNormal.FontEx.Shadow = False
+          StateNormal.FontEx.ShadowColor = clNone
+          StateNormal.FontEx.ShadowColorOpacity = 0
+          StateNormal.FontEx.ShadowRadius = 2
+          StateNormal.FontEx.ShadowOffsetX = 1
+          StateNormal.FontEx.ShadowOffsetY = 1
+          StateNormal.FontEx.Style = []
+          StateNormal.FontEx.TextAlignment = bcaLeftCenter
+          Color = clNone
+          DropDownWidth = 16
+          DropDownArrowSize = 8
+          GlobalOpacity = 255
+          GlyphAlignment = bcaLeftCenter
+          ParentColor = False
+          Rounding.RoundX = 5
+          Rounding.RoundY = 5
+          RoundingDropDown.RoundX = 1
+          RoundingDropDown.RoundY = 1
+          TextApplyGlobalOpacity = False
+          Images = imglIcons
+          ImageIndex = 0
+          MemoryUsage = bmuHigh
+        end
+      end
+      object DBGrid1: TDBGrid
+        Left = 0
+        Height = 320
+        Top = 56
+        Width = 782
+        Align = alClient
+        Color = clWindow
+        Columns = <>
+        DataSource = dsCadModelo
+        TabOrder = 1
+      end
+      object pnlRodape: TPanel
+        Left = 0
+        Height = 59
+        Top = 376
+        Width = 782
+        Align = alBottom
+        BevelOuter = bvNone
+        ClientHeight = 59
+        ClientWidth = 782
+        ParentBackground = False
+        TabOrder = 2
+        object btnNovo: TBCButton
+          Cursor = crHandPoint
+          Left = 8
+          Height = 33
+          Top = 16
+          Width = 88
+          Anchors = [akLeft, akBottom]
+          StateClicked.Background.Color = 2600856
+          StateClicked.Background.Gradient1.StartColor = 8404992
+          StateClicked.Background.Gradient1.EndColor = 4194304
+          StateClicked.Background.Gradient1.GradientType = gtRadial
+          StateClicked.Background.Gradient1.Point1XPercent = 50
+          StateClicked.Background.Gradient1.Point1YPercent = 100
+          StateClicked.Background.Gradient1.Point2XPercent = 0
+          StateClicked.Background.Gradient1.Point2YPercent = 0
+          StateClicked.Background.Gradient2.StartColor = clWhite
+          StateClicked.Background.Gradient2.EndColor = clBlack
+          StateClicked.Background.Gradient2.GradientType = gtLinear
+          StateClicked.Background.Gradient2.Point1XPercent = 0
+          StateClicked.Background.Gradient2.Point1YPercent = 0
+          StateClicked.Background.Gradient2.Point2XPercent = 0
+          StateClicked.Background.Gradient2.Point2YPercent = 100
+          StateClicked.Background.Gradient1EndPercent = 100
+          StateClicked.Background.Style = bbsColor
+          StateClicked.Border.Style = bboNone
+          StateClicked.FontEx.Color = clWhite
+          StateClicked.FontEx.FontQuality = fqSystemClearType
+          StateClicked.FontEx.Height = 14
+          StateClicked.FontEx.Name = 'Segoe UI'
+          StateClicked.FontEx.Shadow = False
+          StateClicked.FontEx.ShadowColor = clNone
+          StateClicked.FontEx.ShadowRadius = 2
+          StateClicked.FontEx.ShadowOffsetX = 0
+          StateClicked.FontEx.ShadowOffsetY = 0
+          StateClicked.FontEx.Style = []
+          StateClicked.FontEx.TextAlignment = bcaLeftCenter
+          StateHover.Background.Color = 2867110
+          StateHover.Background.Gradient1.StartColor = 16744448
+          StateHover.Background.Gradient1.EndColor = 8404992
+          StateHover.Background.Gradient1.GradientType = gtRadial
+          StateHover.Background.Gradient1.Point1XPercent = 50
+          StateHover.Background.Gradient1.Point1YPercent = 100
+          StateHover.Background.Gradient1.Point2XPercent = 0
+          StateHover.Background.Gradient1.Point2YPercent = 0
+          StateHover.Background.Gradient2.StartColor = clWhite
+          StateHover.Background.Gradient2.EndColor = clBlack
+          StateHover.Background.Gradient2.GradientType = gtLinear
+          StateHover.Background.Gradient2.Point1XPercent = 0
+          StateHover.Background.Gradient2.Point1YPercent = 0
+          StateHover.Background.Gradient2.Point2XPercent = 0
+          StateHover.Background.Gradient2.Point2YPercent = 100
+          StateHover.Background.Gradient1EndPercent = 100
+          StateHover.Background.Style = bbsColor
+          StateHover.Border.Style = bboNone
+          StateHover.FontEx.Color = clWhite
+          StateHover.FontEx.FontQuality = fqSystemClearType
+          StateHover.FontEx.Height = 14
+          StateHover.FontEx.Name = 'Segoe UI'
+          StateHover.FontEx.Shadow = False
+          StateHover.FontEx.ShadowColor = clNone
+          StateHover.FontEx.ShadowRadius = 2
+          StateHover.FontEx.ShadowOffsetX = 0
+          StateHover.FontEx.ShadowOffsetY = 0
+          StateHover.FontEx.Style = []
+          StateHover.FontEx.TextAlignment = bcaLeftCenter
+          StateNormal.Background.Color = 4249019
+          StateNormal.Background.Gradient1.StartColor = 4249019
+          StateNormal.Background.Gradient1.EndColor = 4249019
+          StateNormal.Background.Gradient1.GradientType = gtAngular
+          StateNormal.Background.Gradient1.Point1XPercent = 0
+          StateNormal.Background.Gradient1.Point1YPercent = 0
+          StateNormal.Background.Gradient1.Point2XPercent = 0
+          StateNormal.Background.Gradient1.Point2YPercent = 100
+          StateNormal.Background.Gradient2.StartColor = 4249019
+          StateNormal.Background.Gradient2.EndColor = 4249019
+          StateNormal.Background.Gradient2.GradientType = gtRadial
+          StateNormal.Background.Gradient2.Point1XPercent = 50
+          StateNormal.Background.Gradient2.Point1YPercent = 100
+          StateNormal.Background.Gradient2.Point2XPercent = 0
+          StateNormal.Background.Gradient2.Point2YPercent = 0
+          StateNormal.Background.Gradient1EndPercent = 1
+          StateNormal.Background.Style = bbsColor
+          StateNormal.Border.Style = bboNone
+          StateNormal.FontEx.Color = clWhite
+          StateNormal.FontEx.FontQuality = fqSystemClearType
+          StateNormal.FontEx.Height = 14
+          StateNormal.FontEx.Name = 'Segoe UI'
+          StateNormal.FontEx.Shadow = False
+          StateNormal.FontEx.ShadowColor = clNone
+          StateNormal.FontEx.ShadowColorOpacity = 0
+          StateNormal.FontEx.ShadowRadius = 2
+          StateNormal.FontEx.ShadowOffsetX = 0
+          StateNormal.FontEx.ShadowOffsetY = 0
+          StateNormal.FontEx.Style = []
+          StateNormal.FontEx.TextAlignment = bcaLeftCenter
+          Caption = 'Novo'
+          Color = clNone
+          DropDownWidth = 16
+          DropDownArrowSize = 8
+          GlobalOpacity = 255
+          GlyphAlignment = bcaLeftCenter
+          OnClick = btnNovoClick
+          ParentColor = False
+          Rounding.RoundX = 5
+          Rounding.RoundY = 5
+          RoundingDropDown.RoundX = 1
+          RoundingDropDown.RoundY = 1
+          TextApplyGlobalOpacity = False
+          Images = imglIcons
+          ImageIndex = 1
+          MemoryUsage = bmuHigh
+        end
+        object btnFechar: TBCButton
+          Cursor = crHandPoint
+          Left = 672
+          Height = 33
+          Top = 16
+          Width = 96
+          Anchors = [akRight]
+          StateClicked.Background.Color = 2600856
+          StateClicked.Background.Gradient1.StartColor = 8404992
+          StateClicked.Background.Gradient1.EndColor = 4194304
+          StateClicked.Background.Gradient1.GradientType = gtRadial
+          StateClicked.Background.Gradient1.Point1XPercent = 50
+          StateClicked.Background.Gradient1.Point1YPercent = 100
+          StateClicked.Background.Gradient1.Point2XPercent = 0
+          StateClicked.Background.Gradient1.Point2YPercent = 0
+          StateClicked.Background.Gradient2.StartColor = clWhite
+          StateClicked.Background.Gradient2.EndColor = clBlack
+          StateClicked.Background.Gradient2.GradientType = gtLinear
+          StateClicked.Background.Gradient2.Point1XPercent = 0
+          StateClicked.Background.Gradient2.Point1YPercent = 0
+          StateClicked.Background.Gradient2.Point2XPercent = 0
+          StateClicked.Background.Gradient2.Point2YPercent = 100
+          StateClicked.Background.Gradient1EndPercent = 100
+          StateClicked.Background.Style = bbsColor
+          StateClicked.Border.Style = bboNone
+          StateClicked.FontEx.Color = clWhite
+          StateClicked.FontEx.FontQuality = fqSystemClearType
+          StateClicked.FontEx.Height = 14
+          StateClicked.FontEx.Name = 'Segoe UI'
+          StateClicked.FontEx.Shadow = False
+          StateClicked.FontEx.ShadowRadius = 2
+          StateClicked.FontEx.ShadowOffsetX = 1
+          StateClicked.FontEx.ShadowOffsetY = 1
+          StateClicked.FontEx.Style = []
+          StateClicked.FontEx.TextAlignment = bcaLeftCenter
+          StateHover.Background.Color = 2867110
+          StateHover.Background.Gradient1.StartColor = 16744448
+          StateHover.Background.Gradient1.EndColor = 8404992
+          StateHover.Background.Gradient1.GradientType = gtRadial
+          StateHover.Background.Gradient1.Point1XPercent = 50
+          StateHover.Background.Gradient1.Point1YPercent = 100
+          StateHover.Background.Gradient1.Point2XPercent = 0
+          StateHover.Background.Gradient1.Point2YPercent = 0
+          StateHover.Background.Gradient2.StartColor = clWhite
+          StateHover.Background.Gradient2.EndColor = clBlack
+          StateHover.Background.Gradient2.GradientType = gtLinear
+          StateHover.Background.Gradient2.Point1XPercent = 0
+          StateHover.Background.Gradient2.Point1YPercent = 0
+          StateHover.Background.Gradient2.Point2XPercent = 0
+          StateHover.Background.Gradient2.Point2YPercent = 100
+          StateHover.Background.Gradient1EndPercent = 100
+          StateHover.Background.Style = bbsColor
+          StateHover.Border.Style = bboNone
+          StateHover.FontEx.Color = clWhite
+          StateHover.FontEx.FontQuality = fqSystemClearType
+          StateHover.FontEx.Height = 14
+          StateHover.FontEx.Name = 'Segoe UI'
+          StateHover.FontEx.Shadow = False
+          StateHover.FontEx.ShadowRadius = 2
+          StateHover.FontEx.ShadowOffsetX = 1
+          StateHover.FontEx.ShadowOffsetY = 1
+          StateHover.FontEx.Style = []
+          StateHover.FontEx.TextAlignment = bcaLeftCenter
+          StateNormal.Background.Color = 4249019
+          StateNormal.Background.Gradient1.StartColor = 4249019
+          StateNormal.Background.Gradient1.EndColor = 4249019
+          StateNormal.Background.Gradient1.GradientType = gtAngular
+          StateNormal.Background.Gradient1.Point1XPercent = 0
+          StateNormal.Background.Gradient1.Point1YPercent = 0
+          StateNormal.Background.Gradient1.Point2XPercent = 0
+          StateNormal.Background.Gradient1.Point2YPercent = 100
+          StateNormal.Background.Gradient2.StartColor = 4249019
+          StateNormal.Background.Gradient2.EndColor = 4249019
+          StateNormal.Background.Gradient2.GradientType = gtRadial
+          StateNormal.Background.Gradient2.Point1XPercent = 50
+          StateNormal.Background.Gradient2.Point1YPercent = 100
+          StateNormal.Background.Gradient2.Point2XPercent = 0
+          StateNormal.Background.Gradient2.Point2YPercent = 0
+          StateNormal.Background.Gradient1EndPercent = 1
+          StateNormal.Background.Style = bbsColor
+          StateNormal.Border.Style = bboNone
+          StateNormal.FontEx.Color = clWhite
+          StateNormal.FontEx.FontQuality = fqSystemClearType
+          StateNormal.FontEx.Height = 14
+          StateNormal.FontEx.Name = 'Segoe UI'
+          StateNormal.FontEx.Shadow = False
+          StateNormal.FontEx.ShadowColor = clNone
+          StateNormal.FontEx.ShadowColorOpacity = 0
+          StateNormal.FontEx.ShadowRadius = 2
+          StateNormal.FontEx.ShadowOffsetX = 1
+          StateNormal.FontEx.ShadowOffsetY = 1
+          StateNormal.FontEx.Style = []
+          StateNormal.FontEx.TextAlignment = bcaLeftCenter
+          Caption = 'Fechar'
+          Color = clNone
+          DropDownWidth = 16
+          DropDownArrowSize = 8
+          GlobalOpacity = 255
+          GlyphAlignment = bcaLeftCenter
+          OnClick = btnFecharClick
+          ParentColor = False
+          Rounding.RoundX = 5
+          Rounding.RoundY = 5
+          RoundingDropDown.RoundX = 1
+          RoundingDropDown.RoundY = 1
+          TextApplyGlobalOpacity = False
+          Images = imglIcons
+          ImageIndex = 2
+          MemoryUsage = bmuHigh
+        end
+      end
+    end
+    object tbCadastro: TTabSheet
+      Caption = 'Cadastro'
+      ClientHeight = 435
+      ClientWidth = 782
+      object btnEditar: TBCButton
+        Cursor = crHandPoint
+        Left = 8
+        Height = 33
+        Top = 384
+        Width = 80
+        Anchors = [akLeft, akBottom]
+        StateClicked.Background.Color = 2600856
+        StateClicked.Background.Gradient1.StartColor = 8404992
+        StateClicked.Background.Gradient1.EndColor = 4194304
+        StateClicked.Background.Gradient1.GradientType = gtRadial
+        StateClicked.Background.Gradient1.Point1XPercent = 50
+        StateClicked.Background.Gradient1.Point1YPercent = 100
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 0
+        StateClicked.Background.Gradient2.StartColor = clWhite
+        StateClicked.Background.Gradient2.EndColor = clBlack
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 100
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboNone
+        StateClicked.FontEx.Color = 16770790
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Height = 14
+        StateClicked.FontEx.Name = 'Segoe UI'
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 2
+        StateClicked.FontEx.ShadowOffsetX = 1
+        StateClicked.FontEx.ShadowOffsetY = 1
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.TextAlignment = bcaLeftCenter
+        StateHover.Background.Color = 2867110
+        StateHover.Background.Gradient1.StartColor = 16744448
+        StateHover.Background.Gradient1.EndColor = 8404992
+        StateHover.Background.Gradient1.GradientType = gtRadial
+        StateHover.Background.Gradient1.Point1XPercent = 50
+        StateHover.Background.Gradient1.Point1YPercent = 100
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 0
+        StateHover.Background.Gradient2.StartColor = clWhite
+        StateHover.Background.Gradient2.EndColor = clBlack
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 100
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Height = 14
+        StateHover.FontEx.Name = 'Segoe UI'
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 2
+        StateHover.FontEx.ShadowOffsetX = 1
+        StateHover.FontEx.ShadowOffsetY = 1
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.TextAlignment = bcaLeftCenter
+        StateNormal.Background.Color = 4249019
+        StateNormal.Background.Gradient1.StartColor = 4249019
+        StateNormal.Background.Gradient1.EndColor = 4249019
+        StateNormal.Background.Gradient1.GradientType = gtAngular
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 4249019
+        StateNormal.Background.Gradient2.EndColor = 4249019
+        StateNormal.Background.Gradient2.GradientType = gtRadial
+        StateNormal.Background.Gradient2.Point1XPercent = 50
+        StateNormal.Background.Gradient2.Point1YPercent = 100
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 0
+        StateNormal.Background.Gradient1EndPercent = 1
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Height = 14
+        StateNormal.FontEx.Name = 'Segoe UI'
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowColor = clNone
+        StateNormal.FontEx.ShadowColorOpacity = 0
+        StateNormal.FontEx.ShadowRadius = 2
+        StateNormal.FontEx.ShadowOffsetX = 1
+        StateNormal.FontEx.ShadowOffsetY = 1
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.TextAlignment = bcaLeftCenter
+        Caption = 'Editar'
+        Color = clNone
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        GlyphAlignment = bcaLeftCenter
+        OnClick = btnEditarClick
+        ParentColor = False
+        Rounding.RoundX = 5
+        Rounding.RoundY = 5
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        Images = imglIcons
+        ImageIndex = 3
+        MemoryUsage = bmuHigh
+      end
+      object btnGravar: TBCButton
+        Cursor = crHandPoint
+        Left = 96
+        Height = 33
+        Top = 384
+        Width = 88
+        Anchors = [akLeft, akBottom]
+        StateClicked.Background.Color = 2600856
+        StateClicked.Background.Gradient1.StartColor = 8404992
+        StateClicked.Background.Gradient1.EndColor = 4194304
+        StateClicked.Background.Gradient1.GradientType = gtRadial
+        StateClicked.Background.Gradient1.Point1XPercent = 50
+        StateClicked.Background.Gradient1.Point1YPercent = 100
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 0
+        StateClicked.Background.Gradient2.StartColor = clWhite
+        StateClicked.Background.Gradient2.EndColor = clBlack
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 100
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboNone
+        StateClicked.FontEx.Color = 16770790
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Height = 14
+        StateClicked.FontEx.Name = 'Segoe UI'
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 2
+        StateClicked.FontEx.ShadowOffsetX = 1
+        StateClicked.FontEx.ShadowOffsetY = 1
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.TextAlignment = bcaLeftCenter
+        StateHover.Background.Color = 2867110
+        StateHover.Background.Gradient1.StartColor = 16744448
+        StateHover.Background.Gradient1.EndColor = 8404992
+        StateHover.Background.Gradient1.GradientType = gtRadial
+        StateHover.Background.Gradient1.Point1XPercent = 50
+        StateHover.Background.Gradient1.Point1YPercent = 100
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 0
+        StateHover.Background.Gradient2.StartColor = clWhite
+        StateHover.Background.Gradient2.EndColor = clBlack
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 100
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Height = 14
+        StateHover.FontEx.Name = 'Segoe UI'
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 2
+        StateHover.FontEx.ShadowOffsetX = 1
+        StateHover.FontEx.ShadowOffsetY = 1
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.TextAlignment = bcaLeftCenter
+        StateNormal.Background.Color = 4249019
+        StateNormal.Background.Gradient1.StartColor = 4249019
+        StateNormal.Background.Gradient1.EndColor = 4249019
+        StateNormal.Background.Gradient1.GradientType = gtAngular
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 4249019
+        StateNormal.Background.Gradient2.EndColor = 4249019
+        StateNormal.Background.Gradient2.GradientType = gtRadial
+        StateNormal.Background.Gradient2.Point1XPercent = 50
+        StateNormal.Background.Gradient2.Point1YPercent = 100
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 0
+        StateNormal.Background.Gradient1EndPercent = 1
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Height = 14
+        StateNormal.FontEx.Name = 'Segoe UI'
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowColor = clNone
+        StateNormal.FontEx.ShadowColorOpacity = 0
+        StateNormal.FontEx.ShadowRadius = 2
+        StateNormal.FontEx.ShadowOffsetX = 1
+        StateNormal.FontEx.ShadowOffsetY = 1
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.TextAlignment = bcaLeftCenter
+        Caption = 'Gravar  '
+        Color = clNone
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        GlyphAlignment = bcaLeftCenter
+        OnClick = btnGravarClick
+        ParentColor = False
+        Rounding.RoundX = 5
+        Rounding.RoundY = 5
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        Images = imglIcons
+        ImageIndex = 4
+        MemoryUsage = bmuHigh
+      end
+      object btnCancelar: TBCButton
+        Cursor = crHandPoint
+        Left = 192
+        Height = 33
+        Top = 384
+        Width = 96
+        Anchors = [akLeft, akBottom]
+        StateClicked.Background.Color = 6572335
+        StateClicked.Background.Gradient1.StartColor = 8404992
+        StateClicked.Background.Gradient1.EndColor = 4194304
+        StateClicked.Background.Gradient1.GradientType = gtRadial
+        StateClicked.Background.Gradient1.Point1XPercent = 50
+        StateClicked.Background.Gradient1.Point1YPercent = 100
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 0
+        StateClicked.Background.Gradient2.StartColor = clWhite
+        StateClicked.Background.Gradient2.EndColor = clBlack
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 100
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboNone
+        StateClicked.FontEx.Color = clWhite
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Height = 14
+        StateClicked.FontEx.Name = 'Segoe UI'
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 2
+        StateClicked.FontEx.ShadowOffsetX = 1
+        StateClicked.FontEx.ShadowOffsetY = 1
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.TextAlignment = bcaLeftCenter
+        StateHover.Background.Color = 5126436
+        StateHover.Background.Gradient1.StartColor = 16744448
+        StateHover.Background.Gradient1.EndColor = 8404992
+        StateHover.Background.Gradient1.GradientType = gtRadial
+        StateHover.Background.Gradient1.Point1XPercent = 50
+        StateHover.Background.Gradient1.Point1YPercent = 100
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 0
+        StateHover.Background.Gradient2.StartColor = clWhite
+        StateHover.Background.Gradient2.EndColor = clBlack
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 100
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Height = 14
+        StateHover.FontEx.Name = 'Segoe UI'
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 2
+        StateHover.FontEx.ShadowOffsetX = 1
+        StateHover.FontEx.ShadowOffsetY = 1
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.TextAlignment = bcaLeftCenter
+        StateNormal.Background.Color = clNone
+        StateNormal.Background.Gradient1.StartColor = 4249019
+        StateNormal.Background.Gradient1.EndColor = 4249019
+        StateNormal.Background.Gradient1.GradientType = gtAngular
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 4249019
+        StateNormal.Background.Gradient2.EndColor = 4249019
+        StateNormal.Background.Gradient2.GradientType = gtRadial
+        StateNormal.Background.Gradient2.Point1XPercent = 50
+        StateNormal.Background.Gradient2.Point1YPercent = 100
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 0
+        StateNormal.Background.Gradient1EndPercent = 1
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 5126436
+        StateNormal.Border.LightColor = clNone
+        StateNormal.Border.Style = bboSolid
+        StateNormal.FontEx.Color = 5126436
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Height = 14
+        StateNormal.FontEx.Name = 'Segoe UI'
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowColor = clNone
+        StateNormal.FontEx.ShadowColorOpacity = 0
+        StateNormal.FontEx.ShadowRadius = 2
+        StateNormal.FontEx.ShadowOffsetX = 1
+        StateNormal.FontEx.ShadowOffsetY = 1
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.TextAlignment = bcaLeftCenter
+        BorderSpacing.InnerBorder = 1
+        Caption = 'Cancelar  '
+        Color = clNone
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        GlyphAlignment = bcaLeftCenter
+        OnClick = btnCancelarClick
+        OnMouseEnter = btnCancelarMouseEnter
+        OnMouseLeave = btnCancelarMouseLeave
+        ParentColor = False
+        Rounding.RoundX = 5
+        Rounding.RoundY = 5
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        Images = imglIcons
+        ImageIndex = 6
+        MemoryUsage = bmuHigh
+      end
+      object btnExcluir: TBCButton
+        Cursor = crHandPoint
+        Left = 360
+        Height = 33
+        Top = 384
+        Width = 40
+        Anchors = [akLeft, akBottom]
+        StateClicked.Background.Color = 1446607
+        StateClicked.Background.Gradient1.StartColor = 8404992
+        StateClicked.Background.Gradient1.EndColor = 4194304
+        StateClicked.Background.Gradient1.GradientType = gtRadial
+        StateClicked.Background.Gradient1.Point1XPercent = 50
+        StateClicked.Background.Gradient1.Point1YPercent = 100
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 0
+        StateClicked.Background.Gradient2.StartColor = clWhite
+        StateClicked.Background.Gradient2.EndColor = clBlack
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 100
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboNone
+        StateClicked.FontEx.Color = clWhite
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Height = 14
+        StateClicked.FontEx.Name = 'Segoe UI'
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 2
+        StateClicked.FontEx.ShadowOffsetX = 1
+        StateClicked.FontEx.ShadowOffsetY = 1
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.TextAlignment = bcaLeftCenter
+        StateHover.Background.Color = 2104299
+        StateHover.Background.Gradient1.StartColor = 16744448
+        StateHover.Background.Gradient1.EndColor = 8404992
+        StateHover.Background.Gradient1.GradientType = gtRadial
+        StateHover.Background.Gradient1.Point1XPercent = 50
+        StateHover.Background.Gradient1.Point1YPercent = 100
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 0
+        StateHover.Background.Gradient2.StartColor = clWhite
+        StateHover.Background.Gradient2.EndColor = clBlack
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 100
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Height = 14
+        StateHover.FontEx.Name = 'Segoe UI'
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 2
+        StateHover.FontEx.ShadowOffsetX = 1
+        StateHover.FontEx.ShadowOffsetY = 1
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.TextAlignment = bcaLeftCenter
+        StateNormal.Background.Color = 4670447
+        StateNormal.Background.Gradient1.StartColor = 4249019
+        StateNormal.Background.Gradient1.EndColor = 4249019
+        StateNormal.Background.Gradient1.GradientType = gtAngular
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 4249019
+        StateNormal.Background.Gradient2.EndColor = 4249019
+        StateNormal.Background.Gradient2.GradientType = gtRadial
+        StateNormal.Background.Gradient2.Point1XPercent = 50
+        StateNormal.Background.Gradient2.Point1YPercent = 100
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 0
+        StateNormal.Background.Gradient1EndPercent = 1
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Height = 14
+        StateNormal.FontEx.Name = 'Segoe UI'
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowColor = clNone
+        StateNormal.FontEx.ShadowColorOpacity = 0
+        StateNormal.FontEx.ShadowRadius = 2
+        StateNormal.FontEx.ShadowOffsetX = 1
+        StateNormal.FontEx.ShadowOffsetY = 1
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.TextAlignment = bcaLeftCenter
+        Color = clNone
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        GlyphAlignment = bcaLeftCenter
+        OnClick = btnExcluirClick
+        ParentColor = False
+        Rounding.RoundX = 5
+        Rounding.RoundY = 5
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        Images = imglIcons
+        ImageIndex = 7
+        MemoryUsage = bmuHigh
+      end
+    end
+  end
+  object dsCadModelo: TDataSource
+    DataSet = qryCad
+    Left = 720
+    Top = 152
+  end
+  object qryCad: TZQuery
+    Connection = dmF.ZConnection1
+    Params = <>
+    Left = 656
+    Top = 152
+  end
+  object imglIcons: TBGRAImageList
+    Height = 20
+    Width = 20
+    Left = 720
+    Top = 232
+    Bitmap = {
+      4C7A0800000014000000140000008E0700000000000078DAED9A6B6C145514C7
+      2B22D696B641116254889D6D4B8D96260B74B7E5A1893C1AE9168436A0A29176
+      5B812F18B0B640142331311A108D41621013021828205A4444ADB485565CE8EA
+      0784844451A311B53EC0178AEB39DBFFE0ED751E77EE8E482293FCB3F3B8F737
+      E7DCC7B98F9DB4B47FFF48241279A4E5A41652276907692169B0474E7FD253A4
+      DF13BDC717A40F49DFE2FA0752AD22EB12D2CBC8F72AA94878D68F741B298EE7
+      0F2AF0EE47DA67996D932683F42EE92C6994038BDFFF39E908FBECF2DE6B493F
+      91763AA4190DDB162A96CD46D22FA4749BE77782375E91B708E9F36C9ECFC6F3
+      098ABCC5485FE0E2EF038ABC4DA45F495738D4C767A4A30AF5711DE967D22B2E
+      E9EA60E3732EED651FE90F5250A13D6F067317A9587876296932FA4A02ED65AC
+      42B970BE27486790EF4B30BEC3750FE934CE4F91C62996B7417A18F1A083B481
+      349F3490DB940ED3E57D65A41F05DF6FF58129DB39DE473B4F926EF629F68EF3
+      8B65C3DF493A448A698A635C95C03B94A23DA3486B856BE60753D0DD12EF6BBE
+      4E41DB245E2C457F83E78347BF85A8AFE9905BBD6EB8689F2FF61593D6F8681F
+      8F6539BAF60963DC568C87ACEDA47C1DFBC03ACCB14F8A83DD78E695B7D56461
+      8CAD13E2E016D209F3BE8B6A783EC0FE09AC0D90C93C8AB9905FBC8F34EA739B
+      83BFCD1ABC7C94FD58690C89DBCDDF14EB788BD05E9A75593E8C57F72A8E4BCF
+      7B60E690725DD2C41459218CA73CAEAEF681B792743BCE8F4936DFA7C1BB83B4
+      07F3B7D7A5B922CFA31F72E2B12D5CB6C278B804F3FF99BCDE205D453A803A38
+      8679F9D5563CC42C4E3B0671770CEA97DBEA5C292DF7BDFD425958F1DE249522
+      1E7DCF7110F707915E23D54B73F35176E547D7C3486FA09C581F60FD7A19E6D0
+      A5601E421F1EE254BFC8BB9EF402E91ED263B83F87B40E3657A01CD689732A97
+      FAE075C37BDC7E85F3A1A4EB49AB5047CBE5B5A0036F2AD60B65B0A545B15DC5
+      84737EFF5CC4B3F7B116FF98F70B486DA49B3CF276610DCABC89A405DC76B1FE
+      28C69ABC9F07DE52D4A1192B387F26E9713C7B92144D351E60ACDE4D9A867632
+      C487783014F1BD89EB35551ED29690F692C20EF1754DDA0572A09D733DB593E6
+      F9C09B9EE87B3CAAC9E118F53462E0CA5499C23E4D3798AB24E63C45CE00D833
+      84D42831570BBC5605D6E5887B1C23A6E09ECC7C06D78B14582D60711D04D0D7
+      075B30ABECF659C04A474C3883FE16C09E4FC29C0B08CCF52E76A5A3DFFE0696
+      21B0CC58311BE5791729DBA54DEC01AB12AC4F25563DE94F73CDE0C2DA2BD835
+      1C713581B83A10F3D4B38837573AB0323CB0622EACFE022B82B1E80458EFE05D
+      51B00E88EB171BDE24E49D23B1DE06AB16ACFD4E652FF056638F87DBDB32EC7F
+      BD0596E923C7922CC5FE749CF7C085EB0560CD052B597E8AAC42F81695FAEB7C
+      B0926DC443CC30F756B7A19CB6C3F704F6EA323DC6A05629E61C4779721D0DD0
+      5CEFB4C2CEC2B40BF440BD4415D786A68A1C785F0965B84281B5027B8965363C
+      F1083AF85087781A445A4BA622CFDCF30E0ABC04F6516FF191C7479706CFDCF7
+      28B4E0C51C78350AEDA1C6034FE7389FBC530AEBE7C3C2FF746EBC498A7DAA49
+      911754E4D55DE4F5E1ADD0E09DC01E56CC225E1DF110AFCCFD30FE7FE6139EC7
+      F9104F4DF1B83AF43F1A07781E3402CAD464E460DED185B9C146A81DF796BACD
+      8904D62CCC896BACE618B0B71669AA5D588DD8CBCB542C07FEDFBFC1C1AE66B7
+      75B8C5FA7887C55E470EE24FA6465967C1F76CE1DE3239C6E3FFD41116F9B99E
+      274BF7B8DD2E11AEBBE4B247BEB838A7419B8FCBEF818D9DC2F93E87F13B8EDF
+      42992FA56DC75A82F77F37B9CC6BE24E2CA4DB0C96DF3CF6B7CD2F7F85FAC84A
+      A13EB2CDFA10F6876AA534E50EEDA5DC22AE3649EDB95B757D61615BDCC2BF6A
+      F41DAFFD8DF7A567D83C6F00334BD12E662D76493713BE47ADB8E0D4C3C7191E
+      CA6409BE45EAC0BEF5269C77629E91A519AB791D570065A43A7E544DB871E0D4
+      70FE08D6C4A222ADF1A32A989B1309E72DAB081B5D1521A38D7E37B222E1403B
+      DF8B94184B398D0A2B12CE9D458CEE8A50A0866DB3B2B73264D4F6A631AA9D59
+      81C648C86856F18BB991506007BDB7C1CE2E663D9296A6DC9E392D33C98E2AB9
+      BCC8F6C33AE51D292DC862DFA78C0964FF6D1B953D959798AE326C4CE63A95F3
+      F33D7ED697694489796EFCE03A93CB9EF391FFF1692579E7E2159FF33DF93D6C
+      23DDEF14ECB51C3FCCFCFC2B9EDBD4653B97D7B4D137E4533ADB786F729C5849
+      1F4381CDCCF29B077FDBFCF2D7AC0FE6EAD607B715B33E926CEA8FDC87FAF04A
+      72CBEDDA0B3FEBE36BD8A8231F9BA4F6DC2DDBA872C0B6B89C97FB36F71DAFFD
+      AD221CD839B53430C3A68E1A92FD51C14EB62BC90A1B8B5D62CCCC5EDF8DA815
+      973995A1BCFA64BDD8D865F96EEA8F5C67C4EFE0F69954EF792797BD4E5927EB
+      33784D06E52D60F1798A6B0FDE571D29EC8F8C74FB7ED185F712D61DE67FB77C
+      FEA287B943B1F46D95D5B759F2BD62AB390AFE936DD5D8D7E03C8314D6C7AA47
+      9DE27AFBFFC63B896F247B847B3DB87752D3BEDDF83EE21BECC18FC51C32157F
+      5BF05F7C29CE532DBF1EB4D962C9771D9EE8A3E8BB0EEFB4858FA6EFA73578BC
+      4F73D0C2BF837876B17FFC9357866FB9550F4E5BEA1257877BF89675989CFF2F
+      F96B5E34
+    }
+  end
+end

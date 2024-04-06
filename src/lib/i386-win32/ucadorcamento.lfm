@@ -1,0 +1,44 @@
+inherited CadOrcamentoF: TCadOrcamentoF
+  Left = 345
+  Top = 117
+  Caption = 'Orçamentos'
+  inherited pgcPrincipal: TPageControl
+    ActivePage = tbPesquisa
+    TabIndex = 0
+    inherited tbPesquisa: TTabSheet
+      inherited DBGrid1: TDBGrid
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            FieldName = 'orcamentoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Cliente ID'
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Data de Solicitação'
+            FieldName = 'dt_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Data de Validade'
+            FieldName = 'dt_validade_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Valor Total'
+            FieldName = 'vl_total_orcamento'
+          end>
+      end
+    end
+  end
+  inherited qryCad: TZQuery
+    SQL.Strings = (
+      'select * from orcamento'
+    )
+  end
+end

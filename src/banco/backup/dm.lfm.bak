@@ -1,0 +1,30 @@
+object dmF: TdmF
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 333
+  HorizontalOffset = 539
+  VerticalOffset = 297
+  Width = 320
+  object ZConnection1: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+      'controls_cp=CP_UTF8'
+    )
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'prjaccion'
+    User = 'postgres'
+    Password = '1234'
+    Protocol = 'postgresql'
+    LibraryLocation = 'C:\MyApps\accion-exercicios\libpq-32bits\libpq.dll'
+    Left = 32
+    Top = 56
+  end
+  object qryGenerica: TZQuery
+    Params = <>
+    Left = 32
+    Top = 112
+  end
+end

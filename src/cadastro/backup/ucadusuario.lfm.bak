@@ -1,0 +1,41 @@
+inherited CadUsuarioF: TCadUsuarioF
+  Left = 584
+  Top = 311
+  Caption = 'Usuários'
+  inherited pgcPrincipal: TPageControl
+    inherited tbPesquisa: TTabSheet
+      inherited DBGrid1: TDBGrid
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            FieldName = 'id'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Usuario'
+            Width = 100
+            FieldName = 'usuario'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Nome Completo'
+            Width = 150
+            FieldName = 'nome_completo'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Senha'
+            Width = 150
+            FieldName = 'senha'
+          end>
+      end
+    end
+  end
+  inherited qryCad: TZQuery
+    Active = True
+    SQL.Strings = (
+      'select * from usuarios'
+    )
+  end
+end

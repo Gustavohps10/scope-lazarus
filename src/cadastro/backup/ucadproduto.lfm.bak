@@ -1,0 +1,52 @@
+inherited CadProdutoF: TCadProdutoF
+  Caption = 'Produtos'
+  inherited pgcPrincipal: TPageControl
+    inherited tbPesquisa: TTabSheet
+      inherited DBGrid1: TDBGrid
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID'
+            FieldName = 'produtoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'ID Categoria'
+            FieldName = 'categoriaprodutoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Descrição'
+            Width = 150
+            FieldName = 'ds_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Observação'
+            Width = 150
+            FieldName = 'obs_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Valor venda'
+            FieldName = 'vl_venda_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Data de Cadastro'
+            Width = 70
+            FieldName = 'dt_cadastro_produto'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'Status'
+            Width = 70
+            FieldName = 'status_produto'
+          end>
+      end
+    end
+  end
+  inherited dsCadModelo: TDataSource
+    DataSet = nil
+  end
+end
