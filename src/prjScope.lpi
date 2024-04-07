@@ -5,12 +5,14 @@
     <PathDelim Value="\"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
-      <Title Value="prjAccionFinal"/>
+      <Title Value="prjScope"/>
       <Scaled Value="True"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
       <XPManifest>
         <DpiAware Value="True"/>
+        <TextName Value="GustavoHenrique.Scope.App"/>
+        <TextDesc Value="Sistema de Controle de Orçamento para Empresas"/>
       </XPManifest>
       <Icon Value="0"/>
     </General>
@@ -40,7 +42,7 @@
     </RequiredPackages>
     <Units>
       <Unit>
-        <Filename Value="prjAccionFinal.lpr"/>
+        <Filename Value="prjScope.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
@@ -111,7 +113,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="prjAccionFinal"/>
+      <Filename Value="/build/prjScope"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>

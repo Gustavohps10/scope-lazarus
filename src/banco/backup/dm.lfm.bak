@@ -2,8 +2,8 @@ object dmF: TdmF
   OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 333
-  HorizontalOffset = 539
-  VerticalOffset = 297
+  HorizontalOffset = 520
+  VerticalOffset = 191
   Width = 320
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -16,9 +16,9 @@ object dmF: TdmF
     Port = 5432
     Database = 'prjaccion'
     User = 'postgres'
-    Password = '1234'
+    Password = 'guga2004'
     Protocol = 'postgresql'
-    LibraryLocation = 'C:\MyApps\accion-exercicios\libpq-32bits\libpq.dll'
+    LibraryLocation = 'C:\MyApps\scope-lazarus\src\libpq-32bits\libpq.dll'
     Left = 32
     Top = 56
   end
