@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/github/languages/top/gustavohps10/scope-lazarus?color=BBD540"/>
     <img src="https://img.shields.io/github/commit-activity/w/Gustavohps10/scope-lazarus?color=BBD540"/>
     <img src="https://img.shields.io/github/created-at/gustavohps10/scope-lazarus?color=24394E"/>
-    <img src="https://img.shields.io/github/license/Gustavohps10/scope-lazarus?color=24394E"/>
+    <img src="https://img.shields.io/github/license/gustavohps10/scope-lazarus?color=24394E"/>
 </div>
 
 # :page_with_curl: Description
