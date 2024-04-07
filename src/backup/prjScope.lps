@@ -8,8 +8,8 @@
       <Unit>
         <Filename Value="prjScope.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos Y="23"/>
         <UsageCount Value="40"/>
@@ -56,9 +56,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadCliente"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
         <CursorPos X="13" Y="3"/>
         <UsageCount Value="40"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcategoria.pas"/>
@@ -163,9 +164,6 @@
         <UsageCount Value="9"/>
       </Unit>
     </Units>
-    <General>
-      <ActiveWindowIndexAtStart Value="-1"/>
-    </General>
     <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
