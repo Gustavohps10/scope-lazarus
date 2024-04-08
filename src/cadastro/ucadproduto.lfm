@@ -1,6 +1,10 @@
 inherited CadProdutoF: TCadProdutoF
   Caption = 'Produtos'
+  OnCreate = FormCreate
+  OnShow = FormShow
   inherited pgcPrincipal: TPageControl
+    ActivePage = tbCadastro
+    TabIndex = 1
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
         Columns = <        
@@ -45,11 +49,345 @@ inherited CadProdutoF: TCadProdutoF
           end>
       end
     end
+    inherited tbCadastro: TTabSheet
+      inherited btnGravar: TBCButton
+        OnClick = btnGravarClick
+      end
+      object lblProdutoId: TLabel[4]
+        Left = 56
+        Height = 15
+        Top = 16
+        Width = 11
+        Caption = 'ID'
+        ParentColor = False
+      end
+      object edtProdutoId: TDBEdit[5]
+        Left = 56
+        Height = 23
+        Top = 32
+        Width = 112
+        DataField = 'produtoid'
+        DataSource = dsCadModelo
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 0
+      end
+      object cbbCategoria: TBCComboBox[6]
+        Cursor = crHandPoint
+        Left = 56
+        Height = 24
+        Top = 80
+        Width = 112
+        Items.Strings = (
+          'Selecionar'
+        )
+        ItemIndex = 0
+        ArrowSize = 8
+        ArrowWidth = 16
+        FocusBorderOpacity = 0
+        GlobalOpacity = 255
+        MemoryUsage = bmuHigh
+        Rounding.RoundX = 5
+        Rounding.RoundY = 5
+        StateClicked.Background.Color = 7032626
+        StateClicked.Background.Gradient1.StartColor = 8404992
+        StateClicked.Background.Gradient1.EndColor = 4194304
+        StateClicked.Background.Gradient1.GradientType = gtRadial
+        StateClicked.Background.Gradient1.Point1XPercent = 50
+        StateClicked.Background.Gradient1.Point1YPercent = 100
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 0
+        StateClicked.Background.Gradient2.StartColor = clWhite
+        StateClicked.Background.Gradient2.EndColor = clBlack
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 100
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboNone
+        StateClicked.FontEx.Color = clWhite
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 2
+        StateClicked.FontEx.ShadowOffsetX = 1
+        StateClicked.FontEx.ShadowOffsetY = 1
+        StateClicked.FontEx.Style = []
+        StateHover.Background.Color = 5126436
+        StateHover.Background.Gradient1.StartColor = 16744448
+        StateHover.Background.Gradient1.EndColor = 8404992
+        StateHover.Background.Gradient1.GradientType = gtRadial
+        StateHover.Background.Gradient1.Point1XPercent = 50
+        StateHover.Background.Gradient1.Point1YPercent = 100
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 0
+        StateHover.Background.Gradient2.StartColor = clWhite
+        StateHover.Background.Gradient2.EndColor = clBlack
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 100
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 2
+        StateHover.FontEx.ShadowOffsetX = 1
+        StateHover.FontEx.ShadowOffsetY = 1
+        StateHover.FontEx.Style = []
+        StateNormal.Background.Color = clNone
+        StateNormal.Background.Gradient1.StartColor = 4194304
+        StateNormal.Background.Gradient1.EndColor = 8405056
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 8405056
+        StateNormal.Background.Gradient2.EndColor = 4194304
+        StateNormal.Background.Gradient2.GradientType = gtRadial
+        StateNormal.Background.Gradient2.Point1XPercent = 50
+        StateNormal.Background.Gradient2.Point1YPercent = 100
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 0
+        StateNormal.Background.Gradient1EndPercent = 60
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 6579300
+        StateNormal.Border.Style = bboSolid
+        StateNormal.FontEx.Color = 2171169
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 2
+        StateNormal.FontEx.ShadowOffsetX = 1
+        StateNormal.FontEx.ShadowOffsetY = 1
+        StateNormal.FontEx.Style = []
+        StaticButton = False
+        TabOrder = 1
+      end
+      object lblCategoria: TLabel[7]
+        Left = 56
+        Height = 15
+        Top = 64
+        Width = 51
+        Caption = 'Categoria'
+        ParentColor = False
+      end
+      object edtDesc: TDBEdit[8]
+        Left = 56
+        Height = 23
+        Top = 176
+        Width = 112
+        DataField = 'ds_produto'
+        DataSource = dsCadModelo
+        MaxLength = 0
+        TabOrder = 2
+      end
+      object edtObs: TDBEdit[9]
+        Left = 56
+        Height = 23
+        Top = 224
+        Width = 112
+        DataField = 'obs_produto'
+        DataSource = dsCadModelo
+        MaxLength = 0
+        TabOrder = 3
+      end
+      object edtValorVenda: TDBEdit[10]
+        Left = 208
+        Height = 23
+        Top = 81
+        Width = 83
+        DataField = 'vl_venda_produto'
+        DataSource = dsCadModelo
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 4
+      end
+      object dtpDataCadastro: TDBDateTimePicker[11]
+        Left = 208
+        Height = 23
+        Top = 32
+        Width = 83
+        DataField = 'dt_cadastro_produto'
+        DataSource = dsCadModelo
+        ReadOnly = False
+        CenturyFrom = 1941
+        MaxDate = 2958465
+        MinDate = -53780
+        TabOrder = 5
+        TrailingSeparator = False
+        TextForNullDate = 'NULL'
+        LeadingZeros = True
+        Kind = dtkDate
+        TimeFormat = tf24
+        TimeDisplay = tdHMS
+        DateMode = dmComboBox
+        UseDefaultSeparators = True
+        HideDateTimeParts = []
+        MonthNames = 'Long'
+      end
+      object lblDataCad: TLabel[12]
+        Left = 205
+        Height = 15
+        Top = 16
+        Width = 90
+        Caption = 'Data de Cadastro'
+        ParentColor = False
+      end
+      object lblDesc: TLabel[13]
+        Left = 56
+        Height = 15
+        Top = 160
+        Width = 51
+        Caption = 'Descrição'
+        ParentColor = False
+      end
+      object lblObs: TLabel[14]
+        Left = 56
+        Height = 15
+        Top = 208
+        Width = 62
+        Caption = 'Observação'
+        ParentColor = False
+      end
+      object cbbStatus: TBCComboBox[15]
+        Cursor = crHandPoint
+        Left = 56
+        Height = 24
+        Top = 127
+        Width = 112
+        Items.Strings = (
+          'Selecionar'
+          'ATIVO'
+          'INATIVO'
+          ''
+        )
+        ItemIndex = 0
+        ArrowSize = 8
+        ArrowWidth = 16
+        FocusBorderOpacity = 0
+        GlobalOpacity = 255
+        MemoryUsage = bmuHigh
+        Rounding.RoundX = 5
+        Rounding.RoundY = 5
+        StateClicked.Background.Color = 7032626
+        StateClicked.Background.Gradient1.StartColor = 8404992
+        StateClicked.Background.Gradient1.EndColor = 4194304
+        StateClicked.Background.Gradient1.GradientType = gtRadial
+        StateClicked.Background.Gradient1.Point1XPercent = 50
+        StateClicked.Background.Gradient1.Point1YPercent = 100
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 0
+        StateClicked.Background.Gradient2.StartColor = clWhite
+        StateClicked.Background.Gradient2.EndColor = clBlack
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 100
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboNone
+        StateClicked.FontEx.Color = clWhite
+        StateClicked.FontEx.FontQuality = fqSystemClearType
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 2
+        StateClicked.FontEx.ShadowOffsetX = 1
+        StateClicked.FontEx.ShadowOffsetY = 1
+        StateClicked.FontEx.Style = []
+        StateHover.Background.Color = 5126436
+        StateHover.Background.Gradient1.StartColor = 16744448
+        StateHover.Background.Gradient1.EndColor = 8404992
+        StateHover.Background.Gradient1.GradientType = gtRadial
+        StateHover.Background.Gradient1.Point1XPercent = 50
+        StateHover.Background.Gradient1.Point1YPercent = 100
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 0
+        StateHover.Background.Gradient2.StartColor = clWhite
+        StateHover.Background.Gradient2.EndColor = clBlack
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 100
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqSystemClearType
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 2
+        StateHover.FontEx.ShadowOffsetX = 1
+        StateHover.FontEx.ShadowOffsetY = 1
+        StateHover.FontEx.Style = []
+        StateNormal.Background.Color = clNone
+        StateNormal.Background.Gradient1.StartColor = 4194304
+        StateNormal.Background.Gradient1.EndColor = 8405056
+        StateNormal.Background.Gradient1.GradientType = gtLinear
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 8405056
+        StateNormal.Background.Gradient2.EndColor = 4194304
+        StateNormal.Background.Gradient2.GradientType = gtRadial
+        StateNormal.Background.Gradient2.Point1XPercent = 50
+        StateNormal.Background.Gradient2.Point1YPercent = 100
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 0
+        StateNormal.Background.Gradient1EndPercent = 60
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Color = 6579300
+        StateNormal.Border.Style = bboSolid
+        StateNormal.FontEx.Color = 2171169
+        StateNormal.FontEx.FontQuality = fqSystemClearType
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowRadius = 2
+        StateNormal.FontEx.ShadowOffsetX = 1
+        StateNormal.FontEx.ShadowOffsetY = 1
+        StateNormal.FontEx.Style = []
+        StaticButton = False
+        TabOrder = 6
+      end
+      object lblStatus: TLabel[16]
+        Left = 56
+        Height = 15
+        Top = 112
+        Width = 32
+        Caption = 'Status'
+        ParentColor = False
+      end
+      object lblValorVenda: TLabel[17]
+        Left = 208
+        Height = 15
+        Top = 64
+        Width = 77
+        Caption = 'Valor de Venda'
+        ParentColor = False
+      end
+    end
+  end
+  inherited dsCadModelo: TDataSource
+    OnDataChange = dsCadModeloDataChange
+    Top = 160
   end
   inherited qryCad: TZQuery
-    Active = True
+    BeforePost = qryCadBeforePost
     SQL.Strings = (
-      'select * from produto'
+      'select * from produto order by produtoid'
     )
+  end
+  object qrySelectCategorias: TZQuery[5]
+    Connection = dmF.ZConnection1
+    SQL.Strings = (
+      'select * from categoria_produto'
+    )
+    Params = <>
+    Left = 640
+    Top = 232
   end
 end

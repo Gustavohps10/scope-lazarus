@@ -1,7 +1,7 @@
 object CadModeloF: TCadModeloF
-  Left = 329
+  Left = 532
   Height = 530
-  Top = 111
+  Top = 185
   Width = 790
   Caption = 'CadModeloF'
   ClientHeight = 530
@@ -11,7 +11,7 @@ object CadModeloF: TCadModeloF
   OnClose = FormClose
   OnShow = FormShow
   Position = poMainFormCenter
-  LCLVersion = '3.2.0.0'
+  LCLVersion = '2.2.6.0'
   object pnlCabecalho: TPanel
     Left = 0
     Height = 64
@@ -182,7 +182,9 @@ object CadModeloF: TCadModeloF
         Color = clWindow
         Columns = <>
         DataSource = dsCadModelo
+        ReadOnly = True
         TabOrder = 1
+        OnDblClick = DBGrid1DblClick
       end
       object pnlRodape: TPanel
         Left = 0

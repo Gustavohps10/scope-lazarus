@@ -1,7 +1,7 @@
 inherited CadCategoriaF: TCadCategoriaF
-  Left = 331
+  Left = 520
   Height = 527
-  Top = 146
+  Top = 181
   Caption = 'Categorias'
   ClientHeight = 527
   OnShow = nil

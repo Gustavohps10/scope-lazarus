@@ -40,6 +40,7 @@ type
     procedure btnFecharClick(Sender: TObject);
     procedure btnGravarClick(Sender: TObject);
     procedure btnNovoClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure qryCadAfterCancel(DataSet: TDataSet);
@@ -65,12 +66,6 @@ implementation
 procedure TCadModeloF.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   CloseAction:=caFree;
-end;
-
-procedure TCadModeloF.FormShow(Sender: TObject);
-begin
-  pgcPrincipal.ActivePage := tbPesquisa;
-  qryCad.Active := true;
 end;
 
 procedure TCadModeloF.qryCadAfterCancel(DataSet: TDataSet);
@@ -142,6 +137,11 @@ end;
 procedure TCadModeloF.btnNovoClick(Sender: TObject);
 begin
   qryCad.Insert;
+end;
+
+procedure TCadModeloF.DBGrid1DblClick(Sender: TObject);
+begin
+  pgcPrincipal.ActivePage := tbCadastro;
 end;
 
 end.

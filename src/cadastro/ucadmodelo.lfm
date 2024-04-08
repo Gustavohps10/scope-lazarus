@@ -1,7 +1,7 @@
 object CadModeloF: TCadModeloF
-  Left = 329
+  Left = 532
   Height = 530
-  Top = 111
+  Top = 185
   Width = 790
   Caption = 'CadModeloF'
   ClientHeight = 530
@@ -9,9 +9,8 @@ object CadModeloF: TCadModeloF
   Color = 16514043
   Font.Name = 'Segoe UI'
   OnClose = FormClose
-  OnShow = FormShow
   Position = poMainFormCenter
-  LCLVersion = '3.2.0.0'
+  LCLVersion = '2.2.6.0'
   object pnlCabecalho: TPanel
     Left = 0
     Height = 64
