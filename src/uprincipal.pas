@@ -6,13 +6,15 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
-  uCadCategoria, uCadCliente, uCadProduto, uCadOrcamento, uCadUsuario;
+  BGRAImageList, uCadCategoria, uCadCliente, uCadProduto, uCadOrcamento,
+  uCadUsuario;
 
 type
 
   { TprincipalF }
 
   TprincipalF = class(TForm)
+    imglIcons: TBGRAImageList;
     imgLogo: TImage;
     MainMenu1: TMainMenu;
     menuCadastro: TMenuItem;
@@ -24,6 +26,7 @@ type
     menuOrcamento: TMenuItem;
     menuVendas: TMenuItem;
     pnlCabecalho: TPanel;
+    Separator1: TMenuItem;
     procedure menuCadCategoriaClick(Sender: TObject);
     procedure menuCadClienteClick(Sender: TObject);
     procedure menuCadProdutoClick(Sender: TObject);
