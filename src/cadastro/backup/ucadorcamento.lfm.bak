@@ -1,4 +1,6 @@
 inherited CadOrcamentoF: TCadOrcamentoF
+  Left = 345
+  Top = 117
   Caption = 'Orçamentos'
   inherited pgcPrincipal: TPageControl
     ActivePage = tbPesquisa

@@ -46,7 +46,9 @@ inherited CadProdutoF: TCadProdutoF
       end
     end
   end
-  inherited dsCadModelo: TDataSource
-    DataSet = nil
+  inherited qryCad: TZQuery
+    SQL.Strings = (
+      'select * from produto'
+    )
   end
 end

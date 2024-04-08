@@ -1,10 +1,10 @@
 object CadModeloF: TCadModeloF
   Left = 329
-  Height = 527
+  Height = 530
   Top = 111
   Width = 790
   Caption = 'CadModeloF'
-  ClientHeight = 527
+  ClientHeight = 530
   ClientWidth = 790
   Color = 16514043
   Font.Name = 'Segoe UI'
@@ -26,7 +26,7 @@ object CadModeloF: TCadModeloF
   end
   object pgcPrincipal: TPageControl
     Left = 0
-    Height = 463
+    Height = 466
     Top = 64
     Width = 790
     ActivePage = tbPesquisa
@@ -36,7 +36,7 @@ object CadModeloF: TCadModeloF
     TabOrder = 1
     object tbPesquisa: TTabSheet
       Caption = 'Pesquisa'
-      ClientHeight = 435
+      ClientHeight = 438
       ClientWidth = 782
       object pnlCabecalhoConteudo: TPanel
         Left = 0
@@ -175,19 +175,21 @@ object CadModeloF: TCadModeloF
       end
       object DBGrid1: TDBGrid
         Left = 0
-        Height = 320
+        Height = 323
         Top = 56
         Width = 782
         Align = alClient
         Color = clWindow
         Columns = <>
         DataSource = dsCadModelo
+        ReadOnly = True
         TabOrder = 1
+        OnDblClick = DBGrid1DblClick
       end
       object pnlRodape: TPanel
         Left = 0
         Height = 59
-        Top = 376
+        Top = 379
         Width = 782
         Align = alBottom
         BevelOuter = bvNone
@@ -421,13 +423,13 @@ object CadModeloF: TCadModeloF
     end
     object tbCadastro: TTabSheet
       Caption = 'Cadastro'
-      ClientHeight = 435
+      ClientHeight = 438
       ClientWidth = 782
       object btnEditar: TBCButton
         Cursor = crHandPoint
         Left = 8
         Height = 33
-        Top = 384
+        Top = 387
         Width = 80
         Anchors = [akLeft, akBottom]
         StateClicked.Background.Color = 2600856
@@ -537,7 +539,7 @@ object CadModeloF: TCadModeloF
         Cursor = crHandPoint
         Left = 96
         Height = 33
-        Top = 384
+        Top = 387
         Width = 88
         Anchors = [akLeft, akBottom]
         StateClicked.Background.Color = 2600856
@@ -630,6 +632,7 @@ object CadModeloF: TCadModeloF
         Color = clNone
         DropDownWidth = 16
         DropDownArrowSize = 8
+        Enabled = False
         GlobalOpacity = 255
         GlyphAlignment = bcaLeftCenter
         OnClick = btnGravarClick
@@ -647,7 +650,7 @@ object CadModeloF: TCadModeloF
         Cursor = crHandPoint
         Left = 192
         Height = 33
-        Top = 384
+        Top = 387
         Width = 96
         Anchors = [akLeft, akBottom]
         StateClicked.Background.Color = 6572335
@@ -762,7 +765,7 @@ object CadModeloF: TCadModeloF
         Cursor = crHandPoint
         Left = 360
         Height = 33
-        Top = 384
+        Top = 387
         Width = 40
         Anchors = [akLeft, akBottom]
         StateClicked.Background.Color = 1446607
@@ -876,6 +879,14 @@ object CadModeloF: TCadModeloF
   end
   object qryCad: TZQuery
     Connection = dmF.ZConnection1
+    AfterInsert = qryCadAfterInsert
+    BeforeEdit = qryCadBeforeEdit
+    AfterPost = qryCadAfterPost
+    AfterCancel = qryCadAfterCancel
+    AfterDelete = qryCadAfterDelete
+    SQL.Strings = (
+      'select * from produto'
+    )
     Params = <>
     Left = 656
     Top = 152

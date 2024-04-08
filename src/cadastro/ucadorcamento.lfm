@@ -3,8 +3,6 @@ inherited CadOrcamentoF: TCadOrcamentoF
   Top = 117
   Caption = 'Orçamentos'
   inherited pgcPrincipal: TPageControl
-    ActivePage = tbPesquisa
-    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
         Columns = <        
@@ -37,6 +35,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
     end
   end
   inherited qryCad: TZQuery
+    Active = True
     SQL.Strings = (
       'select * from orcamento'
     )

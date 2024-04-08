@@ -1,7 +1,7 @@
 object principalF: TprincipalF
-  Left = 330
+  Left = 297
   Height = 585
-  Top = 74
+  Top = 59
   Width = 866
   Caption = 'Menu Principal'
   ClientHeight = 585
@@ -232,8 +232,7 @@ object principalF: TprincipalF
     end
   end
   object imglIcons: TBGRAImageList
-    Left = 656
-    Top = 128
+    Left = 400
     Bitmap = {
       4C7A080000001000000010000000780900000000000078DAED98095053491AC7
       335BE3CC94AEE3B5E309AE25ACA2E38D233711124039E36A46D641611C3CF01A

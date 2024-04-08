@@ -1,6 +1,6 @@
 inherited CadClienteF: TCadClienteF
-  Left = 579
-  Top = 248
+  Left = 292
+  Top = 179
   Caption = 'Clientes'
   inherited pgcPrincipal: TPageControl
     inherited tbPesquisa: TTabSheet

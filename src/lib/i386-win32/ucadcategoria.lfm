@@ -1,18 +1,21 @@
 inherited CadCategoriaF: TCadCategoriaF
-  Left = 388
-  Top = 91
+  Left = 331
+  Height = 527
+  Top = 146
   Caption = 'Categorias'
+  ClientHeight = 527
   OnShow = nil
   inherited pgcPrincipal: TPageControl
-    ActivePage = tbPesquisa
-    TabIndex = 0
+    Height = 463
     inherited tbPesquisa: TTabSheet
+      ClientHeight = 435
       inherited pnlCabecalhoConteudo: TPanel
         inherited btnPesquisar: TBCButton
           GlyphScale = 2
         end
       end
       inherited DBGrid1: TDBGrid
+        Height = 320
         Columns = <        
           item
             PickList.Strings = (            )
@@ -25,8 +28,24 @@ inherited CadCategoriaF: TCadCategoriaF
             FieldName = 'ds_categoria_produto'
           end>
       end
+      inherited pnlRodape: TPanel
+        Top = 376
+      end
     end
     inherited tbCadastro: TTabSheet
+      ClientHeight = 435
+      inherited btnEditar: TBCButton
+        Top = 384
+      end
+      inherited btnGravar: TBCButton
+        Top = 384
+      end
+      inherited btnCancelar: TBCButton
+        Top = 384
+      end
+      inherited btnExcluir: TBCButton
+        Top = 384
+      end
       object lblID: TLabel[4]
         Left = 64
         Height = 15
@@ -67,9 +86,10 @@ inherited CadCategoriaF: TCadCategoriaF
     end
   end
   inherited qryCad: TZQuery
+    OnNewRecord = qryCadNewRecord
     Active = True
     SQL.Strings = (
-      'select * from categoria_produto'
+      'select * from categoria_produto order by categoriaprodutoid'
     )
   end
 end

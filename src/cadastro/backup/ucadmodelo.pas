@@ -42,6 +42,11 @@ type
     procedure btnNovoClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
+    procedure qryCadAfterCancel(DataSet: TDataSet);
+    procedure qryCadAfterDelete(DataSet: TDataSet);
+    procedure qryCadAfterInsert(DataSet: TDataSet);
+    procedure qryCadAfterPost(DataSet: TDataSet);
+    procedure qryCadBeforeEdit(DataSet: TDataSet);
   private
 
   public
@@ -66,6 +71,36 @@ procedure TCadModeloF.FormShow(Sender: TObject);
 begin
   pgcPrincipal.ActivePage := tbPesquisa;
   qryCad.Active := true;
+end;
+
+procedure TCadModeloF.qryCadAfterCancel(DataSet: TDataSet);
+begin
+  btnEditar.Enabled:=true;
+  btnGravar.Enabled:=false;
+end;
+
+procedure TCadModeloF.qryCadAfterDelete(DataSet: TDataSet);
+begin
+  pgcPrincipal.ActivePage := tbPesquisa;
+end;
+
+procedure TCadModeloF.qryCadAfterInsert(DataSet: TDataSet);
+begin
+  btnEditar.Enabled:=false;
+  btnGravar.Enabled:=true;
+end;
+
+procedure TCadModeloF.qryCadAfterPost(DataSet: TDataSet);
+begin
+  pgcPrincipal.ActivePage := tbPesquisa;
+  btnEditar.Enabled:=true;
+  btnGravar.Enabled:=false;
+end;
+
+procedure TCadModeloF.qryCadBeforeEdit(DataSet: TDataSet);
+begin
+  btnGravar.Enabled:=true;
+  btnEditar.Enabled:=false;
 end;
 
 procedure TCadModeloF.btnCancelarClick(Sender: TObject);
@@ -106,7 +141,7 @@ end;
 
 procedure TCadModeloF.btnNovoClick(Sender: TObject);
 begin
-
+  qryCad.Insert;
 end;
 
 end.

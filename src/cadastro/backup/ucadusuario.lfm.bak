@@ -3,6 +3,8 @@ inherited CadUsuarioF: TCadUsuarioF
   Top = 311
   Caption = 'Usuários'
   inherited pgcPrincipal: TPageControl
+    ActivePage = tbCadastro
+    TabIndex = 1
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
         Columns = <        
@@ -33,7 +35,6 @@ inherited CadUsuarioF: TCadUsuarioF
     end
   end
   inherited qryCad: TZQuery
-    Active = True
     SQL.Strings = (
       'select * from usuarios'
     )

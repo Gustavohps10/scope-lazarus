@@ -18,7 +18,6 @@ uses
 
 begin
   RequireDerivedFormResource:=True;
-  Application.Title:='prjScope';
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TdmF, dmF);
