@@ -4,10 +4,11 @@ inherited CadCategoriaF: TCadCategoriaF
   Top = 124
   Caption = 'Categorias'
   ClientHeight = 527
+  inherited pnlCabecalho: TPanel
+    Caption = 'Categorias'
+  end
   inherited pgcPrincipal: TPageControl
     Height = 463
-    ActivePage = tbPesquisa
-    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       ClientHeight = 435
       inherited pnlCabecalhoConteudo: TPanel

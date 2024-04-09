@@ -1,12 +1,14 @@
 inherited CadProdutoF: TCadProdutoF
-  Left = 327
-  Top = 55
+  Left = 657
+  Top = 272
   Caption = 'Produtos'
   OnCreate = FormCreate
   inherited pnlCabecalho: TPanel
     Caption = 'Produtos'
   end
   inherited pgcPrincipal: TPageControl
+    ActivePage = tbCadastro
+    TabIndex = 1
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
         Columns = <        

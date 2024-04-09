@@ -18,6 +18,7 @@ object dmF: TdmF
     User = 'postgres'
     Password = '1234'
     Protocol = 'postgresql'
+    LibraryLocation = 'C:\MyApps\scope-lazarus\src\libpq-32bits\libpq.dll'
     Left = 32
     Top = 56
   end

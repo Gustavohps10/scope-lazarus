@@ -1,6 +1,6 @@
 inherited CadProdutoF: TCadProdutoF
-  Left = 327
-  Top = 55
+  Left = 657
+  Top = 272
   Caption = 'Produtos'
   OnCreate = FormCreate
   inherited pnlCabecalho: TPanel

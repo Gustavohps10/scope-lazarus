@@ -1,7 +1,10 @@
 inherited CadClienteF: TCadClienteF
-  Left = 350
-  Top = 131
+  Left = 557
+  Top = 249
   Caption = 'Clientes'
+  inherited pnlCabecalho: TPanel
+    Caption = 'Clientes'
+  end
   inherited pgcPrincipal: TPageControl
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
@@ -30,13 +33,101 @@ inherited CadClienteF: TCadClienteF
     end
     inherited tbCadastro: TTabSheet
       inherited pnlFormulario: TPanel
-        Anchors = []
+        inherited pnlTopoFormulario: TPanel
+          Caption = 'Cadastro de Clientes'
+        end
+        inherited pnlConteudoFormulario: TBCPanel
+          object lblClienteId: TLabel[0]
+            Left = 16
+            Height = 15
+            Top = 16
+            Width = 11
+            Caption = 'ID'
+            ParentColor = False
+          end
+          object edtClienteId: TDBEdit[1]
+            Left = 16
+            Height = 23
+            Top = 32
+            Width = 184
+            DataField = 'clienteid'
+            DataSource = dsCadModelo
+            Alignment = taRightJustify
+            MaxLength = 0
+            TabOrder = 0
+          end
+          object lblTipo: TLabel[2]
+            Left = 208
+            Height = 15
+            Top = 16
+            Width = 23
+            Caption = 'Tipo'
+            ParentColor = False
+          end
+          object cbbTipo: TComboBox[3]
+            Left = 208
+            Height = 23
+            Top = 32
+            Width = 185
+            ItemHeight = 15
+            ItemIndex = 0
+            Items.Strings = (
+              'Selecionar'
+              'F'
+              'J'
+            )
+            TabOrder = 1
+            Text = 'Selecionar'
+          end
+          object edtNome: TDBEdit[4]
+            Left = 16
+            Height = 23
+            Top = 80
+            Width = 184
+            DataField = 'nome_cliente'
+            DataSource = dsCadModelo
+            MaxLength = 100
+            TabOrder = 2
+          end
+          object lblNome: TLabel[5]
+            Left = 16
+            Height = 15
+            Top = 64
+            Width = 33
+            Caption = 'Nome'
+            ParentColor = False
+          end
+          object edtCpfCnpj: TDBEdit[6]
+            Left = 208
+            Height = 23
+            Top = 80
+            Width = 184
+            DataField = 'cpf_cnpj_cliente'
+            DataSource = dsCadModelo
+            MaxLength = 18
+            TabOrder = 3
+          end
+          object lblCpfCnpj: TLabel[7]
+            Left = 208
+            Height = 15
+            Top = 64
+            Width = 53
+            Caption = 'CPF/CNPJ'
+            ParentColor = False
+          end
+        end
       end
     end
   end
+  inherited dsCadModelo: TDataSource
+    OnDataChange = dsCadModeloDataChange
+  end
   inherited qryCad: TZQuery
+    BeforePost = qryCadBeforePost
+    OnNewRecord = qryCadNewRecord
+    Active = True
     SQL.Strings = (
-      'select * from cliente'
+      'select *  from cliente order by clienteid'
     )
   end
 end
