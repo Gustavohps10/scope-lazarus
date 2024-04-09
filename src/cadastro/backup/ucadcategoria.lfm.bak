@@ -83,6 +83,7 @@ inherited CadCategoriaF: TCadCategoriaF
   end
   inherited qryCad: TZQuery
     OnNewRecord = qryCadNewRecord
+    Active = True
     SQL.Strings = (
       'select * from categoria_produto order by categoriaprodutoid'
     )

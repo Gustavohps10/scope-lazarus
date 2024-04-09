@@ -22,8 +22,12 @@ object CadModeloF: TCadModeloF
     Width = 790
     Align = alTop
     BevelOuter = bvNone
+    Caption = 'Topo'
     Color = 5126436
-    Font.Name = 'Roboto'
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Name = 'Inter'
+    Font.Quality = fqAntialiased
     ParentBackground = False
     ParentColor = False
     ParentFont = False
@@ -490,7 +494,7 @@ object CadModeloF: TCadModeloF
           BevelInner = bvNone
           BevelOuter = bvNone
           BevelWidth = 1
-          Border.Color = 11447982
+          Border.Color = 11053224
           Border.Style = bboSolid
           BorderBCStyle = bpsBorder
           Enabled = False

@@ -3,6 +3,9 @@ inherited CadProdutoF: TCadProdutoF
   Top = 55
   Caption = 'Produtos'
   OnCreate = FormCreate
+  inherited pnlCabecalho: TPanel
+    Caption = 'Produtos'
+  end
   inherited pgcPrincipal: TPageControl
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
@@ -32,18 +35,19 @@ inherited CadProdutoF: TCadProdutoF
           item
             PickList.Strings = (            )
             Title.Caption = 'Valor venda'
+            Width = 100
             FieldName = 'vl_venda_produto'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'Data de Cadastro'
-            Width = 70
+            Width = 100
             FieldName = 'dt_cadastro_produto'
           end        
           item
             PickList.Strings = (            )
             Title.Caption = 'Status'
-            Width = 70
+            Width = 100
             FieldName = 'status_produto'
           end>
       end
@@ -54,6 +58,7 @@ inherited CadProdutoF: TCadProdutoF
           Caption = 'Cadastro de Produtos'
         end
         inherited pnlConteudoFormulario: TBCPanel
+          Border.Color = 11447982
           object lblProdutoId: TLabel[0]
             Left = 16
             Height = 15
@@ -395,6 +400,7 @@ inherited CadProdutoF: TCadProdutoF
   end
   inherited qryCad: TZQuery
     BeforePost = qryCadBeforePost
+    OnNewRecord = qryCadNewRecord
     SQL.Strings = (
       'select * from produto order by produtoid'
     )

@@ -9,7 +9,7 @@ uses
   EditBtn, ButtonPanel, DBDateTimePicker, BCComboBox, BCLabel, BCListBox,
   BCMDButton, BCMaterialEdit, BGRACustomDrawn, BCMaterialFloatSpinEdit,
   BCMaterialSpinEdit, BCCheckComboBox, BCPanel, ZDataset, uCadModelo, DB,
-  ZAbstractDataset;
+  ZAbstractDataset, dm;
 
 type
 
@@ -34,6 +34,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
     procedure qryCadBeforePost(DataSet: TDataSet);
+    procedure qryCadNewRecord(DataSet: TDataSet);
   private
 
   public
@@ -54,7 +55,8 @@ var i: integer = 1;
 begin
    if qryCad.FieldByName('status_produto').AsString = 'ATIVO'
    then cbbStatus.ItemIndex := 1
-   else cbbStatus.ItemIndex := 2;
+   else if qryCad.FieldByName('status_produto').AsString = 'INATIVO'
+   then cbbStatus.ItemIndex := 2;
 
    {Muda o Combobox de Categoria de acordo com o produto selecionado}
      with qrySelectCategorias do
@@ -78,15 +80,29 @@ end;
 procedure TCadProdutoF.qryCadBeforePost(DataSet: TDataSet);
 var statusProduto: string;
 begin
-   ShowMessage(inttostr(cbbStatus.ItemIndex));
-   {Passa o CategoriaProdutoID do cbbCategoria para o Field do Dataset}
-   qryCad.FieldByName('categoriaprodutoid').AsInteger := PtrUInt(cbbCategoria.Items.Objects[cbbCategoria.ItemIndex]);
-
    if cbbStatus.ItemIndex = 1
    then statusProduto:='ATIVO'
    else statusProduto:='INATIVO';
 
+   {Passa o CategoriaProdutoID do cbbCategoria para o Field do Dataset}
+   qryCad.FieldByName('categoriaprodutoid').AsInteger := PtrUInt(cbbCategoria.Items.Objects[cbbCategoria.ItemIndex]);
    qryCad.FieldByName('status_produto').AsString := statusProduto;
+end;
+
+procedure TCadProdutoF.qryCadNewRecord(DataSet: TDataSet);
+begin
+  with dmF.qryGenerica do
+   begin
+    Close;
+    SQL.Clear;
+    SQL.Add('select nextval('+ QuotedStr('produto_produtoid ')+') AS CODIGO');
+    Open;
+    qryCad.FieldByName('produtoid').asInteger := FieldByName('CODIGO').AsInteger;
+   end;
+  qryCad.FieldByName('dt_cadastro_produto').AsDateTime := Date;
+  cbbCategoria.ItemIndex := 0;
+  cbbStatus.ItemIndex := 0;
+  pgcPrincipal.ActivePage := tbCadastro;
 end;
 
 procedure TCadProdutoF.FormCreate(Sender: TObject);

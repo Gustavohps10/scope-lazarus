@@ -34,11 +34,11 @@ object CadModeloF: TCadModeloF
     Height = 466
     Top = 64
     Width = 790
-    ActivePage = tbCadastro
+    ActivePage = tbPesquisa
     Align = alClient
     Font.Name = 'Inter'
     ParentFont = False
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 1
     object tbPesquisa: TTabSheet
       Caption = 'Pesquisa'
@@ -490,7 +490,7 @@ object CadModeloF: TCadModeloF
           BevelInner = bvNone
           BevelOuter = bvNone
           BevelWidth = 1
-          Border.Color = 11447982
+          Border.Color = 11053224
           Border.Style = bboSolid
           BorderBCStyle = bpsBorder
           Enabled = False
