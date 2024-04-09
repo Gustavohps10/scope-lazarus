@@ -1,0 +1,8 @@
+object VerProdutosF: TVerProdutosF
+  Left = 587
+  Height = 359
+  Top = 277
+  Width = 398
+  Caption = 'Visualizar Produtos do Orçamento'
+  LCLVersion = '2.2.6.0'
+end

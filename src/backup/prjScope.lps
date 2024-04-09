@@ -11,7 +11,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="11"/>
         <CursorPos Y="27"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="uprincipal.pas"/>
@@ -23,7 +23,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="29"/>
         <CursorPos X="21" Y="55"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadmodelo.pas"/>
@@ -35,7 +35,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="122"/>
         <CursorPos Y="131"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="banco\dm.pas"/>
@@ -45,7 +45,7 @@
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="48" Y="18"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcliente.pas"/>
@@ -57,7 +57,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="18"/>
         <CursorPos X="61" Y="50"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcategoria.pas"/>
@@ -68,7 +68,7 @@
         <EditorIndex Value="-1"/>
         <CursorPos X="41" Y="45"/>
         <FoldState Value=" TL HB21o"/>
-        <UsageCount Value="71"/>
+        <UsageCount Value="77"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadproduto.pas"/>
@@ -78,9 +78,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadProduto"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="69"/>
+        <TopLine Value="68"/>
         <CursorPos X="25" Y="61"/>
-        <UsageCount Value="70"/>
+        <UsageCount Value="76"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadorcamento.pas"/>
@@ -89,9 +89,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadOrcamento"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="13" Y="3"/>
-        <UsageCount Value="70"/>
+        <CursorPos X="29" Y="51"/>
+        <UsageCount Value="76"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadusuario.pas"/>
@@ -100,17 +101,15 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadUsuario"/>
-        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="2"/>
-        <CursorPos X="50" Y="23"/>
-        <UsageCount Value="69"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <CursorPos X="60" Y="11"/>
+        <UsageCount Value="75"/>
       </Unit>
       <Unit>
         <Filename Value="uprincipal.lfm"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -119,35 +118,35 @@
         <EditorIndex Value="-1"/>
         <CursorPos Y="54"/>
         <FoldState Value=" T0iA69o"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcliente.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="39" Y="7"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadusuario.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="25" Y="5"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadorcamento.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="39" Y="3"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadproduto.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="25" Y="3"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -155,7 +154,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="283"/>
         <CursorPos X="23" Y="10"/>
-        <UsageCount Value="6"/>
+        <UsageCount Value="5"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -164,45 +163,164 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1581"/>
         <CursorPos X="26" Y="1590"/>
-        <UsageCount Value="7"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\uselecionarprodutos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SelecionarProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSelecionarProdutos"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="7"/>
+        <CursorPos X="52" Y="37"/>
+        <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\uverprodutos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="VerProdutosF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uVerProdutos"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <ComponentName Value="FrameProduto"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="frameListaProduto"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="87" Y="33"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="8">
+    <JumpHistory HistoryIndex="29">
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="30" Column="34"/>
+        <Filename Value="cadastro\ucadorcamento.pas"/>
+        <Caret Line="52" Column="29"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="32" Column="34"/>
+        <Filename Value="cadastro\ucadorcamento.pas"/>
+        <Caret Line="51" Column="29"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="31" Column="34"/>
+        <Filename Value="cadastro\ucadorcamento.pas"/>
+        <Caret Line="50" Column="29"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="30" Column="34"/>
+        <Filename Value="cadastro\uverprodutos.pas"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="31" Column="34"/>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="23" Column="91"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="32" Column="34"/>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="27" Column="91"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="34" Column="34"/>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="28" Column="40"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="36" Column="34"/>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="29" Column="40"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\ucadusuario.pas"/>
-        <Caret Line="46" Column="34"/>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="30" Column="40"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="28" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="29" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="30" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="31" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="30" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="31" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="32" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="33" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="38" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="37" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="36" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="35" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="34" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="33" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="38" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="37" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="36" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="35" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="34" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="33" Column="87"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <Caret Line="34" Column="87"/>
       </Position>
     </JumpHistory>
     <RunParams>

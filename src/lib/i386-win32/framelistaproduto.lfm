@@ -1,0 +1,394 @@
+object FrameProduto: TFrameProduto
+  Left = 0
+  Height = 63
+  Top = 0
+  Width = 445
+  Align = alTop
+  ClientHeight = 63
+  ClientWidth = 445
+  Color = clNone
+  Font.Name = 'Inter'
+  ParentBackground = False
+  ParentColor = False
+  ParentFont = False
+  TabOrder = 0
+  DesignLeft = 589
+  DesignTop = 473
+  object pnlProdutoFundo: TBCPanel
+    Left = 0
+    Height = 63
+    Top = 0
+    Width = 445
+    Align = alClient
+    Background.Color = clWhite
+    Background.Gradient1.StartColor = clWhite
+    Background.Gradient1.EndColor = clBlack
+    Background.Gradient1.GradientType = gtLinear
+    Background.Gradient1.Point1XPercent = 0
+    Background.Gradient1.Point1YPercent = 0
+    Background.Gradient1.Point2XPercent = 0
+    Background.Gradient1.Point2YPercent = 100
+    Background.Gradient2.StartColor = clWhite
+    Background.Gradient2.EndColor = clBlack
+    Background.Gradient2.GradientType = gtLinear
+    Background.Gradient2.Point1XPercent = 0
+    Background.Gradient2.Point1YPercent = 0
+    Background.Gradient2.Point2XPercent = 0
+    Background.Gradient2.Point2YPercent = 100
+    Background.Gradient1EndPercent = 35
+    Background.Style = bbsColor
+    BevelInner = bvNone
+    BevelOuter = bvRaised
+    BevelWidth = 1
+    Border.Style = bboSolid
+    Color = clWhite
+    FontEx.Color = clDefault
+    FontEx.FontQuality = fqSystemClearType
+    FontEx.Name = 'inter'
+    FontEx.Shadow = False
+    FontEx.ShadowRadius = 5
+    FontEx.ShadowOffsetX = 5
+    FontEx.ShadowOffsetY = 5
+    FontEx.Style = []
+    ParentBackground = False
+    Rounding.RoundX = 5
+    Rounding.RoundY = 5
+    TabOrder = 0
+    object lblProdutoDescValue: TBCLabel
+      Left = 64
+      Height = 20
+      Top = 29
+      Width = 98
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point1XPercent = 0
+      Background.Gradient1.Point1YPercent = 0
+      Background.Gradient1.Point2XPercent = 0
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point1XPercent = 0
+      Background.Gradient2.Point1YPercent = 0
+      Background.Gradient2.Point2XPercent = 0
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsClear
+      Border.Style = bboNone
+      Caption = 'Produto 123'
+      FontEx.Color = clDefault
+      FontEx.FontQuality = fqFineAntialiasing
+      FontEx.Height = 18
+      FontEx.Name = 'inter'
+      FontEx.Shadow = False
+      FontEx.ShadowRadius = 5
+      FontEx.ShadowOffsetX = 5
+      FontEx.ShadowOffsetY = 5
+      FontEx.Style = []
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+    end
+    object btnExcluir: TBCButton
+      Cursor = crHandPoint
+      Left = 392
+      Height = 33
+      Top = 16
+      Width = 40
+      Anchors = [akRight, akBottom]
+      StateClicked.Background.Color = 1446607
+      StateClicked.Background.Gradient1.StartColor = 8404992
+      StateClicked.Background.Gradient1.EndColor = 4194304
+      StateClicked.Background.Gradient1.GradientType = gtRadial
+      StateClicked.Background.Gradient1.Point1XPercent = 50
+      StateClicked.Background.Gradient1.Point1YPercent = 100
+      StateClicked.Background.Gradient1.Point2XPercent = 0
+      StateClicked.Background.Gradient1.Point2YPercent = 0
+      StateClicked.Background.Gradient2.StartColor = clWhite
+      StateClicked.Background.Gradient2.EndColor = clBlack
+      StateClicked.Background.Gradient2.GradientType = gtLinear
+      StateClicked.Background.Gradient2.Point1XPercent = 0
+      StateClicked.Background.Gradient2.Point1YPercent = 0
+      StateClicked.Background.Gradient2.Point2XPercent = 0
+      StateClicked.Background.Gradient2.Point2YPercent = 100
+      StateClicked.Background.Gradient1EndPercent = 100
+      StateClicked.Background.Style = bbsColor
+      StateClicked.Border.Style = bboNone
+      StateClicked.FontEx.Color = clWhite
+      StateClicked.FontEx.FontQuality = fqSystemClearType
+      StateClicked.FontEx.Height = 14
+      StateClicked.FontEx.Name = 'Segoe UI'
+      StateClicked.FontEx.Shadow = False
+      StateClicked.FontEx.ShadowRadius = 2
+      StateClicked.FontEx.ShadowOffsetX = 1
+      StateClicked.FontEx.ShadowOffsetY = 1
+      StateClicked.FontEx.Style = []
+      StateClicked.FontEx.TextAlignment = bcaLeftCenter
+      StateHover.Background.Color = 2104299
+      StateHover.Background.Gradient1.StartColor = 16744448
+      StateHover.Background.Gradient1.EndColor = 8404992
+      StateHover.Background.Gradient1.GradientType = gtRadial
+      StateHover.Background.Gradient1.Point1XPercent = 50
+      StateHover.Background.Gradient1.Point1YPercent = 100
+      StateHover.Background.Gradient1.Point2XPercent = 0
+      StateHover.Background.Gradient1.Point2YPercent = 0
+      StateHover.Background.Gradient2.StartColor = clWhite
+      StateHover.Background.Gradient2.EndColor = clBlack
+      StateHover.Background.Gradient2.GradientType = gtLinear
+      StateHover.Background.Gradient2.Point1XPercent = 0
+      StateHover.Background.Gradient2.Point1YPercent = 0
+      StateHover.Background.Gradient2.Point2XPercent = 0
+      StateHover.Background.Gradient2.Point2YPercent = 100
+      StateHover.Background.Gradient1EndPercent = 100
+      StateHover.Background.Style = bbsColor
+      StateHover.Border.Style = bboNone
+      StateHover.FontEx.Color = clWhite
+      StateHover.FontEx.FontQuality = fqSystemClearType
+      StateHover.FontEx.Height = 14
+      StateHover.FontEx.Name = 'Segoe UI'
+      StateHover.FontEx.Shadow = False
+      StateHover.FontEx.ShadowRadius = 2
+      StateHover.FontEx.ShadowOffsetX = 1
+      StateHover.FontEx.ShadowOffsetY = 1
+      StateHover.FontEx.Style = []
+      StateHover.FontEx.TextAlignment = bcaLeftCenter
+      StateNormal.Background.Color = 4670447
+      StateNormal.Background.Gradient1.StartColor = 4249019
+      StateNormal.Background.Gradient1.EndColor = 4249019
+      StateNormal.Background.Gradient1.GradientType = gtAngular
+      StateNormal.Background.Gradient1.Point1XPercent = 0
+      StateNormal.Background.Gradient1.Point1YPercent = 0
+      StateNormal.Background.Gradient1.Point2XPercent = 0
+      StateNormal.Background.Gradient1.Point2YPercent = 100
+      StateNormal.Background.Gradient2.StartColor = 4249019
+      StateNormal.Background.Gradient2.EndColor = 4249019
+      StateNormal.Background.Gradient2.GradientType = gtRadial
+      StateNormal.Background.Gradient2.Point1XPercent = 50
+      StateNormal.Background.Gradient2.Point1YPercent = 100
+      StateNormal.Background.Gradient2.Point2XPercent = 0
+      StateNormal.Background.Gradient2.Point2YPercent = 0
+      StateNormal.Background.Gradient1EndPercent = 1
+      StateNormal.Background.Style = bbsColor
+      StateNormal.Border.Style = bboNone
+      StateNormal.FontEx.Color = clWhite
+      StateNormal.FontEx.FontQuality = fqSystemClearType
+      StateNormal.FontEx.Height = 14
+      StateNormal.FontEx.Name = 'Segoe UI'
+      StateNormal.FontEx.Shadow = False
+      StateNormal.FontEx.ShadowColor = clNone
+      StateNormal.FontEx.ShadowColorOpacity = 0
+      StateNormal.FontEx.ShadowRadius = 2
+      StateNormal.FontEx.ShadowOffsetX = 1
+      StateNormal.FontEx.ShadowOffsetY = 1
+      StateNormal.FontEx.Style = []
+      StateNormal.FontEx.TextAlignment = bcaLeftCenter
+      Color = clNone
+      DropDownWidth = 16
+      DropDownArrowSize = 8
+      GlobalOpacity = 255
+      Glyph.Data = {
+        76060000424D7606000000000000360000002800000014000000140000000100
+        2000000000004006000064000000640000000000000000000000000000000000
+        00000000000000000000FFFFFF1FFFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFF
+        FF33FFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFFFF1E000000000000
+        00000000000000000000000000000000000000000000FFFFFF3BFFFFFFFCFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFCFFFFFF3A000000000000000000000000000000000000
+        000000000000FFFFFF66FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF660000
+        00000000000000000000000000000000000000000000FFFFFF66FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFF66000000000000000000000000000000000000
+        000000000000FFFFFF66FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF660000
+        00000000000000000000000000000000000000000000FFFFFF66FFFFFFFFFFFF
+        FFFFFFFFFFF5FFFFFFCAFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCAFFFF
+        FFF5FFFFFFFFFFFFFFFFFFFFFF66000000000000000000000000000000000000
+        000000000000FFFFFF66FFFFFFFFFFFFFFFFFFFFFFF4FFFFFF3AFFFFFFB4FFFF
+        FFFFFFFFFFFFFFFFFFB4FFFFFF3AFFFFFFF4FFFFFFFFFFFFFFFFFFFFFF660000
+        00000000000000000000000000000000000000000000FFFFFF66FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFEFFFFFFF3CFFFFFFB1FFFFFFB7FFFFFF38FFFFFFECFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFF66000000000000000000000000000000000000
+        000000000000FFFFFF66FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEEFFFF
+        FF30FFFFFF30FFFFFFEEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF660000
+        00000000000000000000000000000000000000000000FFFFFF66FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFB4FFFFFF3AFFFFFF3AFFFFFFB4FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFF66000000000000000000000000000000000000
+        000000000000FFFFFF66FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB7FFFFFF38FFFF
+        FFECFFFFFFEFFFFFFF3CFFFFFFB1FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF660000
+        00000000000000000000000000000000000000000000FFFFFF66FFFFFFFFFFFF
+        FFFFFFFFFFEAFFFFFF3EFFFFFFEEFFFFFFFFFFFFFFFFFFFFFFEEFFFFFF3EFFFF
+        FFEAFFFFFFFFFFFFFFFFFFFFFF66000000000000000000000000000000000000
+        000000000000FFFFFF66FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF660000
+        00000000000000000000000000000000000000000000FFFFFF66FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFF66000000000000000000000000000000000000
+        000000000000FFFFFF66FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF660000
+        00000000000000000000000000000000000000000000FFFFFF66FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFF66000000000000000000000000000000000000
+        0000FFFFFF11FFFFFFBFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFBFFFFF
+        FF1100000000000000000000000000000000FFFFFF02FFFFFF30FFFFFF33FFFF
+        FF33FFFFFF33FFFFFFD6FFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFFFFD6FFFF
+        FF33FFFFFF33FFFFFF33FFFFFF30FFFFFF020000000000000000000000000000
+        00000000000000000000000000000000000000000000FFFFFFA0FFFFFFA5FFFF
+        FF99FFFFFF99FFFFFFA5FFFFFF9E000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        000000000000FFFFFF04FFFFFF2FFFFFFF33FFFFFF33FFFFFF2FFFFFFF040000
+        0000000000000000000000000000000000000000000000000000
+      }
+      GlyphAlignment = bcaLeftCenter
+      ParentColor = False
+      Rounding.RoundX = 5
+      Rounding.RoundY = 5
+      RoundingDropDown.RoundX = 1
+      RoundingDropDown.RoundY = 1
+      TextApplyGlobalOpacity = False
+      ImageIndex = 7
+      MemoryUsage = bmuHigh
+    end
+    object lblProdutoIDValue: TBCLabel
+      Left = 16
+      Height = 20
+      Top = 29
+      Width = 30
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point1XPercent = 0
+      Background.Gradient1.Point1YPercent = 0
+      Background.Gradient1.Point2XPercent = 0
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point1XPercent = 0
+      Background.Gradient2.Point1YPercent = 0
+      Background.Gradient2.Point2XPercent = 0
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsClear
+      Border.Style = bboNone
+      Caption = '123'
+      FontEx.Color = clDefault
+      FontEx.FontQuality = fqFineAntialiasing
+      FontEx.Height = 18
+      FontEx.Name = 'inter'
+      FontEx.Shadow = False
+      FontEx.ShadowRadius = 5
+      FontEx.ShadowOffsetX = 5
+      FontEx.ShadowOffsetY = 5
+      FontEx.Style = []
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+    end
+    object lblValorUnitarioValue: TBCLabel
+      Left = 176
+      Height = 20
+      Top = 29
+      Width = 45
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point1XPercent = 0
+      Background.Gradient1.Point1YPercent = 0
+      Background.Gradient1.Point2XPercent = 0
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point1XPercent = 0
+      Background.Gradient2.Point1YPercent = 0
+      Background.Gradient2.Point2XPercent = 0
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsClear
+      Border.Style = bboNone
+      Caption = '10,00'
+      FontEx.Color = clDefault
+      FontEx.FontQuality = fqFineAntialiasing
+      FontEx.Height = 18
+      FontEx.Name = 'inter'
+      FontEx.Shadow = False
+      FontEx.ShadowRadius = 5
+      FontEx.ShadowOffsetX = 5
+      FontEx.ShadowOffsetY = 5
+      FontEx.Style = []
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+    end
+    object lblQuantidadeValue: TBCLabel
+      Left = 240
+      Height = 20
+      Top = 29
+      Width = 20
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point1XPercent = 0
+      Background.Gradient1.Point1YPercent = 0
+      Background.Gradient1.Point2XPercent = 0
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point1XPercent = 0
+      Background.Gradient2.Point1YPercent = 0
+      Background.Gradient2.Point2XPercent = 0
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsClear
+      Border.Style = bboNone
+      Caption = '20'
+      FontEx.Color = clDefault
+      FontEx.FontQuality = fqFineAntialiasing
+      FontEx.Height = 18
+      FontEx.Name = 'inter'
+      FontEx.Shadow = False
+      FontEx.ShadowRadius = 5
+      FontEx.ShadowOffsetX = 5
+      FontEx.ShadowOffsetY = 5
+      FontEx.Style = []
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+    end
+    object lblValorTotalValue: TBCLabel
+      Left = 272
+      Height = 20
+      Top = 29
+      Width = 55
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point1XPercent = 0
+      Background.Gradient1.Point1YPercent = 0
+      Background.Gradient1.Point2XPercent = 0
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point1XPercent = 0
+      Background.Gradient2.Point1YPercent = 0
+      Background.Gradient2.Point2XPercent = 0
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsClear
+      Border.Style = bboNone
+      Caption = '200,00'
+      FontEx.Color = clDefault
+      FontEx.FontQuality = fqFineAntialiasing
+      FontEx.Height = 18
+      FontEx.Name = 'inter'
+      FontEx.Shadow = False
+      FontEx.ShadowRadius = 5
+      FontEx.ShadowOffsetX = 5
+      FontEx.ShadowOffsetY = 5
+      FontEx.Style = []
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+    end
+  end
+end

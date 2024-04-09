@@ -1,10 +1,13 @@
 inherited CadOrcamentoF: TCadOrcamentoF
-  Left = 345
-  Top = 117
+  Left = 503
+  Top = 234
   Caption = 'Orçamentos'
+  inherited pnlCabecalho: TPanel
+    Caption = 'Orçamentos'
+  end
   inherited pgcPrincipal: TPageControl
-    ActivePage = tbPesquisa
-    TabIndex = 0
+    ActivePage = tbCadastro
+    TabIndex = 1
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
         Columns = <        
@@ -35,10 +38,348 @@ inherited CadOrcamentoF: TCadOrcamentoF
           end>
       end
     end
+    inherited tbCadastro: TTabSheet
+      inherited pnlFormulario: TPanel
+        inherited pnlTopoFormulario: TPanel
+          Caption = 'Cadastro de Orçamentos'
+        end
+        inherited pnlConteudoFormulario: TBCPanel
+          object edtOrcId: TDBEdit[0]
+            Left = 16
+            Height = 23
+            Top = 24
+            Width = 184
+            DataField = 'orcamentoid'
+            DataSource = dsCadModelo
+            Alignment = taRightJustify
+            MaxLength = 0
+            TabOrder = 0
+          end
+          object lblOrcId: TLabel[1]
+            Left = 16
+            Height = 15
+            Top = 8
+            Width = 11
+            Caption = 'ID'
+            ParentColor = False
+          end
+          object lblCliente: TLabel[2]
+            Left = 208
+            Height = 15
+            Top = 8
+            Width = 37
+            Caption = 'Cliente'
+            ParentColor = False
+          end
+          object cbbClientes: TDBLookupComboBox[3]
+            Left = 208
+            Height = 23
+            Top = 24
+            Width = 184
+            DataField = 'clienteid'
+            DataSource = dsCadModelo
+            KeyField = 'clienteid'
+            ListField = 'nome_cliente'
+            ListFieldIndex = 0
+            ListSource = dsClientes
+            LookupCache = False
+            TabOrder = 1
+          end
+          object lblDataOrc: TLabel[4]
+            Left = 16
+            Height = 15
+            Top = 56
+            Width = 83
+            Caption = 'Data de Criação'
+            ParentColor = False
+          end
+          object dtpDataOrc: TDBDateTimePicker[5]
+            Left = 16
+            Height = 23
+            Top = 72
+            Width = 184
+            DataField = 'dt_orcamento'
+            DataSource = dsCadModelo
+            ReadOnly = False
+            CenturyFrom = 1941
+            MaxDate = 2958465
+            MinDate = -53780
+            AutoSize = False
+            TabOrder = 2
+            TrailingSeparator = False
+            TextForNullDate = 'NULL'
+            LeadingZeros = True
+            Kind = dtkDate
+            TimeFormat = tf24
+            TimeDisplay = tdHMS
+            DateMode = dmComboBox
+            UseDefaultSeparators = True
+            HideDateTimeParts = []
+            MonthNames = 'Long'
+          end
+          object lblDataValidade: TLabel[6]
+            Left = 208
+            Height = 15
+            Top = 56
+            Width = 87
+            Caption = 'Data de Validade'
+            ParentColor = False
+          end
+          object dtpDataValidade: TDBDateTimePicker[7]
+            Left = 208
+            Height = 23
+            Top = 72
+            Width = 184
+            DataField = 'dt_validade_orcamento'
+            DataSource = dsCadModelo
+            ReadOnly = False
+            CenturyFrom = 1941
+            MaxDate = 2958465
+            MinDate = -53780
+            AutoSize = False
+            TabOrder = 3
+            TrailingSeparator = False
+            TextForNullDate = 'NULL'
+            LeadingZeros = True
+            Kind = dtkDate
+            TimeFormat = tf24
+            TimeDisplay = tdHMS
+            DateMode = dmComboBox
+            UseDefaultSeparators = True
+            HideDateTimeParts = []
+            MonthNames = 'Long'
+          end
+          object edtValorTotal: TDBEdit[8]
+            Left = 280
+            Height = 32
+            Top = 216
+            Width = 112
+            DataField = 'vl_total_orcamento'
+            DataSource = dsCadModelo
+            Alignment = taRightJustify
+            AutoSize = False
+            Font.Height = -19
+            MaxLength = 0
+            ParentFont = False
+            TabOrder = 4
+          end
+          object lblValorTotal: TLabel[9]
+            Left = 280
+            Height = 21
+            Top = 192
+            Width = 72
+            Caption = 'Valor Total'
+            Font.Height = -16
+            ParentColor = False
+            ParentFont = False
+          end
+          object btnSelecionarProdutos: TBCButton[10]
+            Cursor = crHandPoint
+            Left = 16
+            Height = 32
+            Top = 216
+            Width = 184
+            Anchors = [akLeft, akBottom]
+            StateClicked.Background.Color = 8412732
+            StateClicked.Background.Gradient1.StartColor = 8404992
+            StateClicked.Background.Gradient1.EndColor = 4194304
+            StateClicked.Background.Gradient1.GradientType = gtRadial
+            StateClicked.Background.Gradient1.Point1XPercent = 50
+            StateClicked.Background.Gradient1.Point1YPercent = 100
+            StateClicked.Background.Gradient1.Point2XPercent = 0
+            StateClicked.Background.Gradient1.Point2YPercent = 0
+            StateClicked.Background.Gradient2.StartColor = clWhite
+            StateClicked.Background.Gradient2.EndColor = clBlack
+            StateClicked.Background.Gradient2.GradientType = gtLinear
+            StateClicked.Background.Gradient2.Point1XPercent = 0
+            StateClicked.Background.Gradient2.Point1YPercent = 0
+            StateClicked.Background.Gradient2.Point2XPercent = 0
+            StateClicked.Background.Gradient2.Point2YPercent = 100
+            StateClicked.Background.Gradient1EndPercent = 100
+            StateClicked.Background.Style = bbsColor
+            StateClicked.Border.Style = bboNone
+            StateClicked.FontEx.Color = clWhite
+            StateClicked.FontEx.FontQuality = fqFineAntialiasing
+            StateClicked.FontEx.Height = 14
+            StateClicked.FontEx.Name = 'Inter'
+            StateClicked.FontEx.Shadow = False
+            StateClicked.FontEx.ShadowRadius = 2
+            StateClicked.FontEx.ShadowOffsetX = 1
+            StateClicked.FontEx.ShadowOffsetY = 1
+            StateClicked.FontEx.Style = []
+            StateClicked.FontEx.TextAlignment = bcaLeftCenter
+            StateHover.Background.Color = 7032626
+            StateHover.Background.Gradient1.StartColor = 16744448
+            StateHover.Background.Gradient1.EndColor = 8404992
+            StateHover.Background.Gradient1.GradientType = gtRadial
+            StateHover.Background.Gradient1.Point1XPercent = 50
+            StateHover.Background.Gradient1.Point1YPercent = 100
+            StateHover.Background.Gradient1.Point2XPercent = 0
+            StateHover.Background.Gradient1.Point2YPercent = 0
+            StateHover.Background.Gradient2.StartColor = clWhite
+            StateHover.Background.Gradient2.EndColor = clBlack
+            StateHover.Background.Gradient2.GradientType = gtLinear
+            StateHover.Background.Gradient2.Point1XPercent = 0
+            StateHover.Background.Gradient2.Point1YPercent = 0
+            StateHover.Background.Gradient2.Point2XPercent = 0
+            StateHover.Background.Gradient2.Point2YPercent = 100
+            StateHover.Background.Gradient1EndPercent = 100
+            StateHover.Background.Style = bbsColor
+            StateHover.Border.Style = bboNone
+            StateHover.FontEx.Color = clWhite
+            StateHover.FontEx.FontQuality = fqFineAntialiasing
+            StateHover.FontEx.Height = 14
+            StateHover.FontEx.Name = 'Inter'
+            StateHover.FontEx.Shadow = False
+            StateHover.FontEx.ShadowRadius = 2
+            StateHover.FontEx.ShadowOffsetX = 1
+            StateHover.FontEx.ShadowOffsetY = 1
+            StateHover.FontEx.Style = []
+            StateHover.FontEx.TextAlignment = bcaLeftCenter
+            StateNormal.Background.Color = 5126436
+            StateNormal.Background.Gradient1.StartColor = 4249019
+            StateNormal.Background.Gradient1.EndColor = 4249019
+            StateNormal.Background.Gradient1.GradientType = gtAngular
+            StateNormal.Background.Gradient1.Point1XPercent = 0
+            StateNormal.Background.Gradient1.Point1YPercent = 0
+            StateNormal.Background.Gradient1.Point2XPercent = 0
+            StateNormal.Background.Gradient1.Point2YPercent = 100
+            StateNormal.Background.Gradient2.StartColor = 4249019
+            StateNormal.Background.Gradient2.EndColor = 4249019
+            StateNormal.Background.Gradient2.GradientType = gtRadial
+            StateNormal.Background.Gradient2.Point1XPercent = 50
+            StateNormal.Background.Gradient2.Point1YPercent = 100
+            StateNormal.Background.Gradient2.Point2XPercent = 0
+            StateNormal.Background.Gradient2.Point2YPercent = 0
+            StateNormal.Background.Gradient1EndPercent = 1
+            StateNormal.Background.Style = bbsColor
+            StateNormal.Border.Color = 5126436
+            StateNormal.Border.LightColor = clNone
+            StateNormal.Border.Style = bboSolid
+            StateNormal.FontEx.Color = clWhite
+            StateNormal.FontEx.FontQuality = fqFineAntialiasing
+            StateNormal.FontEx.Height = 14
+            StateNormal.FontEx.Name = 'Inter'
+            StateNormal.FontEx.Shadow = False
+            StateNormal.FontEx.ShadowColor = clNone
+            StateNormal.FontEx.ShadowColorOpacity = 0
+            StateNormal.FontEx.ShadowRadius = 2
+            StateNormal.FontEx.ShadowOffsetX = 1
+            StateNormal.FontEx.ShadowOffsetY = 1
+            StateNormal.FontEx.Style = []
+            StateNormal.FontEx.TextAlignment = bcaLeftCenter
+            BorderSpacing.InnerBorder = 1
+            Caption = 'Selecionar Produtos'
+            Color = clNone
+            DropDownWidth = 16
+            DropDownArrowSize = 8
+            GlobalOpacity = 255
+            Glyph.Data = {
+              36040000424D3604000000000000360000002800000010000000100000000100
+              2000000000000004000064000000640000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000000000000000000000000000FFFF
+              FF7DFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFF
+              FFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAAFFFFFF7C0000000000000000FFFF
+              FFA3000000000000000000000000000000000000000000000000FFFFFF01FFFF
+              FF22FFFFFF22FFFFFF22FFFFFF22FFFFFF04FFFFFFA30000000000000000FFFF
+              FFA3000000000000000000000000000000000000000000000000FFFFFF05FFFF
+              FF96FFFFFF90FFFFFF8DFFFFFF98FFFFFF10FFFFFFA30000000000000000FFFF
+              FFA300000000000000000000000000000000000000000000000000000000FFFF
+              FF66FFFFFF3DFFFFFF29FFFFFF7B00000000FFFFFFA30000000000000000FFFF
+              FFA300000000000000000000000000000000000000000000000000000000FFFF
+              FF90FFFFFF68FFFFFF54FFFFFFA3FFFFFF01FFFFFFA30000000000000000FFFF
+              FFA300000000000000000000000000000000000000000000000000000000FFFF
+              FF020000000000000000FFFFFF0200000000FFFFFFA30000000000000000FFFF
+              FFA3000000000000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000FFFFFFA30000000000000000FFFF
+              FFA3000000000000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000FFFFFFA30000000000000000FFFF
+              FFA300000000000000000000000000000000FFFFFF37FFFFFF66FFFFFF66FFFF
+              FF3600000000000000000000000000000000FFFFFFA30000000000000000FFFF
+              FFA300000000000000000000000000000000FFFFFFC1FFFFFFBBFFFFFFBBFFFF
+              FFC100000000000000000000000000000000FFFFFFA30000000000000000FFFF
+              FFA300000000000000000000000000000000FFFFFF13FFFFFF33FFFFFF33FFFF
+              FF1300000000000000000000000000000000FFFFFFA30000000000000000FFFF
+              FFADFFFFFF88FFFFFF88FFFFFF88FFFFFF88FFFFFF88FFFFFF88FFFFFF88FFFF
+              FF88FFFFFF88FFFFFF88FFFFFF88FFFFFF88FFFFFFAD0000000000000000FFFF
+              FF2EFFFFFFC5FFFFFF42FFFFFF22FFFFFF22FFFFFF22FFFFFF69FFFFFF69FFFF
+              FF22FFFFFF22FFFFFF22FFFFFF42FFFFFFC6FFFFFF2E00000000000000000000
+              0000FFFFFF16FFFFFFA0FFFFFFAAFFFFFFAAFFFFFFAAFFFFFFAFFFFFFFAFFFFF
+              FFAAFFFFFFAAFFFFFFAAFFFFFFA0FFFFFF160000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000
+            }
+            GlyphAlignment = bcaLeftCenter
+            OnClick = btnSelecionarProdutosClick
+            ParentColor = False
+            Rounding.RoundX = 5
+            Rounding.RoundY = 5
+            RoundingDropDown.RoundX = 1
+            RoundingDropDown.RoundY = 1
+            TextApplyGlobalOpacity = False
+            ImageIndex = 6
+            MemoryUsage = bmuHigh
+          end
+          object lbProdutos: TDBLookupListBox[11]
+            Left = 16
+            Height = 88
+            Top = 120
+            Width = 184
+            DataField = 'orcamentoid'
+            DataSource = dsCadModelo
+            KeyField = 'orcamentoid'
+            ListField = 'produtodesc'
+            ListFieldIndex = 0
+            ListSource = dsOrcItem
+            LookupCache = False
+            TabOrder = 5
+          end
+          object lblProdutos: TLabel[12]
+            Left = 16
+            Height = 15
+            Top = 104
+            Width = 48
+            Caption = 'Produtos'
+            ParentColor = False
+          end
+        end
+      end
+    end
   end
   inherited qryCad: TZQuery
+    Active = True
     SQL.Strings = (
       'select * from orcamento'
     )
+  end
+  object qrySelectClientes: TZQuery[5]
+    Connection = dmF.ZConnection1
+    SQL.Strings = (
+      'select clienteid, nome_cliente from cliente'
+    )
+    Params = <>
+    Left = 656
+    Top = 312
+  end
+  object dsClientes: TDataSource[6]
+    DataSet = qrySelectClientes
+    Left = 720
+    Top = 312
+  end
+  object dsOrcItem: TDataSource[7]
+    DataSet = qryOrcItem
+    Left = 720
+    Top = 392
+  end
+  object qryOrcItem: TZQuery[8]
+    Connection = dmF.ZConnection1
+    Active = True
+    SQL.Strings = (
+      'select * from orcamento_item'
+    )
+    Params = <>
+    Left = 656
+    Top = 392
   end
 end

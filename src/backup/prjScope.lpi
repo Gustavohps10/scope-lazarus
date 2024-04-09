@@ -39,6 +39,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="MemDSLaz"/>
+      </Item>
+      <Item>
         <PackageName Value="DateTimeCtrls"/>
       </Item>
       <Item>
@@ -120,6 +123,28 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadUsuario"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\uselecionarprodutos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SelecionarProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSelecionarProdutos"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\uverprodutos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="VerProdutosF"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uVerProdutos"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\framelistaproduto.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FrameProduto"/>
+        <ResourceBaseClass Value="Frame"/>
+        <UnitName Value="frameListaProduto"/>
       </Unit>
     </Units>
   </ProjectOptions>
