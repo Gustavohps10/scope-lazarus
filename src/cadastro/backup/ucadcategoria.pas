@@ -12,8 +12,8 @@ type
   { TCadCategoriaF }
 
   TCadCategoriaF = class(TCadModeloF)
-    DBEdit1: TDBEdit;
-    DBEdit2: TDBEdit;
+    edtCatId: TDBEdit;
+    edtCatDesc: TDBEdit;
     lblID: TLabel;
     lblDesc: TLabel;
     procedure qryCadNewRecord(DataSet: TDataSet);

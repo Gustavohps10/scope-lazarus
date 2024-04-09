@@ -1,6 +1,6 @@
 inherited CadClienteF: TCadClienteF
-  Left = 292
-  Top = 179
+  Left = 350
+  Top = 131
   Caption = 'Clientes'
   inherited pgcPrincipal: TPageControl
     inherited tbPesquisa: TTabSheet
@@ -28,9 +28,13 @@ inherited CadClienteF: TCadClienteF
           end>
       end
     end
+    inherited tbCadastro: TTabSheet
+      inherited pnlFormulario: TPanel
+        Anchors = []
+      end
+    end
   end
   inherited qryCad: TZQuery
-    Active = True
     SQL.Strings = (
       'select * from cliente'
     )

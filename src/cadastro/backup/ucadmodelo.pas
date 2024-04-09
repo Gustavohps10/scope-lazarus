@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ExtCtrls, ComCtrls,
-  DBGrids, StdCtrls, ZDataset, BCMaterialDesignButton, BCButton, BGRAImageList;
+  DBGrids, StdCtrls, ZDataset, BCMaterialDesignButton, BCButton, BGRAImageList,
+  BCPanel;
 
 type
 
@@ -24,11 +25,15 @@ type
     dsCadModelo: TDataSource;
     DBGrid1: TDBGrid;
     edtPesquisar: TEdit;
+    pnlTopoFormulario: TPanel;
+    pnlFormulario: TPanel;
     pnlBordaPesquisa: TPanel;
+    pnlConteudoFormulario: TBCPanel;
     pnlRodape: TPanel;
     pnlCabecalhoConteudo: TPanel;
     pgcPrincipal: TPageControl;
     pnlCabecalho: TPanel;
+    pnlRodapeFormulario: TPanel;
     tbPesquisa: TTabSheet;
     tbCadastro: TTabSheet;
     qryCad: TZQuery;
@@ -42,7 +47,6 @@ type
     procedure btnNovoClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
-    procedure FormShow(Sender: TObject);
     procedure qryCadAfterCancel(DataSet: TDataSet);
     procedure qryCadAfterDelete(DataSet: TDataSet);
     procedure qryCadAfterInsert(DataSet: TDataSet);
@@ -72,6 +76,7 @@ procedure TCadModeloF.qryCadAfterCancel(DataSet: TDataSet);
 begin
   btnEditar.Enabled:=true;
   btnGravar.Enabled:=false;
+  pnlConteudoFormulario.Enabled:=false;
 end;
 
 procedure TCadModeloF.qryCadAfterDelete(DataSet: TDataSet);
@@ -117,10 +122,12 @@ end;
 procedure TCadModeloF.btnEditarClick(Sender: TObject);
 begin
   qryCad.Edit;
+  pnlConteudoFormulario.Enabled:=true;
 end;
 
 procedure TCadModeloF.btnExcluirClick(Sender: TObject);
 begin
+  pnlConteudoFormulario.Enabled:=false;
   qryCad.Delete;
 end;
 
@@ -132,11 +139,13 @@ end;
 procedure TCadModeloF.btnGravarClick(Sender: TObject);
 begin
   qryCad.Post;
+  pnlConteudoFormulario.Enabled:=false;
 end;
 
 procedure TCadModeloF.btnNovoClick(Sender: TObject);
 begin
   qryCad.Insert;
+  pnlConteudoFormulario.Enabled:=true;
 end;
 
 procedure TCadModeloF.DBGrid1DblClick(Sender: TObject);

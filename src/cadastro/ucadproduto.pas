@@ -8,7 +8,8 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
   EditBtn, ButtonPanel, DBDateTimePicker, BCComboBox, BCLabel, BCListBox,
   BCMDButton, BCMaterialEdit, BGRACustomDrawn, BCMaterialFloatSpinEdit,
-  BCMaterialSpinEdit, BCCheckComboBox, ZDataset, uCadModelo, DB, ZAbstractDataset;
+  BCMaterialSpinEdit, BCCheckComboBox, BCPanel, ZDataset, uCadModelo, DB,
+  ZAbstractDataset;
 
 type
 
@@ -20,18 +21,17 @@ type
     dtpDataCadastro: TDBDateTimePicker;
     edtDesc: TDBEdit;
     edtObs: TDBEdit;
-    edtValorVenda: TDBEdit;
     edtProdutoId: TDBEdit;
-    lblValorVenda: TLabel;
+    edtValorVenda: TDBEdit;
+    lblCategoria: TLabel;
     lblDataCad: TLabel;
     lblDesc: TLabel;
     lblObs: TLabel;
-    lblStatus: TLabel;
     lblProdutoId: TLabel;
-    lblCategoria: TLabel;
+    lblStatus: TLabel;
+    lblValorVenda: TLabel;
     qrySelectCategorias: TZQuery;
     procedure FormCreate(Sender: TObject);
-    procedure FormShow(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
     procedure qryCadBeforePost(DataSet: TDataSet);
   private
@@ -52,6 +52,10 @@ implementation
 procedure TCadProdutoF.dsCadModeloDataChange(Sender: TObject; Field: TField);
 var i: integer = 1;
 begin
+   if qryCad.FieldByName('status_produto').AsString = 'ATIVO'
+   then cbbStatus.ItemIndex := 1
+   else cbbStatus.ItemIndex := 2;
+
    {Muda o Combobox de Categoria de acordo com o produto selecionado}
      with qrySelectCategorias do
      begin
@@ -72,23 +76,23 @@ begin
 end;
 
 procedure TCadProdutoF.qryCadBeforePost(DataSet: TDataSet);
+var statusProduto: string;
 begin
-     {Passa o ID do Combobox Categoria para o Field do Dataset}
+   if cbbStatus.ItemIndex = 1
+   then statusProduto:='ATIVO'
+   else statusProduto:='INATIVO';
+
+   {Passa o CategoriaProdutoID do cbbCategoria para o Field do Dataset}
    qryCad.FieldByName('categoriaprodutoid').AsInteger := PtrUInt(cbbCategoria.Items.Objects[cbbCategoria.ItemIndex]);
-end;
-
-procedure TCadProdutoF.FormShow(Sender: TObject);
-begin
-
+   qryCad.FieldByName('status_produto').AsString := statusProduto;
 end;
 
 procedure TCadProdutoF.FormCreate(Sender: TObject);
 begin
+   {Lista todas categorias no combobox}
    with qrySelectCategorias do
        begin
         Open;
-        {Lista todas categorias no combobox}
-        First;
         cbbCategoria.Clear;
         cbbCategoria.Items.Add('Selecionar');
         while not EOF do

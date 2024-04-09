@@ -16,7 +16,7 @@ object dmF: TdmF
     Port = 5432
     Database = 'prjaccion'
     User = 'postgres'
-    Password = 'guga2004'
+    Password = '1234'
     Protocol = 'postgresql'
     Left = 32
     Top = 56
