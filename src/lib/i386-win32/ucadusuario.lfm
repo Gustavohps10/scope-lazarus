@@ -1,7 +1,10 @@
 inherited CadUsuarioF: TCadUsuarioF
-  Left = 421
-  Top = 160
+  Left = 459
+  Top = 232
   Caption = 'Usuários'
+  inherited pnlCabecalho: TPanel
+    Caption = 'Usuários'
+  end
   inherited pgcPrincipal: TPageControl
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
@@ -31,11 +34,94 @@ inherited CadUsuarioF: TCadUsuarioF
           end>
       end
     end
+    inherited tbCadastro: TTabSheet
+      inherited pnlFormulario: TPanel
+        inherited pnlTopoFormulario: TPanel
+          Caption = 'Cadastro de Usuários'
+        end
+        inherited pnlConteudoFormulario: TBCPanel
+          object lblUsuarioId: TLabel[0]
+            Left = 16
+            Height = 15
+            Top = 8
+            Width = 11
+            Caption = 'ID'
+            ParentColor = False
+          end
+          object edtUsuarioId: TDBEdit[1]
+            Left = 16
+            Height = 23
+            Top = 24
+            Width = 184
+            DataField = 'id'
+            DataSource = dsCadModelo
+            Alignment = taRightJustify
+            MaxLength = 0
+            TabOrder = 0
+          end
+          object edtUsuarioId1: TDBEdit[2]
+            Left = 208
+            Height = 23
+            Top = 24
+            Width = 184
+            DataField = 'nome_completo'
+            DataSource = dsCadModelo
+            MaxLength = 60
+            TabOrder = 1
+          end
+          object lblNomeCompleto: TLabel[3]
+            Left = 208
+            Height = 15
+            Top = 8
+            Width = 89
+            Caption = 'Nome Completo'
+            ParentColor = False
+          end
+          object edtUsuarioId2: TDBEdit[4]
+            Left = 16
+            Height = 23
+            Top = 72
+            Width = 184
+            DataField = 'usuario'
+            DataSource = dsCadModelo
+            MaxLength = 30
+            TabOrder = 2
+          end
+          object lblUsuario: TLabel[5]
+            Left = 16
+            Height = 15
+            Top = 56
+            Width = 40
+            Caption = 'Usuario'
+            ParentColor = False
+          end
+          object edtUsuarioId3: TDBEdit[6]
+            Left = 208
+            Height = 23
+            Top = 72
+            Width = 184
+            DataField = 'senha'
+            DataSource = dsCadModelo
+            MaxLength = 50
+            TabOrder = 3
+          end
+          object lblSenha: TLabel[7]
+            Left = 208
+            Height = 15
+            Top = 56
+            Width = 32
+            Caption = 'Senha'
+            ParentColor = False
+          end
+        end
+      end
+    end
   end
   inherited qryCad: TZQuery
+    OnNewRecord = qryCadNewRecord
     Active = True
     SQL.Strings = (
-      'select * from usuarios'
+      'select * from usuarios order by id'
     )
   end
 end
