@@ -7,7 +7,11 @@ object CadModeloF: TCadModeloF
   ClientHeight = 530
   ClientWidth = 790
   Color = 16514043
-  Font.Name = 'Segoe UI'
+  Font.CharSet = ANSI_CHARSET
+  Font.Height = -13
+  Font.Name = 'Inter'
+  Font.Pitch = fpVariable
+  Font.Quality = fqDraft
   OnClose = FormClose
   Position = poMainFormCenter
   LCLVersion = '3.2.0.0'
@@ -30,10 +34,11 @@ object CadModeloF: TCadModeloF
     Height = 466
     Top = 64
     Width = 790
-    ActivePage = tbCadastro
+    ActivePage = tbPesquisa
     Align = alClient
+    Font.Name = 'Inter'
     ParentFont = False
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 1
     object tbPesquisa: TTabSheet
       Caption = 'Pesquisa'
@@ -183,6 +188,8 @@ object CadModeloF: TCadModeloF
         Color = clWindow
         Columns = <>
         DataSource = dsCadModelo
+        Font.Name = 'Inter'
+        ParentFont = False
         ReadOnly = True
         TabOrder = 1
         OnDblClick = DBGrid1DblClick
@@ -224,9 +231,9 @@ object CadModeloF: TCadModeloF
           StateClicked.Background.Style = bbsColor
           StateClicked.Border.Style = bboNone
           StateClicked.FontEx.Color = clWhite
-          StateClicked.FontEx.FontQuality = fqSystemClearType
+          StateClicked.FontEx.FontQuality = fqFineAntialiasing
           StateClicked.FontEx.Height = 14
-          StateClicked.FontEx.Name = 'Segoe UI'
+          StateClicked.FontEx.Name = 'Inter'
           StateClicked.FontEx.Shadow = False
           StateClicked.FontEx.ShadowColor = clNone
           StateClicked.FontEx.ShadowRadius = 2
@@ -253,9 +260,9 @@ object CadModeloF: TCadModeloF
           StateHover.Background.Style = bbsColor
           StateHover.Border.Style = bboNone
           StateHover.FontEx.Color = clWhite
-          StateHover.FontEx.FontQuality = fqSystemClearType
+          StateHover.FontEx.FontQuality = fqFineAntialiasing
           StateHover.FontEx.Height = 14
-          StateHover.FontEx.Name = 'Segoe UI'
+          StateHover.FontEx.Name = 'Inter'
           StateHover.FontEx.Shadow = False
           StateHover.FontEx.ShadowColor = clNone
           StateHover.FontEx.ShadowRadius = 2
@@ -282,9 +289,9 @@ object CadModeloF: TCadModeloF
           StateNormal.Background.Style = bbsColor
           StateNormal.Border.Style = bboNone
           StateNormal.FontEx.Color = clWhite
-          StateNormal.FontEx.FontQuality = fqSystemClearType
+          StateNormal.FontEx.FontQuality = fqFineAntialiasing
           StateNormal.FontEx.Height = 14
-          StateNormal.FontEx.Name = 'Segoe UI'
+          StateNormal.FontEx.Name = 'Inter'
           StateNormal.FontEx.Shadow = False
           StateNormal.FontEx.ShadowColor = clNone
           StateNormal.FontEx.ShadowColorOpacity = 0
@@ -336,9 +343,9 @@ object CadModeloF: TCadModeloF
           StateClicked.Background.Style = bbsColor
           StateClicked.Border.Style = bboNone
           StateClicked.FontEx.Color = clWhite
-          StateClicked.FontEx.FontQuality = fqSystemClearType
+          StateClicked.FontEx.FontQuality = fqFineAntialiasing
           StateClicked.FontEx.Height = 14
-          StateClicked.FontEx.Name = 'Segoe UI'
+          StateClicked.FontEx.Name = 'Inter'
           StateClicked.FontEx.Shadow = False
           StateClicked.FontEx.ShadowRadius = 2
           StateClicked.FontEx.ShadowOffsetX = 1
@@ -364,9 +371,9 @@ object CadModeloF: TCadModeloF
           StateHover.Background.Style = bbsColor
           StateHover.Border.Style = bboNone
           StateHover.FontEx.Color = clWhite
-          StateHover.FontEx.FontQuality = fqSystemClearType
+          StateHover.FontEx.FontQuality = fqFineAntialiasing
           StateHover.FontEx.Height = 14
-          StateHover.FontEx.Name = 'Segoe UI'
+          StateHover.FontEx.Name = 'Inter'
           StateHover.FontEx.Shadow = False
           StateHover.FontEx.ShadowRadius = 2
           StateHover.FontEx.ShadowOffsetX = 1
@@ -392,9 +399,9 @@ object CadModeloF: TCadModeloF
           StateNormal.Background.Style = bbsColor
           StateNormal.Border.Style = bboNone
           StateNormal.FontEx.Color = clWhite
-          StateNormal.FontEx.FontQuality = fqSystemClearType
+          StateNormal.FontEx.FontQuality = fqFineAntialiasing
           StateNormal.FontEx.Height = 14
-          StateNormal.FontEx.Name = 'Segoe UI'
+          StateNormal.FontEx.Name = 'Inter'
           StateNormal.FontEx.Shadow = False
           StateNormal.FontEx.ShadowColor = clNone
           StateNormal.FontEx.ShadowColorOpacity = 0
@@ -449,6 +456,7 @@ object CadModeloF: TCadModeloF
           Color = clWhite
           Font.Color = 4605510
           Font.Height = -19
+          Font.Name = 'Inter'
           Font.Style = [fsBold]
           ParentBackground = False
           ParentColor = False
@@ -517,7 +525,7 @@ object CadModeloF: TCadModeloF
             Left = 0
             Height = 33
             Top = 48
-            Width = 80
+            Width = 88
             Anchors = [akLeft, akBottom]
             StateClicked.Background.Color = 2600856
             StateClicked.Background.Gradient1.StartColor = 8404992
@@ -538,9 +546,9 @@ object CadModeloF: TCadModeloF
             StateClicked.Background.Style = bbsColor
             StateClicked.Border.Style = bboNone
             StateClicked.FontEx.Color = 16770790
-            StateClicked.FontEx.FontQuality = fqSystemClearType
+            StateClicked.FontEx.FontQuality = fqFineAntialiasing
             StateClicked.FontEx.Height = 14
-            StateClicked.FontEx.Name = 'Segoe UI'
+            StateClicked.FontEx.Name = 'Inter'
             StateClicked.FontEx.Shadow = False
             StateClicked.FontEx.ShadowRadius = 2
             StateClicked.FontEx.ShadowOffsetX = 1
@@ -566,9 +574,9 @@ object CadModeloF: TCadModeloF
             StateHover.Background.Style = bbsColor
             StateHover.Border.Style = bboNone
             StateHover.FontEx.Color = clWhite
-            StateHover.FontEx.FontQuality = fqSystemClearType
+            StateHover.FontEx.FontQuality = fqFineAntialiasing
             StateHover.FontEx.Height = 14
-            StateHover.FontEx.Name = 'Segoe UI'
+            StateHover.FontEx.Name = 'Inter'
             StateHover.FontEx.Shadow = False
             StateHover.FontEx.ShadowRadius = 2
             StateHover.FontEx.ShadowOffsetX = 1
@@ -594,9 +602,9 @@ object CadModeloF: TCadModeloF
             StateNormal.Background.Style = bbsColor
             StateNormal.Border.Style = bboNone
             StateNormal.FontEx.Color = clWhite
-            StateNormal.FontEx.FontQuality = fqSystemClearType
+            StateNormal.FontEx.FontQuality = fqFineAntialiasing
             StateNormal.FontEx.Height = 14
-            StateNormal.FontEx.Name = 'Segoe UI'
+            StateNormal.FontEx.Name = 'Inter'
             StateNormal.FontEx.Shadow = False
             StateNormal.FontEx.ShadowColor = clNone
             StateNormal.FontEx.ShadowColorOpacity = 0
@@ -624,7 +632,7 @@ object CadModeloF: TCadModeloF
           end
           object btnGravar: TBCButton
             Cursor = crHandPoint
-            Left = 88
+            Left = 96
             Height = 33
             Top = 48
             Width = 88
@@ -648,9 +656,9 @@ object CadModeloF: TCadModeloF
             StateClicked.Background.Style = bbsColor
             StateClicked.Border.Style = bboNone
             StateClicked.FontEx.Color = 16770790
-            StateClicked.FontEx.FontQuality = fqSystemClearType
+            StateClicked.FontEx.FontQuality = fqFineAntialiasing
             StateClicked.FontEx.Height = 14
-            StateClicked.FontEx.Name = 'Segoe UI'
+            StateClicked.FontEx.Name = 'Inter'
             StateClicked.FontEx.Shadow = False
             StateClicked.FontEx.ShadowRadius = 2
             StateClicked.FontEx.ShadowOffsetX = 1
@@ -676,9 +684,9 @@ object CadModeloF: TCadModeloF
             StateHover.Background.Style = bbsColor
             StateHover.Border.Style = bboNone
             StateHover.FontEx.Color = clWhite
-            StateHover.FontEx.FontQuality = fqSystemClearType
+            StateHover.FontEx.FontQuality = fqFineAntialiasing
             StateHover.FontEx.Height = 14
-            StateHover.FontEx.Name = 'Segoe UI'
+            StateHover.FontEx.Name = 'Inter'
             StateHover.FontEx.Shadow = False
             StateHover.FontEx.ShadowRadius = 2
             StateHover.FontEx.ShadowOffsetX = 1
@@ -704,9 +712,9 @@ object CadModeloF: TCadModeloF
             StateNormal.Background.Style = bbsColor
             StateNormal.Border.Style = bboNone
             StateNormal.FontEx.Color = clWhite
-            StateNormal.FontEx.FontQuality = fqSystemClearType
+            StateNormal.FontEx.FontQuality = fqFineAntialiasing
             StateNormal.FontEx.Height = 14
-            StateNormal.FontEx.Name = 'Segoe UI'
+            StateNormal.FontEx.Name = 'Inter'
             StateNormal.FontEx.Shadow = False
             StateNormal.FontEx.ShadowColor = clNone
             StateNormal.FontEx.ShadowColorOpacity = 0
@@ -735,7 +743,7 @@ object CadModeloF: TCadModeloF
           end
           object btnCancelar: TBCButton
             Cursor = crHandPoint
-            Left = 184
+            Left = 192
             Height = 33
             Top = 48
             Width = 96
@@ -759,9 +767,9 @@ object CadModeloF: TCadModeloF
             StateClicked.Background.Style = bbsColor
             StateClicked.Border.Style = bboNone
             StateClicked.FontEx.Color = clWhite
-            StateClicked.FontEx.FontQuality = fqSystemClearType
+            StateClicked.FontEx.FontQuality = fqFineAntialiasing
             StateClicked.FontEx.Height = 14
-            StateClicked.FontEx.Name = 'Segoe UI'
+            StateClicked.FontEx.Name = 'Inter'
             StateClicked.FontEx.Shadow = False
             StateClicked.FontEx.ShadowRadius = 2
             StateClicked.FontEx.ShadowOffsetX = 1
@@ -787,9 +795,9 @@ object CadModeloF: TCadModeloF
             StateHover.Background.Style = bbsColor
             StateHover.Border.Style = bboNone
             StateHover.FontEx.Color = clWhite
-            StateHover.FontEx.FontQuality = fqSystemClearType
+            StateHover.FontEx.FontQuality = fqFineAntialiasing
             StateHover.FontEx.Height = 14
-            StateHover.FontEx.Name = 'Segoe UI'
+            StateHover.FontEx.Name = 'Inter'
             StateHover.FontEx.Shadow = False
             StateHover.FontEx.ShadowRadius = 2
             StateHover.FontEx.ShadowOffsetX = 1
@@ -817,9 +825,9 @@ object CadModeloF: TCadModeloF
             StateNormal.Border.LightColor = clNone
             StateNormal.Border.Style = bboSolid
             StateNormal.FontEx.Color = 5126436
-            StateNormal.FontEx.FontQuality = fqSystemClearType
+            StateNormal.FontEx.FontQuality = fqFineAntialiasing
             StateNormal.FontEx.Height = 14
-            StateNormal.FontEx.Name = 'Segoe UI'
+            StateNormal.FontEx.Name = 'Inter'
             StateNormal.FontEx.Shadow = False
             StateNormal.FontEx.ShadowColor = clNone
             StateNormal.FontEx.ShadowColorOpacity = 0

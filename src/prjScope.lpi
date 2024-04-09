@@ -15,8 +15,16 @@
         <TextDesc Value="Sistema de Controle de Orçamento para Empresas"/>
       </XPManifest>
       <Icon Value="0"/>
-      <Resources Count="1">
-        <Resource_0 FileName="C:\Users\Gustavo\Downloads\roboto\Roboto-Regular.ttf" Type="RCDATA" ResourceName="ROBOTO-REGULAR"/>
+      <Resources Count="9">
+        <Resource_0 FileName="Inter-font\Inter-Black.ttf" Type="RCDATA" ResourceName="INTER-BLACK"/>
+        <Resource_1 FileName="Inter-font\Inter-Bold.ttf" Type="RCDATA" ResourceName="INTER-BOLD"/>
+        <Resource_2 FileName="Inter-font\Inter-ExtraBold.ttf" Type="RCDATA" ResourceName="INTER-EXTRABOLD"/>
+        <Resource_3 FileName="Inter-font\Inter-ExtraLight.ttf" Type="RCDATA" ResourceName="INTER-EXTRALIGHT"/>
+        <Resource_4 FileName="Inter-font\Inter-Light.ttf" Type="RCDATA" ResourceName="INTER-LIGHT"/>
+        <Resource_5 FileName="Inter-font\Inter-Medium.ttf" Type="RCDATA" ResourceName="INTER-MEDIUM"/>
+        <Resource_6 FileName="Inter-font\Inter-Regular.ttf" Type="RCDATA" ResourceName="INTER-REGULAR"/>
+        <Resource_7 FileName="Inter-font\Inter-SemiBold.ttf" Type="RCDATA" ResourceName="INTER-SEMIBOLD"/>
+        <Resource_8 FileName="Inter-font\Inter-Thin.ttf" Type="RCDATA" ResourceName="INTER-THIN"/>
       </Resources>
     </General>
     <BuildModes>

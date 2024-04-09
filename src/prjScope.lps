@@ -11,7 +11,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="11"/>
         <CursorPos Y="27"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="67"/>
       </Unit>
       <Unit>
         <Filename Value="uprincipal.pas"/>
@@ -23,7 +23,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="29"/>
         <CursorPos X="21" Y="55"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="67"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadmodelo.pas"/>
@@ -32,13 +32,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadModelo"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="34"/>
-        <CursorPos Y="141"/>
-        <UsageCount Value="66"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="122"/>
+        <CursorPos Y="138"/>
+        <UsageCount Value="67"/>
       </Unit>
       <Unit>
         <Filename Value="banco\dm.pas"/>
@@ -49,7 +46,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="28"/>
         <CursorPos X="16" Y="39"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="67"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcliente.pas"/>
@@ -60,7 +57,7 @@
         <UnitName Value="uCadCliente"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="67" Y="12"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="67"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcategoria.pas"/>
@@ -68,9 +65,9 @@
         <ComponentName Value="CadCategoriaF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
         <CursorPos X="21" Y="15"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="67"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadproduto.pas"/>
@@ -79,10 +76,13 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadProduto"/>
-        <TopLine Value="74"/>
-        <CursorPos X="69" Y="87"/>
-        <UsageCount Value="65"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="73"/>
+        <CursorPos X="34" Y="87"/>
+        <UsageCount Value="66"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadorcamento.pas"/>
@@ -93,7 +93,7 @@
         <UnitName Value="uCadOrcamento"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="13" Y="3"/>
-        <UsageCount Value="65"/>
+        <UsageCount Value="66"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadusuario.pas"/>
@@ -104,7 +104,7 @@
         <UnitName Value="uCadUsuario"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="34" Y="29"/>
-        <UsageCount Value="64"/>
+        <UsageCount Value="65"/>
       </Unit>
       <Unit>
         <Filename Value="uprincipal.lfm"/>
@@ -166,14 +166,10 @@
         <UsageCount Value="7"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="1">
+    <JumpHistory>
       <Position>
         <Filename Value="cadastro\ucadproduto.pas"/>
         <Caret Line="87" Column="69" TopLine="74"/>
-      </Position>
-      <Position>
-        <Filename Value="cadastro\ucadmodelo.pas"/>
-        <Caret Line="131" TopLine="128"/>
       </Position>
     </JumpHistory>
     <RunParams>

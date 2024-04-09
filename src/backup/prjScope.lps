@@ -32,12 +32,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadModelo"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="128"/>
-        <CursorPos Y="131"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="122"/>
+        <CursorPos Y="138"/>
         <UsageCount Value="66"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="banco\dm.pas"/>
@@ -67,9 +65,9 @@
         <ComponentName Value="CadCategoriaF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
         <CursorPos X="21" Y="15"/>
         <UsageCount Value="66"/>
+        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadproduto.pas"/>
@@ -78,8 +76,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadProduto"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="74"/>
-        <CursorPos X="69" Y="87"/>
+        <CursorPos X="67" Y="87"/>
         <UsageCount Value="65"/>
         <Loaded Value="True"/>
       </Unit>
