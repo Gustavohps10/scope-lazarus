@@ -1,7 +1,7 @@
 inherited CadOrcamentoF: TCadOrcamentoF
-  Left = 362
+  Left = 545
   Height = 556
-  Top = 97
+  Top = 213
   Caption = 'Orçamentos'
   ClientHeight = 556
   inherited pnlCabecalho: TPanel
@@ -49,24 +49,24 @@ inherited CadOrcamentoF: TCadOrcamentoF
     inherited tbCadastro: TTabSheet
       ClientHeight = 464
       inherited pnlFormulario: TPanel
-        Left = 168
+        Left = 80
         Height = 440
         Top = 8
-        Width = 428
+        Width = 616
         ClientHeight = 440
-        ClientWidth = 428
+        ClientWidth = 616
         inherited pnlTopoFormulario: TPanel
-          Width = 428
+          Width = 616
           Caption = 'Cadastro de Orçamentos'
         end
         inherited pnlConteudoFormulario: TBCPanel
           Height = 331
-          Width = 428
+          Width = 616
           object edtOrcId: TDBEdit[0]
             Left = 16
             Height = 23
             Top = 24
-            Width = 184
+            Width = 56
             DataField = 'orcamentoid'
             DataSource = dsCadModelo
             Alignment = taRightJustify
@@ -82,7 +82,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ParentColor = False
           end
           object lblCliente: TLabel[2]
-            Left = 226
+            Left = 104
             Height = 15
             Top = 8
             Width = 37
@@ -90,10 +90,10 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ParentColor = False
           end
           object cbbClientes: TDBLookupComboBox[3]
-            Left = 226
+            Left = 104
             Height = 23
             Top = 24
-            Width = 184
+            Width = 496
             DataField = 'clienteid'
             DataSource = dsCadModelo
             KeyField = 'clienteid'
@@ -115,7 +115,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Left = 16
             Height = 23
             Top = 72
-            Width = 184
+            Width = 264
             DataField = 'dt_orcamento'
             DataSource = dsCadModelo
             ReadOnly = False
@@ -136,7 +136,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             MonthNames = 'Long'
           end
           object lblDataValidade: TLabel[6]
-            Left = 226
+            Left = 328
             Height = 15
             Top = 56
             Width = 87
@@ -144,10 +144,10 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ParentColor = False
           end
           object dtpDataValidade: TDBDateTimePicker[7]
-            Left = 226
+            Left = 328
             Height = 23
             Top = 72
-            Width = 184
+            Width = 272
             DataField = 'dt_validade_orcamento'
             DataSource = dsCadModelo
             ReadOnly = False
@@ -168,7 +168,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             MonthNames = 'Long'
           end
           object edtValorTotal: TDBEdit[8]
-            Left = 298
+            Left = 488
             Height = 32
             Top = 287
             Width = 112
@@ -183,7 +183,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             TabOrder = 4
           end
           object lblValorTotal: TLabel[9]
-            Left = 296
+            Left = 488
             Height = 21
             Top = 264
             Width = 72
@@ -352,18 +352,28 @@ inherited CadOrcamentoF: TCadOrcamentoF
           object dbgProdutos: TDBGrid[12]
             Left = 16
             Height = 135
-            Top = 121
-            Width = 394
+            Top = 120
+            Width = 584
             Color = clWindow
             Columns = <            
               item
-                Title.Caption = 'ID'
+                Title.Caption = 'Item'
                 Width = 50
+                FieldName = 'orcamentoitemid'
+              end            
+              item
+                Title.Caption = 'Orçamento ID'
+                Width = 80
+                FieldName = 'orcamentoid'
+              end            
+              item
+                Title.Caption = 'Produto ID'
+                Width = 70
                 FieldName = 'produtoid'
               end            
               item
-                Title.Caption = 'Descrição'
-                Width = 140
+                Title.Caption = 'Prod. Descrição'
+                Width = 150
                 FieldName = 'produtodesc'
               end            
               item
@@ -372,26 +382,188 @@ inherited CadOrcamentoF: TCadOrcamentoF
                 FieldName = 'qt_produto'
               end            
               item
-                Title.Caption = 'Valor Unt'
-                Width = 60
+                Title.Caption = 'Vl. Unt.'
+                Width = 70
                 FieldName = 'vl_unitario'
               end            
               item
-                Title.Caption = 'Valor Total'
-                Width = 60
+                Title.Caption = 'Vl Total'
+                Width = 80
                 FieldName = 'vl_total'
               end>
-            DataSource = dsOrcItem
+            DataSource = dmF.dsOrcItem
             ReadOnly = True
             TabOrder = 5
+          end
+          object btnExcluir1: TBCButton[13]
+            Cursor = crHandPoint
+            Left = 208
+            Height = 32
+            Top = 287
+            Width = 96
+            Anchors = [akRight, akBottom]
+            StateClicked.Background.Color = 1446607
+            StateClicked.Background.Gradient1.StartColor = 8404992
+            StateClicked.Background.Gradient1.EndColor = 4194304
+            StateClicked.Background.Gradient1.GradientType = gtRadial
+            StateClicked.Background.Gradient1.Point1XPercent = 50
+            StateClicked.Background.Gradient1.Point1YPercent = 100
+            StateClicked.Background.Gradient1.Point2XPercent = 0
+            StateClicked.Background.Gradient1.Point2YPercent = 0
+            StateClicked.Background.Gradient2.StartColor = clWhite
+            StateClicked.Background.Gradient2.EndColor = clBlack
+            StateClicked.Background.Gradient2.GradientType = gtLinear
+            StateClicked.Background.Gradient2.Point1XPercent = 0
+            StateClicked.Background.Gradient2.Point1YPercent = 0
+            StateClicked.Background.Gradient2.Point2XPercent = 0
+            StateClicked.Background.Gradient2.Point2YPercent = 100
+            StateClicked.Background.Gradient1EndPercent = 100
+            StateClicked.Background.Style = bbsColor
+            StateClicked.Border.Style = bboNone
+            StateClicked.FontEx.Color = clWhite
+            StateClicked.FontEx.FontQuality = fqFineAntialiasing
+            StateClicked.FontEx.Height = 14
+            StateClicked.FontEx.Name = 'Inter'
+            StateClicked.FontEx.Shadow = False
+            StateClicked.FontEx.ShadowRadius = 2
+            StateClicked.FontEx.ShadowOffsetX = 1
+            StateClicked.FontEx.ShadowOffsetY = 1
+            StateClicked.FontEx.Style = []
+            StateClicked.FontEx.TextAlignment = bcaLeftCenter
+            StateHover.Background.Color = 2104299
+            StateHover.Background.Gradient1.StartColor = 16744448
+            StateHover.Background.Gradient1.EndColor = 8404992
+            StateHover.Background.Gradient1.GradientType = gtRadial
+            StateHover.Background.Gradient1.Point1XPercent = 50
+            StateHover.Background.Gradient1.Point1YPercent = 100
+            StateHover.Background.Gradient1.Point2XPercent = 0
+            StateHover.Background.Gradient1.Point2YPercent = 0
+            StateHover.Background.Gradient2.StartColor = clWhite
+            StateHover.Background.Gradient2.EndColor = clBlack
+            StateHover.Background.Gradient2.GradientType = gtLinear
+            StateHover.Background.Gradient2.Point1XPercent = 0
+            StateHover.Background.Gradient2.Point1YPercent = 0
+            StateHover.Background.Gradient2.Point2XPercent = 0
+            StateHover.Background.Gradient2.Point2YPercent = 100
+            StateHover.Background.Gradient1EndPercent = 100
+            StateHover.Background.Style = bbsColor
+            StateHover.Border.Style = bboNone
+            StateHover.FontEx.Color = clWhite
+            StateHover.FontEx.FontQuality = fqFineAntialiasing
+            StateHover.FontEx.Height = 14
+            StateHover.FontEx.Name = 'Inter'
+            StateHover.FontEx.Shadow = False
+            StateHover.FontEx.ShadowRadius = 2
+            StateHover.FontEx.ShadowOffsetX = 1
+            StateHover.FontEx.ShadowOffsetY = 1
+            StateHover.FontEx.Style = []
+            StateHover.FontEx.TextAlignment = bcaLeftCenter
+            StateNormal.Background.Color = 4670447
+            StateNormal.Background.Gradient1.StartColor = 4249019
+            StateNormal.Background.Gradient1.EndColor = 4249019
+            StateNormal.Background.Gradient1.GradientType = gtAngular
+            StateNormal.Background.Gradient1.Point1XPercent = 0
+            StateNormal.Background.Gradient1.Point1YPercent = 0
+            StateNormal.Background.Gradient1.Point2XPercent = 0
+            StateNormal.Background.Gradient1.Point2YPercent = 100
+            StateNormal.Background.Gradient2.StartColor = 4249019
+            StateNormal.Background.Gradient2.EndColor = 4249019
+            StateNormal.Background.Gradient2.GradientType = gtRadial
+            StateNormal.Background.Gradient2.Point1XPercent = 50
+            StateNormal.Background.Gradient2.Point1YPercent = 100
+            StateNormal.Background.Gradient2.Point2XPercent = 0
+            StateNormal.Background.Gradient2.Point2YPercent = 0
+            StateNormal.Background.Gradient1EndPercent = 1
+            StateNormal.Background.Style = bbsColor
+            StateNormal.Border.Style = bboNone
+            StateNormal.FontEx.Color = clWhite
+            StateNormal.FontEx.FontQuality = fqFineAntialiasing
+            StateNormal.FontEx.Height = 14
+            StateNormal.FontEx.Name = 'Inter'
+            StateNormal.FontEx.Shadow = False
+            StateNormal.FontEx.ShadowColor = clNone
+            StateNormal.FontEx.ShadowColorOpacity = 0
+            StateNormal.FontEx.ShadowRadius = 2
+            StateNormal.FontEx.ShadowOffsetX = 1
+            StateNormal.FontEx.ShadowOffsetY = 1
+            StateNormal.FontEx.Style = []
+            StateNormal.FontEx.TextAlignment = bcaLeftCenter
+            Caption = 'Remover '
+            Color = clNone
+            DropDownWidth = 16
+            DropDownArrowSize = 8
+            GlobalOpacity = 255
+            Glyph.Data = {
+              76060000424D7606000000000000360000002800000014000000140000000100
+              2000000000004006000064000000640000000000000000000000000000000000
+              000000000000000000000000000000000000000000000000000000000000FFFF
+              FF05FFFFFF050000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000000000000000000000000000FFFF
+              FF02FFFFFF54FFFFFFAAFFFFFFE7FFFFFFEEFFFFFFEEFFFFFFE7FFFFFFA9FFFF
+              FF54FFFFFF020000000000000000000000000000000000000000000000000000
+              00000000000000000000FFFFFF30FFFFFFD0FFFFFFB7FFFFFF52FFFFFF0D0000
+              000000000000FFFFFF0DFFFFFF52FFFFFFB7FFFFFFCFFFFFFF30000000000000
+              00000000000000000000000000000000000000000000FFFFFF4DFFFFFFE3FFFF
+              FF49000000000000000000000000000000000000000000000000000000000000
+              0000FFFFFF48FFFFFFE2FFFFFF4C000000000000000000000000000000000000
+              0000FFFFFF30FFFFFFE3FFFFFF28000000000000000000000000000000000000
+              00000000000000000000000000000000000000000000FFFFFF26FFFFFFE1FFFF
+              FF2F000000000000000000000000FFFFFF02FFFFFFCFFFFFFF48000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              00000000000000000000FFFFFF46FFFFFFCEFFFFFF020000000000000000FFFF
+              FF53FFFFFFB60000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000000000000000000000000000FFFF
+              FFB4FFFFFF520000000000000000FFFFFFA9FFFFFF5000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000FFFFFF4FFFFFFFA70000000000000000FFFF
+              FFE6FFFFFF0C0000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000000000000000000000000000FFFF
+              FF0BFFFFFFE400000000FFFFFF04FFFFFFEB0000000000000000000000000000
+              0000FFFFFF13FFFFFF75FFFFFF77FFFFFF77FFFFFF77FFFFFF77FFFFFF77FFFF
+              FF3600000000000000000000000000000000FFFFFFE8FFFFFF04FFFFFF04FFFF
+              FFEB00000000000000000000000000000000FFFFFF14FFFFFF75FFFFFF77FFFF
+              FF77FFFFFF77FFFFFF77FFFFFF77FFFFFF370000000000000000000000000000
+              0000FFFFFFE8FFFFFF0400000000FFFFFFE6FFFFFF0B00000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000FFFFFF0AFFFFFFE40000000000000000FFFF
+              FFAAFFFFFF4D0000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000000000000000000000000000FFFF
+              FF4DFFFFFFA80000000000000000FFFFFF54FFFFFFB200000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000FFFFFFB2FFFFFF530000000000000000FFFF
+              FF02FFFFFFD0FFFFFF4300000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000FFFFFF43FFFF
+              FFCEFFFFFF02000000000000000000000000FFFFFF30FFFFFFE0FFFFFF230000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000000000000FFFFFF23FFFFFFE0FFFFFF300000000000000000000000000000
+              000000000000FFFFFF4DFFFFFFE0FFFFFF430000000000000000000000000000
+              000000000000000000000000000000000000FFFFFF45FFFFFFE0FFFFFF4D0000
+              0000000000000000000000000000000000000000000000000000FFFFFF31FFFF
+              FFD0FFFFFFB3FFFFFF4DFFFFFF0A0000000000000000FFFFFF0AFFFFFF4DFFFF
+              FFB3FFFFFFD0FFFFFF3000000000000000000000000000000000000000000000
+              0000000000000000000000000000FFFFFF02FFFFFF54FFFFFFA9FFFFFFE7FFFF
+              FFE8FFFFFFE8FFFFFFE6FFFFFFA9FFFFFF53FFFFFF0200000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000FFFFFF04FFFFFF0400000000000000000000
+              0000000000000000000000000000000000000000000000000000
+            }
+            GlyphAlignment = bcaLeftCenter
+            OnClick = btnExcluir1Click
+            ParentColor = False
+            Rounding.RoundX = 5
+            Rounding.RoundY = 5
+            RoundingDropDown.RoundX = 1
+            RoundingDropDown.RoundY = 1
+            TextApplyGlobalOpacity = False
+            MemoryUsage = bmuHigh
           end
         end
         inherited pnlRodapeFormulario: TPanel
           Height = 59
           Top = 381
-          Width = 428
+          Width = 616
           ClientHeight = 59
-          ClientWidth = 428
+          ClientWidth = 616
           inherited btnEditar: TBCButton
             Top = 17
           end
@@ -402,7 +574,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Top = 17
           end
           inherited btnExcluir: TBCButton
-            Left = 386
+            Left = 574
             Top = 17
           end
         end
@@ -411,12 +583,15 @@ inherited CadOrcamentoF: TCadOrcamentoF
   end
   inherited dsCadModelo: TDataSource
     OnDataChange = dsCadModeloDataChange
+    Left = 744
   end
   inherited qryCad: TZQuery
+    OnNewRecord = qryCadNewRecord
     Active = True
     SQL.Strings = (
       'select * from orcamento'
     )
+    Left = 696
   end
   object qrySelectClientes: TZQuery[5]
     Connection = dmF.ZConnection1
@@ -425,23 +600,12 @@ inherited CadOrcamentoF: TCadOrcamentoF
       'select clienteid, nome_cliente from cliente'
     )
     Params = <>
-    Left = 656
-    Top = 312
+    Left = 696
+    Top = 296
   end
   object dsClientes: TDataSource[6]
     DataSet = qrySelectClientes
-    Left = 720
-    Top = 312
-  end
-  object dsOrcItem: TDataSource[7]
-    DataSet = qryOrcItem
-    Left = 720
-    Top = 392
-  end
-  object qryOrcItem: TZQuery[8]
-    Connection = dmF.ZConnection1
-    Params = <>
-    Left = 656
-    Top = 392
+    Left = 744
+    Top = 296
   end
 end

@@ -406,6 +406,7 @@ inherited CadProdutoF: TCadProdutoF
     SQL.Strings = (
       'select * from produto order by produtoid'
     )
+    Top = 160
   end
   object qrySelectCategorias: TZQuery[5]
     Connection = dmF.ZConnection1
@@ -413,7 +414,7 @@ inherited CadProdutoF: TCadProdutoF
       'select * from categoria_produto order by categoriaprodutoid'
     )
     Params = <>
-    Left = 640
+    Left = 656
     Top = 232
   end
 end

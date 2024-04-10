@@ -5,20 +5,23 @@ unit dm;
 interface
 
 uses
-  Classes, SysUtils, ZConnection, ZDataset;
+  Classes, SysUtils, DB, ZConnection, ZDataset;
 
 type
 
   { TdmF }
 
   TdmF = class(TDataModule)
+    dsOrcItem: TDataSource;
+    qryOrcItem: TZQuery;
     ZConnection1: TZConnection;
     qryGenerica: TZQuery;
     procedure DataModuleCreate(Sender: TObject);
+    procedure qryOrcItemAfterPost(DataSet: TDataSet);
   private
 
   public
-
+    function getSequence(sequenceName: string): integer;
   end;
 
 var
@@ -40,6 +43,18 @@ begin
   ZConnection1.Protocol := 'postgresql';
   ZConnection1.Connected := True;
 
+end;
+
+function TdmF.getSequence(sequenceName: string): integer;
+begin
+  with qryGenerica do
+   begin
+    Close;
+    SQL.Clear;
+    SQL.Add('select nextval('+ QuotedStr(sequenceName)+') AS CODIGO');
+    Open;
+    Result := FieldByName('CODIGO').AsInteger;
+   end;
 end;
 
 end.

@@ -1,10 +1,10 @@
 object dmF: TdmF
   OnCreate = DataModuleCreate
   OldCreateOrder = False
-  Height = 333
-  HorizontalOffset = 520
-  VerticalOffset = 191
-  Width = 320
+  Height = 318
+  HorizontalOffset = 669
+  VerticalOffset = 379
+  Width = 264
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
     AutoEncodeStrings = True
@@ -12,6 +12,7 @@ object dmF: TdmF
       'AutoEncodeStrings=ON'
       'controls_cp=CP_UTF8'
     )
+    Connected = True
     HostName = 'localhost'
     Port = 5432
     Database = 'prjaccion'
@@ -26,5 +27,19 @@ object dmF: TdmF
     Params = <>
     Left = 32
     Top = 112
+  end
+  object qryOrcItem: TZQuery
+    Connection = ZConnection1
+    SQL.Strings = (
+      'select * from orcamento_item'
+    )
+    Params = <>
+    Left = 32
+    Top = 168
+  end
+  object dsOrcItem: TDataSource
+    DataSet = qryOrcItem
+    Left = 96
+    Top = 168
   end
 end
