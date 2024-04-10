@@ -11,7 +11,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="11"/>
         <CursorPos Y="27"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="uprincipal.pas"/>
@@ -23,7 +23,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="29"/>
         <CursorPos X="21" Y="55"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadmodelo.pas"/>
@@ -35,7 +35,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="122"/>
         <CursorPos Y="131"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="banco\dm.pas"/>
@@ -45,7 +45,7 @@
         <ResourceBaseClass Value="DataModule"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="48" Y="18"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcliente.pas"/>
@@ -57,7 +57,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="18"/>
         <CursorPos X="61" Y="50"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcategoria.pas"/>
@@ -68,7 +68,7 @@
         <EditorIndex Value="-1"/>
         <CursorPos X="41" Y="45"/>
         <FoldState Value=" TL HB21o"/>
-        <UsageCount Value="77"/>
+        <UsageCount Value="84"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadproduto.pas"/>
@@ -78,9 +78,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadProduto"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="68"/>
-        <CursorPos X="25" Y="61"/>
-        <UsageCount Value="76"/>
+        <TopLine Value="88"/>
+        <CursorPos X="18" Y="77"/>
+        <UsageCount Value="83"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadorcamento.pas"/>
@@ -89,8 +89,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadOrcamento"/>
-        <CursorPos X="29" Y="51"/>
-        <UsageCount Value="76"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="50"/>
+        <CursorPos X="30" Y="59"/>
+        <UsageCount Value="83"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -104,12 +107,33 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="2"/>
         <CursorPos X="60" Y="11"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="82"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\modal\uorcmodalmodelo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="OrcModalModeloF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uOrcModalModelo"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="20"/>
+        <CursorPos X="90" Y="20"/>
+        <UsageCount Value="32"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\uverprodutos.pas"/>
+        <ComponentName Value="VerProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uVerProdutos"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
       </Unit>
       <Unit>
         <Filename Value="uprincipal.lfm"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -118,35 +142,35 @@
         <EditorIndex Value="-1"/>
         <CursorPos Y="54"/>
         <FoldState Value=" T0iA69o"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcliente.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="39" Y="7"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadusuario.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="25" Y="5"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadorcamento.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="39" Y="3"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadproduto.lfm"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="25" Y="3"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -154,7 +178,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="283"/>
         <CursorPos X="23" Y="10"/>
-        <UsageCount Value="5"/>
+        <UsageCount Value="4"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
       <Unit>
@@ -163,33 +187,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="1581"/>
         <CursorPos X="26" Y="1590"/>
-        <UsageCount Value="6"/>
-      </Unit>
-      <Unit>
-        <Filename Value="cadastro\uselecionarprodutos.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="SelecionarProdutosF"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="uSelecionarProdutos"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="7"/>
-        <CursorPos X="52" Y="37"/>
-        <UsageCount Value="25"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
-      </Unit>
-      <Unit>
-        <Filename Value="cadastro\uverprodutos.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="VerProdutosF"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="uVerProdutos"/>
-        <EditorIndex Value="1"/>
-        <UsageCount Value="21"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <UsageCount Value="5"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\framelistaproduto.pas"/>
@@ -198,13 +196,24 @@
         <UnitName Value="frameListaProduto"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="87" Y="33"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="20"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\modal\uselecionarprodutosf.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SelecionarProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSelecionarProdutosF"/>
+        <CursorPos X="84" Y="9"/>
+        <UsageCount Value="26"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="3">
+    <JumpHistory HistoryIndex="7">
       <Position>
-        <Filename Value="cadastro\ucadorcamento.pas"/>
-        <Caret Line="52" Column="29"/>
+        <Filename Value="cadastro\modal\uselecionarprodutosf.pas"/>
       </Position>
       <Position>
         <Filename Value="cadastro\ucadorcamento.pas"/>
@@ -212,10 +221,27 @@
       </Position>
       <Position>
         <Filename Value="cadastro\ucadorcamento.pas"/>
-        <Caret Line="50" Column="29"/>
+        <Caret Line="50" Column="29" TopLine="32"/>
       </Position>
       <Position>
-        <Filename Value="cadastro\uverprodutos.pas"/>
+        <Filename Value="cadastro\ucadorcamento.pas"/>
+        <Caret Line="51" Column="29" TopLine="33"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\ucadorcamento.pas"/>
+        <Caret Line="52" Column="29" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\ucadorcamento.pas"/>
+        <Caret Line="9" Column="73" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\ucadorcamento.pas"/>
+        <Caret Line="10" Column="23" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="cadastro\ucadorcamento.pas"/>
+        <Caret Line="57" Column="46" TopLine="50"/>
       </Position>
     </JumpHistory>
     <RunParams>

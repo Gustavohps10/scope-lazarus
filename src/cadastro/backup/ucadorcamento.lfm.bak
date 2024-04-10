@@ -1,15 +1,20 @@
 inherited CadOrcamentoF: TCadOrcamentoF
-  Left = 503
-  Top = 234
+  Left = 362
+  Height = 556
+  Top = 97
   Caption = 'Orçamentos'
+  ClientHeight = 556
   inherited pnlCabecalho: TPanel
     Caption = 'Orçamentos'
   end
   inherited pgcPrincipal: TPageControl
+    Height = 492
     ActivePage = tbCadastro
     TabIndex = 1
     inherited tbPesquisa: TTabSheet
+      ClientHeight = 464
       inherited DBGrid1: TDBGrid
+        Height = 349
         Columns = <        
           item
             PickList.Strings = (            )
@@ -37,13 +42,26 @@ inherited CadOrcamentoF: TCadOrcamentoF
             FieldName = 'vl_total_orcamento'
           end>
       end
+      inherited pnlRodape: TPanel
+        Top = 405
+      end
     end
     inherited tbCadastro: TTabSheet
+      ClientHeight = 464
       inherited pnlFormulario: TPanel
+        Left = 168
+        Height = 440
+        Top = 8
+        Width = 428
+        ClientHeight = 440
+        ClientWidth = 428
         inherited pnlTopoFormulario: TPanel
+          Width = 428
           Caption = 'Cadastro de Orçamentos'
         end
         inherited pnlConteudoFormulario: TBCPanel
+          Height = 331
+          Width = 428
           object edtOrcId: TDBEdit[0]
             Left = 16
             Height = 23
@@ -64,7 +82,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ParentColor = False
           end
           object lblCliente: TLabel[2]
-            Left = 208
+            Left = 226
             Height = 15
             Top = 8
             Width = 37
@@ -72,7 +90,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ParentColor = False
           end
           object cbbClientes: TDBLookupComboBox[3]
-            Left = 208
+            Left = 226
             Height = 23
             Top = 24
             Width = 184
@@ -118,7 +136,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             MonthNames = 'Long'
           end
           object lblDataValidade: TLabel[6]
-            Left = 208
+            Left = 226
             Height = 15
             Top = 56
             Width = 87
@@ -126,7 +144,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ParentColor = False
           end
           object dtpDataValidade: TDBDateTimePicker[7]
-            Left = 208
+            Left = 226
             Height = 23
             Top = 72
             Width = 184
@@ -150,13 +168,14 @@ inherited CadOrcamentoF: TCadOrcamentoF
             MonthNames = 'Long'
           end
           object edtValorTotal: TDBEdit[8]
-            Left = 280
+            Left = 298
             Height = 32
-            Top = 216
+            Top = 287
             Width = 112
             DataField = 'vl_total_orcamento'
             DataSource = dsCadModelo
             Alignment = taRightJustify
+            Anchors = [akRight, akBottom]
             AutoSize = False
             Font.Height = -19
             MaxLength = 0
@@ -164,10 +183,11 @@ inherited CadOrcamentoF: TCadOrcamentoF
             TabOrder = 4
           end
           object lblValorTotal: TLabel[9]
-            Left = 280
+            Left = 296
             Height = 21
-            Top = 192
+            Top = 264
             Width = 72
+            Anchors = [akRight, akBottom]
             Caption = 'Valor Total'
             Font.Height = -16
             ParentColor = False
@@ -177,7 +197,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Cursor = crHandPoint
             Left = 16
             Height = 32
-            Top = 216
+            Top = 287
             Width = 184
             Anchors = [akLeft, akBottom]
             StateClicked.Background.Color = 8412732
@@ -321,31 +341,76 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ImageIndex = 6
             MemoryUsage = bmuHigh
           end
-          object lbProdutos: TDBLookupListBox[11]
-            Left = 16
-            Height = 88
-            Top = 120
-            Width = 184
-            DataField = 'orcamentoid'
-            DataSource = dsCadModelo
-            KeyField = 'orcamentoid'
-            ListField = 'produtodesc'
-            ListFieldIndex = 0
-            ListSource = dsOrcItem
-            LookupCache = False
-            TabOrder = 5
-          end
-          object lblProdutos: TLabel[12]
+          object lblListaProdutos: TLabel[11]
             Left = 16
             Height = 15
-            Top = 104
-            Width = 48
-            Caption = 'Produtos'
+            Top = 102
+            Width = 91
+            Caption = 'Lista de Produtos'
             ParentColor = False
+          end
+          object dbgProdutos: TDBGrid[12]
+            Left = 16
+            Height = 135
+            Top = 121
+            Width = 394
+            Color = clWindow
+            Columns = <            
+              item
+                Title.Caption = 'ID'
+                Width = 50
+                FieldName = 'produtoid'
+              end            
+              item
+                Title.Caption = 'Descrição'
+                Width = 140
+                FieldName = 'produtodesc'
+              end            
+              item
+                Title.Caption = 'QTD'
+                Width = 50
+                FieldName = 'qt_produto'
+              end            
+              item
+                Title.Caption = 'Valor Unt'
+                Width = 60
+                FieldName = 'vl_unitario'
+              end            
+              item
+                Title.Caption = 'Valor Total'
+                Width = 60
+                FieldName = 'vl_total'
+              end>
+            DataSource = dsOrcItem
+            ReadOnly = True
+            TabOrder = 5
+          end
+        end
+        inherited pnlRodapeFormulario: TPanel
+          Height = 59
+          Top = 381
+          Width = 428
+          ClientHeight = 59
+          ClientWidth = 428
+          inherited btnEditar: TBCButton
+            Top = 17
+          end
+          inherited btnGravar: TBCButton
+            Top = 17
+          end
+          inherited btnCancelar: TBCButton
+            Top = 17
+          end
+          inherited btnExcluir: TBCButton
+            Left = 386
+            Top = 17
           end
         end
       end
     end
+  end
+  inherited dsCadModelo: TDataSource
+    OnDataChange = dsCadModeloDataChange
   end
   inherited qryCad: TZQuery
     Active = True
@@ -355,6 +420,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
   end
   object qrySelectClientes: TZQuery[5]
     Connection = dmF.ZConnection1
+    Active = True
     SQL.Strings = (
       'select clienteid, nome_cliente from cliente'
     )
@@ -374,10 +440,6 @@ inherited CadOrcamentoF: TCadOrcamentoF
   end
   object qryOrcItem: TZQuery[8]
     Connection = dmF.ZConnection1
-    Active = True
-    SQL.Strings = (
-      'select * from orcamento_item'
-    )
     Params = <>
     Left = 656
     Top = 392

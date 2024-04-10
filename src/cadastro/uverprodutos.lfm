@@ -1,17 +1,18 @@
 object VerProdutosF: TVerProdutosF
-  Left = 624
+  Left = 579
   Height = 359
-  Top = 309
-  Width = 398
+  Top = 190
+  Width = 370
   Caption = 'Visualizar Produtos do Orçamento'
   ClientHeight = 359
-  ClientWidth = 398
-  LCLVersion = '2.2.6.0'
+  ClientWidth = 370
+  Position = poMainFormCenter
+  LCLVersion = '3.2.0.0'
   object pnlTopo: TPanel
     Left = 0
     Height = 50
     Top = 0
-    Width = 398
+    Width = 370
     Align = alTop
     BevelOuter = bvNone
     Caption = 'Ver Produtos'
@@ -20,6 +21,7 @@ object VerProdutosF: TVerProdutosF
     Font.Height = -19
     Font.Name = 'Inter'
     Font.Quality = fqAntialiased
+    ParentBackground = False
     ParentColor = False
     ParentFont = False
     TabOrder = 0
@@ -28,7 +30,7 @@ object VerProdutosF: TVerProdutosF
     Left = 0
     Height = 309
     Top = 50
-    Width = 398
+    Width = 370
     HorzScrollBar.Page = 1
     VertScrollBar.Page = 1
     Align = alClient

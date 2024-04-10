@@ -12,7 +12,7 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, datetimectrls, memdslaz, zcomponent, uPrincipal, uCadModelo, dm,
   uCadCliente, ucadcategoria, uCadProduto, uCadOrcamento, uCadUsuario,
-  uSelecionarProdutos, uVerProdutos;
+  uOrcModalModelo, uSelecionarProdutosF;
 
 {$R *.res}
 
@@ -23,7 +23,7 @@ begin
   Application.CreateForm(TdmF, dmF);
   Application.CreateForm(TprincipalF, principalF);
   Application.CreateForm(TCadModeloF, CadModeloF);
-  Application.CreateForm(TVerProdutosF, VerProdutosF);
+  Application.CreateForm(TSelecionarProdutosF, SelecionarProdutosF);
   Application.Run;
 end.
 

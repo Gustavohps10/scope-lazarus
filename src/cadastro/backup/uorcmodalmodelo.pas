@@ -1,4 +1,4 @@
-unit uSelecionarProdutos;
+unit uOrcModalModelo;
 
 {$mode ObjFPC}{$H+}
 
@@ -11,30 +11,28 @@ uses
 
 type
 
-  { TSelecionarProdutosF }
+  { TOrcModalModeloF }
 
-  TSelecionarProdutosF = class(TForm)
+  TOrcModalModeloF = class(TForm)
     edtValorTotal: TEdit;
     edtValorUnitario: TDBEdit;
     edtQuantidade: TBCMaterialSpinEdit;
     btnPesquisar: TBCButton;
     btnAdicionarProduto: TBCButton;
     edtProdutoId: TDBEdit;
-    dsProdutos: TDataSource;
-    dbgProdutos: TDBGrid;
+    dsSelect: TDataSource;
+    DBGrid: TDBGrid;
     edtPesquisar: TEdit;
     edtProdutoDesc: TDBEdit;
     lblValorUnitario: TLabel;
     lblProdutoId: TLabel;
     lblProdutoDesc: TLabel;
     lblValorTotal: TLabel;
-    mdsProdutosSelecionados: TMemDataset;
     pnlBordaPesquisa: TPanel;
     pnlRodape: TPanel;
     pnlPesquisa: TPanel;
     pnlTopo: TPanel;
-    qrySelectProdutos: TZQuery;
-    procedure edtQuantidadeChange(Sender: TObject);
+    qrySelect: TZQuery;
   private
 
   public
@@ -42,18 +40,13 @@ type
   end;
 
 var
-  SelecionarProdutosF: TSelecionarProdutosF;
+  OrcModalModeloF: TOrcModalModeloF;
 
 implementation
 
 {$R *.lfm}
 
-{ TSelecionarProdutosF }
-
-procedure TSelecionarProdutosF.edtQuantidadeChange(Sender: TObject);
-begin
-
-end;
+{ TOrcModalModeloF }
 
 end.
 

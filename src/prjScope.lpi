@@ -125,19 +125,20 @@
         <UnitName Value="uCadUsuario"/>
       </Unit>
       <Unit>
-        <Filename Value="cadastro\uselecionarprodutos.pas"/>
+        <Filename Value="cadastro\modal\uorcmodalmodelo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="OrcModalModeloF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uOrcModalModelo"/>
+      </Unit>
+      <Unit>
+        <Filename Value="cadastro\modal\uselecionarprodutosf.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="SelecionarProdutosF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="uSelecionarProdutos"/>
-      </Unit>
-      <Unit>
-        <Filename Value="cadastro\uverprodutos.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="VerProdutosF"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="uVerProdutos"/>
+        <UnitName Value="uSelecionarProdutosF"/>
       </Unit>
     </Units>
   </ProjectOptions>
@@ -149,7 +150,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="cadastro;banco"/>
+      <OtherUnitFiles Value="cadastro;banco;cadastro\modal"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

@@ -1,14 +1,14 @@
-object SelecionarProdutosF: TSelecionarProdutosF
-  Left = 714
+object OrcModalModeloF: TOrcModalModeloF
+  Left = 762
   Height = 439
-  Top = 262
+  Top = 210
   Width = 375
-  Caption = 'Selecionar Produtos'
+  Caption = 'OrcModalModeloF'
   ClientHeight = 439
   ClientWidth = 375
   Color = 16514043
   Position = poMainFormCenter
-  LCLVersion = '2.2.6.0'
+  LCLVersion = '3.2.0.0'
   object pnlTopo: TPanel
     Left = 0
     Height = 50
@@ -16,12 +16,13 @@ object SelecionarProdutosF: TSelecionarProdutosF
     Width = 375
     Align = alTop
     BevelOuter = bvNone
-    Caption = 'Selecionar Produtos'
+    Caption = 'pnlTopo'
     Color = 5126436
     Font.Color = clWhite
     Font.Height = -19
     Font.Name = 'Inter'
     Font.Quality = fqAntialiased
+    ParentBackground = False
     ParentColor = False
     ParentFont = False
     TabOrder = 0
@@ -36,6 +37,7 @@ object SelecionarProdutosF: TSelecionarProdutosF
     ClientHeight = 47
     ClientWidth = 375
     Font.Name = 'Inter'
+    ParentBackground = False
     ParentFont = False
     TabOrder = 3
     object edtPesquisar: TEdit
@@ -215,28 +217,15 @@ object SelecionarProdutosF: TSelecionarProdutosF
       TabOrder = 1
     end
   end
-  object dbgProdutos: TDBGrid
+  object DBGrid: TDBGrid
     Left = 0
     Height = 175
     Top = 97
     Width = 375
     Align = alClient
     Color = clWindow
-    Columns = <    
-      item
-        Title.Caption = 'ID'
-        FieldName = 'produtoid'
-      end    
-      item
-        Title.Caption = 'Descrição'
-        Width = 150
-        FieldName = 'ds_produto'
-      end    
-      item
-        Title.Caption = 'Valor de Venda'
-        FieldName = 'vl_venda_produto'
-      end>
-    DataSource = dsProdutos
+    Columns = <>
+    DataSource = dsSelect
     Font.Name = 'Iner'
     ParentFont = False
     TabOrder = 2
@@ -251,6 +240,7 @@ object SelecionarProdutosF: TSelecionarProdutosF
     ClientHeight = 167
     ClientWidth = 375
     Font.Name = 'Inter'
+    ParentBackground = False
     ParentFont = False
     TabOrder = 1
     object edtProdutoId: TDBEdit
@@ -259,7 +249,7 @@ object SelecionarProdutosF: TSelecionarProdutosF
       Top = 24
       Width = 164
       DataField = 'produtoid'
-      DataSource = dsProdutos
+      DataSource = dsSelect
       ReadOnly = True
       Alignment = taRightJustify
       MaxLength = 50
@@ -279,7 +269,7 @@ object SelecionarProdutosF: TSelecionarProdutosF
       Top = 72
       Width = 164
       DataField = 'ds_produto'
-      DataSource = dsProdutos
+      DataSource = dsSelect
       ReadOnly = True
       MaxLength = 50
       TabOrder = 1
@@ -288,7 +278,7 @@ object SelecionarProdutosF: TSelecionarProdutosF
       Left = 20
       Height = 15
       Top = 56
-      Width = 56
+      Width = 57
       Caption = 'Descrição'
       ParentColor = False
     end
@@ -463,7 +453,7 @@ object SelecionarProdutosF: TSelecionarProdutosF
       Top = 24
       Width = 156
       DataField = 'vl_venda_produto'
-      DataSource = dsProdutos
+      DataSource = dsSelect
       ReadOnly = True
       Alignment = taRightJustify
       MaxLength = 0
@@ -473,7 +463,7 @@ object SelecionarProdutosF: TSelecionarProdutosF
       Left = 200
       Height = 15
       Top = 8
-      Width = 73
+      Width = 75
       Caption = 'Valor Unitário'
       ParentColor = False
     end
@@ -491,7 +481,7 @@ object SelecionarProdutosF: TSelecionarProdutosF
       Left = 200
       Height = 15
       Top = 56
-      Width = 56
+      Width = 59
       Caption = 'Valor Total'
       ParentColor = False
     end
@@ -504,23 +494,14 @@ object SelecionarProdutosF: TSelecionarProdutosF
       TabOrder = 4
     end
   end
-  object qrySelectProdutos: TZQuery
+  object qrySelect: TZQuery
     Connection = dmF.ZConnection1
-    Active = True
-    SQL.Strings = (
-      'select produtoid, ds_produto, vl_venda_produto from produto order by produtoid'
-    )
     Params = <>
     Left = 16
     Top = 208
   end
-  object mdsProdutosSelecionados: TMemDataset
-    FieldDefs = <>
-    Left = 96
-    Top = 208
-  end
-  object dsProdutos: TDataSource
-    DataSet = qrySelectProdutos
+  object dsSelect: TDataSource
+    DataSet = qrySelect
     Left = 56
     Top = 208
   end

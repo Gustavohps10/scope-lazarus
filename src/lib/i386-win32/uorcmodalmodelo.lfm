@@ -1,0 +1,256 @@
+object OrcModalModeloF: TOrcModalModeloF
+  Left = 493
+  Height = 439
+  Top = 148
+  Width = 375
+  Caption = 'OrcModalModeloF'
+  ClientHeight = 439
+  ClientWidth = 375
+  Color = 16514043
+  Position = poMainFormCenter
+  LCLVersion = '3.2.0.0'
+  object pnlTopo: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 375
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'pnlTopo'
+    Color = 5126436
+    Font.Color = clWhite
+    Font.Height = -19
+    Font.Name = 'Inter'
+    Font.Quality = fqAntialiased
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+  object pnlPesquisa: TPanel
+    Left = 0
+    Height = 47
+    Top = 50
+    Width = 375
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 47
+    ClientWidth = 375
+    Font.Name = 'Inter'
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 3
+    object edtPesquisar: TEdit
+      Left = 56
+      Height = 21
+      Top = 16
+      Width = 232
+      BorderStyle = bsNone
+      Color = 16514043
+      Font.Height = -16
+      ParentFont = False
+      TabOrder = 0
+    end
+    object btnPesquisar: TBCButton
+      Cursor = crHandPoint
+      Left = 8
+      Height = 33
+      Top = 8
+      Width = 36
+      StateClicked.Background.Color = 2600856
+      StateClicked.Background.Gradient1.StartColor = 8404992
+      StateClicked.Background.Gradient1.EndColor = 4194304
+      StateClicked.Background.Gradient1.GradientType = gtRadial
+      StateClicked.Background.Gradient1.Point1XPercent = 50
+      StateClicked.Background.Gradient1.Point1YPercent = 100
+      StateClicked.Background.Gradient1.Point2XPercent = 0
+      StateClicked.Background.Gradient1.Point2YPercent = 0
+      StateClicked.Background.Gradient2.StartColor = clWhite
+      StateClicked.Background.Gradient2.EndColor = clBlack
+      StateClicked.Background.Gradient2.GradientType = gtLinear
+      StateClicked.Background.Gradient2.Point1XPercent = 0
+      StateClicked.Background.Gradient2.Point1YPercent = 0
+      StateClicked.Background.Gradient2.Point2XPercent = 0
+      StateClicked.Background.Gradient2.Point2YPercent = 100
+      StateClicked.Background.Gradient1EndPercent = 100
+      StateClicked.Background.Style = bbsColor
+      StateClicked.Border.Style = bboNone
+      StateClicked.FontEx.Color = 16770790
+      StateClicked.FontEx.FontQuality = fqSystemClearType
+      StateClicked.FontEx.Shadow = False
+      StateClicked.FontEx.ShadowRadius = 2
+      StateClicked.FontEx.ShadowOffsetX = 1
+      StateClicked.FontEx.ShadowOffsetY = 1
+      StateClicked.FontEx.Style = [fsBold]
+      StateHover.Background.Color = 2867110
+      StateHover.Background.Gradient1.StartColor = 4249019
+      StateHover.Background.Gradient1.DrawMode = dmLinearBlend
+      StateHover.Background.Gradient1.EndColor = 4249019
+      StateHover.Background.Gradient1.GradientType = gtRadial
+      StateHover.Background.Gradient1.Point1XPercent = 50
+      StateHover.Background.Gradient1.Point1YPercent = 100
+      StateHover.Background.Gradient1.Point2XPercent = 0
+      StateHover.Background.Gradient1.Point2YPercent = 0
+      StateHover.Background.Gradient2.StartColor = 4249019
+      StateHover.Background.Gradient2.EndColor = 4249019
+      StateHover.Background.Gradient2.GradientType = gtLinear
+      StateHover.Background.Gradient2.Point1XPercent = 0
+      StateHover.Background.Gradient2.Point1YPercent = 0
+      StateHover.Background.Gradient2.Point2XPercent = 0
+      StateHover.Background.Gradient2.Point2YPercent = 100
+      StateHover.Background.Gradient1EndPercent = 100
+      StateHover.Background.Style = bbsColor
+      StateHover.Border.Style = bboNone
+      StateHover.FontEx.Color = clWhite
+      StateHover.FontEx.FontQuality = fqSystemClearType
+      StateHover.FontEx.Shadow = False
+      StateHover.FontEx.ShadowRadius = 2
+      StateHover.FontEx.ShadowOffsetX = 1
+      StateHover.FontEx.ShadowOffsetY = 1
+      StateHover.FontEx.Style = [fsBold]
+      StateNormal.Background.Color = 4249019
+      StateNormal.Background.Gradient1.StartColor = 4249019
+      StateNormal.Background.Gradient1.EndColor = 4249019
+      StateNormal.Background.Gradient1.GradientType = gtAngular
+      StateNormal.Background.Gradient1.Point1XPercent = 0
+      StateNormal.Background.Gradient1.Point1YPercent = 0
+      StateNormal.Background.Gradient1.Point2XPercent = 0
+      StateNormal.Background.Gradient1.Point2YPercent = 100
+      StateNormal.Background.Gradient2.StartColor = 4249019
+      StateNormal.Background.Gradient2.EndColor = 4249019
+      StateNormal.Background.Gradient2.GradientType = gtRadial
+      StateNormal.Background.Gradient2.Point1XPercent = 50
+      StateNormal.Background.Gradient2.Point1YPercent = 100
+      StateNormal.Background.Gradient2.Point2XPercent = 0
+      StateNormal.Background.Gradient2.Point2YPercent = 0
+      StateNormal.Background.Gradient1EndPercent = 1
+      StateNormal.Background.Style = bbsColor
+      StateNormal.Border.Style = bboNone
+      StateNormal.FontEx.Color = clWhite
+      StateNormal.FontEx.FontQuality = fqSystemClearType
+      StateNormal.FontEx.Height = 14
+      StateNormal.FontEx.Name = 'Segoe UI'
+      StateNormal.FontEx.Shadow = False
+      StateNormal.FontEx.ShadowColor = clNone
+      StateNormal.FontEx.ShadowColorOpacity = 0
+      StateNormal.FontEx.ShadowRadius = 2
+      StateNormal.FontEx.ShadowOffsetX = 1
+      StateNormal.FontEx.ShadowOffsetY = 1
+      StateNormal.FontEx.Style = []
+      StateNormal.FontEx.TextAlignment = bcaLeftCenter
+      Color = clNone
+      DropDownWidth = 16
+      DropDownArrowSize = 8
+      GlobalOpacity = 255
+      Glyph.Data = {
+        76060000424D7606000000000000360000002800000014000000140000000100
+        2000000000004006000064000000640000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000FFFFFF3DFFFFFF2D0000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        00000000000000000000000000000000000000000000FFFFFF3BFFFFFFF2FFFF
+        FFEAFFFFFF2D0000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000FFFFFF3EFFFFFFF4FFFFFFFFFFFFFFF3FFFFFF3E00000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000FFFFFF3BFFFFFFF2FFFFFFFFFFFFFFF5FFFF
+        FF4100000000000000000000000000000000000000000000000000000000FFFF
+        FF23FFFFFF7EFFFFFFB4FFFFFFC4FFFFFFA3FFFFFF6AFFFFFF0CFFFFFF3EFFFF
+        FFF4FFFFFFFFFFFFFFF3FFFFFF3D000000000000000000000000000000000000
+        000000000000FFFFFF03FFFFFF89FFFFFFFAFFFFFFFFFFFFFFE7FFFFFFD2FFFF
+        FFEFFFFFFFFFFFFFFFEEFFFFFFF4FFFFFFFFFFFFFFF3FFFFFF3D000000000000
+        000000000000000000000000000000000000FFFFFF01FFFFFFA7FFFFFFFFFFFF
+        FFB5FFFFFF300000000000000000FFFFFF03FFFFFF47FFFFFFD2FFFFFFFFFFFF
+        FFF5FFFFFF3C0000000000000000000000000000000000000000000000000000
+        0000FFFFFF66FFFFFFFFFFFFFF95FFFFFF010000000000000000000000000000
+        000000000000FFFFFF0AFFFFFFC1FFFFFFFCFFFFFF3300000000000000000000
+        0000000000000000000000000000FFFFFF02FFFFFFE3FFFFFFD8FFFFFF040000
+        0000000000000000000000000000000000000000000000000000FFFFFF1CFFFF
+        FFF6FFFFFFB0000000000000000000000000000000000000000000000000FFFF
+        FF35FFFFFFFFFFFFFF7100000000000000000000000000000000000000000000
+        0000000000000000000000000000FFFFFFA6FFFFFFF8FFFFFF09000000000000
+        0000000000000000000000000000FFFFFF59FFFFFFFFFFFFFF3F000000000000
+        000000000000000000000000000000000000000000000000000000000000FFFF
+        FF74FFFFFFFFFFFFFF270000000000000000000000000000000000000000FFFF
+        FF5AFFFFFFFFFFFFFF3E00000000000000000000000000000000000000000000
+        0000000000000000000000000000FFFFFF73FFFFFFFFFFFFFF25000000000000
+        0000000000000000000000000000FFFFFF35FFFFFFFFFFFFFF70000000000000
+        000000000000000000000000000000000000000000000000000000000000FFFF
+        FFA5FFFFFFF7FFFFFF080000000000000000000000000000000000000000FFFF
+        FF02FFFFFFE4FFFFFFD6FFFFFF04000000000000000000000000000000000000
+        00000000000000000000FFFFFF1BFFFFFFF5FFFFFFB100000000000000000000
+        000000000000000000000000000000000000FFFFFF68FFFFFFFFFFFFFF93FFFF
+        FF010000000000000000000000000000000000000000FFFFFF0AFFFFFFC0FFFF
+        FFFDFFFFFF340000000000000000000000000000000000000000000000000000
+        0000FFFFFF01FFFFFFA8FFFFFFFFFFFFFFB2FFFFFF2E0000000000000000FFFF
+        FF02FFFFFF44FFFFFFD0FFFFFFFFFFFFFF750000000000000000000000000000
+        00000000000000000000000000000000000000000000FFFFFF04FFFFFF8CFFFF
+        FFFBFFFFFFFFFFFFFFE6FFFFFFD2FFFFFFEDFFFFFFFFFFFFFFF1FFFFFF640000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000FFFFFF25FFFFFF80FFFFFFB4FFFFFFC7FFFF
+        FFAFFFFFFF70FFFFFF1400000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000000000000000
+        0000000000000000000000000000000000000000000000000000
+      }
+      GlyphAlignment = bcaLeftCenter
+      ParentColor = False
+      Rounding.RoundX = 5
+      Rounding.RoundY = 5
+      RoundingDropDown.RoundX = 1
+      RoundingDropDown.RoundY = 1
+      TextApplyGlobalOpacity = False
+      ImageIndex = 0
+      MemoryUsage = bmuHigh
+    end
+    object pnlBordaPesquisa: TPanel
+      Left = 56
+      Height = 2
+      Top = 39
+      Width = 232
+      Color = 10461087
+      ParentBackground = False
+      ParentColor = False
+      TabOrder = 1
+    end
+  end
+  object DBGrid: TDBGrid
+    Left = 0
+    Height = 175
+    Top = 97
+    Width = 375
+    Align = alClient
+    Color = clWindow
+    Columns = <>
+    DataSource = dsSelect
+    Font.Name = 'Iner'
+    ParentFont = False
+    TabOrder = 2
+  end
+  object pnlRodape: TPanel
+    Left = 0
+    Height = 167
+    Top = 272
+    Width = 375
+    Align = alBottom
+    BevelOuter = bvNone
+    Font.Name = 'Inter'
+    ParentBackground = False
+    ParentFont = False
+    TabOrder = 1
+  end
+  object qrySelect: TZQuery
+    Connection = dmF.ZConnection1
+    Params = <>
+    Left = 16
+    Top = 208
+  end
+  object dsSelect: TDataSource
+    DataSet = qrySelect
+    Left = 56
+    Top = 208
+  end
+end
