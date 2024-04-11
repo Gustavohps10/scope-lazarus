@@ -12,6 +12,7 @@ object dmF: TdmF
       'AutoEncodeStrings=ON'
       'controls_cp=CP_UTF8'
     )
+    Connected = True
     HostName = 'localhost'
     Port = 5432
     Database = 'prjaccion'
@@ -29,6 +30,7 @@ object dmF: TdmF
   end
   object qryOrcItem: TZQuery
     Connection = ZConnection1
+    Active = True
     SQL.Strings = (
       'select * from orcamento_item'
     )

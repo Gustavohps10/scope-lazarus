@@ -47,7 +47,7 @@ var
 
 implementation
 uses
-  uSelecionarProdutosF;
+  uSelecionarProdutosF, uCadOrcamento;
 
 {$R *.lfm}
 

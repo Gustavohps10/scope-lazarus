@@ -78,33 +78,11 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Left = 16
             Height = 15
             Top = 8
-            Width = 11
-            Caption = 'ID'
+            Width = 36
+            Caption = 'ID Orc.'
             ParentColor = False
           end
-          object lblCliente: TLabel[2]
-            Left = 104
-            Height = 15
-            Top = 8
-            Width = 37
-            Caption = 'Cliente'
-            ParentColor = False
-          end
-          object cbbClientes: TDBLookupComboBox[3]
-            Left = 104
-            Height = 23
-            Top = 24
-            Width = 496
-            DataField = 'clienteid'
-            DataSource = dsCadModelo
-            KeyField = 'clienteid'
-            ListField = 'nome_cliente'
-            ListFieldIndex = 0
-            ListSource = dsClientes
-            LookupCache = False
-            TabOrder = 1
-          end
-          object lblDataOrc: TLabel[4]
+          object lblDataOrc: TLabel[2]
             Left = 16
             Height = 15
             Top = 56
@@ -112,12 +90,44 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Caption = 'Data de Criação'
             ParentColor = False
           end
-          object dtpDataOrc: TDBDateTimePicker[5]
+          object dtpDataOrc: TDBDateTimePicker[3]
             Left = 16
             Height = 23
             Top = 72
             Width = 264
             DataField = 'dt_orcamento'
+            DataSource = dsCadModelo
+            ReadOnly = False
+            CenturyFrom = 1941
+            MaxDate = 2958465
+            MinDate = -53780
+            AutoSize = False
+            TabOrder = 1
+            TrailingSeparator = False
+            TextForNullDate = 'NULL'
+            LeadingZeros = True
+            Kind = dtkDate
+            TimeFormat = tf24
+            TimeDisplay = tdHMS
+            DateMode = dmComboBox
+            UseDefaultSeparators = True
+            HideDateTimeParts = []
+            MonthNames = 'Long'
+          end
+          object lblDataValidade: TLabel[4]
+            Left = 328
+            Height = 15
+            Top = 56
+            Width = 87
+            Caption = 'Data de Validade'
+            ParentColor = False
+          end
+          object dtpDataValidade: TDBDateTimePicker[5]
+            Left = 328
+            Height = 23
+            Top = 72
+            Width = 272
+            DataField = 'dt_validade_orcamento'
             DataSource = dsCadModelo
             ReadOnly = False
             CenturyFrom = 1941
@@ -136,39 +146,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             HideDateTimeParts = []
             MonthNames = 'Long'
           end
-          object lblDataValidade: TLabel[6]
-            Left = 328
-            Height = 15
-            Top = 56
-            Width = 87
-            Caption = 'Data de Validade'
-            ParentColor = False
-          end
-          object dtpDataValidade: TDBDateTimePicker[7]
-            Left = 328
-            Height = 23
-            Top = 72
-            Width = 272
-            DataField = 'dt_validade_orcamento'
-            DataSource = dsCadModelo
-            ReadOnly = False
-            CenturyFrom = 1941
-            MaxDate = 2958465
-            MinDate = -53780
-            AutoSize = False
-            TabOrder = 3
-            TrailingSeparator = False
-            TextForNullDate = 'NULL'
-            LeadingZeros = True
-            Kind = dtkDate
-            TimeFormat = tf24
-            TimeDisplay = tdHMS
-            DateMode = dmComboBox
-            UseDefaultSeparators = True
-            HideDateTimeParts = []
-            MonthNames = 'Long'
-          end
-          object edtValorTotal: TDBEdit[8]
+          object edtValorTotal: TDBEdit[6]
             Left = 488
             Height = 32
             Top = 287
@@ -181,9 +159,9 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Font.Height = -19
             MaxLength = 0
             ParentFont = False
-            TabOrder = 4
+            TabOrder = 3
           end
-          object lblValorTotal: TLabel[9]
+          object lblValorTotal: TLabel[7]
             Left = 488
             Height = 21
             Top = 264
@@ -194,12 +172,12 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ParentColor = False
             ParentFont = False
           end
-          object btnSelecionarProdutos: TBCButton[10]
+          object btnSelecionarProdutos: TBCButton[8]
             Cursor = crHandPoint
             Left = 16
-            Height = 32
-            Top = 287
-            Width = 184
+            Height = 23
+            Top = 272
+            Width = 48
             Anchors = [akLeft, akBottom]
             StateClicked.Background.Color = 8412732
             StateClicked.Background.Gradient1.StartColor = 8404992
@@ -290,7 +268,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             StateNormal.FontEx.Style = []
             StateNormal.FontEx.TextAlignment = bcaLeftCenter
             BorderSpacing.InnerBorder = 1
-            Caption = 'Selecionar Produtos'
+            Caption = '... '
             Color = clNone
             DropDownWidth = 16
             DropDownArrowSize = 8
@@ -343,7 +321,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             ImageIndex = 6
             MemoryUsage = bmuHigh
           end
-          object lblListaProdutos: TLabel[11]
+          object lblListaProdutos: TLabel[9]
             Left = 16
             Height = 15
             Top = 102
@@ -351,11 +329,11 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Caption = 'Lista de Produtos'
             ParentColor = False
           end
-          object btnRemoverItem: TBCButton[12]
+          object btnRemoverItem: TBCButton[10]
             Cursor = crHandPoint
-            Left = 208
-            Height = 32
-            Top = 287
+            Left = 72
+            Height = 23
+            Top = 272
             Width = 32
             Anchors = [akRight, akBottom]
             StateClicked.Background.Color = 1446607
@@ -452,55 +430,55 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Glyph.Data = {
               76060000424D7606000000000000360000002800000014000000140000000100
               2000000000004006000064000000640000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000FFFFFF06FFFFFF60FFFFFFADFFFFFFD3FFFFFFD3FFFFFFACFFFFFF5FFFFF
+              FF05000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000FFFFFF32FFFFFFDBFFFFFFEDFFFFFF9BFFFF
+              FF6EFFFFFF6EFFFFFF9BFFFFFFEEFFFFFFDAFFFFFF3100000000000000000000
+              0000000000000000000000000000000000000000000000000000FFFFFF33FFFF
+              FFF4FFFFFFA1FFFFFF1000000000000000000000000000000000FFFFFF11FFFF
+              FFA4FFFFFFF4FFFFFF3100000000000000000000000000000000000000000000
+              000000000000FFFFFF06FFFFFFDCFFFFFFA10000000000000000000000000000
+              000000000000000000000000000000000000FFFFFFA4FFFFFFDAFFFFFF060000
+              00000000000000000000000000000000000000000000FFFFFF60FFFFFFEDFFFF
+              FF0F000000000000000000000000000000000000000000000000000000000000
+              0000FFFFFF11FFFFFFEEFFFFFF5F000000000000000000000000000000000000
+              000000000000FFFFFFAFFFFFFF9A000000000000000000000000000000000000
+              00000000000000000000000000000000000000000000FFFFFF9CFFFFFFAD0000
+              00000000000000000000000000000000000000000000FFFFFFD2FFFFFF6C0000
+              0000FFFFFF05FFFFFF8EFFFFFF99FFFFFF99FFFFFF99FFFFFF99FFFFFF8EFFFF
+              FF0500000000FFFFFF6DFFFFFFD2000000000000000000000000000000000000
+              000000000000FFFFFFD3FFFFFF6C00000000FFFFFF05FFFFFF8EFFFFFF99FFFF
+              FF99FFFFFF99FFFFFF99FFFFFF8EFFFFFF0500000000FFFFFF6DFFFFFFD20000
+              00000000000000000000000000000000000000000000FFFFFFAFFFFFFF990000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000000000000FFFFFF9BFFFFFFAE000000000000000000000000000000000000
+              000000000000FFFFFF61FFFFFFECFFFFFF0F0000000000000000000000000000
+              000000000000000000000000000000000000FFFFFF10FFFFFFEDFFFFFF600000
+              00000000000000000000000000000000000000000000FFFFFF06FFFFFFDDFFFF
+              FF9F000000000000000000000000000000000000000000000000000000000000
+              0000FFFFFFA1FFFFFFDBFFFFFF06000000000000000000000000000000000000
+              00000000000000000000FFFFFF34FFFFFFF5FFFFFF9FFFFFFF0F000000000000
+              00000000000000000000FFFFFF0FFFFFFFA1FFFFFFF4FFFFFF32000000000000
               000000000000000000000000000000000000000000000000000000000000FFFF
-              FF05FFFFFF050000000000000000000000000000000000000000000000000000
-              000000000000000000000000000000000000000000000000000000000000FFFF
-              FF02FFFFFF54FFFFFFAAFFFFFFE7FFFFFFEEFFFFFFEEFFFFFFE7FFFFFFA9FFFF
-              FF54FFFFFF020000000000000000000000000000000000000000000000000000
-              00000000000000000000FFFFFF30FFFFFFD0FFFFFFB7FFFFFF52FFFFFF0D0000
-              000000000000FFFFFF0DFFFFFF52FFFFFFB7FFFFFFCFFFFFFF30000000000000
-              00000000000000000000000000000000000000000000FFFFFF4DFFFFFFE3FFFF
-              FF49000000000000000000000000000000000000000000000000000000000000
-              0000FFFFFF48FFFFFFE2FFFFFF4C000000000000000000000000000000000000
-              0000FFFFFF30FFFFFFE3FFFFFF28000000000000000000000000000000000000
-              00000000000000000000000000000000000000000000FFFFFF26FFFFFFE1FFFF
-              FF2F000000000000000000000000FFFFFF02FFFFFFCFFFFFFF48000000000000
+              FF34FFFFFFDDFFFFFFECFFFFFF99FFFFFF6DFFFFFF6DFFFFFF9AFFFFFFEDFFFF
+              FFDCFFFFFF330000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000FFFFFF06FFFFFF61FFFFFFAFFFFF
+              FFD3FFFFFFD3FFFFFFAEFFFFFF60FFFFFF060000000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
-              00000000000000000000FFFFFF46FFFFFFCEFFFFFF020000000000000000FFFF
-              FF53FFFFFFB60000000000000000000000000000000000000000000000000000
-              000000000000000000000000000000000000000000000000000000000000FFFF
-              FFB4FFFFFF520000000000000000FFFFFFA9FFFFFF5000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
-              0000000000000000000000000000FFFFFF4FFFFFFFA70000000000000000FFFF
-              FFE6FFFFFF0C0000000000000000000000000000000000000000000000000000
-              000000000000000000000000000000000000000000000000000000000000FFFF
-              FF0BFFFFFFE400000000FFFFFF04FFFFFFEB0000000000000000000000000000
-              0000FFFFFF13FFFFFF75FFFFFF77FFFFFF77FFFFFF77FFFFFF77FFFFFF77FFFF
-              FF3600000000000000000000000000000000FFFFFFE8FFFFFF04FFFFFF04FFFF
-              FFEB00000000000000000000000000000000FFFFFF14FFFFFF75FFFFFF77FFFF
-              FF77FFFFFF77FFFFFF77FFFFFF77FFFFFF370000000000000000000000000000
-              0000FFFFFFE8FFFFFF0400000000FFFFFFE6FFFFFF0B00000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
-              0000000000000000000000000000FFFFFF0AFFFFFFE40000000000000000FFFF
-              FFAAFFFFFF4D0000000000000000000000000000000000000000000000000000
-              000000000000000000000000000000000000000000000000000000000000FFFF
-              FF4DFFFFFFA80000000000000000FFFFFF54FFFFFFB200000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
-              0000000000000000000000000000FFFFFFB2FFFFFF530000000000000000FFFF
-              FF02FFFFFFD0FFFFFF4300000000000000000000000000000000000000000000
-              0000000000000000000000000000000000000000000000000000FFFFFF43FFFF
-              FFCEFFFFFF02000000000000000000000000FFFFFF30FFFFFFE0FFFFFF230000
               0000000000000000000000000000000000000000000000000000000000000000
-              000000000000FFFFFF23FFFFFFE0FFFFFF300000000000000000000000000000
-              000000000000FFFFFF4DFFFFFFE0FFFFFF430000000000000000000000000000
-              000000000000000000000000000000000000FFFFFF45FFFFFFE0FFFFFF4D0000
-              0000000000000000000000000000000000000000000000000000FFFFFF31FFFF
-              FFD0FFFFFFB3FFFFFF4DFFFFFF0A0000000000000000FFFFFF0AFFFFFF4DFFFF
-              FFB3FFFFFFD0FFFFFF3000000000000000000000000000000000000000000000
-              0000000000000000000000000000FFFFFF02FFFFFF54FFFFFFA9FFFFFFE7FFFF
-              FFE8FFFFFFE8FFFFFFE6FFFFFFA9FFFFFF53FFFFFF0200000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
-              0000000000000000000000000000FFFFFF04FFFFFF0400000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000000000000000000000000000000
             }
             GlyphAlignment = bcaLeftCenter
@@ -513,6 +491,214 @@ inherited CadOrcamentoF: TCadOrcamentoF
             TextApplyGlobalOpacity = False
             MemoryUsage = bmuHigh
           end
+          object btnSelecionarCliente: TBCButton[11]
+            Cursor = crHandPoint
+            Left = 104
+            Height = 23
+            Top = 24
+            Width = 48
+            Anchors = [akLeft, akBottom]
+            StateClicked.Background.Color = 8412732
+            StateClicked.Background.Gradient1.StartColor = 8404992
+            StateClicked.Background.Gradient1.EndColor = 4194304
+            StateClicked.Background.Gradient1.GradientType = gtRadial
+            StateClicked.Background.Gradient1.Point1XPercent = 50
+            StateClicked.Background.Gradient1.Point1YPercent = 100
+            StateClicked.Background.Gradient1.Point2XPercent = 0
+            StateClicked.Background.Gradient1.Point2YPercent = 0
+            StateClicked.Background.Gradient2.StartColor = clWhite
+            StateClicked.Background.Gradient2.EndColor = clBlack
+            StateClicked.Background.Gradient2.GradientType = gtLinear
+            StateClicked.Background.Gradient2.Point1XPercent = 0
+            StateClicked.Background.Gradient2.Point1YPercent = 0
+            StateClicked.Background.Gradient2.Point2XPercent = 0
+            StateClicked.Background.Gradient2.Point2YPercent = 100
+            StateClicked.Background.Gradient1EndPercent = 100
+            StateClicked.Background.Style = bbsColor
+            StateClicked.Border.Style = bboNone
+            StateClicked.FontEx.Color = clWhite
+            StateClicked.FontEx.FontQuality = fqFineAntialiasing
+            StateClicked.FontEx.Height = 14
+            StateClicked.FontEx.Name = 'Inter'
+            StateClicked.FontEx.Shadow = False
+            StateClicked.FontEx.ShadowRadius = 2
+            StateClicked.FontEx.ShadowOffsetX = 1
+            StateClicked.FontEx.ShadowOffsetY = 1
+            StateClicked.FontEx.Style = []
+            StateClicked.FontEx.TextAlignment = bcaLeftCenter
+            StateHover.Background.Color = 7032626
+            StateHover.Background.Gradient1.StartColor = 16744448
+            StateHover.Background.Gradient1.EndColor = 8404992
+            StateHover.Background.Gradient1.GradientType = gtRadial
+            StateHover.Background.Gradient1.Point1XPercent = 50
+            StateHover.Background.Gradient1.Point1YPercent = 100
+            StateHover.Background.Gradient1.Point2XPercent = 0
+            StateHover.Background.Gradient1.Point2YPercent = 0
+            StateHover.Background.Gradient2.StartColor = clWhite
+            StateHover.Background.Gradient2.EndColor = clBlack
+            StateHover.Background.Gradient2.GradientType = gtLinear
+            StateHover.Background.Gradient2.Point1XPercent = 0
+            StateHover.Background.Gradient2.Point1YPercent = 0
+            StateHover.Background.Gradient2.Point2XPercent = 0
+            StateHover.Background.Gradient2.Point2YPercent = 100
+            StateHover.Background.Gradient1EndPercent = 100
+            StateHover.Background.Style = bbsColor
+            StateHover.Border.Style = bboNone
+            StateHover.FontEx.Color = clWhite
+            StateHover.FontEx.FontQuality = fqFineAntialiasing
+            StateHover.FontEx.Height = 14
+            StateHover.FontEx.Name = 'Inter'
+            StateHover.FontEx.Shadow = False
+            StateHover.FontEx.ShadowRadius = 2
+            StateHover.FontEx.ShadowOffsetX = 1
+            StateHover.FontEx.ShadowOffsetY = 1
+            StateHover.FontEx.Style = []
+            StateHover.FontEx.TextAlignment = bcaLeftCenter
+            StateNormal.Background.Color = 5126436
+            StateNormal.Background.Gradient1.StartColor = 4249019
+            StateNormal.Background.Gradient1.EndColor = 4249019
+            StateNormal.Background.Gradient1.GradientType = gtAngular
+            StateNormal.Background.Gradient1.Point1XPercent = 0
+            StateNormal.Background.Gradient1.Point1YPercent = 0
+            StateNormal.Background.Gradient1.Point2XPercent = 0
+            StateNormal.Background.Gradient1.Point2YPercent = 100
+            StateNormal.Background.Gradient2.StartColor = 4249019
+            StateNormal.Background.Gradient2.EndColor = 4249019
+            StateNormal.Background.Gradient2.GradientType = gtRadial
+            StateNormal.Background.Gradient2.Point1XPercent = 50
+            StateNormal.Background.Gradient2.Point1YPercent = 100
+            StateNormal.Background.Gradient2.Point2XPercent = 0
+            StateNormal.Background.Gradient2.Point2YPercent = 0
+            StateNormal.Background.Gradient1EndPercent = 1
+            StateNormal.Background.Style = bbsColor
+            StateNormal.Border.Color = 5126436
+            StateNormal.Border.LightColor = clNone
+            StateNormal.Border.Style = bboSolid
+            StateNormal.FontEx.Color = clWhite
+            StateNormal.FontEx.FontQuality = fqFineAntialiasing
+            StateNormal.FontEx.Height = 14
+            StateNormal.FontEx.Name = 'Inter'
+            StateNormal.FontEx.Shadow = False
+            StateNormal.FontEx.ShadowColor = clNone
+            StateNormal.FontEx.ShadowColorOpacity = 0
+            StateNormal.FontEx.ShadowRadius = 2
+            StateNormal.FontEx.ShadowOffsetX = 1
+            StateNormal.FontEx.ShadowOffsetY = 1
+            StateNormal.FontEx.Style = []
+            StateNormal.FontEx.TextAlignment = bcaLeftCenter
+            BorderSpacing.InnerBorder = 1
+            Caption = '... '
+            Color = clNone
+            DropDownWidth = 16
+            DropDownArrowSize = 8
+            GlobalOpacity = 255
+            Glyph.Data = {
+              76060000424D7606000000000000360000002800000014000000140000000100
+              2000000000004006000064000000640000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000FFFFFF71FFFFFFD300000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000FFFFFF13FFFF
+              FF77FFFFFFA2FFFFFF87FFFFFF2CFFFFFF71FFFFFFFEFFFFFF71000000000000
+              000000000000FFFFFF33FFFFFF55FFFFFF55FFFFFF55FFFFFF55FFFFFF55FFFF
+              FF3F00000000FFFFFF2EFFFFFFE9FFFFFFEDFFFFFFB8FFFFFFD8FFFFFFFDFFFF
+              FFFEFFFFFF71000000000000000000000000FFFFFF33FFFFFFFEFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF87FFFFFF03FFFFFFCFFFFFFFC2FFFF
+              FF1100000000FFFFFF01FFFFFF79FFFFFFFDFFFFFF2C00000000000000000000
+              0000FFFFFF20FFFFFFF2FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF5AFFFFFF2DFFFFFFFFFFFFFF30000000000000000000000000FFFFFF01FFFF
+              FFD8FFFFFF8800000000000000000000000000000000FFFFFF31FFFFFFCEFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF59FFFFFF4DFFFFFFFFFFFFFF0C0000
+              0000000000000000000000000000FFFFFFB8FFFFFFA200000000000000000000
+              00000000000000000000FFFFFF02FFFFFF4DFFFFFFADFFFFFFD2FFFFFF57FFFF
+              FF0BFFFFFF1DFFFFFFFDFFFFFF50000000000000000000000000FFFFFF11FFFF
+              FFEEFFFFFF780000000000000000000000000000000000000000000000000000
+              00000000000000000000000000000000000000000000FFFFFFA3FFFFFFF0FFFF
+              FF51FFFFFF09FFFFFF30FFFFFFC2FFFFFFE1FFFFFF0F00000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000000000000FFFFFF09FFFFFFA1FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFD9FFFF
+              FF30000000000000000000000000000000000000000000000000000000000000
+              000000000000FFFFFF01FFFFFF56FFFFFF9CFFFFFF9CFFFFFF58FFFFFF02FFFF
+              FF1DFFFFFF4BFFFFFF37FFFFFF03000000000000000000000000000000000000
+              000000000000000000000000000000000000FFFFFF09FFFFFFB4FFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFBBFFFFFF080000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000FFFFFF88FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FF85000000000000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000FFFFFFE3FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000FFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFFD000000000000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000FFFFFFF2FFFFFFFFFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF10000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000FFFFFFACFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+              FFAA000000000000000000000000000000000000000000000000000000000000
+              000000000000000000000000000000000000FFFFFF1DFFFFFFEDFFFFFFFFFFFF
+              FFFFFFFFFFFFFFFFFFFFFFFFFFEDFFFFFF1C0000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              000000000000FFFFFF1DFFFFFFACFFFFFFF2FFFFFFF2FFFFFFAEFFFFFF270000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000
+            }
+            GlyphAlignment = bcaLeftCenter
+            OnClick = btnSelecionarClienteClick
+            ParentColor = False
+            Rounding.RoundX = 5
+            Rounding.RoundY = 5
+            RoundingDropDown.RoundX = 1
+            RoundingDropDown.RoundY = 1
+            TextApplyGlobalOpacity = False
+            ImageIndex = 6
+            MemoryUsage = bmuHigh
+          end
+          object edtClienteId: TDBEdit[12]
+            Left = 160
+            Height = 23
+            Top = 24
+            Width = 56
+            DataField = 'clienteid'
+            DataSource = dsCadModelo
+            Alignment = taRightJustify
+            MaxLength = 0
+            TabOrder = 4
+          end
+          object lblClienteId: TLabel[13]
+            Left = 160
+            Height = 15
+            Top = 8
+            Width = 51
+            Caption = 'ID Cliente'
+            ParentColor = False
+          end
+          object lblClienteNome: TLabel[14]
+            Left = 224
+            Height = 15
+            Top = 8
+            Width = 90
+            Caption = 'Nome do Cliente'
+            ParentColor = False
+          end
+          object cbbClienteNome: TDBLookupComboBox[15]
+            Left = 224
+            Height = 23
+            Top = 24
+            Width = 376
+            DataField = 'clienteid'
+            DataSource = dsCadModelo
+            Enabled = False
+            KeyField = 'clienteid'
+            ListField = 'nome_cliente'
+            ListFieldIndex = 0
+            ListSource = dmF.dsClientes
+            LookupCache = False
+            TabOrder = 5
+          end
         end
         inherited pnlRodapeFormulario: TPanel
           Height = 59
@@ -521,20 +707,17 @@ inherited CadOrcamentoF: TCadOrcamentoF
           ClientHeight = 59
           ClientWidth = 616
           inherited btnEditar: TBCButton
-            Left = 16
-            Top = 17
+            Top = 16
           end
           inherited btnGravar: TBCButton
-            Left = 112
             Top = 17
           end
           inherited btnCancelar: TBCButton
-            Left = 208
             Top = 17
           end
           inherited btnExcluir: TBCButton
-            Left = 560
-            Top = 17
+            Left = 584
+            Top = 16
           end
         end
       end
@@ -648,19 +831,5 @@ inherited CadOrcamentoF: TCadOrcamentoF
       DisplayFormat = '#0.00'
       Precision = 983042
     end
-  end
-  object qrySelectClientes: TZQuery[5]
-    Connection = dmF.ZConnection1
-    SQL.Strings = (
-      'select clienteid, nome_cliente from cliente'
-    )
-    Params = <>
-    Left = 696
-    Top = 296
-  end
-  object dsClientes: TDataSource[6]
-    DataSet = qrySelectClientes
-    Left = 744
-    Top = 296
   end
 end

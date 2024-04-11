@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
   DBGrids, BCButton, DBDateTimePicker, ZDataset, uCadModelo, dm, DateUtils,
-  uSelecionarProdutosF;
+  uSelecionarProdutosF, uSelecionarCliente;
 
 type
 
@@ -16,17 +16,19 @@ type
   TCadOrcamentoF = class(TCadModeloF)
     btnRemoverItem: TBCButton;
     btnSelecionarProdutos: TBCButton;
-    cbbClientes: TDBLookupComboBox;
+    btnSelecionarCliente: TBCButton;
     dbgProdutos: TDBGrid;
+    cbbClienteNome: TDBLookupComboBox;
     dtpDataOrc: TDBDateTimePicker;
     dtpDataValidade: TDBDateTimePicker;
+    edtClienteId: TDBEdit;
     edtValorTotal: TDBEdit;
-    dsClientes: TDataSource;
     edtOrcId: TDBEdit;
+    lblClienteNome: TLabel;
     lblListaProdutos: TLabel;
+    lblClienteId: TLabel;
     lblValorTotal: TLabel;
     lblDataOrc: TLabel;
-    lblCliente: TLabel;
     lblDataValidade: TLabel;
     lblOrcId: TLabel;
     qryCadclienteid: TLongintField;
@@ -34,10 +36,11 @@ type
     qryCaddt_validade_orcamento: TDateTimeField;
     qryCadorcamentoid: TLongintField;
     qryCadvl_total_orcamento: TFloatField;
-    qrySelectClientes: TZQuery;
     procedure btnRemoverItemClick(Sender: TObject);
+    procedure btnSelecionarClienteClick(Sender: TObject);
     procedure btnSelecionarProdutosClick(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
+    procedure edtClienteNomeChange(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure qryCadAfterCancel(DataSet: TDataSet);
     procedure qryCadAfterDelete(DataSet: TDataSet);
@@ -73,6 +76,12 @@ begin
   dmF.qryOrcItem.Delete;
 end;
 
+procedure TCadOrcamentoF.btnSelecionarClienteClick(Sender: TObject);
+begin
+  SelecionarClienteF := TSelecionarClienteF.Create(Self);
+  SelecionarClienteF.ShowModal();
+end;
+
 procedure TCadOrcamentoF.dsCadModeloDataChange(Sender: TObject; Field: TField);
 begin
   with dmF.qryOrcItem do
@@ -84,10 +93,14 @@ begin
   end;
 end;
 
+procedure TCadOrcamentoF.edtClienteNomeChange(Sender: TObject);
+begin
+
+end;
+
 procedure TCadOrcamentoF.FormShow(Sender: TObject);
 begin
   qryCad.Open;
-  qrySelectClientes.Open;
   dmF.qryOrcItem.Open;
 end;
 

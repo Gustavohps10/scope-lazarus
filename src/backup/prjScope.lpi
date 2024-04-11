@@ -140,6 +140,14 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uSelecionarProdutosF"/>
       </Unit>
+      <Unit>
+        <Filename Value="cadastro\modal\uselecionarcliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SelecionarClienteF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSelecionarCliente"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

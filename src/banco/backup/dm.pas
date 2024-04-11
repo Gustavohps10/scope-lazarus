@@ -47,7 +47,7 @@ var
 
 implementation
 uses
-  uSelecionarProdutosF;
+  uSelecionarProdutosF, uCadOrcamento;
 
 {$R *.lfm}
 
@@ -73,7 +73,7 @@ begin
      qryOrcItem.FieldByName('vl_unitario').AsString := qryProdutos.FieldByName('vl_venda_produto').AsString;
      qryOrcItem.FieldByName('vl_total').AsString := qryProdutos.FieldByName('vl_venda_produto').AsString;
      qryOrcItem.FieldByName('produtodesc').AsString := qryProdutos.FieldByName('ds_produto').AsString;
-     CadOrcamentoF.;
+     SelecionarProdutosF.edtQuantidade.Edit.Value:=1;
   end;
 end;
 
