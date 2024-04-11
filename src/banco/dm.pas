@@ -36,10 +36,14 @@ type
     qryClientes: TZQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure dsProdutosDataChange(Sender: TObject; Field: TField);
+    procedure qryOrcItemAfterDelete(DataSet: TDataSet);
+    procedure qryOrcItemAfterPost(DataSet: TDataSet);
   private
 
   public
     function getSequence(sequenceName: string): integer;
+    procedure calculaTotalOrc();
+    procedure qrySearch(ZQuery: TZQuery; table: string; field: string; value: string);
   end;
 
 var
@@ -77,6 +81,16 @@ begin
   end;
 end;
 
+procedure TdmF.qryOrcItemAfterDelete(DataSet: TDataSet);
+begin
+  calculaTotalOrc();
+end;
+
+procedure TdmF.qryOrcItemAfterPost(DataSet: TDataSet);
+begin
+  calculaTotalOrc();
+end;
+
 function TdmF.getSequence(sequenceName: string): integer;
 begin
   with qryGenerica do
@@ -86,6 +100,34 @@ begin
     SQL.Add('select nextval('+ QuotedStr(sequenceName)+') AS CODIGO');
     Open;
     Result := FieldByName('CODIGO').AsInteger;
+   end;
+end;
+
+procedure TdmF.calculaTotalOrc();
+var valorTotalOrcamento: double = 0;
+begin
+  with qryOrcItem do
+  begin
+   First;
+   while not EOF do
+   begin
+    valorTotalOrcamento := valorTotalOrcamento + FieldByName('vl_total').AsFloat;
+    Next;
+   end;
+   CadOrcamentoF.qryCad.FieldByName('vl_total_orcamento').AsFloat:= valorTotalOrcamento;
+  end;
+end;
+
+procedure TdmF.qrySearch(ZQuery: TZQuery; table: string; field: string; value: string);
+var qrySql: string;
+begin
+  qrySql := 'select * from ' + table + ' where ' + field + ' ilike ' + QuotedStr('%' + value + '%');
+  with ZQuery do
+   begin
+    Close;
+    SQL.Clear;
+    SQL.Add(qrySql);
+    Open;
    end;
 end;
 

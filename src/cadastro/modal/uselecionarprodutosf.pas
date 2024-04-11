@@ -50,19 +50,8 @@ uses
 { TSelecionarProdutosF }
 
 procedure TSelecionarProdutosF.btnAdicionarProdutoClick(Sender: TObject);
-var valorTotalOrcamento: double = 0;
 begin
   dmF.qryOrcItem.Post;
-  with dmF.qryOrcItem do
-  begin
-   First;
-   while not EOF do
-   begin
-    valorTotalOrcamento := valorTotalOrcamento + FieldByName('vl_total').AsFloat;
-    Next;
-   end;
-   CadOrcamentoF.qryCad.FieldByName('vl_total_orcamento').AsFloat:= valorTotalOrcamento;
-  end;
   Close;
 end;
 

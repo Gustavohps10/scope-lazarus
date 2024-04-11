@@ -81,6 +81,7 @@ end;
 procedure TSelecionarProdutosF.FormClose(Sender: TObject;
   var CloseAction: TCloseAction);
 begin
+  dmF.qryProdutos.Close;
   CloseAction:=caFree;
 end;
 

@@ -1,7 +1,7 @@
 inherited SelecionarClienteF: TSelecionarClienteF
-  Left = 347
+  Left = 666
   Height = 477
-  Top = 75
+  Top = 204
   Caption = 'Selecionar Cliente'
   ClientHeight = 477
   OnClose = FormClose
@@ -375,8 +375,9 @@ inherited SelecionarClienteF: TSelecionarClienteF
       Left = 16
       Height = 15
       Top = 8
-      Width = 33
+      Width = 34
       Caption = 'Nome'
+      ParentColor = False
     end
     object edtNome: TDBEdit[3]
       Left = 16
@@ -404,8 +405,9 @@ inherited SelecionarClienteF: TSelecionarClienteF
       Left = 16
       Height = 15
       Top = 56
-      Width = 60
+      Width = 59
       Caption = 'CPF/CNPJ'
+      ParentColor = False
     end
     object edtTipo: TDBEdit[6]
       Left = 192
@@ -422,8 +424,9 @@ inherited SelecionarClienteF: TSelecionarClienteF
       Left = 192
       Height = 15
       Top = 56
-      Width = 25
+      Width = 24
       Caption = 'Tipo'
+      ParentColor = False
     end
   end
 end

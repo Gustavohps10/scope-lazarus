@@ -56,13 +56,8 @@ end;
 procedure TSelecionarClienteF.btnSelecionarClick(Sender: TObject);
 begin
    CadOrcamentoF.qryCad.FieldByName('clienteid').AsInteger := dmF.qryClientes.FieldByName('clienteid').AsInteger;
-   CadOrcamentoF.edtClienteNome.Text := dmF.qryClientes.FieldByName('nome_cliente').asString;
+   //CadOrcamentoF.edtClienteNome.Text := dmF.qryClientes.FieldByName('nome_cliente').asString;
    Close;
-end;
-
-procedure TSelecionarClienteF.FormShow(Sender: TObject);
-begin
-   dmF.qryClientes.Open;
 end;
 
 end.

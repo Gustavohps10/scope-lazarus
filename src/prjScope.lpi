@@ -39,6 +39,12 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="frce"/>
+      </Item>
+      <Item>
+        <PackageName Value="lazreport"/>
+      </Item>
+      <Item>
         <PackageName Value="MemDSLaz"/>
       </Item>
       <Item>
@@ -148,6 +154,14 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uSelecionarCliente"/>
       </Unit>
+      <Unit>
+        <Filename Value="relatorio\relclientes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relClientesF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relClientes"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -158,7 +172,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="cadastro;banco;cadastro\modal"/>
+      <OtherUnitFiles Value="cadastro;banco;cadastro\modal;relatorio"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

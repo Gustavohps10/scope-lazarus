@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
-  ZDataset, uCadModelo, DB, dm;
+  BGRAThemeRadioButton, ZDataset, uCadModelo, DB, dm;
 
 type
 
@@ -21,6 +21,11 @@ type
     lblNomeCompleto: TLabel;
     lblUsuario: TLabel;
     lblSenha: TLabel;
+    rbtnNome: TBGRAThemeRadioButton;
+    rbtnUsuarioId: TBGRAThemeRadioButton;
+    rbtnUsuario: TBGRAThemeRadioButton;
+    procedure btnPesquisarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
 
@@ -48,6 +53,25 @@ begin
     qryCad.FieldByName('id').asInteger := FieldByName('CODIGO').AsInteger;
    end;
   pgcPrincipal.ActivePage := tbCadastro;
+end;
+
+procedure TCadUsuarioF.FormShow(Sender: TObject);
+begin
+  qryCad.Open;
+end;
+
+procedure TCadUsuarioF.btnPesquisarClick(Sender: TObject);
+var search: string;
+begin
+  search := Trim(edtPesquisar.Text);
+  if rbtnUsuarioId.Checked then
+     dmF.qrySearch(qryCad, 'usuarios', 'cast(id as text)', search);
+
+  if rbtnUsuario.Checked then
+     dmf.qrySearch(qryCad, 'usuarios', 'usuario', search);
+
+  if rbtnClienteCpfCnpj.Checked then
+     dmf.qrySearch(qryCad, 'usuarios', 'nome_completo', search);
 end;
 
 end.

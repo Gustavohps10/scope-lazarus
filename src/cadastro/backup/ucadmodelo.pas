@@ -14,6 +14,7 @@ type
   { TCadModeloF }
 
   TCadModeloF = class(TForm)
+    btnFiltro: TBCButton;
     imglIcons: TBGRAImageList;
     btnExcluir: TBCButton;
     btnCancelar: TBCButton;
@@ -83,6 +84,7 @@ procedure TCadModeloF.qryCadAfterDelete(DataSet: TDataSet);
 begin
   pgcPrincipal.ActivePage := tbPesquisa;
   btnEditar.Enabled:=true;
+  btnGravar.Enabled:=false;
 end;
 
 procedure TCadModeloF.qryCadAfterInsert(DataSet: TDataSet);

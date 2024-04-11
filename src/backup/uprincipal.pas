@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
-  BGRAImageList, uCadCategoria, uCadCliente, uCadProduto, uCadOrcamento,
+  BGRAImageList, uCadCategoria, uCadCliente, uCadProduto, uCadOrcamento, relClientes,
   uCadUsuario;
 
 type
@@ -22,6 +22,8 @@ type
     menuCadCliente: TMenuItem;
     menuCadProduto: TMenuItem;
     menuCadUsuario: TMenuItem;
+    menuRelClientes: TMenuItem;
+    menuRelatorios: TMenuItem;
     menuSobre: TMenuItem;
     menuOrcamento: TMenuItem;
     menuVendas: TMenuItem;
@@ -32,6 +34,7 @@ type
     procedure menuCadProdutoClick(Sender: TObject);
     procedure menuCadUsuarioClick(Sender: TObject);
     procedure menuOrcamentoClick(Sender: TObject);
+    procedure menuRelClientesClick(Sender: TObject);
   private
 
   public
@@ -75,6 +78,12 @@ procedure TprincipalF.menuOrcamentoClick(Sender: TObject);
 begin
   CadOrcamentoF := TCadOrcamentoF.Create(Self);
   CadOrcamentoF.Show();
+end;
+
+procedure TprincipalF.menuRelClientesClick(Sender: TObject);
+begin
+   relClientesF := TrelClientesF.Create(Self);
+   relClientesF.Show()s;
 end;
 
 end.

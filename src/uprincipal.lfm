@@ -1,16 +1,16 @@
 object principalF: TprincipalF
-  Left = 297
+  Left = 649
   Height = 585
-  Top = 59
+  Top = 263
   Width = 866
   Caption = 'Menu Principal'
-  ClientHeight = 585
+  ClientHeight = 565
   ClientWidth = 866
   Color = 16514043
   Font.Name = 'Segoe UI'
   Menu = MainMenu1
   Position = poScreenCenter
-  LCLVersion = '3.2.0.0'
+  LCLVersion = '2.2.6.0'
   object pnlCabecalho: TPanel
     Left = 0
     Height = 64
@@ -224,6 +224,13 @@ object principalF: TprincipalF
         Caption = 'Orçamento'
         ImageIndex = 6
         OnClick = menuOrcamentoClick
+      end
+    end
+    object menuRelatorios: TMenuItem
+      Caption = 'Relatórios'
+      object menuRelClientes: TMenuItem
+        Caption = 'Rel. Clientes'
+        OnClick = menuRelClientesClick
       end
     end
     object menuSobre: TMenuItem

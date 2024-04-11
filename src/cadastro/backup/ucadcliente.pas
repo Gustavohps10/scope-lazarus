@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  ZDataset, uCadModelo, DB, dm;
+  BGRAThemeRadioButton, ZDataset, uCadModelo, DB, dm;
 
 type
 
@@ -21,7 +21,13 @@ type
     lblNome: TLabel;
     lblCpfCnpj: TLabel;
     lblTipo: TLabel;
+    rbtnClienteTipo: TBGRAThemeRadioButton;
+    rbtnClienteId: TBGRAThemeRadioButton;
+    rbtnClienteNome: TBGRAThemeRadioButton;
+    rbtnClienteCpfCnpj: TBGRAThemeRadioButton;
+    procedure btnPesquisarClick(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
+    procedure FormShow(Sender: TObject);
     procedure qryCadBeforePost(DataSet: TDataSet);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
@@ -50,6 +56,28 @@ begin
    then cbbTipo.ItemIndex := 1
    else if qryCad.FieldByName('tipo_cliente').AsString = 'J'
    then cbbTipo.ItemIndex := 2;
+end;
+
+procedure TCadClienteF.btnPesquisarClick(Sender: TObject);
+var search: string;
+begin
+  search := Trim(edtPesquisar.Text);
+  if rbtnClienteId.Checked then
+     dmF.qrySearch(qryCad, 'cliente', 'cast(clienteid as text)', search);
+
+  if rbtnClienteNome.Checked then
+     dmf.qrySearch(qryCad, 'cliente', 'nome_cliente', search);
+
+  if rbtnClienteCpfCnpj.Checked then
+     dmf.qrySearch(qryCad, 'cliente', 'cpf_cnpj_cliente', search);
+
+  if rbtnClienteTipo.Checked then
+     dmf.qrySearch(qryCad, 'cliente', 'tipo_cliente', search);
+end;
+
+procedure TCadClienteF.FormShow(Sender: TObject);
+begin
+  qryCad.Open;
 end;
 
 procedure TCadClienteF.qryCadNewRecord(DataSet: TDataSet);

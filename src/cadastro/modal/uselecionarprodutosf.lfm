@@ -209,7 +209,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 200
       Height = 15
       Top = 56
-      Width = 59
+      Width = 56
       Caption = 'Valor Total'
       ParentColor = False
     end
@@ -229,7 +229,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 200
       Height = 15
       Top = 8
-      Width = 75
+      Width = 73
       Caption = 'Valor Unitário'
       ParentColor = False
     end
@@ -257,7 +257,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 20
       Height = 15
       Top = 56
-      Width = 57
+      Width = 56
       Caption = 'Descrição'
       ParentColor = False
     end

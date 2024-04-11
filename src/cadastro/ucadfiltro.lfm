@@ -1,0 +1,28 @@
+object CadFiltroF: TCadFiltroF
+  Left = 580
+  Height = 259
+  Top = 265
+  Width = 309
+  Caption = 'CadFiltroF'
+  ClientHeight = 259
+  ClientWidth = 309
+  LCLVersion = '2.2.6.0'
+  object pnlCabecalho: TPanel
+    Left = 0
+    Height = 56
+    Top = 0
+    Width = 309
+    Align = alTop
+    BevelOuter = bvNone
+    Caption = 'Topo'
+    Color = 5126436
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Name = 'Inter'
+    Font.Quality = fqAntialiased
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+  end
+end

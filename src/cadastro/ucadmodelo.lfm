@@ -1,10 +1,10 @@
 object CadModeloF: TCadModeloF
-  Left = 371
-  Height = 530
-  Top = 112
+  Left = 541
+  Height = 533
+  Top = 257
   Width = 790
   Caption = 'CadModeloF'
-  ClientHeight = 530
+  ClientHeight = 533
   ClientWidth = 790
   Color = 16514043
   Font.CharSet = ANSI_CHARSET
@@ -14,7 +14,7 @@ object CadModeloF: TCadModeloF
   Font.Quality = fqDraft
   OnClose = FormClose
   Position = poMainFormCenter
-  LCLVersion = '3.2.0.0'
+  LCLVersion = '2.2.6.0'
   object pnlCabecalho: TPanel
     Left = 0
     Height = 64
@@ -35,7 +35,7 @@ object CadModeloF: TCadModeloF
   end
   object pgcPrincipal: TPageControl
     Left = 0
-    Height = 466
+    Height = 469
     Top = 64
     Width = 790
     ActivePage = tbPesquisa
@@ -46,7 +46,7 @@ object CadModeloF: TCadModeloF
     TabOrder = 1
     object tbPesquisa: TTabSheet
       Caption = 'Pesquisa'
-      ClientHeight = 438
+      ClientHeight = 441
       ClientWidth = 782
       object pnlCabecalhoConteudo: TPanel
         Left = 0
@@ -83,7 +83,7 @@ object CadModeloF: TCadModeloF
         object btnPesquisar: TBCButton
           Cursor = crHandPoint
           Left = 8
-          Height = 32
+          Height = 33
           Top = 8
           Width = 36
           StateClicked.Background.Color = 2600856
@@ -185,7 +185,7 @@ object CadModeloF: TCadModeloF
       end
       object DBGrid1: TDBGrid
         Left = 0
-        Height = 323
+        Height = 326
         Top = 56
         Width = 782
         Align = alClient
@@ -201,7 +201,7 @@ object CadModeloF: TCadModeloF
       object pnlRodape: TPanel
         Left = 0
         Height = 59
-        Top = 379
+        Top = 382
         Width = 782
         Align = alBottom
         BevelOuter = bvNone
@@ -212,7 +212,7 @@ object CadModeloF: TCadModeloF
         object btnNovo: TBCButton
           Cursor = crHandPoint
           Left = 8
-          Height = 32
+          Height = 33
           Top = 16
           Width = 88
           Anchors = [akLeft, akBottom]
@@ -324,7 +324,7 @@ object CadModeloF: TCadModeloF
         object btnFechar: TBCButton
           Cursor = crHandPoint
           Left = 672
-          Height = 32
+          Height = 33
           Top = 16
           Width = 96
           Anchors = [akRight]
@@ -435,13 +435,13 @@ object CadModeloF: TCadModeloF
     end
     object tbCadastro: TTabSheet
       Caption = 'Cadastro'
-      ClientHeight = 438
+      ClientHeight = 441
       ClientWidth = 782
       ParentFont = False
       object pnlFormulario: TPanel
         Left = 186
         Height = 400
-        Top = 24
+        Top = 26
         Width = 410
         Anchors = []
         BevelOuter = bvNone
@@ -527,7 +527,7 @@ object CadModeloF: TCadModeloF
           object btnEditar: TBCButton
             Cursor = crHandPoint
             Left = 0
-            Height = 32
+            Height = 33
             Top = 48
             Width = 88
             Anchors = [akLeft, akBottom]
@@ -637,7 +637,7 @@ object CadModeloF: TCadModeloF
           object btnGravar: TBCButton
             Cursor = crHandPoint
             Left = 96
-            Height = 32
+            Height = 33
             Top = 48
             Width = 88
             Anchors = [akLeft, akBottom]
@@ -748,7 +748,7 @@ object CadModeloF: TCadModeloF
           object btnCancelar: TBCButton
             Cursor = crHandPoint
             Left = 192
-            Height = 32
+            Height = 33
             Top = 48
             Width = 96
             Anchors = [akLeft, akBottom]
@@ -862,10 +862,10 @@ object CadModeloF: TCadModeloF
           end
           object btnExcluir: TBCButton
             Cursor = crHandPoint
-            Left = 376
-            Height = 32
+            Left = 368
+            Height = 33
             Top = 48
-            Width = 32
+            Width = 40
             Anchors = [akRight, akBottom]
             StateClicked.Background.Color = 1446607
             StateClicked.Background.Gradient1.StartColor = 8404992

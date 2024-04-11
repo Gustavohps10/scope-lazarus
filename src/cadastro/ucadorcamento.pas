@@ -6,8 +6,8 @@ interface
 
 uses
   Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
-  DBGrids, BCButton, DBDateTimePicker, ZDataset, uCadModelo, dm, DateUtils,
-  uSelecionarProdutosF, uSelecionarCliente;
+  DBGrids, BCButton, BGRAThemeRadioButton, DBDateTimePicker, ZDataset,
+  uCadModelo, dm, DateUtils, uSelecionarProdutosF, uSelecionarCliente;
 
 type
 
@@ -36,11 +36,16 @@ type
     qryCaddt_validade_orcamento: TDateTimeField;
     qryCadorcamentoid: TLongintField;
     qryCadvl_total_orcamento: TFloatField;
+    rbtnOrcClienteId: TBGRAThemeRadioButton;
+    rbtnOrcId: TBGRAThemeRadioButton;
+    rbtnOrcValorTotal: TBGRAThemeRadioButton;
+    procedure btnPesquisarClick(Sender: TObject);
     procedure btnRemoverItemClick(Sender: TObject);
     procedure btnSelecionarClienteClick(Sender: TObject);
     procedure btnSelecionarProdutosClick(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
     procedure edtClienteNomeChange(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
     procedure qryCadAfterCancel(DataSet: TDataSet);
     procedure qryCadAfterDelete(DataSet: TDataSet);
@@ -76,6 +81,26 @@ begin
   dmF.qryOrcItem.Delete;
 end;
 
+procedure TCadOrcamentoF.btnPesquisarClick(Sender: TObject);
+var search: string;
+begin
+  search := Trim(edtPesquisar.Text);
+  if rbtnOrcId.Checked then
+     dmF.qrySearch(qryCad, 'orcamento', 'cast(orcamentoid as text)', search);
+
+  if rbtnOrcClienteId.Checked then
+     dmf.qrySearch(qryCad, 'orcamento', 'cast(clienteid as text)', search);
+
+  //if rbtnOrcDataSolic.Checked then
+  //   dmf.qrySearch(qryCad, 'orcamento', 'cast(dt_orcamento as text)', search);
+  //
+  //if rbtnOrcDataValidade.Checked then
+  //   dmf.qrySearch(qryCad, 'orcamento', 'cast(dt_validade_orcamento as text)', search);
+
+  if rbtnOrcValorTotal.Checked then
+     dmf.qrySearch(qryCad, 'orcamento', 'cast(vl_total_orcamento as text)', search);
+end;
+
 procedure TCadOrcamentoF.btnSelecionarClienteClick(Sender: TObject);
 begin
   SelecionarClienteF := TSelecionarClienteF.Create(Self);
@@ -98,9 +123,17 @@ begin
 
 end;
 
+procedure TCadOrcamentoF.FormClose(Sender: TObject;
+  var CloseAction: TCloseAction);
+begin
+  inherited;
+  dmF.qryClientes.Close;
+end;
+
 procedure TCadOrcamentoF.FormShow(Sender: TObject);
 begin
   qryCad.Open;
+  dmF.qryClientes.Open;
   dmF.qryOrcItem.Open;
 end;
 

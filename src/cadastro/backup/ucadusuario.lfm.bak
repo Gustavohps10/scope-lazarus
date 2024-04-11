@@ -1,12 +1,42 @@
 inherited CadUsuarioF: TCadUsuarioF
-  Left = 403
-  Top = 156
+  Left = 447
+  Top = 171
   Caption = 'Usuários'
+  OnShow = FormShow
   inherited pnlCabecalho: TPanel
     Caption = 'Usuários'
   end
   inherited pgcPrincipal: TPageControl
     inherited tbPesquisa: TTabSheet
+      inherited pnlCabecalhoConteudo: TPanel
+        inherited btnPesquisar: TBCButton
+          OnClick = btnPesquisarClick
+        end
+        object rbtnUsuarioId: TBGRAThemeRadioButton[3]
+          Left = 312
+          Height = 19
+          Top = 18
+          Width = 96
+          Caption = ' Usuário ID'
+          Checked = True
+        end
+        object rbtnUsuario: TBGRAThemeRadioButton[4]
+          Left = 408
+          Height = 19
+          Top = 18
+          Width = 72
+          Caption = ' Usuario'
+          Checked = False
+        end
+        object rbtnNome: TBGRAThemeRadioButton[5]
+          Left = 488
+          Height = 19
+          Top = 18
+          Width = 80
+          Caption = ' Nome'
+          Checked = False
+        end
+      end
       inherited DBGrid1: TDBGrid
         Columns = <        
           item
@@ -55,6 +85,7 @@ inherited CadUsuarioF: TCadUsuarioF
             Width = 184
             DataField = 'id'
             DataSource = dsCadModelo
+            ReadOnly = True
             Alignment = taRightJustify
             MaxLength = 0
             TabOrder = 0
@@ -119,7 +150,6 @@ inherited CadUsuarioF: TCadUsuarioF
   end
   inherited qryCad: TZQuery
     OnNewRecord = qryCadNewRecord
-    Active = True
     SQL.Strings = (
       'select * from usuarios order by id'
     )

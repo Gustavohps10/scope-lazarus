@@ -30,7 +30,8 @@ object dmF: TdmF
   end
   object qryOrcItem: TZQuery
     Connection = ZConnection1
-    Active = True
+    AfterPost = qryOrcItemAfterPost
+    AfterDelete = qryOrcItemAfterDelete
     SQL.Strings = (
       'select * from orcamento_item'
     )

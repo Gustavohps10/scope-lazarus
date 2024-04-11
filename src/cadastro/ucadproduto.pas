@@ -8,8 +8,8 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
   EditBtn, ButtonPanel, DBDateTimePicker, BCComboBox, BCLabel, BCListBox,
   BCMDButton, BCMaterialEdit, BGRACustomDrawn, BCMaterialFloatSpinEdit,
-  BCMaterialSpinEdit, BCCheckComboBox, BCPanel, ZDataset, uCadModelo, DB,
-  ZAbstractDataset, dm;
+  BCMaterialSpinEdit, BCCheckComboBox, BCPanel, BGRAThemeRadioButton, ZDataset,
+  uCadModelo, DB, ZAbstractDataset, dm;
 
 type
 
@@ -38,6 +38,11 @@ type
     qryCadstatus_produto: TStringField;
     qryCadvl_venda_produto: TFloatField;
     qrySelectCategorias: TZQuery;
+    rbtnProdutoDesc: TBGRAThemeRadioButton;
+    rbtnValorVenda: TBGRAThemeRadioButton;
+    rbtnProdutoId: TBGRAThemeRadioButton;
+    rbtnStatus: TBGRAThemeRadioButton;
+    procedure btnPesquisarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
     procedure FormShow(Sender: TObject);
@@ -134,6 +139,23 @@ begin
      end;
 
    qryCad.Active:=true;
+end;
+
+procedure TCadProdutoF.btnPesquisarClick(Sender: TObject);
+var search: string;
+begin
+  search := Trim(edtPesquisar.Text);
+  if rbtnProdutoId.Checked then
+     dmF.qrySearch(qryCad, 'produto', 'cast(produtoid as text)', search);
+
+  if rbtnProdutoDesc.Checked then
+     dmf.qrySearch(qryCad, 'produto', 'ds_produto', search);
+
+  if rbtnValorVenda.Checked then
+     dmf.qrySearch(qryCad, 'produto', 'cast(vl_venda_produto as text)', search);
+
+  if rbtnStatus.Checked then
+     dmf.qrySearch(qryCad, 'produto', 'status_produto', search);
 end;
 
 

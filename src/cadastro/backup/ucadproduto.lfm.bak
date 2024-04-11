@@ -1,13 +1,51 @@
 inherited CadProdutoF: TCadProdutoF
-  Left = 315
-  Top = 113
+  Left = 476
+  Top = 261
   Caption = 'Produtos'
   OnCreate = FormCreate
+  OnShow = FormShow
   inherited pnlCabecalho: TPanel
     Caption = 'Produtos'
   end
   inherited pgcPrincipal: TPageControl
     inherited tbPesquisa: TTabSheet
+      inherited pnlCabecalhoConteudo: TPanel
+        inherited btnPesquisar: TBCButton
+          OnClick = btnPesquisarClick
+        end
+        object rbtnProdutoDesc: TBGRAThemeRadioButton[3]
+          Left = 416
+          Height = 19
+          Top = 18
+          Width = 88
+          Caption = ' Descrição'
+          Checked = False
+        end
+        object rbtnProdutoId: TBGRAThemeRadioButton[4]
+          Left = 312
+          Height = 19
+          Top = 18
+          Width = 96
+          Caption = ' Produto ID'
+          Checked = True
+        end
+        object rbtnValorVenda: TBGRAThemeRadioButton[5]
+          Left = 512
+          Height = 19
+          Top = 18
+          Width = 96
+          Caption = ' Valor Venda'
+          Checked = False
+        end
+        object rbtnStatus: TBGRAThemeRadioButton[6]
+          Left = 616
+          Height = 19
+          Top = 18
+          Width = 64
+          Caption = ' Status'
+          Checked = False
+        end
+      end
       inherited DBGrid1: TDBGrid
         Columns = <        
           item
