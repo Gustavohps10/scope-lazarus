@@ -1,14 +1,13 @@
 inherited CadProdutoF: TCadProdutoF
-  Left = 657
-  Top = 272
+  Left = 315
+  Top = 113
   Caption = 'Produtos'
   OnCreate = FormCreate
+  OnShow = FormShow
   inherited pnlCabecalho: TPanel
     Caption = 'Produtos'
   end
   inherited pgcPrincipal: TPageControl
-    ActivePage = tbCadastro
-    TabIndex = 1
     inherited tbPesquisa: TTabSheet
       inherited DBGrid1: TDBGrid
         Columns = <        
@@ -199,7 +198,7 @@ inherited CadProdutoF: TCadProdutoF
             Width = 176
             DataField = 'ds_produto'
             DataSource = dsCadModelo
-            MaxLength = 0
+            MaxLength = 50
             TabOrder = 2
           end
           object lblObs: TLabel[6]
@@ -217,7 +216,7 @@ inherited CadProdutoF: TCadProdutoF
             Width = 176
             DataField = 'obs_produto'
             DataSource = dsCadModelo
-            MaxLength = 0
+            MaxLength = 300
             TabOrder = 3
           end
           object lblDataCad: TLabel[8]
@@ -401,12 +400,81 @@ inherited CadProdutoF: TCadProdutoF
     Top = 160
   end
   inherited qryCad: TZQuery
+    AutoCalcFields = False
     BeforePost = qryCadBeforePost
     OnNewRecord = qryCadNewRecord
     SQL.Strings = (
       'select * from produto order by produtoid'
     )
     Top = 160
+    object qryCadvl_venda_produto: TFloatField[0]
+      FieldKind = fkData
+      FieldName = 'vl_venda_produto'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '#0.00'
+      Precision = 983042
+    end
+    object qryCadprodutoid: TLongintField[1]
+      FieldKind = fkData
+      FieldName = 'produtoid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryCadcategoriaprodutoid: TLongintField[2]
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryCadds_produto: TStringField[3]
+      FieldKind = fkData
+      FieldName = 'ds_produto'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object qryCadobs_produto: TStringField[4]
+      FieldKind = fkData
+      FieldName = 'obs_produto'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 300
+    end
+    object qryCaddt_cadastro_produto: TDateTimeField[5]
+      FieldKind = fkData
+      FieldName = 'dt_cadastro_produto'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryCadstatus_produto: TStringField[6]
+      FieldKind = fkData
+      FieldName = 'status_produto'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
   end
   object qrySelectCategorias: TZQuery[5]
     Connection = dmF.ZConnection1

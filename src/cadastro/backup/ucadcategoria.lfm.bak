@@ -1,7 +1,7 @@
 inherited CadCategoriaF: TCadCategoriaF
-  Left = 348
+  Left = 352
   Height = 527
-  Top = 124
+  Top = 174
   Caption = 'Categorias'
   ClientHeight = 527
   inherited pnlCabecalho: TPanel

@@ -16,6 +16,7 @@ type
     edtCatDesc: TDBEdit;
     lblID: TLabel;
     lblDesc: TLabel;
+    procedure FormShow(Sender: TObject);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
 
@@ -43,6 +44,11 @@ begin
     qryCad.FieldByName('categoriaprodutoid').asInteger := FieldByName('CODIGO').AsInteger;
    end;
   pgcPrincipal.ActivePage := tbCadastro;
+end;
+
+procedure TCadCategoriaF.FormShow(Sender: TObject);
+begin
+  qryCad.Open;
 end;
 
 end.

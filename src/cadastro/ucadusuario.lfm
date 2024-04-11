@@ -1,7 +1,8 @@
 inherited CadUsuarioF: TCadUsuarioF
-  Left = 459
-  Top = 232
+  Left = 403
+  Top = 156
   Caption = 'Usuários'
+  OnShow = FormShow
   inherited pnlCabecalho: TPanel
     Caption = 'Usuários'
   end
@@ -119,7 +120,6 @@ inherited CadUsuarioF: TCadUsuarioF
   end
   inherited qryCad: TZQuery
     OnNewRecord = qryCadNewRecord
-    Active = True
     SQL.Strings = (
       'select * from usuarios order by id'
     )

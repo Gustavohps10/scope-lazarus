@@ -1,9 +1,10 @@
 inherited CadCategoriaF: TCadCategoriaF
-  Left = 508
+  Left = 352
   Height = 527
-  Top = 246
+  Top = 174
   Caption = 'Categorias'
   ClientHeight = 527
+  OnShow = FormShow
   inherited pnlCabecalho: TPanel
     Caption = 'Categorias'
   end
@@ -84,7 +85,6 @@ inherited CadCategoriaF: TCadCategoriaF
   end
   inherited qryCad: TZQuery
     OnNewRecord = qryCadNewRecord
-    Active = True
     SQL.Strings = (
       'select * from categoria_produto order by categoriaprodutoid'
     )

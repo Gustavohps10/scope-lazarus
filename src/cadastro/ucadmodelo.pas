@@ -82,6 +82,8 @@ end;
 procedure TCadModeloF.qryCadAfterDelete(DataSet: TDataSet);
 begin
   pgcPrincipal.ActivePage := tbPesquisa;
+  btnEditar.Enabled:=true;
+  btnGravar.Enabled:=false;
 end;
 
 procedure TCadModeloF.qryCadAfterInsert(DataSet: TDataSet);

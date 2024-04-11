@@ -21,6 +21,7 @@ type
     lblNomeCompleto: TLabel;
     lblUsuario: TLabel;
     lblSenha: TLabel;
+    procedure FormShow(Sender: TObject);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
 
@@ -48,6 +49,11 @@ begin
     qryCad.FieldByName('id').asInteger := FieldByName('CODIGO').AsInteger;
    end;
   pgcPrincipal.ActivePage := tbCadastro;
+end;
+
+procedure TCadUsuarioF.FormShow(Sender: TObject);
+begin
+  qryCad.Open;
 end;
 
 end.

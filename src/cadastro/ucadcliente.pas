@@ -22,6 +22,7 @@ type
     lblCpfCnpj: TLabel;
     lblTipo: TLabel;
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
+    procedure FormShow(Sender: TObject);
     procedure qryCadBeforePost(DataSet: TDataSet);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
@@ -50,6 +51,11 @@ begin
    then cbbTipo.ItemIndex := 1
    else if qryCad.FieldByName('tipo_cliente').AsString = 'J'
    then cbbTipo.ItemIndex := 2;
+end;
+
+procedure TCadClienteF.FormShow(Sender: TObject);
+begin
+  qryCad.Open;
 end;
 
 procedure TCadClienteF.qryCadNewRecord(DataSet: TDataSet);

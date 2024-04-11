@@ -1,7 +1,9 @@
 inherited SelecionarProdutosF: TSelecionarProdutosF
-  Left = 643
-  Top = 341
+  Left = 503
+  Top = 124
   Caption = 'Selecionar Produtos'
+  OnClose = FormClose
+  OnShow = FormShow
   inherited pnlTopo: TPanel
     Caption = 'Selecionar Produtos'
   end
@@ -23,6 +25,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
         Title.Caption = 'Valor de Venda'
         FieldName = 'vl_venda_produto'
       end>
+    DataSource = dmF.dsProdutos
   end
   inherited pnlRodape: TPanel
     object edtQuantidade: TBCMaterialSpinEdit[0]
@@ -206,7 +209,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 200
       Height = 15
       Top = 56
-      Width = 56
+      Width = 59
       Caption = 'Valor Total'
       ParentColor = False
     end
@@ -226,7 +229,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 200
       Height = 15
       Top = 8
-      Width = 73
+      Width = 75
       Caption = 'Valor Unitário'
       ParentColor = False
     end
@@ -254,7 +257,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 20
       Height = 15
       Top = 56
-      Width = 56
+      Width = 57
       Caption = 'Descrição'
       ParentColor = False
     end
@@ -266,7 +269,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       DataField = 'produtodesc'
       DataSource = dmF.dsOrcItem
       ReadOnly = True
-      MaxLength = 0
+      MaxLength = 50
       TabOrder = 3
     end
     object edtValorTotal: TDBEdit[9]
@@ -444,14 +447,5 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       ImageIndex = 7
       MemoryUsage = bmuHigh
     end
-  end
-  inherited qrySelect: TZQuery
-    Active = True
-    SQL.Strings = (
-      'select produtoid, ds_produto, vl_venda_produto from produto order by produtoid'
-    )
-  end
-  inherited dsSelect: TDataSource
-    OnDataChange = dsSelectDataChange
   end
 end

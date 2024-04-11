@@ -30,6 +30,13 @@ type
     lblProdutoId: TLabel;
     lblStatus: TLabel;
     lblValorVenda: TLabel;
+    qryCadcategoriaprodutoid: TLongintField;
+    qryCadds_produto: TStringField;
+    qryCaddt_cadastro_produto: TDateTimeField;
+    qryCadobs_produto: TStringField;
+    qryCadprodutoid: TLongintField;
+    qryCadstatus_produto: TStringField;
+    qryCadvl_venda_produto: TFloatField;
     qrySelectCategorias: TZQuery;
     procedure FormCreate(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);

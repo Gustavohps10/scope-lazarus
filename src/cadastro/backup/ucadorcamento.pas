@@ -14,7 +14,7 @@ type
   { TCadOrcamentoF }
 
   TCadOrcamentoF = class(TCadModeloF)
-    btnExcluir1: TBCButton;
+    btnRemoverItem: TBCButton;
     btnSelecionarProdutos: TBCButton;
     cbbClientes: TDBLookupComboBox;
     dbgProdutos: TDBGrid;
@@ -29,9 +29,20 @@ type
     lblCliente: TLabel;
     lblDataValidade: TLabel;
     lblOrcId: TLabel;
+    qryCadclienteid: TLongintField;
+    qryCaddt_orcamento: TDateTimeField;
+    qryCaddt_validade_orcamento: TDateTimeField;
+    qryCadorcamentoid: TLongintField;
+    qryCadvl_total_orcamento: TFloatField;
     qrySelectClientes: TZQuery;
+    procedure btnRemoverItemClick(Sender: TObject);
     procedure btnSelecionarProdutosClick(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
+    procedure FormShow(Sender: TObject);
+    procedure qryCadAfterCancel(DataSet: TDataSet);
+    procedure qryCadAfterDelete(DataSet: TDataSet);
+    procedure qryCadAfterEdit(DataSet: TDataSet);
+    procedure qryCadAfterPost(DataSet: TDataSet);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
 
@@ -57,6 +68,11 @@ begin
   SelecionarProdutosF.ShowModal();
 end;
 
+procedure TCadOrcamentoF.btnRemoverItemClick(Sender: TObject);
+begin
+  dmF.qryOrcItem.Delete;
+end;
+
 procedure TCadOrcamentoF.dsCadModeloDataChange(Sender: TObject; Field: TField);
 begin
   with dmF.qryOrcItem do
@@ -68,8 +84,44 @@ begin
   end;
 end;
 
+procedure TCadOrcamentoF.FormShow(Sender: TObject);
+begin
+  qryCad.Open;
+  qrySelectClientes.Open;
+  dmF.qryOrcItem.Open;
+end;
+
+procedure TCadOrcamentoF.qryCadAfterCancel(DataSet: TDataSet);
+begin
+  inherited;
+  btnSelecionarProdutos.Enabled:=false;
+  btnRemoverItem.Enabled:=false;
+end;
+
+procedure TCadOrcamentoF.qryCadAfterDelete(DataSet: TDataSet);
+begin
+  inherited;
+  btnSelecionarProdutos.Enabled:=false;
+  btnRemoverItem.Enabled:=false;
+end;
+
+procedure TCadOrcamentoF.qryCadAfterEdit(DataSet: TDataSet);
+begin
+  btnSelecionarProdutos.Enabled:=true;
+  btnRemoverItem.Enabled:=true;
+end;
+
+procedure TCadOrcamentoF.qryCadAfterPost(DataSet: TDataSet);
+begin
+  inherited;
+  btnSelecionarProdutos.Enabled:=false;
+  btnRemoverItem.Enabled:=false;
+end;
+
 procedure TCadOrcamentoF.qryCadNewRecord(DataSet: TDataSet);
 begin
+  btnSelecionarProdutos.Enabled:=true;
+  btnRemoverItem.Enabled:=true;
   qryCad.FieldByName('orcamentoid').AsInteger := dmF.getSequence('orcamento_orcamentoid_seq');
   qryCad.FieldByName('dt_orcamento').AsDateTime := Date;
   qryCad.FieldByName('dt_validade_orcamento').AsDateTime := IncDay(Date, 15);

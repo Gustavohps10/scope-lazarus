@@ -1,6 +1,6 @@
 inherited CadClienteF: TCadClienteF
-  Left = 557
-  Top = 249
+  Left = 323
+  Top = 142
   Caption = 'Clientes'
   inherited pnlCabecalho: TPanel
     Caption = 'Clientes'

@@ -22,8 +22,12 @@ object CadModeloF: TCadModeloF
     Width = 790
     Align = alTop
     BevelOuter = bvNone
+    Caption = 'Topo'
     Color = 5126436
-    Font.Name = 'Roboto'
+    Font.Color = clWhite
+    Font.Height = -27
+    Font.Name = 'Inter'
+    Font.Quality = fqAntialiased
     ParentBackground = False
     ParentColor = False
     ParentFont = False
@@ -79,7 +83,7 @@ object CadModeloF: TCadModeloF
         object btnPesquisar: TBCButton
           Cursor = crHandPoint
           Left = 8
-          Height = 33
+          Height = 32
           Top = 8
           Width = 36
           StateClicked.Background.Color = 2600856
@@ -208,7 +212,7 @@ object CadModeloF: TCadModeloF
         object btnNovo: TBCButton
           Cursor = crHandPoint
           Left = 8
-          Height = 33
+          Height = 32
           Top = 16
           Width = 88
           Anchors = [akLeft, akBottom]
@@ -320,7 +324,7 @@ object CadModeloF: TCadModeloF
         object btnFechar: TBCButton
           Cursor = crHandPoint
           Left = 672
-          Height = 33
+          Height = 32
           Top = 16
           Width = 96
           Anchors = [akRight]
@@ -523,7 +527,7 @@ object CadModeloF: TCadModeloF
           object btnEditar: TBCButton
             Cursor = crHandPoint
             Left = 0
-            Height = 33
+            Height = 32
             Top = 48
             Width = 88
             Anchors = [akLeft, akBottom]
@@ -633,7 +637,7 @@ object CadModeloF: TCadModeloF
           object btnGravar: TBCButton
             Cursor = crHandPoint
             Left = 96
-            Height = 33
+            Height = 32
             Top = 48
             Width = 88
             Anchors = [akLeft, akBottom]
@@ -744,7 +748,7 @@ object CadModeloF: TCadModeloF
           object btnCancelar: TBCButton
             Cursor = crHandPoint
             Left = 192
-            Height = 33
+            Height = 32
             Top = 48
             Width = 96
             Anchors = [akLeft, akBottom]
@@ -858,10 +862,10 @@ object CadModeloF: TCadModeloF
           end
           object btnExcluir: TBCButton
             Cursor = crHandPoint
-            Left = 368
-            Height = 33
+            Left = 376
+            Height = 32
             Top = 48
-            Width = 40
+            Width = 32
             Anchors = [akRight, akBottom]
             StateClicked.Background.Color = 1446607
             StateClicked.Background.Gradient1.StartColor = 8404992

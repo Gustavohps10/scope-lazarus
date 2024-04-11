@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  BCMaterialSpinEdit, BCButton, uOrcModalModelo, DB, dm;
+  ZDataset, BCMaterialSpinEdit, BCButton, uOrcModalModelo, DB, dm;
 
 type
 
@@ -24,10 +24,14 @@ type
     lblProdutoId: TLabel;
     lblValorTotal: TLabel;
     lblValorUnitario: TLabel;
+    qrySelectds_produto: TStringField;
+    qrySelectprodutoid: TLongintField;
+    qrySelectvl_venda_produto: TFloatField;
     procedure btnAdicionarProdutoClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
-    procedure dsSelectDataChange(Sender: TObject; Field: TField);
     procedure edtQuantidadeChange(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormShow(Sender: TObject);
   private
 
   public
@@ -45,18 +49,6 @@ uses
 
 { TSelecionarProdutosF }
 
-procedure TSelecionarProdutosF.dsSelectDataChange(Sender: TObject; Field: TField);
-begin
-  if dmF.qryOrcItem.FieldCount <> 0 then
-  begin
-     dmF.qryOrcItem.FieldByName('produtoid').AsString := qrySelect.FieldByName('produtoid').AsString;
-     dmF.qryOrcItem.FieldByName('vl_unitario').AsString := qrySelect.FieldByName('vl_venda_produto').AsString;
-     dmF.qryOrcItem.FieldByName('vl_total').AsString := qrySelect.FieldByName('vl_venda_produto').AsString;
-     dmF.qryOrcItem.FieldByName('produtodesc').AsString := qrySelect.FieldByName('ds_produto').AsString;
-     edtQuantidade.Edit.Value := 1;
-  end;
-end;
-
 procedure TSelecionarProdutosF.btnAdicionarProdutoClick(Sender: TObject);
 var valorTotalOrcamento: double = 0;
 begin
@@ -66,7 +58,7 @@ begin
    First;
    while not EOF do
    begin
-    valorTotalOrcamento := valorTotalOrcamento + FieldByName('vl_total_orcamento').AsFloat;
+    valorTotalOrcamento := valorTotalOrcamento + FieldByName('vl_total').AsFloat;
     Next;
    end;
    CadOrcamentoF.qryCad.FieldByName('vl_total_orcamento').AsFloat:= valorTotalOrcamento;
@@ -84,6 +76,17 @@ procedure TSelecionarProdutosF.edtQuantidadeChange(Sender: TObject);
 begin
   dmF.qryOrcItem.FieldByName('qt_produto').AsInteger := edtQuantidade.Edit.Value;
   dmF.qryOrcItem.FieldByName('vl_total').AsFloat := edtQuantidade.Edit.Value * dmF.qryOrcItem.FieldByName('vl_unitario').AsFloat;
+end;
+
+procedure TSelecionarProdutosF.FormClose(Sender: TObject;
+  var CloseAction: TCloseAction);
+begin
+  CloseAction:=caFree;
+end;
+
+procedure TSelecionarProdutosF.FormShow(Sender: TObject);
+begin
+  dmF.qryProdutos.Open;
 end;
 
 end.

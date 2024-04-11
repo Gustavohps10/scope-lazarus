@@ -30,9 +30,17 @@ type
     lblProdutoId: TLabel;
     lblStatus: TLabel;
     lblValorVenda: TLabel;
+    qryCadcategoriaprodutoid: TLongintField;
+    qryCadds_produto: TStringField;
+    qryCaddt_cadastro_produto: TDateTimeField;
+    qryCadobs_produto: TStringField;
+    qryCadprodutoid: TLongintField;
+    qryCadstatus_produto: TStringField;
+    qryCadvl_venda_produto: TFloatField;
     qrySelectCategorias: TZQuery;
     procedure FormCreate(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
+    procedure FormShow(Sender: TObject);
     procedure qryCadBeforePost(DataSet: TDataSet);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
@@ -75,6 +83,11 @@ begin
          end;
        end;
      end;
+end;
+
+procedure TCadProdutoF.FormShow(Sender: TObject);
+begin
+  qryCad.Open;
 end;
 
 procedure TCadProdutoF.qryCadBeforePost(DataSet: TDataSet);
