@@ -6,14 +6,16 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
-  BGRAImageList, uCadCategoria, uCadCliente, uCadProduto, uCadOrcamento, relClientes,
-  uCadUsuario;
+  BGRAImageList, BCLabel, uCadCategoria, uCadCliente, uCadProduto,
+  uCadOrcamento, relClientes, uCadUsuario;
 
 type
 
   { TprincipalF }
 
   TprincipalF = class(TForm)
+    lblUsuarioNome: TBCLabel;
+    imgUsuarioAvatar: TImage;
     imglIcons: TBGRAImageList;
     imgLogo: TImage;
     MainMenu1: TMainMenu;
@@ -27,6 +29,8 @@ type
     menuSobre: TMenuItem;
     menuOrcamento: TMenuItem;
     menuVendas: TMenuItem;
+    pnlPrincipal: TPanel;
+    pnlMenuLateral: TPanel;
     pnlCabecalho: TPanel;
     Separator1: TMenuItem;
     procedure menuCadCategoriaClick(Sender: TObject);
@@ -53,31 +57,46 @@ implementation
 procedure TprincipalF.menuCadCategoriaClick(Sender: TObject);
 begin
   CadCategoriaF := TCadCategoriaF.Create(Self);
-  CadCategoriaF.Show();
+  CadCategoriaF.Parent := pnlPrincipal;
+  CadCategoriaF.Align := alClient;
+  CadCategoriaF.BorderStyle:=bsNone;
+  CadCategoriaF.Show;
 end;
 
 procedure TprincipalF.menuCadClienteClick(Sender: TObject);
 begin
-  CadClienteF := TCadClienteF.Create(Self);;
-  CadClienteF.Show();
+  CadClienteF := TCadClienteF.Create(Self);
+  CadClienteF.Parent := pnlPrincipal;
+  CadClienteF.Align := alClient;
+  CadClienteF.BorderStyle:=bsNone;
+  CadClienteF.Show;
 end;
 
 procedure TprincipalF.menuCadProdutoClick(Sender: TObject);
 begin
   CadProdutoF := TCadProdutoF.Create(Self);
-  CadProdutoF.Show();
+  CadProdutoF.Parent := pnlPrincipal;
+  CadProdutoF.Align := alClient;
+  CadProdutoF.BorderStyle:=bsNone;
+  CadProdutoF.Show;
 end;
 
 procedure TprincipalF.menuCadUsuarioClick(Sender: TObject);
 begin
   CadUsuarioF := TCadUsuarioF.Create(Self);
-  CadUsuarioF.Show();
+  CadUsuarioF.Parent := pnlPrincipal;
+  CadUsuarioF.Align := alClient;
+  CadUsuarioF.BorderStyle:=bsNone;
+  CadUsuarioF.Show;
 end;
 
 procedure TprincipalF.menuOrcamentoClick(Sender: TObject);
 begin
   CadOrcamentoF := TCadOrcamentoF.Create(Self);
-  CadOrcamentoF.Show();
+  CadOrcamentoF.Parent := pnlPrincipal;
+  CadOrcamentoF.Align := alClient;
+  CadOrcamentoF.BorderStyle:=bsNone;
+  CadOrcamentoF.Show;
 end;
 
 procedure TprincipalF.menuRelClientesClick(Sender: TObject);

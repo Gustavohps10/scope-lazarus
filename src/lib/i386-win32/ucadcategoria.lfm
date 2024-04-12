@@ -14,8 +14,6 @@ inherited CadCategoriaF: TCadCategoriaF
   inherited pgcPrincipal: TPageControl
     Height = 463
     Width = 857
-    ActivePage = tbPesquisa
-    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       ClientHeight = 435
       ClientWidth = 849

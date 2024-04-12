@@ -8,8 +8,6 @@ inherited CadProdutoF: TCadProdutoF
     Caption = 'Produtos'
   end
   inherited pgcPrincipal: TPageControl
-    ActivePage = tbCadastro
-    TabIndex = 1
     inherited tbPesquisa: TTabSheet
       inherited pnlCabecalhoConteudo: TPanel
         inherited btnPesquisar: TBCButton

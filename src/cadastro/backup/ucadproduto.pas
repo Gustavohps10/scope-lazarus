@@ -43,7 +43,6 @@ type
     rbtnProdutoId: TBGRAThemeRadioButton;
     rbtnStatus: TBGRAThemeRadioButton;
     procedure btnPesquisarClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
     procedure FormShow(Sender: TObject);
     procedure qryCadBeforePost(DataSet: TDataSet);
@@ -92,7 +91,20 @@ end;
 
 procedure TCadProdutoF.FormShow(Sender: TObject);
 begin
-  qryCad.Open;
+   {Lista todas categorias no combobox}
+   with qrySelectCategorias do
+       begin
+        Open;
+        cbbCategoria.Clear;
+        cbbCategoria.Items.Add('Selecionar');
+        while not EOF do
+        begin
+           cbbCategoria.Items.AddObject(FieldByName('ds_categoria_produto').asString, TObject(FieldByName('categoriaprodutoid').AsInteger));
+           Next;
+        end;
+     end;
+   qryCad.Active:=true;
+   qryCad.Open;
 end;
 
 procedure TCadProdutoF.qryCadBeforePost(DataSet: TDataSet);
@@ -121,24 +133,6 @@ begin
   cbbCategoria.ItemIndex := 0;
   cbbStatus.ItemIndex := 0;
   pgcPrincipal.ActivePage := tbCadastro;
-end;
-
-procedure TCadProdutoF.FormCreate(Sender: TObject);
-begin
-   {Lista todas categorias no combobox}
-   with qrySelectCategorias do
-       begin
-        Open;
-        cbbCategoria.Clear;
-        cbbCategoria.Items.Add('Selecionar');
-        while not EOF do
-        begin
-           cbbCategoria.Items.AddObject(FieldByName('ds_categoria_produto').asString, TObject(FieldByName('categoriaprodutoid').AsInteger));
-           Next;
-        end;
-     end;
-
-   qryCad.Active:=true;
 end;
 
 procedure TCadProdutoF.btnPesquisarClick(Sender: TObject);

@@ -48,6 +48,7 @@ type
     procedure btnNovoClick(Sender: TObject);
     procedure DBGrid1DblClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
     procedure qryCadAfterCancel(DataSet: TDataSet);
     procedure qryCadAfterDelete(DataSet: TDataSet);
     procedure qryCadAfterInsert(DataSet: TDataSet);
@@ -63,6 +64,8 @@ var
   CadModeloF: TCadModeloF;
 
 implementation
+uses
+  uPrincipal;
 
 {$R *.lfm}
 
@@ -71,6 +74,12 @@ implementation
 procedure TCadModeloF.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   CloseAction:=caFree;
+end;
+
+procedure TCadModeloF.FormCreate(Sender: TObject);
+begin
+  if principalF.pnlPrincipal.ControlCount > 0 then
+  ShowMessage((principalF.Controls[0] as TForm).Caption);
 end;
 
 procedure TCadModeloF.qryCadAfterCancel(DataSet: TDataSet);

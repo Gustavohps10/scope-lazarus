@@ -13,6 +13,7 @@ object CadModeloF: TCadModeloF
   Font.Pitch = fpVariable
   Font.Quality = fqDraft
   OnClose = FormClose
+  OnCreate = FormCreate
   Position = poMainFormCenter
   LCLVersion = '3.2.0.0'
   object pnlCabecalho: TPanel
@@ -23,8 +24,8 @@ object CadModeloF: TCadModeloF
     Align = alTop
     BevelOuter = bvNone
     Caption = 'Topo'
-    Color = 5126436
-    Font.Color = clWhite
+    Color = 16514043
+    Font.Color = 2171169
     Font.Height = -27
     Font.Name = 'Inter'
     Font.Quality = fqAntialiased
@@ -199,7 +200,7 @@ object CadModeloF: TCadModeloF
         Top = 56
         Width = 782
         Align = alClient
-        Color = clWindow
+        Color = 16514043
         Columns = <>
         DataSource = dsCadModelo
         Font.Name = 'Inter'

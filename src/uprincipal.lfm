@@ -1,11 +1,11 @@
 object principalF: TprincipalF
-  Left = 380
-  Height = 585
-  Top = 147
-  Width = 866
+  Left = 225
+  Height = 624
+  Top = 27
+  Width = 805
   Caption = 'Menu Principal'
-  ClientHeight = 585
-  ClientWidth = 866
+  ClientHeight = 624
+  ClientWidth = 805
   Color = 16514043
   Font.Name = 'Segoe UI'
   Menu = MainMenu1
@@ -15,12 +15,12 @@ object principalF: TprincipalF
     Left = 0
     Height = 64
     Top = 0
-    Width = 866
+    Width = 805
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 64
-    ClientWidth = 866
-    Color = 15461355
+    ClientWidth = 805
+    Color = clWhite
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
@@ -186,6 +186,108 @@ object principalF: TprincipalF
       }
       Proportional = True
     end
+    object imgUsuarioAvatar: TImage
+      Left = 752
+      Height = 40
+      Top = 11
+      Width = 40
+      Anchors = [akTop, akRight]
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B477261706869633004000089504E47
+        0D0A1A0A0000000D49484452000000280000002808060000008CFEB86D000000
+        097048597300000B1300000B1301009A9C18000003E249444154789CED584D8F
+        554510BD133F08F8856E868937B7CEE977939197A8E8FC80495C89630C110137
+        BAD510C405121208EA2F70A7EE0C24B87062D4858E1F712923EED495A3A26EFC
+        04C4802E04047362BFB15FDBB7EF9DC7CC242653492537AFAB4F9FAEAEAAAE7E
+        45B1266BD22C755DDFEC9C9B017000C04B005EF5AAEF031A934DB19A323D3D7D
+        AD993D0AE0039297485EC929808B24DF03B0AB288A6B56941CC947489E6C23C5
+        66B25F3BE71E5E76626559DE46F2ADCCC2A7007C06E01D9273003E27793A43F6
+        8DAAAA6E5D1672BD5EAF4E790DC057009E057077D35C33DB02E039792E35BFAE
+        EBDE7290FB3102FE89E4EEA9A9A9EBBAE2C896E41E003F47447F1899A43FD621
+        CF01384E723CE3ADC7BD26BD6A669B48CEC79E34B38D4B269888B9D7EABA5E17
+        DB5555D52779221167F366B639B61706C9D988E4EBA364EB90E732E4CE6692E1
+        6C86E49027CD6C5BE73A171EAD8FB9E4B132F29C6A9EAF7B439E6C3A6E00BF04
+        73BFEC54275584A3057637D86D89C8BD323E3E7E8394E49108E3AE140680A722
+        8C9DAD04FD0DB118C04DD9AA6460E039111B8CF5FBFD1B434F02782C85D1EFF7
+        AF8F12F1DD2C39E7DC2DE1F5A53A97D9C8551394907C3EC4999C9CBC29477026
+        72796311D618878FF188488A1CC9A3E19873EECE261C33BB274A96AD8D04D581
+        84D757A3E1BFBB9F6F4B12001FB5C08C913C13D8EFCF2DF87200FE691B4133DB
+        DC52667E35B33BDA70748F07045FCC191EEB1CB0C324E71377EDF12EE4245A2B
+        9877AC1341006F77011F884A8992419A8BB99468AD4E04A3234E16D89510921F
+        773DE2C52451E02A805781DF98623520F84CA3A573EE8128E5B33164661B9D73
+        F70914C00BBEBC1CD5B77ED3585BA7E2EFF370CDFB1B8DF5C089CAC4A1D80680
+        79429F64B237D4CBDE769F73AE4AE01D0EBC77215BA82524DF0FC04FAA79F0E4
+        4BBDD848FED591D895845E52129465797BD0987C138CCF65C9F91DED8ACAC513
+        24B703F82DB528803F497E01E043926F4AF50D60411E699823ACED66F66434B6
+        A395A05A1E3509C1A43F744CD102A794F1CEB999B22CD737014D4C4C6C20F9A0
+        AF0EF123EAB2C71E602E747E96EA69D8B0F373240FB6C64942344731ED3152D8
+        0F154B113D0D2390DFBBDE0C39110680F311F66CB154D1BB353A6AE98941808F
+        22755D97892E7C416DDEA8803D3D0DE3F803B057CD66D11D671D80A77DEC861B
+        FEBEAA2A8E442E2499F0A4F45B359B5555DDDB70E38C69CC37A4DF25626EE1AA
+        C90D44B7819E8699FA76C6FFDD3117FCF5B1D8E3257476E4636D21BA4DAFAF51
+        0B35FEA98D4BCBD611447572A77A38FCF789992275C17B76C78AFFFD96AA6D66
+        B6556DBADA245D635EF5BD5F17BFDE28AB4A6A4DFE6FF2375E13BF58259FD5EB
+        0000000049454E44AE426082
+      }
+    end
+    object lblUsuarioNome: TBCLabel
+      Left = 680
+      Height = 25
+      Top = 20
+      Width = 66
+      Anchors = [akTop, akRight]
+      Background.Gradient1.StartColor = clWhite
+      Background.Gradient1.EndColor = clBlack
+      Background.Gradient1.GradientType = gtLinear
+      Background.Gradient1.Point1XPercent = 0
+      Background.Gradient1.Point1YPercent = 0
+      Background.Gradient1.Point2XPercent = 0
+      Background.Gradient1.Point2YPercent = 100
+      Background.Gradient2.StartColor = clWhite
+      Background.Gradient2.EndColor = clBlack
+      Background.Gradient2.GradientType = gtLinear
+      Background.Gradient2.Point1XPercent = 0
+      Background.Gradient2.Point1YPercent = 0
+      Background.Gradient2.Point2XPercent = 0
+      Background.Gradient2.Point2YPercent = 100
+      Background.Gradient1EndPercent = 35
+      Background.Style = bbsClear
+      Border.Style = bboNone
+      Caption = 'ADMIN'
+      FontEx.Color = 2171169
+      FontEx.FontQuality = fqFineAntialiasing
+      FontEx.Height = 20
+      FontEx.Name = 'Inter'
+      FontEx.Shadow = False
+      FontEx.ShadowRadius = 5
+      FontEx.ShadowOffsetX = 5
+      FontEx.ShadowOffsetY = 5
+      FontEx.Style = []
+      Rounding.RoundX = 1
+      Rounding.RoundY = 1
+    end
+  end
+  object pnlMenuLateral: TPanel
+    Left = 0
+    Height = 560
+    Top = 64
+    Width = 170
+    Align = alLeft
+    BevelOuter = bvNone
+    Color = 5126436
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 1
+  end
+  object pnlPrincipal: TPanel
+    Left = 170
+    Height = 560
+    Top = 64
+    Width = 635
+    Align = alClient
+    BevelOuter = bvNone
+    ParentBackground = False
+    TabOrder = 2
   end
   object MainMenu1: TMainMenu
     Images = imglIcons
