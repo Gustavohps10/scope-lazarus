@@ -60,10 +60,10 @@ var search: string;
 begin
   search := Trim(edtPesquisar.Text);
   if rbtnCategoriaId.Checked then
-     dmF.qrySearch(qryCad, 'categoria_produto', 'cast(categoriaprodutoid as text)', );
+     dmF.qrySearch(qryCad, 'categoria_produto', 'cast(categoriaprodutoid as text)', search);
 
   if rbtnCategoriaDesc.Checked then
-     dmf.qrySearch(qryCad, 'categoria_produto', 'ds_categoria_produto', edtPesquisar.Text);
+     dmf.qrySearch(qryCad, 'categoria_produto', 'ds_categoria_produto', search);
 end;
 
 end.

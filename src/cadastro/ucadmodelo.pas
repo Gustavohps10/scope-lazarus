@@ -25,6 +25,7 @@ type
     dsCadModelo: TDataSource;
     DBGrid1: TDBGrid;
     edtPesquisar: TEdit;
+    lblFiltrarPor: TLabel;
     pnlTopoFormulario: TPanel;
     pnlFormulario: TPanel;
     pnlBordaPesquisa: TPanel;

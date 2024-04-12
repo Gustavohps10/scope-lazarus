@@ -1,6 +1,6 @@
 inherited CadProdutoF: TCadProdutoF
-  Left = 476
-  Top = 261
+  Left = 358
+  Top = 112
   Caption = 'Produtos'
   OnCreate = FormCreate
   OnShow = FormShow
@@ -13,34 +13,34 @@ inherited CadProdutoF: TCadProdutoF
         inherited btnPesquisar: TBCButton
           OnClick = btnPesquisarClick
         end
-        object rbtnProdutoDesc: TBGRAThemeRadioButton[3]
-          Left = 416
+        object rbtnProdutoDesc: TBGRAThemeRadioButton[4]
+          Left = 400
           Height = 19
-          Top = 18
+          Top = 22
           Width = 88
           Caption = ' Descrição'
           Checked = False
         end
-        object rbtnProdutoId: TBGRAThemeRadioButton[4]
-          Left = 312
+        object rbtnProdutoId: TBGRAThemeRadioButton[5]
+          Left = 304
           Height = 19
-          Top = 18
-          Width = 96
+          Top = 22
+          Width = 88
           Caption = ' Produto ID'
           Checked = True
         end
-        object rbtnValorVenda: TBGRAThemeRadioButton[5]
-          Left = 512
+        object rbtnValorVenda: TBGRAThemeRadioButton[6]
+          Left = 496
           Height = 19
-          Top = 18
+          Top = 22
           Width = 96
           Caption = ' Valor Venda'
           Checked = False
         end
-        object rbtnStatus: TBGRAThemeRadioButton[6]
-          Left = 616
+        object rbtnStatus: TBGRAThemeRadioButton[7]
+          Left = 600
           Height = 19
-          Top = 18
+          Top = 22
           Width = 64
           Caption = ' Status'
           Checked = False

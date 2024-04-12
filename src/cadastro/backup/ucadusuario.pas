@@ -21,7 +21,7 @@ type
     lblNomeCompleto: TLabel;
     lblUsuario: TLabel;
     lblSenha: TLabel;
-    rbtnNome: TBGRAThemeRadioButton;
+    rbtnUsuarioNome: TBGRAThemeRadioButton;
     rbtnUsuarioId: TBGRAThemeRadioButton;
     rbtnUsuario: TBGRAThemeRadioButton;
     procedure btnPesquisarClick(Sender: TObject);
@@ -70,7 +70,7 @@ begin
   if rbtnUsuario.Checked then
      dmf.qrySearch(qryCad, 'usuarios', 'usuario', search);
 
-  if rbtnClienteCpfCnpj.Checked then
+  if rbtnUsuarioNome.Checked then
      dmf.qrySearch(qryCad, 'usuarios', 'nome_completo', search);
 end;
 

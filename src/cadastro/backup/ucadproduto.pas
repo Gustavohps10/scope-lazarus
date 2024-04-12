@@ -152,7 +152,7 @@ begin
      dmf.qrySearch(qryCad, 'produto', 'ds_produto', search);
 
   if rbtnValorVenda.Checked then
-     dmf.qrySearch(qryCad, 'produto', 'vl_venda_produto', search);
+     dmf.qrySearch(qryCad, 'produto', 'cast(vl_venda_produto as text)', search);
 
   if rbtnStatus.Checked then
      dmf.qrySearch(qryCad, 'produto', 'status_produto', search);

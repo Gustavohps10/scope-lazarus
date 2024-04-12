@@ -1,6 +1,6 @@
 inherited CadClienteF: TCadClienteF
-  Left = 548
-  Top = 218
+  Left = 375
+  Top = 101
   Caption = 'Clientes'
   OnShow = FormShow
   inherited pnlCabecalho: TPanel
@@ -12,35 +12,35 @@ inherited CadClienteF: TCadClienteF
         inherited btnPesquisar: TBCButton
           OnClick = btnPesquisarClick
         end
-        object rbtnClienteNome: TBGRAThemeRadioButton[3]
-          Left = 416
+        object rbtnClienteNome: TBGRAThemeRadioButton[4]
+          Left = 392
           Height = 19
-          Top = 18
+          Top = 21
           Width = 64
           Caption = ' Nome'
           Checked = False
         end
-        object rbtnClienteCpfCnpj: TBGRAThemeRadioButton[4]
-          Left = 488
+        object rbtnClienteCpfCnpj: TBGRAThemeRadioButton[5]
+          Left = 456
           Height = 19
-          Top = 18
-          Width = 96
+          Top = 21
+          Width = 88
           Caption = ' CPF/CNPJ'
           Checked = False
         end
-        object rbtnClienteTipo: TBGRAThemeRadioButton[5]
-          Left = 592
+        object rbtnClienteTipo: TBGRAThemeRadioButton[6]
+          Left = 544
           Height = 19
-          Top = 18
-          Width = 88
+          Top = 21
+          Width = 56
           Caption = ' Tipo'
           Checked = False
         end
-        object rbtnClienteId: TBGRAThemeRadioButton[6]
-          Left = 312
+        object rbtnClienteId: TBGRAThemeRadioButton[7]
+          Left = 304
           Height = 19
-          Top = 18
-          Width = 96
+          Top = 21
+          Width = 88
           Caption = ' Cliente ID'
           Checked = True
         end

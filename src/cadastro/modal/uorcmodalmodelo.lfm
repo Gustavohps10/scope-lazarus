@@ -225,7 +225,7 @@ object OrcModalModeloF: TOrcModalModeloF
     Align = alClient
     Color = clWindow
     Columns = <>
-    Font.Name = 'Iner'
+    Font.Name = 'Inter'
     ParentFont = False
     TabOrder = 2
   end

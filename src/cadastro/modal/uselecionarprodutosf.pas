@@ -14,7 +14,7 @@ type
 
   TSelecionarProdutosF = class(TOrcModalModeloF)
     btnAdicionarProduto: TBCButton;
-    btnExcluir: TBCButton;
+    btnCancelar: TBCButton;
     edtProdutoDesc: TDBEdit;
     edtValorTotal: TDBEdit;
     edtProdutoId: TDBEdit;
@@ -28,7 +28,9 @@ type
     qrySelectprodutoid: TLongintField;
     qrySelectvl_venda_produto: TFloatField;
     procedure btnAdicionarProdutoClick(Sender: TObject);
-    procedure btnExcluirClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnCancelarMouseEnter(Sender: TObject);
+    procedure btnCancelarMouseLeave(Sender: TObject);
     procedure edtQuantidadeChange(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
@@ -55,10 +57,20 @@ begin
   Close;
 end;
 
-procedure TSelecionarProdutosF.btnExcluirClick(Sender: TObject);
+procedure TSelecionarProdutosF.btnCancelarClick(Sender: TObject);
 begin
   dmF.qryOrcItem.Cancel;
   Close;
+end;
+
+procedure TSelecionarProdutosF.btnCancelarMouseEnter(Sender: TObject);
+begin
+  btnCancelar.ImageIndex := 5;
+end;
+
+procedure TSelecionarProdutosF.btnCancelarMouseLeave(Sender: TObject);
+begin
+  btnCancelar.ImageIndex := 6;
 end;
 
 procedure TSelecionarProdutosF.edtQuantidadeChange(Sender: TObject);

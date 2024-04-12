@@ -13,18 +13,19 @@ type
   { TSelecionarClienteF }
 
   TSelecionarClienteF = class(TOrcModalModeloF)
+    btnCancelar: TBCButton;
     btnSelecionar: TBCButton;
-    btnExcluir: TBCButton;
     edtTipo: TDBEdit;
     edtNome: TDBEdit;
     edtCpfCnpj: TDBEdit;
     lblNome: TLabel;
     lblCpfCnpj: TLabel;
     lblTipo: TLabel;
-    procedure btnExcluirClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnCancelarMouseEnter(Sender: TObject);
+    procedure btnCancelarMouseLeave(Sender: TObject);
     procedure btnSelecionarClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
-    procedure FormShow(Sender: TObject);
   private
 
   public
@@ -48,7 +49,17 @@ begin
   CloseAction:=caFree;
 end;
 
-procedure TSelecionarClienteF.btnExcluirClick(Sender: TObject);
+procedure TSelecionarClienteF.btnCancelarMouseEnter(Sender: TObject);
+begin
+  btnCancelar.ImageIndex := 5;
+end;
+
+procedure TSelecionarClienteF.btnCancelarMouseLeave(Sender: TObject);
+begin
+  btnCancelar.ImageIndex := 6;
+end;
+
+procedure TSelecionarClienteF.btnCancelarClick(Sender: TObject);
 begin
   Close;
 end;

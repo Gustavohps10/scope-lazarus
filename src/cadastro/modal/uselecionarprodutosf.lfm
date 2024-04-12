@@ -1,6 +1,6 @@
 inherited SelecionarProdutosF: TSelecionarProdutosF
-  Left = 503
-  Top = 124
+  Left = 793
+  Top = 101
   Caption = 'Selecionar Produtos'
   OnClose = FormClose
   OnShow = FormShow
@@ -46,7 +46,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Top = 120
       Width = 104
       Anchors = [akLeft, akBottom]
-      StateClicked.Background.Color = 8412732
+      StateClicked.Background.Color = 2600856
       StateClicked.Background.Gradient1.StartColor = 8404992
       StateClicked.Background.Gradient1.EndColor = 4194304
       StateClicked.Background.Gradient1.GradientType = gtRadial
@@ -74,7 +74,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       StateClicked.FontEx.ShadowOffsetY = 1
       StateClicked.FontEx.Style = []
       StateClicked.FontEx.TextAlignment = bcaLeftCenter
-      StateHover.Background.Color = 7032626
+      StateHover.Background.Color = 2867110
       StateHover.Background.Gradient1.StartColor = 16744448
       StateHover.Background.Gradient1.EndColor = 8404992
       StateHover.Background.Gradient1.GradientType = gtRadial
@@ -102,7 +102,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       StateHover.FontEx.ShadowOffsetY = 1
       StateHover.FontEx.Style = []
       StateHover.FontEx.TextAlignment = bcaLeftCenter
-      StateNormal.Background.Color = 5126436
+      StateNormal.Background.Color = 4249019
       StateNormal.Background.Gradient1.StartColor = 4249019
       StateNormal.Background.Gradient1.EndColor = 4249019
       StateNormal.Background.Gradient1.GradientType = gtAngular
@@ -121,7 +121,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       StateNormal.Background.Style = bbsColor
       StateNormal.Border.Color = 5126436
       StateNormal.Border.LightColor = clNone
-      StateNormal.Border.Style = bboSolid
+      StateNormal.Border.Style = bboNone
       StateNormal.FontEx.Color = clWhite
       StateNormal.FontEx.FontQuality = fqFineAntialiasing
       StateNormal.FontEx.Height = 14
@@ -209,7 +209,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 200
       Height = 15
       Top = 56
-      Width = 56
+      Width = 59
       Caption = 'Valor Total'
       ParentColor = False
     end
@@ -229,7 +229,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 200
       Height = 15
       Top = 8
-      Width = 73
+      Width = 75
       Caption = 'Valor Unitário'
       ParentColor = False
     end
@@ -257,7 +257,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Left = 20
       Height = 15
       Top = 56
-      Width = 56
+      Width = 57
       Caption = 'Descrição'
       ParentColor = False
     end
@@ -284,14 +284,14 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       MaxLength = 0
       TabOrder = 4
     end
-    object btnExcluir: TBCButton[10]
+    object btnCancelar: TBCButton[10]
       Cursor = crHandPoint
       Left = 144
       Height = 32
       Top = 120
       Width = 96
-      Anchors = [akRight, akBottom]
-      StateClicked.Background.Color = 1446607
+      Anchors = [akLeft, akBottom]
+      StateClicked.Background.Color = 6572335
       StateClicked.Background.Gradient1.StartColor = 8404992
       StateClicked.Background.Gradient1.EndColor = 4194304
       StateClicked.Background.Gradient1.GradientType = gtRadial
@@ -319,7 +319,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       StateClicked.FontEx.ShadowOffsetY = 1
       StateClicked.FontEx.Style = []
       StateClicked.FontEx.TextAlignment = bcaLeftCenter
-      StateHover.Background.Color = 2104299
+      StateHover.Background.Color = 5126436
       StateHover.Background.Gradient1.StartColor = 16744448
       StateHover.Background.Gradient1.EndColor = 8404992
       StateHover.Background.Gradient1.GradientType = gtRadial
@@ -347,7 +347,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       StateHover.FontEx.ShadowOffsetY = 1
       StateHover.FontEx.Style = []
       StateHover.FontEx.TextAlignment = bcaLeftCenter
-      StateNormal.Background.Color = 4670447
+      StateNormal.Background.Color = clNone
       StateNormal.Background.Gradient1.StartColor = 4249019
       StateNormal.Background.Gradient1.EndColor = 4249019
       StateNormal.Background.Gradient1.GradientType = gtAngular
@@ -364,8 +364,10 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       StateNormal.Background.Gradient2.Point2YPercent = 0
       StateNormal.Background.Gradient1EndPercent = 1
       StateNormal.Background.Style = bbsColor
-      StateNormal.Border.Style = bboNone
-      StateNormal.FontEx.Color = clWhite
+      StateNormal.Border.Color = 5126436
+      StateNormal.Border.LightColor = clNone
+      StateNormal.Border.Style = bboSolid
+      StateNormal.FontEx.Color = 5126436
       StateNormal.FontEx.FontQuality = fqFineAntialiasing
       StateNormal.FontEx.Height = 14
       StateNormal.FontEx.Name = 'Inter'
@@ -377,74 +379,24 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       StateNormal.FontEx.ShadowOffsetY = 1
       StateNormal.FontEx.Style = []
       StateNormal.FontEx.TextAlignment = bcaLeftCenter
-      Caption = 'Cancelar '
+      BorderSpacing.InnerBorder = 1
+      Caption = 'Cancelar  '
       Color = clNone
       DropDownWidth = 16
       DropDownArrowSize = 8
       GlobalOpacity = 255
-      Glyph.Data = {
-        76060000424D7606000000000000360000002800000014000000140000000100
-        2000000000004006000064000000640000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000FFFFFF0AFFFF
-        FF27FFFFFF27FFFFFF0A00000000000000000000000000000000000000000000
-        000000000000000000000000000000000000000000000000000000000000FFFF
-        FF0EFFFFFF7AFFFFFFC7FFFFFFC4FFFFFFA6FFFFFFA6FFFFFFC4FFFFFFC7FFFF
-        FF79FFFFFF0D0000000000000000000000000000000000000000000000000000
-        00000000000000000000FFFFFF54FFFFFFCFFFFFFF65FFFFFF0D000000000000
-        00000000000000000000FFFFFF0EFFFFFF67FFFFFFD0FFFFFF53000000000000
-        00000000000000000000000000000000000000000000FFFFFF76FFFFFFAFFFFF
-        FF0D000000000000000000000000000000000000000000000000000000000000
-        0000FFFFFF0EFFFFFFB1FFFFFF74000000000000000000000000000000000000
-        0000FFFFFF56FFFFFFAFFFFFFF02000000000000000000000000000000000000
-        00000000000000000000000000000000000000000000FFFFFF02FFFFFFB1FFFF
-        FF53000000000000000000000000FFFFFF0FFFFFFFCFFFFFFF0D000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000000000000FFFFFF0EFFFFFFD0FFFFFF0D0000000000000000FFFF
-        FF7BFFFFFF64000000000000000000000000FFFFFF49FFFFFF28000000000000
-        00000000000000000000FFFFFF28FFFFFF49000000000000000000000000FFFF
-        FF66FFFFFF790000000000000000FFFFFFC8FFFFFF0D00000000000000000000
-        0000FFFFFF28FFFFFFD0FFFFFF290000000000000000FFFFFF29FFFFFFD0FFFF
-        FF28000000000000000000000000FFFFFF0EFFFFFFC700000000FFFFFF0DFFFF
-        FFC20000000000000000000000000000000000000000FFFFFF29FFFFFFD0FFFF
-        FF29FFFFFF29FFFFFFD0FFFFFF29000000000000000000000000000000000000
-        0000FFFFFFC3FFFFFF0BFFFFFF26FFFFFFA60000000000000000000000000000
-        00000000000000000000FFFFFF29FFFFFFD0FFFFFFD0FFFFFF29000000000000
-        000000000000000000000000000000000000FFFFFFA7FFFFFF26FFFFFF26FFFF
-        FFA6000000000000000000000000000000000000000000000000FFFFFF29FFFF
-        FFD0FFFFFFD0FFFFFF2900000000000000000000000000000000000000000000
-        0000FFFFFFA7FFFFFF26FFFFFF0DFFFFFFC10000000000000000000000000000
-        000000000000FFFFFF29FFFFFFD0FFFFFF29FFFFFF29FFFFFFD0FFFFFF290000
-        000000000000000000000000000000000000FFFFFFC3FFFFFF0B00000000FFFF
-        FFC8FFFFFF0C000000000000000000000000FFFFFF28FFFFFFD0FFFFFF290000
-        000000000000FFFFFF29FFFFFFD0FFFFFF28000000000000000000000000FFFF
-        FF0DFFFFFFC70000000000000000FFFFFF7CFFFFFF6300000000000000000000
-        0000FFFFFF47FFFFFF2800000000000000000000000000000000FFFFFF28FFFF
-        FF47000000000000000000000000FFFFFF65FFFFFF7A0000000000000000FFFF
-        FF0FFFFFFFCEFFFFFF0B00000000000000000000000000000000000000000000
-        0000000000000000000000000000000000000000000000000000FFFFFF0DFFFF
-        FFCFFFFFFF0E000000000000000000000000FFFFFF58FFFFFFACFFFFFF020000
-        0000000000000000000000000000000000000000000000000000000000000000
-        000000000000FFFFFF02FFFFFFAFFFFFFF550000000000000000000000000000
-        000000000000FFFFFF78FFFFFFACFFFFFF0B0000000000000000000000000000
-        000000000000000000000000000000000000FFFFFF0CFFFFFFAFFFFFFF760000
-        0000000000000000000000000000000000000000000000000000FFFFFF58FFFF
-        FFCFFFFFFF63FFFFFF0C00000000000000000000000000000000FFFFFF0CFFFF
-        FF64FFFFFFCFFFFFFF5600000000000000000000000000000000000000000000
-        0000000000000000000000000000FFFFFF0FFFFFFF7CFFFFFFC8FFFFFFC2FFFF
-        FFA5FFFFFFA5FFFFFFC3FFFFFFC8FFFFFF7BFFFFFF0F00000000000000000000
-        0000000000000000000000000000000000000000000000000000000000000000
-        00000000000000000000FFFFFF0CFFFFFF28FFFFFF28FFFFFF0B000000000000
-        0000000000000000000000000000000000000000000000000000
-      }
       GlyphAlignment = bcaLeftCenter
-      OnClick = btnExcluirClick
+      OnClick = btnCancelarClick
+      OnMouseEnter = btnCancelarMouseEnter
+      OnMouseLeave = btnCancelarMouseLeave
       ParentColor = False
       Rounding.RoundX = 5
       Rounding.RoundY = 5
       RoundingDropDown.RoundX = 1
       RoundingDropDown.RoundY = 1
       TextApplyGlobalOpacity = False
-      ImageIndex = 7
+      Images = CadModeloF.imglIcons
+      ImageIndex = 6
       MemoryUsage = bmuHigh
     end
   end

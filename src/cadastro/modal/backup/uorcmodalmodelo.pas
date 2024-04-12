@@ -15,14 +15,12 @@ type
 
   TOrcModalModeloF = class(TForm)
     btnPesquisar: TBCButton;
-    dsSelect: TDataSource;
     DBGrid: TDBGrid;
     edtPesquisar: TEdit;
     pnlBordaPesquisa: TPanel;
     pnlRodape: TPanel;
     pnlPesquisa: TPanel;
     pnlTopo: TPanel;
-    qrySelect: TZQuery;
   private
 
   public

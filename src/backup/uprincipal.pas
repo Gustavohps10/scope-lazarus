@@ -83,7 +83,7 @@ end;
 procedure TprincipalF.menuRelClientesClick(Sender: TObject);
 begin
    relClientesF := TrelClientesF.Create(Self);
-   relClientesF.Show()s;
+   relClientesF.Show();
 end;
 
 end.

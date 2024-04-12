@@ -14,7 +14,7 @@ type
 
   TSelecionarProdutosF = class(TOrcModalModeloF)
     btnAdicionarProduto: TBCButton;
-    btnExcluir: TBCButton;
+    btnCancelar: TBCButton;
     edtProdutoDesc: TDBEdit;
     edtValorTotal: TDBEdit;
     edtProdutoId: TDBEdit;
@@ -28,7 +28,9 @@ type
     qrySelectprodutoid: TLongintField;
     qrySelectvl_venda_produto: TFloatField;
     procedure btnAdicionarProdutoClick(Sender: TObject);
-    procedure btnExcluirClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnCancelarMouseEnter(Sender: TObject);
+    procedure btnCancelarMouseLeave(Sender: TObject);
     procedure edtQuantidadeChange(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
@@ -50,26 +52,25 @@ uses
 { TSelecionarProdutosF }
 
 procedure TSelecionarProdutosF.btnAdicionarProdutoClick(Sender: TObject);
-var valorTotalOrcamento: double = 0;
 begin
   dmF.qryOrcItem.Post;
-  with dmF.qryOrcItem do
-  begin
-   First;
-   while not EOF do
-   begin
-    valorTotalOrcamento := valorTotalOrcamento + FieldByName('vl_total').AsFloat;
-    Next;
-   end;
-   CadOrcamentoF.qryCad.FieldByName('vl_total_orcamento').AsFloat:= valorTotalOrcamento;
-  end;
   Close;
 end;
 
-procedure TSelecionarProdutosF.btnExcluirClick(Sender: TObject);
+procedure TSelecionarProdutosF.btnCancelarClick(Sender: TObject);
 begin
   dmF.qryOrcItem.Cancel;
   Close;
+end;
+
+procedure TSelecionarProdutosF.btnCancelarMouseEnter(Sender: TObject);
+begin
+  btnCancelar.ImageIndex := 5;
+end;
+
+procedure TSelecionarProdutosF.btnCancelarMouseLeave(Sender: TObject);
+begin
+  btnCancelar.ImageIndex := 6;
 end;
 
 procedure TSelecionarProdutosF.edtQuantidadeChange(Sender: TObject);
