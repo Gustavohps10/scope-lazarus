@@ -12,7 +12,6 @@ object dmF: TdmF
       'AutoEncodeStrings=ON'
       'controls_cp=CP_UTF8'
     )
-    Connected = True
     HostName = 'localhost'
     Port = 5432
     Database = 'prjaccion'

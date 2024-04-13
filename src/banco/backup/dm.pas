@@ -114,7 +114,7 @@ begin
     valorTotalOrcamento := valorTotalOrcamento + FieldByName('vl_total').AsFloat;
     Next;
    end;
-   CadOrcamentoF.qryCad.FieldByName('vl_total_orcamento').AsFloat:= valorTotalOrcamento;
+   //CadOrcamentoF.qryCad.FieldByName('vl_total_orcamento').AsFloat:= valorTotalOrcamento;
   end;
 end;
 
@@ -127,9 +127,8 @@ begin
     Close;
     SQL.Clear;
     SQL.Add(qrySql);
-    Open;s
+    Open;
    end;
 end;
 
 end.
-

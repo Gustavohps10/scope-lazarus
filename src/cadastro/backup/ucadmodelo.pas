@@ -79,7 +79,7 @@ end;
 procedure TCadModeloF.FormCreate(Sender: TObject);
 begin
   if principalF.pnlPrincipal.ControlCount > 0 then
-  ShowMessage((principalF.Controls[0] as TForm).Caption);
+  (principalF.pnlPrincipal.Controls[0] as TForm).Close;
 end;
 
 procedure TCadModeloF.qryCadAfterCancel(DataSet: TDataSet);
