@@ -1,7 +1,7 @@
 inherited CadCategoriaF: TCadCategoriaF
-  Left = 298
+  Left = 354
   Height = 527
-  Top = 137
+  Top = 140
   Width = 857
   Caption = 'Categorias'
   ClientHeight = 527
@@ -14,6 +14,8 @@ inherited CadCategoriaF: TCadCategoriaF
   inherited pgcPrincipal: TPageControl
     Height = 463
     Width = 857
+    ActivePage = tbPesquisa
+    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       ClientHeight = 435
       ClientWidth = 849
@@ -71,9 +73,6 @@ inherited CadCategoriaF: TCadCategoriaF
       inherited pnlFormulario: TPanel
         Left = 220
         Top = 24
-        inherited pnlTopoFormulario: TPanel
-          Caption = 'Cadastro de Categorias'
-        end
         inherited pnlConteudoFormulario: TBCPanel
           object lblID: TLabel[0]
             Left = 24
@@ -118,6 +117,7 @@ inherited CadCategoriaF: TCadCategoriaF
     end
   end
   inherited qryCad: TZQuery
+    OnDeleteError = qryCadDeleteError
     OnNewRecord = qryCadNewRecord
     SQL.Strings = (
       'select * from categoria_produto order by categoriaprodutoid'

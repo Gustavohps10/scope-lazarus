@@ -29,6 +29,7 @@ object CadModeloF: TCadModeloF
     Font.Height = -27
     Font.Name = 'Inter'
     Font.Quality = fqAntialiased
+    Font.Style = [fsBold]
     ParentBackground = False
     ParentColor = False
     ParentFont = False
@@ -39,11 +40,11 @@ object CadModeloF: TCadModeloF
     Height = 469
     Top = 64
     Width = 790
-    ActivePage = tbPesquisa
+    ActivePage = tbCadastro
     Align = alClient
     Font.Name = 'Inter'
     ParentFont = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 1
     object tbPesquisa: TTabSheet
       Caption = 'Pesquisa'
@@ -461,28 +462,10 @@ object CadModeloF: TCadModeloF
         ClientWidth = 410
         ParentBackground = False
         TabOrder = 0
-        object pnlTopoFormulario: TPanel
-          Left = 0
-          Height = 50
-          Top = 0
-          Width = 410
-          Align = alTop
-          BevelOuter = bvNone
-          Caption = 'pnlTopoFormulario'
-          Color = clWhite
-          Font.Color = 4605510
-          Font.Height = -19
-          Font.Name = 'Inter'
-          Font.Style = [fsBold]
-          ParentBackground = False
-          ParentColor = False
-          ParentFont = False
-          TabOrder = 0
-        end
         object pnlConteudoFormulario: TBCPanel
           Left = 0
-          Height = 260
-          Top = 50
+          Height = 310
+          Top = 0
           Width = 410
           Align = alClient
           Anchors = []
@@ -521,7 +504,7 @@ object CadModeloF: TCadModeloF
           ParentBackground = False
           Rounding.RoundX = 5
           Rounding.RoundY = 5
-          TabOrder = 2
+          TabOrder = 1
         end
         object pnlRodapeFormulario: TPanel
           Left = 0
@@ -535,7 +518,7 @@ object CadModeloF: TCadModeloF
           Color = clWhite
           ParentBackground = False
           ParentColor = False
-          TabOrder = 1
+          TabOrder = 0
           object btnEditar: TBCButton
             Cursor = crHandPoint
             Left = 224
@@ -992,6 +975,7 @@ object CadModeloF: TCadModeloF
   end
   object qryCad: TZQuery
     Connection = dmF.ZConnection1
+    AfterOpen = qryCadAfterOpen
     AfterInsert = qryCadAfterInsert
     BeforeEdit = qryCadBeforeEdit
     AfterPost = qryCadAfterPost

@@ -1,6 +1,6 @@
 inherited SelecionarProdutosF: TSelecionarProdutosF
-  Left = 793
-  Top = 101
+  Left = 555
+  Top = 139
   Caption = 'Selecionar Produtos'
   OnClose = FormClose
   OnShow = FormShow
@@ -219,7 +219,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Top = 24
       Width = 156
       DataField = 'vl_unitario'
-      DataSource = dmF.dsOrcItem
+      DataSource = CadOrcamentoF.dsOrcItem
       ReadOnly = True
       Alignment = taRightJustify
       MaxLength = 0
@@ -239,7 +239,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Top = 24
       Width = 164
       DataField = 'produtoid'
-      DataSource = dmF.dsOrcItem
+      DataSource = CadOrcamentoF.dsOrcItem
       ReadOnly = True
       Alignment = taRightJustify
       MaxLength = 0
@@ -267,7 +267,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Top = 72
       Width = 164
       DataField = 'produtodesc'
-      DataSource = dmF.dsOrcItem
+      DataSource = CadOrcamentoF.dsOrcItem
       ReadOnly = True
       MaxLength = 50
       TabOrder = 3
@@ -278,7 +278,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       Top = 72
       Width = 156
       DataField = 'vl_total'
-      DataSource = dmF.dsOrcItem
+      DataSource = CadOrcamentoF.dsOrcItem
       ReadOnly = True
       Alignment = taRightJustify
       MaxLength = 0

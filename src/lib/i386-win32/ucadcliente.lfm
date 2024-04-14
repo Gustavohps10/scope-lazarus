@@ -7,6 +7,8 @@ inherited CadClienteF: TCadClienteF
     Caption = 'Clientes'
   end
   inherited pgcPrincipal: TPageControl
+    ActivePage = tbPesquisa
+    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       inherited pnlCabecalhoConteudo: TPanel
         inherited btnPesquisar: TBCButton
@@ -71,9 +73,6 @@ inherited CadClienteF: TCadClienteF
     end
     inherited tbCadastro: TTabSheet
       inherited pnlFormulario: TPanel
-        inherited pnlTopoFormulario: TPanel
-          Caption = 'Cadastro de Clientes'
-        end
         inherited pnlConteudoFormulario: TBCPanel
           object lblClienteId: TLabel[0]
             Left = 16
@@ -163,6 +162,7 @@ inherited CadClienteF: TCadClienteF
   end
   inherited qryCad: TZQuery
     BeforePost = qryCadBeforePost
+    OnDeleteError = qryCadDeleteError
     OnNewRecord = qryCadNewRecord
     SQL.Strings = (
       'select *  from cliente order by clienteid'

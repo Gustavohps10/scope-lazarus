@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  BGRAThemeRadioButton, ZDataset, uCadModelo, DB, dm;
+  ExtCtrls, BGRAThemeRadioButton, ZDataset, uCadModelo, DB, dm;
 
 type
 
@@ -29,6 +29,8 @@ type
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
     procedure FormShow(Sender: TObject);
     procedure qryCadBeforePost(DataSet: TDataSet);
+    procedure qryCadDeleteError(DataSet: TDataSet; E: EDatabaseError;
+      var DataAction: TDataAction);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
 
@@ -48,6 +50,15 @@ implementation
 procedure TCadClienteF.qryCadBeforePost(DataSet: TDataSet);
 begin
   qryCad.FieldByName('tipo_cliente').asString := cbbTipo.Items[cbbTipo.ItemIndex];
+end;
+
+procedure TCadClienteF.qryCadDeleteError(DataSet: TDataSet; E: EDatabaseError;
+  var DataAction: TDataAction);
+begin
+  MessageDlg('Erro ao excluir',
+   'Você não pode excluir o cliente ' + qryCad.FieldByName('nome_cliente').AsString + ', pois ele esta presente em outros orçamentos',
+   mtError,
+   [mbOk],0);
 end;
 
 procedure TCadClienteF.dsCadModeloDataChange(Sender: TObject; Field: TField);

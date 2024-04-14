@@ -1,7 +1,7 @@
 inherited CadOrcamentoF: TCadOrcamentoF
-  Left = 281
+  Left = 237
   Height = 556
-  Top = 101
+  Top = 185
   Caption = 'Orçamentos'
   ClientHeight = 556
   OnClose = FormClose
@@ -84,12 +84,8 @@ inherited CadOrcamentoF: TCadOrcamentoF
         Width = 616
         ClientHeight = 440
         ClientWidth = 616
-        inherited pnlTopoFormulario: TPanel
-          Width = 616
-          Caption = 'Cadastro de Orçamentos'
-        end
         inherited pnlConteudoFormulario: TBCPanel
-          Height = 331
+          Height = 381
           Width = 616
           object edtOrcId: TDBEdit[0]
             Left = 16
@@ -126,7 +122,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Width = 264
             DataField = 'dt_orcamento'
             DataSource = dsCadModelo
-            ReadOnly = False
+            ReadOnly = True
             CenturyFrom = 1941
             MaxDate = 2958465
             MinDate = -53780
@@ -178,7 +174,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
           object edtValorTotal: TDBEdit[6]
             Left = 488
             Height = 32
-            Top = 287
+            Top = 337
             Width = 112
             DataField = 'vl_total_orcamento'
             DataSource = dsCadModelo
@@ -194,7 +190,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
           object lblValorTotal: TLabel[7]
             Left = 488
             Height = 21
-            Top = 264
+            Top = 314
             Width = 72
             Anchors = [akRight, akBottom]
             Caption = 'Valor Total'
@@ -206,7 +202,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Cursor = crHandPoint
             Left = 16
             Height = 23
-            Top = 272
+            Top = 322
             Width = 48
             Anchors = [akLeft, akBottom]
             StateClicked.Background.Color = 8412732
@@ -363,7 +359,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Cursor = crHandPoint
             Left = 72
             Height = 23
-            Top = 272
+            Top = 322
             Width = 27
             Anchors = [akRight, akBottom]
             StateClicked.Background.Color = 1446607
@@ -527,7 +523,6 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Height = 23
             Top = 24
             Width = 48
-            Anchors = [akLeft, akBottom]
             StateClicked.Background.Color = 8412732
             StateClicked.Background.Gradient1.StartColor = 8404992
             StateClicked.Background.Gradient1.EndColor = 4194304
@@ -722,12 +717,11 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Width = 376
             DataField = 'clienteid'
             DataSource = dsCadModelo
-            Enabled = False
             KeyField = 'clienteid'
             ListField = 'nome_cliente'
             ListFieldIndex = 0
-            ListSource = dmF.dsClientes
             LookupCache = False
+            ReadOnly = True
             TabOrder = 5
           end
         end
@@ -756,8 +750,8 @@ inherited CadOrcamentoF: TCadOrcamentoF
       end
       object dbgProdutos: TDBGrid[1]
         Left = 96
-        Height = 144
-        Top = 176
+        Height = 192
+        Top = 128
         Width = 584
         Anchors = []
         Color = clWindow
@@ -797,7 +791,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Width = 80
             FieldName = 'vl_total'
           end>
-        DataSource = dmF.dsOrcItem
+        DataSource = dsOrcItem
         ReadOnly = True
         TabOrder = 1
       end
@@ -810,7 +804,9 @@ inherited CadOrcamentoF: TCadOrcamentoF
   inherited qryCad: TZQuery
     AfterEdit = qryCadAfterEdit
     AfterPost = qryCadAfterPost
+    BeforeCancel = qryCadBeforeCancel
     AfterCancel = qryCadAfterCancel
+    BeforeDelete = qryCadBeforeDelete
     AfterDelete = qryCadAfterDelete
     OnNewRecord = qryCadNewRecord
     SQL.Strings = (
@@ -864,5 +860,97 @@ inherited CadOrcamentoF: TCadOrcamentoF
       DisplayFormat = '#0.00'
       Precision = 983042
     end
+  end
+  inherited imglIcons: TBGRAImageList
+    Left = 744
+    Top = 224
+  end
+  object qryOrcItem: TZQuery[5]
+    Connection = dmF.ZConnection1
+    AfterPost = qryOrcItemAfterPost
+    AfterDelete = qryOrcItemAfterDelete
+    SQL.Strings = (
+      'select * from orcamento_item'
+    )
+    Params = <>
+    MasterFields = 'orcamentoid'
+    MasterSource = dsCadModelo
+    LinkedFields = 'orcamentoid'
+    Left = 696
+    Top = 304
+    object qryOrcItemorcamentoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryOrcItemorcamentoitemid: TLongintField
+      FieldKind = fkData
+      FieldName = 'orcamentoitemid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryOrcItemprodutoid: TLongintField
+      FieldKind = fkData
+      FieldName = 'produtoid'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryOrcItemprodutodesc: TStringField
+      FieldKind = fkData
+      FieldName = 'produtodesc'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object qryOrcItemqt_produto: TFloatField
+      FieldKind = fkData
+      FieldName = 'qt_produto'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Precision = 983042
+    end
+    object qryOrcItemvl_unitario: TFloatField
+      FieldKind = fkData
+      FieldName = 'vl_unitario'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '#0.00'
+      Precision = 983042
+    end
+    object qryOrcItemvl_total: TFloatField
+      FieldKind = fkData
+      FieldName = 'vl_total'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '#0.00'
+      Precision = 983042
+    end
+  end
+  object dsOrcItem: TDataSource[6]
+    DataSet = qryOrcItem
+    Left = 752
+    Top = 304
   end
 end

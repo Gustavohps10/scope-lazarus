@@ -26,7 +26,6 @@ type
     DBGrid1: TDBGrid;
     edtPesquisar: TEdit;
     lblFiltrarPor: TLabel;
-    pnlTopoFormulario: TPanel;
     pnlFormulario: TPanel;
     pnlBordaPesquisa: TPanel;
     pnlConteudoFormulario: TBCPanel;
@@ -52,6 +51,7 @@ type
     procedure qryCadAfterCancel(DataSet: TDataSet);
     procedure qryCadAfterDelete(DataSet: TDataSet);
     procedure qryCadAfterInsert(DataSet: TDataSet);
+    procedure qryCadAfterOpen(DataSet: TDataSet);
     procedure qryCadAfterPost(DataSet: TDataSet);
     procedure qryCadBeforeEdit(DataSet: TDataSet);
   private
@@ -91,6 +91,8 @@ end;
 
 procedure TCadModeloF.qryCadAfterDelete(DataSet: TDataSet);
 begin
+  if qryCad.RecordCount = 0 then
+     btnExcluir.Enabled:=false;
   pgcPrincipal.ActivePage := tbPesquisa;
   btnEditar.Enabled:=true;
   btnGravar.Enabled:=false;
@@ -102,11 +104,19 @@ begin
   btnGravar.Enabled:=true;
 end;
 
+procedure TCadModeloF.qryCadAfterOpen(DataSet: TDataSet);
+begin
+  if qryCad.RecordCount > 0
+  then btnExcluir.Enabled:=true
+  else btnExcluir.Enabled:=false;
+end;
+
 procedure TCadModeloF.qryCadAfterPost(DataSet: TDataSet);
 begin
   pgcPrincipal.ActivePage := tbPesquisa;
   btnEditar.Enabled:=true;
   btnGravar.Enabled:=false;
+   btnExcluir.Enabled:=true;
 end;
 
 procedure TCadModeloF.qryCadBeforeEdit(DataSet: TDataSet);
@@ -139,8 +149,15 @@ end;
 
 procedure TCadModeloF.btnExcluirClick(Sender: TObject);
 begin
-  pnlConteudoFormulario.Enabled:=false;
-  qryCad.Delete;
+  try
+   if MessageDlg('Confirmar exclusão', 'Você tem certeza que deseja excluir este registro?', mtWarning,
+   [mbYes, mbNo],0) = mrYes
+   then qryCad.Delete;
+  except
+    On e: EDatabaseError do begin
+      //ShowMessage('Não foi possivel excluir o registro!');
+    end;
+  end;
 end;
 
 procedure TCadModeloF.btnFecharClick(Sender: TObject);

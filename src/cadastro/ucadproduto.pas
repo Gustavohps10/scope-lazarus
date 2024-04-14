@@ -6,10 +6,10 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  EditBtn, ButtonPanel, DBDateTimePicker, BCComboBox, BCLabel, BCListBox,
-  BCMDButton, BCMaterialEdit, BGRACustomDrawn, BCMaterialFloatSpinEdit,
-  BCMaterialSpinEdit, BCCheckComboBox, BCPanel, BGRAThemeRadioButton, ZDataset,
-  uCadModelo, DB, ZAbstractDataset, dm;
+  EditBtn, ButtonPanel, ExtCtrls, DBDateTimePicker, BCComboBox, BCLabel,
+  BCListBox, BCMDButton, BCMaterialEdit, BGRACustomDrawn,
+  BCMaterialFloatSpinEdit, BCMaterialSpinEdit, BCCheckComboBox, BCPanel,
+  BGRAThemeRadioButton, ZDataset, uCadModelo, DB, ZAbstractDataset, dm;
 
 type
 
@@ -46,6 +46,8 @@ type
     procedure dsCadModeloDataChange(Sender: TObject; Field: TField);
     procedure FormShow(Sender: TObject);
     procedure qryCadBeforePost(DataSet: TDataSet);
+    procedure qryCadDeleteError(DataSet: TDataSet; E: EDatabaseError;
+      var DataAction: TDataAction);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
 
@@ -116,6 +118,15 @@ begin
    {Passa o CategoriaProdutoID do cbbCategoria para o Field do Dataset}
    qryCad.FieldByName('categoriaprodutoid').AsInteger := PtrUInt(cbbCategoria.Items.Objects[cbbCategoria.ItemIndex]);
    qryCad.FieldByName('status_produto').AsString := statusProduto;
+end;
+
+procedure TCadProdutoF.qryCadDeleteError(DataSet: TDataSet; E: EDatabaseError;
+  var DataAction: TDataAction);
+begin
+   MessageDlg('Erro ao excluir',
+   'Você não pode excluir o produto ' + qryCad.FieldByName('ds_produto').AsString + ', pois ele esta presente em outros orçamentos',
+   mtError,
+   [mbOk],0);
 end;
 
 procedure TCadProdutoF.qryCadNewRecord(DataSet: TDataSet);

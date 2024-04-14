@@ -8,6 +8,8 @@ inherited CadProdutoF: TCadProdutoF
     Caption = 'Produtos'
   end
   inherited pgcPrincipal: TPageControl
+    ActivePage = tbPesquisa
+    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       inherited pnlCabecalhoConteudo: TPanel
         inherited btnPesquisar: TBCButton
@@ -92,9 +94,6 @@ inherited CadProdutoF: TCadProdutoF
     end
     inherited tbCadastro: TTabSheet
       inherited pnlFormulario: TPanel
-        inherited pnlTopoFormulario: TPanel
-          Caption = 'Cadastro de Produtos'
-        end
         inherited pnlConteudoFormulario: TBCPanel
           Border.Color = 11447982
           object lblProdutoId: TLabel[0]
@@ -439,6 +438,7 @@ inherited CadProdutoF: TCadProdutoF
   inherited qryCad: TZQuery
     AutoCalcFields = False
     BeforePost = qryCadBeforePost
+    OnDeleteError = qryCadDeleteError
     OnNewRecord = qryCadNewRecord
     SQL.Strings = (
       'select * from produto order by produtoid'

@@ -14,15 +14,6 @@ type
   TdmF = class(TDataModule)
     dsProdutos: TDataSource;
     dsClientes: TDataSource;
-    dsOrcItem: TDataSource;
-    qryOrcItem: TZQuery;
-    qryOrcItemorcamentoid: TLongintField;
-    qryOrcItemorcamentoitemid: TLongintField;
-    qryOrcItemprodutodesc: TStringField;
-    qryOrcItemprodutoid: TLongintField;
-    qryOrcItemqt_produto: TFloatField;
-    qryOrcItemvl_total: TFloatField;
-    qryOrcItemvl_unitario: TFloatField;
     qryProdutoscategoriaprodutoid: TLongintField;
     qryProdutosds_produto: TStringField;
     qryProdutosdt_cadastro_produto: TDateTimeField;
@@ -36,13 +27,10 @@ type
     qryClientes: TZQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure dsProdutosDataChange(Sender: TObject; Field: TField);
-    procedure qryOrcItemAfterDelete(DataSet: TDataSet);
-    procedure qryOrcItemAfterPost(DataSet: TDataSet);
   private
 
   public
     function getSequence(sequenceName: string): integer;
-    procedure calculaTotalOrc();
     procedure qrySearch(ZQuery: TZQuery; table: string; field: string; value: string);
   end;
 
@@ -71,24 +59,14 @@ end;
 
 procedure TdmF.dsProdutosDataChange(Sender: TObject; Field: TField);
 begin
-  if qryOrcItem.FieldCount <> 0 then
+  if CadOrcamentoF.qryOrcItem.FieldCount <> 0 then
   begin
-     qryOrcItem.FieldByName('produtoid').AsString := qryProdutos.FieldByName('produtoid').AsString;
-     qryOrcItem.FieldByName('vl_unitario').AsString := qryProdutos.FieldByName('vl_venda_produto').AsString;
-     qryOrcItem.FieldByName('vl_total').AsString := qryProdutos.FieldByName('vl_venda_produto').AsString;
-     qryOrcItem.FieldByName('produtodesc').AsString := qryProdutos.FieldByName('ds_produto').AsString;
+     CadOrcamentoF.qryOrcItem.FieldByName('produtoid').AsString := qryProdutos.FieldByName('produtoid').AsString;
+     CadOrcamentoF.qryOrcItem.FieldByName('vl_unitario').AsString := qryProdutos.FieldByName('vl_venda_produto').AsString;
+     CadOrcamentoF.qryOrcItem.FieldByName('vl_total').AsString := qryProdutos.FieldByName('vl_venda_produto').AsString;
+     CadOrcamentoF.qryOrcItem.FieldByName('produtodesc').AsString := qryProdutos.FieldByName('ds_produto').AsString;
      SelecionarProdutosF.edtQuantidade.Edit.Value:=1;
   end;
-end;
-
-procedure TdmF.qryOrcItemAfterDelete(DataSet: TDataSet);
-begin
-  calculaTotalOrc();
-end;
-
-procedure TdmF.qryOrcItemAfterPost(DataSet: TDataSet);
-begin
-  calculaTotalOrc();
 end;
 
 function TdmF.getSequence(sequenceName: string): integer;
@@ -101,21 +79,6 @@ begin
     Open;
     Result := FieldByName('CODIGO').AsInteger;
    end;
-end;
-
-procedure TdmF.calculaTotalOrc();
-var valorTotalOrcamento: double = 0;
-begin
-  with qryOrcItem do
-  begin
-   First;
-   while not EOF do
-   begin
-    valorTotalOrcamento := valorTotalOrcamento + FieldByName('vl_total').AsFloat;
-    Next;
-   end;
-   //CadOrcamentoF.qryCad.FieldByName('vl_total_orcamento').AsFloat:= valorTotalOrcamento;
-  end;
 end;
 
 procedure TdmF.qrySearch(ZQuery: TZQuery; table: string; field: string; value: string);

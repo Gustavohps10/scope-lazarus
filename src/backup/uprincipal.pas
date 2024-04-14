@@ -21,8 +21,6 @@ type
     btnMenuClientes: TBCButton;
     btnMenuOrcamento: TBCButton;
     bnMenuSair: TBCButton;
-    epnlRelatorios1: TBCExpandPanel;
-    epnlRelatorios2: TBCExpandPanel;
     epnlVendas: TBCExpandPanel;
     epnlRelatorios: TBCExpandPanel;
     epnlCadastro: TBCExpandPanel;

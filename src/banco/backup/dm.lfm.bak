@@ -2,8 +2,8 @@ object dmF: TdmF
   OnCreate = DataModuleCreate
   OldCreateOrder = False
   Height = 318
-  HorizontalOffset = 476
-  VerticalOffset = 283
+  HorizontalOffset = 449
+  VerticalOffset = 220
   Width = 264
   object ZConnection1: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -12,12 +12,14 @@ object dmF: TdmF
       'AutoEncodeStrings=ON'
       'controls_cp=CP_UTF8'
     )
+    Connected = True
     HostName = 'localhost'
     Port = 5432
     Database = 'prjaccion'
     User = 'postgres'
     Password = '1234'
     Protocol = 'postgresql'
+    LibraryLocation = 'C:\MyApps\scope-lazarus\src\libpq-32bits\libpq.dll'
     Left = 32
     Top = 8
   end
@@ -26,91 +28,6 @@ object dmF: TdmF
     Params = <>
     Left = 104
     Top = 8
-  end
-  object qryOrcItem: TZQuery
-    Connection = ZConnection1
-    AfterPost = qryOrcItemAfterPost
-    AfterDelete = qryOrcItemAfterDelete
-    SQL.Strings = (
-      'select * from orcamento_item'
-    )
-    Params = <>
-    Left = 32
-    Top = 72
-    object qryOrcItemorcamentoid: TLongintField
-      FieldKind = fkData
-      FieldName = 'orcamentoid'
-      Index = 0
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object qryOrcItemorcamentoitemid: TLongintField
-      FieldKind = fkData
-      FieldName = 'orcamentoitemid'
-      Index = 1
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object qryOrcItemprodutoid: TLongintField
-      FieldKind = fkData
-      FieldName = 'produtoid'
-      Index = 2
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object qryOrcItemprodutodesc: TStringField
-      FieldKind = fkData
-      FieldName = 'produtodesc'
-      Index = 3
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 50
-    end
-    object qryOrcItemqt_produto: TFloatField
-      FieldKind = fkData
-      FieldName = 'qt_produto'
-      Index = 4
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      Precision = 983042
-    end
-    object qryOrcItemvl_unitario: TFloatField
-      FieldKind = fkData
-      FieldName = 'vl_unitario'
-      Index = 5
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      DisplayFormat = '#0.00'
-      Precision = 983042
-    end
-    object qryOrcItemvl_total: TFloatField
-      FieldKind = fkData
-      FieldName = 'vl_total'
-      Index = 6
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-      DisplayFormat = '#0.00'
-      Precision = 983042
-    end
-  end
-  object dsOrcItem: TDataSource
-    DataSet = qryOrcItem
-    Left = 104
-    Top = 72
   end
   object qryProdutos: TZQuery
     Connection = ZConnection1

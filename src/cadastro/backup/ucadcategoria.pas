@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, DBCtrls, StdCtrls,
-  ExtCtrls, BGRAThemeRadioButton, uCadModelo, DB, dm;
+  ExtCtrls, BGRAThemeRadioButton, uCadModelo, DB, dm, SQLDB;
 
 type
 
@@ -21,6 +21,8 @@ type
     lblDesc: TLabel;
     procedure btnPesquisarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure qryCadDeleteError(DataSet: TDataSet; E: EDatabaseError;
+      var DataAction: TDataAction);
     procedure qryCadNewRecord(DataSet: TDataSet);
   private
 
@@ -53,6 +55,15 @@ end;
 procedure TCadCategoriaF.FormShow(Sender: TObject);
 begin
   qryCad.Open;
+end;
+
+procedure TCadCategoriaF.qryCadDeleteError(DataSet: TDataSet;
+  E: EDatabaseError; var DataAction: TDataAction);
+begin
+ MessageDlg('Erro ao excluir',
+   'Você não pode excluir a categoria ' + qryCad.FieldByName('ds_categoria_produto').AsString + ', pois ela pertence a outros produtos',
+   mtError,
+   [mbOk],0);
 end;
 
 procedure TCadCategoriaF.btnPesquisarClick(Sender: TObject);

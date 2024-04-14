@@ -53,13 +53,13 @@ uses
 
 procedure TSelecionarProdutosF.btnAdicionarProdutoClick(Sender: TObject);
 begin
-  dmF.qryOrcItem.Post;
+  CadOrcamentoF.qryOrcItem.Post;
   Close;
 end;
 
 procedure TSelecionarProdutosF.btnCancelarClick(Sender: TObject);
 begin
-  dmF.qryOrcItem.Cancel;
+  CadOrcamentoF.qryOrcItem.Cancel;
   Close;
 end;
 
@@ -75,8 +75,8 @@ end;
 
 procedure TSelecionarProdutosF.edtQuantidadeChange(Sender: TObject);
 begin
-  dmF.qryOrcItem.FieldByName('qt_produto').AsInteger := edtQuantidade.Edit.Value;
-  dmF.qryOrcItem.FieldByName('vl_total').AsFloat := edtQuantidade.Edit.Value * dmF.qryOrcItem.FieldByName('vl_unitario').AsFloat;
+  CadOrcamentoF.qryOrcItem.FieldByName('qt_produto').AsInteger := edtQuantidade.Edit.Value;
+  CadOrcamentoF.qryOrcItem.FieldByName('vl_total').AsFloat := edtQuantidade.Edit.Value * CadOrcamentoF.qryOrcItem.FieldByName('vl_unitario').AsFloat;
 end;
 
 procedure TSelecionarProdutosF.FormClose(Sender: TObject;

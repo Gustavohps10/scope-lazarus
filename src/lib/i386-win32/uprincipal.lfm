@@ -2,10 +2,10 @@ object principalF: TprincipalF
   Left = 336
   Height = 584
   Top = 58
-  Width = 814
+  Width = 870
   Caption = 'Menu Principal'
   ClientHeight = 584
-  ClientWidth = 814
+  ClientWidth = 870
   Color = 16514043
   Font.Name = 'Segoe UI'
   Menu = MainMenu1
@@ -15,11 +15,11 @@ object principalF: TprincipalF
     Left = 0
     Height = 64
     Top = 0
-    Width = 814
+    Width = 870
     Align = alTop
     BevelOuter = bvNone
     ClientHeight = 64
-    ClientWidth = 814
+    ClientWidth = 870
     Color = clWhite
     ParentBackground = False
     ParentColor = False
@@ -187,7 +187,7 @@ object principalF: TprincipalF
       Proportional = True
     end
     object imgUsuarioAvatar: TImage
-      Left = 761
+      Left = 817
       Height = 40
       Top = 11
       Width = 40
@@ -231,7 +231,7 @@ object principalF: TprincipalF
       }
     end
     object lblUsuarioNome: TBCLabel
-      Left = 689
+      Left = 745
       Height = 25
       Top = 20
       Width = 66
@@ -1844,7 +1844,7 @@ object principalF: TprincipalF
     Left = 170
     Height = 520
     Top = 64
-    Width = 644
+    Width = 700
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
