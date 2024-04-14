@@ -1,7 +1,7 @@
 inherited CadOrcamentoF: TCadOrcamentoF
-  Left = 237
+  Left = 332
   Height = 556
-  Top = 185
+  Top = 111
   Caption = 'Orçamentos'
   ClientHeight = 556
   OnClose = FormClose
@@ -11,6 +11,8 @@ inherited CadOrcamentoF: TCadOrcamentoF
   end
   inherited pgcPrincipal: TPageControl
     Height = 492
+    ActivePage = tbPesquisa
+    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       ClientHeight = 464
       inherited pnlCabecalhoConteudo: TPanel

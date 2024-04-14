@@ -1,15 +1,77 @@
 inherited SelecionarClienteF: TSelecionarClienteF
-  Left = 517
-  Height = 477
-  Top = 70
+  Left = 533
+  Height = 530
+  Top = 91
+  Width = 438
   Caption = 'Selecionar Cliente'
-  ClientHeight = 477
+  ClientHeight = 530
+  ClientWidth = 438
   OnClose = FormClose
   inherited pnlTopo: TPanel
+    Width = 438
     Caption = 'Selecionar Cliente'
   end
+  inherited pnlPesquisa: TPanel
+    Height = 94
+    Width = 438
+    ClientHeight = 94
+    ClientWidth = 438
+    inherited edtPesquisar: TEdit
+      Width = 368
+    end
+    inherited btnPesquisar: TBCButton
+      OnClick = btnPesquisarClick
+    end
+    inherited pnlBordaPesquisa: TPanel
+      Width = 368
+    end
+    object rbtnCpfCnpj: TBGRAThemeRadioButton[3]
+      Left = 216
+      Height = 19
+      Top = 64
+      Width = 96
+      Caption = ' CPF/CNPJ'
+      Checked = False
+    end
+    object rbtnTipo: TBGRAThemeRadioButton[4]
+      Left = 152
+      Height = 19
+      Top = 64
+      Width = 56
+      Caption = ' Tipo'
+      Checked = False
+    end
+    object rbtnClienteId: TBGRAThemeRadioButton[5]
+      Left = 56
+      Height = 19
+      Top = 64
+      Width = 88
+      Caption = ' Cliente ID'
+      Checked = False
+    end
+    object lblFiltrarPor: TLabel[6]
+      Left = 56
+      Height = 15
+      Top = 48
+      Width = 57
+      Caption = 'Filtrar Por:'
+      Font.Color = 2171169
+      Font.Name = 'Inter'
+      ParentFont = False
+    end
+    object rbtnNome: TBGRAThemeRadioButton[7]
+      Left = 320
+      Height = 19
+      Top = 64
+      Width = 64
+      Caption = ' Nome'
+      Checked = True
+    end
+  end
   inherited DBGrid: TDBGrid
-    Height = 226
+    Height = 232
+    Top = 144
+    Width = 438
     Columns = <    
       item
         PickList.Strings = (        )
@@ -36,16 +98,19 @@ inherited SelecionarClienteF: TSelecionarClienteF
       end>
     DataSource = dmF.dsClientes
     ReadOnly = True
+    OnDblClick = DBGridDblClick
   end
   inherited pnlRodape: TPanel
     Height = 154
-    Top = 323
+    Top = 376
+    Width = 438
     ClientHeight = 154
+    ClientWidth = 438
     object btnSelecionar: TBCButton[0]
       Cursor = crHandPoint
-      Left = 256
+      Left = 316
       Height = 32
-      Top = 110
+      Top = 112
       Width = 108
       Anchors = [akLeft, akBottom]
       StateClicked.Background.Color = 2600856
@@ -219,7 +284,7 @@ inherited SelecionarClienteF: TSelecionarClienteF
       Left = 16
       Height = 23
       Top = 24
-      Width = 344
+      Width = 408
       DataField = 'nome_cliente'
       DataSource = dmF.dsClientes
       ReadOnly = True
@@ -230,7 +295,7 @@ inherited SelecionarClienteF: TSelecionarClienteF
       Left = 16
       Height = 23
       Top = 72
-      Width = 168
+      Width = 200
       DataField = 'cpf_cnpj_cliente'
       DataSource = dmF.dsClientes
       ReadOnly = True
@@ -246,10 +311,10 @@ inherited SelecionarClienteF: TSelecionarClienteF
       ParentColor = False
     end
     object edtTipo: TDBEdit[5]
-      Left = 192
+      Left = 224
       Height = 23
       Top = 72
-      Width = 168
+      Width = 200
       DataField = 'tipo_cliente'
       DataSource = dmF.dsClientes
       ReadOnly = True
@@ -257,7 +322,7 @@ inherited SelecionarClienteF: TSelecionarClienteF
       TabOrder = 2
     end
     object lblTipo: TLabel[6]
-      Left = 192
+      Left = 224
       Height = 15
       Top = 56
       Width = 25
@@ -266,9 +331,9 @@ inherited SelecionarClienteF: TSelecionarClienteF
     end
     object btnCancelar: TBCButton[7]
       Cursor = crHandPoint
-      Left = 152
+      Left = 208
       Height = 32
-      Top = 110
+      Top = 112
       Width = 96
       Anchors = [akLeft, akBottom]
       StateClicked.Background.Color = 6572335

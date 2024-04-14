@@ -1,7 +1,7 @@
 inherited CadOrcamentoF: TCadOrcamentoF
-  Left = 237
+  Left = 332
   Height = 556
-  Top = 185
+  Top = 111
   Caption = 'Orçamentos'
   ClientHeight = 556
   OnClose = FormClose
@@ -11,8 +11,6 @@ inherited CadOrcamentoF: TCadOrcamentoF
   end
   inherited pgcPrincipal: TPageControl
     Height = 492
-    ActivePage = tbPesquisa
-    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       ClientHeight = 464
       inherited pnlCabecalhoConteudo: TPanel
@@ -523,9 +521,8 @@ inherited CadOrcamentoF: TCadOrcamentoF
             Cursor = crHandPoint
             Left = 104
             Height = 23
-            Top = 74
+            Top = 24
             Width = 48
-            Anchors = [akLeft, akBottom]
             StateClicked.Background.Color = 8412732
             StateClicked.Background.Gradient1.StartColor = 8404992
             StateClicked.Background.Gradient1.EndColor = 4194304
@@ -753,8 +750,8 @@ inherited CadOrcamentoF: TCadOrcamentoF
       end
       object dbgProdutos: TDBGrid[1]
         Left = 96
-        Height = 144
-        Top = 176
+        Height = 192
+        Top = 128
         Width = 584
         Anchors = []
         Color = clWindow
