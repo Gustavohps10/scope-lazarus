@@ -12,11 +12,11 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
   inherited pnlPesquisa: TPanel
     Height = 95
     ClientHeight = 95
-    inherited btnPesquisar: TBCButton[0]
-      OnClick = btnPesquisarClick
-    end
-    inherited edtPesquisar: TEdit[1]
+    inherited edtPesquisar: TEdit
       Width = 288
+    end
+    inherited btnPesquisar: TBCButton
+      OnClick = btnPesquisarClick
     end
     inherited pnlBordaPesquisa: TPanel
       Top = 41
@@ -79,6 +79,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
         FieldName = 'vl_venda_produto'
       end>
     DataSource = dmF.dsProdutos
+    ReadOnly = True
   end
   inherited pnlRodape: TPanel
     Top = 352

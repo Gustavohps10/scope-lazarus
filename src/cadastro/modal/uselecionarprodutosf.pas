@@ -86,13 +86,13 @@ begin
   dmF.qryProdutos.Close;
   search := Trim(edtPesquisar.Text);
   if rbtnProdutoId.Checked then
-     dmF.qrySearch(dmF.qryProdutos, 'produto', 'cast(produtoid as text)', search);
+     dmF.qrySearch(dmF.qryProdutos, 'produto', 'cast(produtoid as text)', search, 'and status_produto=' + QuotedStr('ATIVO'));
 
   if rbtnDesc.Checked then
-     dmf.qrySearch(dmF.qryProdutos, 'produto', 'ds_produto', search);
+     dmf.qrySearch(dmF.qryProdutos, 'produto', 'ds_produto', search, 'and status_produto=' + QuotedStr('ATIVO'));
 
   if rbtnValorVenda.Checked then
-     dmf.qrySearch(dmF.qryProdutos, 'produto', 'cast(vl_venda_produto as text)', search);
+     dmf.qrySearch(dmF.qryProdutos, 'produto', 'cast(vl_venda_produto as text)', search, 'and status_produto=' + QuotedStr('ATIVO'));
 end;
 
 procedure TSelecionarProdutosF.edtQuantidadeChange(Sender: TObject);

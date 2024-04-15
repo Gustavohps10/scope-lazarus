@@ -31,7 +31,7 @@ type
 
   public
     function getSequence(sequenceName: string): integer;
-    procedure qrySearch(ZQuery: TZQuery; table: string; field: string; value: string);
+    procedure qrySearch(ZQuery: TZQuery; table: string; field: string; value: string; additionalWhere: string = '');
   end;
 
 var
@@ -66,6 +66,7 @@ begin
      CadOrcamentoF.qryOrcItem.FieldByName('vl_total').AsString := qryProdutos.FieldByName('vl_venda_produto').AsString;
      CadOrcamentoF.qryOrcItem.FieldByName('produtodesc').AsString := qryProdutos.FieldByName('ds_produto').AsString;
      SelecionarProdutosF.edtQuantidade.Edit.Value:=1;
+     SelecionarProdutosF.edtQuantidade.Edit.MinValue:=1;
   end;
 end;
 
@@ -81,10 +82,10 @@ begin
    end;
 end;
 
-procedure TdmF.qrySearch(ZQuery: TZQuery; table: string; field: string; value: string);
+procedure TdmF.qrySearch(ZQuery: TZQuery; table: string; field: string; value: string; additionalWhere: string = '');
 var qrySql: string;
 begin
-  qrySql := 'select * from ' + table + ' where ' + field + ' ilike ' + QuotedStr('%' + value + '%');
+  qrySql := 'select * from ' + table + ' where ' + field + ' ilike ' + QuotedStr('%' + value + '%') + additionalWhere;
   with ZQuery do
    begin
     Close;

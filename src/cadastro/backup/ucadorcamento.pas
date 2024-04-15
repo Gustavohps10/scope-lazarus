@@ -65,6 +65,7 @@ type
     procedure qryCadNewRecord(DataSet: TDataSet);
     procedure qryOrcItemAfterDelete(DataSet: TDataSet);
     procedure qryOrcItemAfterPost(DataSet: TDataSet);
+    procedure tbCadastroShow(Sender: TObject);
   private
     procedure calculaTotalOrc();
     procedure deletaOrcItens();
@@ -84,13 +85,6 @@ implementation
 
 procedure TCadOrcamentoF.btnSelecionarProdutosClick(Sender: TObject);
 begin
-  if not qryOrcItem.Active then
-  begin
-    qryOrcItem.SQL.Clear;
-    qryOrcItem.SQL.Add('select * from orcamento_item where orcamentoid = ' + qryCad.FieldByName('orcamentoid').AsString);
-    qryOrcItem.Open;
-  end;
-
   dsOrcItem.DataSet.Append;
   qryOrcItem.FieldByName('orcamentoitemid').AsInteger := dmF.getSequence('orcamento_item_orcamentoitemid');
   qryOrcItem.FieldByName('orcamentoid').AsInteger := qryCad.FieldByName('orcamentoid').AsInteger;
@@ -131,6 +125,8 @@ begin
 
   if rbtnOrcValorTotal.Checked then
      dmf.qrySearch(qryCad, 'orcamento', 'cast(vl_total_orcamento as text)', search);
+
+  qryOrcItem.Open;
 end;
 
 procedure TCadOrcamentoF.btnSelecionarClienteClick(Sender: TObject);
@@ -227,6 +223,7 @@ procedure TCadOrcamentoF.qryCadNewRecord(DataSet: TDataSet);
 begin
   btnSelecionarProdutos.Enabled:=true;
   btnRemoverItem.Enabled:=true;
+  qryOrcItem.Close;
   qryCad.FieldByName('orcamentoid').AsInteger := dmF.getSequence('orcamento_orcamentoid_seq');
   qryCad.FieldByName('dt_orcamento').AsDateTime := Date;
   dtpDataValidade.MinDate:=Date;
@@ -245,6 +242,12 @@ end;
 procedure TCadOrcamentoF.qryOrcItemAfterPost(DataSet: TDataSet);
 begin
   calculaTotalOrc();
+end;
+
+procedure TCadOrcamentoF.tbCadastroShow(Sender: TObject);
+begin
+  if not qryOrcItem.Active then
+    qryOrcItem.Open;
 end;
 
 procedure TCadOrcamentoF.calculaTotalOrc();

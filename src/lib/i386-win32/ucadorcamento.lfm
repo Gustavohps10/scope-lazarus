@@ -79,6 +79,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
     end
     inherited tbCadastro: TTabSheet
       ClientHeight = 464
+      OnShow = tbCadastroShow
       inherited pnlFormulario: TPanel
         Left = 80
         Height = 440
@@ -722,6 +723,7 @@ inherited CadOrcamentoF: TCadOrcamentoF
             KeyField = 'clienteid'
             ListField = 'nome_cliente'
             ListFieldIndex = 0
+            ListSource = dmF.dsClientes
             LookupCache = False
             ReadOnly = True
             TabOrder = 5

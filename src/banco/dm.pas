@@ -31,7 +31,7 @@ type
 
   public
     function getSequence(sequenceName: string): integer;
-    procedure qrySearch(ZQuery: TZQuery; table: string; field: string; value: string);
+    procedure qrySearch(ZQuery: TZQuery; table: string; field: string; value: string; additionalWhere: string = '');
   end;
 
 var
@@ -82,10 +82,10 @@ begin
    end;
 end;
 
-procedure TdmF.qrySearch(ZQuery: TZQuery; table: string; field: string; value: string);
+procedure TdmF.qrySearch(ZQuery: TZQuery; table: string; field: string; value: string; additionalWhere: string = '');
 var qrySql: string;
 begin
-  qrySql := 'select * from ' + table + ' where ' + field + ' ilike ' + QuotedStr('%' + value + '%');
+  qrySql := 'select * from ' + table + ' where ' + field + ' ilike ' + QuotedStr('%' + value + '%')+ ' ' + additionalWhere;
   with ZQuery do
    begin
     Close;
