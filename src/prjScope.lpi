@@ -202,6 +202,14 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relOrcamentos"/>
       </Unit>
+      <Unit>
+        <Filename Value="auth\ulogin.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LoginF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uLogin"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -212,7 +220,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="cadastro;banco;cadastro\modal;relatorio"/>
+      <OtherUnitFiles Value="cadastro;banco;cadastro\modal;relatorio;auth"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <Linking>

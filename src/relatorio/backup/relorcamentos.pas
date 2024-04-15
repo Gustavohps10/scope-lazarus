@@ -21,6 +21,7 @@ type
     qryRelModeloorcamentoid: TLongintField;
     qryRelModelovl_total_orcamento: TFloatField;
     qryOrcItem: TZQuery;
+    procedure btnImprimirClick(Sender: TObject);
   private
 
   public
@@ -35,6 +36,13 @@ implementation
 {$R *.lfm}
 
 { TrelOrcamentosF }
+
+procedure TrelOrcamentosF.btnImprimirClick(Sender: TObject);
+begin
+  frReportModelo.LoadFromFile('../relatorio/relOrcamentos.lrf');
+  frReportModelo.PrepareReport;
+  frReportModelo.ShowReport;
+end;
 
 end.
 

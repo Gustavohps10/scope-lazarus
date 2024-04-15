@@ -195,7 +195,7 @@ object relModeloF: TrelModeloF
     Height = 32
     Top = 280
     Width = 160
-    StateClicked.Background.Color = 8412732
+    StateClicked.Background.Color = 2600856
     StateClicked.Background.Gradient1.StartColor = 8404992
     StateClicked.Background.Gradient1.EndColor = 4194304
     StateClicked.Background.Gradient1.GradientType = gtRadial
@@ -223,7 +223,7 @@ object relModeloF: TrelModeloF
     StateClicked.FontEx.ShadowOffsetY = 1
     StateClicked.FontEx.Style = []
     StateClicked.FontEx.TextAlignment = bcaLeftCenter
-    StateHover.Background.Color = 7032626
+    StateHover.Background.Color = 2867110
     StateHover.Background.Gradient1.StartColor = 16744448
     StateHover.Background.Gradient1.EndColor = 8404992
     StateHover.Background.Gradient1.GradientType = gtRadial
@@ -251,7 +251,7 @@ object relModeloF: TrelModeloF
     StateHover.FontEx.ShadowOffsetY = 1
     StateHover.FontEx.Style = []
     StateHover.FontEx.TextAlignment = bcaLeftCenter
-    StateNormal.Background.Color = 5126436
+    StateNormal.Background.Color = 4249019
     StateNormal.Background.Gradient1.StartColor = 4249019
     StateNormal.Background.Gradient1.EndColor = 4249019
     StateNormal.Background.Gradient1.GradientType = gtAngular
@@ -284,7 +284,7 @@ object relModeloF: TrelModeloF
     StateNormal.FontEx.Style = []
     StateNormal.FontEx.TextAlignment = bcaLeftCenter
     BorderSpacing.InnerBorder = 1
-    Caption = 'Imprimir Relatório'
+    Caption = 'Imprimir Relatório '
     Color = clNone
     DropDownWidth = 16
     DropDownArrowSize = 8

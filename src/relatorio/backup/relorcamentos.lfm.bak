@@ -3,6 +3,9 @@ inherited relOrcamentosF: TrelOrcamentosF
   inherited pnlTopo: TPanel
     Caption = 'Relatório de Orçamentos'
   end
+  inherited btnImprimir: TBCButton
+    OnClick = btnImprimirClick
+  end
   inherited frReportModelo: TfrReport
     Left = 344
     Top = 136
@@ -67,6 +70,7 @@ inherited relOrcamentosF: TrelOrcamentosF
   end
   object qryOrcItem: TZQuery[6]
     Connection = dmF.ZConnection1
+    Active = True
     SQL.Strings = (
       'select * from orcamento_item'
     )

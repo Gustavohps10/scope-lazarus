@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, DBCtrls,
-  BGRAThemeRadioButton, ZDataset, uCadModelo, DB, dm;
+  ExtCtrls, BGRAThemeRadioButton, ZDataset, uCadModelo, DB, dm;
 
 type
 

@@ -13,7 +13,7 @@ uses
   Forms, datetimectrls, memdslaz, zcomponent, uPrincipal, uCadModelo, dm,
   uCadCliente, ucadcategoria, uCadProduto, uCadOrcamento, uCadUsuario,
   uOrcModalModelo, uSelecionarProdutosF, uSelecionarCliente, relModelo, 
-relCategorias, relProdutos, relClientes, relUsuarios, relOrcamentos;
+relCategorias, relProdutos, relClientes, relUsuarios, relOrcamentos, uLogin;
 
 {$R *.res}
 
@@ -21,15 +21,11 @@ begin
   RequireDerivedFormResource:=True;
   Application.Scaled:=True;
   Application.Initialize;
+  Application.CreateForm(TLoginF, LoginF);
   Application.CreateForm(TdmF, dmF);
   Application.CreateForm(TprincipalF, principalF);
   Application.CreateForm(TCadModeloF, CadModeloF);
   Application.CreateForm(TrelModeloF, relModeloF);
-  Application.CreateForm(TrelCategoriasF, relCategoriasF);
-  Application.CreateForm(TrelProdutosF, relProdutosF);
-  Application.CreateForm(TrelClientesF, relClientesF);
-  Application.CreateForm(TrelUsuariosF, relUsuariosF);
-  Application.CreateForm(TrelOrcamentosF, relOrcamentosF);
   Application.Run;
 end.
 

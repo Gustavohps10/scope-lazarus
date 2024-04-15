@@ -1,4 +1,6 @@
 inherited relOrcamentosF: TrelOrcamentosF
+  Left = 401
+  Top = 147
   Caption = 'Relatório de Orçamentos'
   inherited pnlTopo: TPanel
     Caption = 'Relatório de Orçamentos'
@@ -15,7 +17,6 @@ inherited relOrcamentosF: TrelOrcamentosF
     Top = 80
   end
   inherited qryRelModelo: TZQuery
-    Active = True
     SQL.Strings = (
       'select * from orcamento'
     )
@@ -70,7 +71,6 @@ inherited relOrcamentosF: TrelOrcamentosF
   end
   object qryOrcItem: TZQuery[6]
     Connection = dmF.ZConnection1
-    Active = True
     SQL.Strings = (
       'select * from orcamento_item'
     )
