@@ -85,7 +85,7 @@ end;
 procedure TdmF.qrySearch(ZQuery: TZQuery; table: string; field: string; value: string; additionalWhere: string = '');
 var qrySql: string;
 begin
-  qrySql := 'select * from ' + table + ' where ' + field + ' ilike ' + QuotedStr('%' + value + '%') + additionalWhere;
+  qrySql := 'select * from ' + table + ' where ' + field + ' ilike ' + QuotedStr('%' + value + '%')+ ' ' + additionalWhere;
   with ZQuery do
    begin
     Close;

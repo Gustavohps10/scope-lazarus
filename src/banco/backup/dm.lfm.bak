@@ -12,14 +12,12 @@ object dmF: TdmF
       'AutoEncodeStrings=ON'
       'controls_cp=CP_UTF8'
     )
-    Connected = True
     HostName = 'localhost'
     Port = 5432
     Database = 'prjaccion'
     User = 'postgres'
     Password = '1234'
     Protocol = 'postgresql'
-    LibraryLocation = 'C:\MyApps\scope-lazarus\src\libpq-32bits\libpq.dll'
     Left = 32
     Top = 8
   end

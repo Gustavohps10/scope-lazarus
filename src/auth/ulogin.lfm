@@ -1,14 +1,16 @@
 object LoginF: TLoginF
-  Left = 295
+  Left = 571
   Height = 479
-  Top = 90
+  Top = 283
   Width = 762
+  BorderStyle = bsNone
   Caption = 'Login'
   ClientHeight = 479
   ClientWidth = 762
   Color = 16514043
   Font.Name = 'Inter'
-  LCLVersion = '3.2.0.0'
+  OnCreate = FormCreate
+  LCLVersion = '2.2.6.0'
   object pnlLoginLateral: TPanel
     Left = 0
     Height = 479
@@ -22,296 +24,22 @@ object LoginF: TLoginF
     ParentBackground = False
     ParentColor = False
     TabOrder = 0
-    object pnlLoginContainer: TPanel
-      Left = 0
-      Height = 352
-      Top = 88
-      Width = 374
-      Anchors = []
-      BevelOuter = bvNone
-      ClientHeight = 352
-      ClientWidth = 374
-      ParentBackground = False
-      TabOrder = 0
-      object lblLogin: TBCLabel
-        Left = 152
-        Height = 25
-        Top = 40
-        Width = 62
-        Background.Gradient1.StartColor = clWhite
-        Background.Gradient1.EndColor = clBlack
-        Background.Gradient1.GradientType = gtLinear
-        Background.Gradient1.Point1XPercent = 0
-        Background.Gradient1.Point1YPercent = 0
-        Background.Gradient1.Point2XPercent = 0
-        Background.Gradient1.Point2YPercent = 100
-        Background.Gradient2.StartColor = clWhite
-        Background.Gradient2.EndColor = clBlack
-        Background.Gradient2.GradientType = gtLinear
-        Background.Gradient2.Point1XPercent = 0
-        Background.Gradient2.Point1YPercent = 0
-        Background.Gradient2.Point2XPercent = 0
-        Background.Gradient2.Point2YPercent = 100
-        Background.Gradient1EndPercent = 35
-        Background.Style = bbsClear
-        Border.Style = bboNone
-        Caption = 'LOGIN'
-        FontEx.Color = 15066597
-        FontEx.FontQuality = fqFineAntialiasing
-        FontEx.Height = 20
-        FontEx.Name = 'inter'
-        FontEx.Shadow = False
-        FontEx.ShadowRadius = 5
-        FontEx.ShadowOffsetX = 5
-        FontEx.ShadowOffsetY = 5
-        FontEx.Style = [fsBold]
-        Rounding.RoundX = 1
-        Rounding.RoundY = 1
-      end
-      object lblDigiteUsuarioSenha: TBCLabel
-        Left = 96
-        Height = 15
-        Top = 80
-        Width = 194
-        Background.Gradient1.StartColor = clWhite
-        Background.Gradient1.EndColor = clBlack
-        Background.Gradient1.GradientType = gtLinear
-        Background.Gradient1.Point1XPercent = 0
-        Background.Gradient1.Point1YPercent = 0
-        Background.Gradient1.Point2XPercent = 0
-        Background.Gradient1.Point2YPercent = 100
-        Background.Gradient2.StartColor = clWhite
-        Background.Gradient2.EndColor = clBlack
-        Background.Gradient2.GradientType = gtLinear
-        Background.Gradient2.Point1XPercent = 0
-        Background.Gradient2.Point1YPercent = 0
-        Background.Gradient2.Point2XPercent = 0
-        Background.Gradient2.Point2YPercent = 100
-        Background.Gradient1EndPercent = 35
-        Background.Style = bbsClear
-        Border.Style = bboNone
-        Caption = 'Digite seu Usuario e Senha abaixo:'
-        FontEx.Color = clDefault
-        FontEx.FontQuality = fqSystemClearType
-        FontEx.Name = 'inter'
-        FontEx.Shadow = False
-        FontEx.ShadowRadius = 5
-        FontEx.ShadowOffsetX = 5
-        FontEx.ShadowOffsetY = 5
-        FontEx.Style = []
-        Rounding.RoundX = 1
-        Rounding.RoundY = 1
-      end
-      object edtUsuario: TBCMaterialEdit
-        Left = 64
-        Height = 42
-        Top = 112
-        Width = 258
-        Color = 16514043
-        DisabledColor = 12103592
-        AccentColor = 5126436
-      end
-      object edtSenha: TBCMaterialEdit
-        Left = 64
-        Height = 42
-        Top = 168
-        Width = 258
-        Color = 16514043
-        DisabledColor = 12103592
-        AccentColor = 5126436
-      end
-      object txtCopyright: TStaticText
-        Left = 96
-        Height = 33
-        Top = 288
-        Width = 212
-        Alignment = taCenter
-        Caption = 'Desenvolvido por Gustavo Henrique.'#13#10' Todos os Direitos Reservados'
-        Font.Color = 5126436
-        Font.Name = 'Inter'
-        Font.Quality = fqCleartypeNatural
-        ParentFont = False
-        TabOrder = 2
-      end
-      object btnLogin: TBCButton
-        Cursor = crHandPoint
-        Left = 64
-        Height = 32
-        Top = 232
-        Width = 80
-        Anchors = [akRight, akBottom]
-        StateClicked.Background.Color = 2600856
-        StateClicked.Background.Gradient1.StartColor = 8404992
-        StateClicked.Background.Gradient1.EndColor = 4194304
-        StateClicked.Background.Gradient1.GradientType = gtRadial
-        StateClicked.Background.Gradient1.Point1XPercent = 50
-        StateClicked.Background.Gradient1.Point1YPercent = 100
-        StateClicked.Background.Gradient1.Point2XPercent = 0
-        StateClicked.Background.Gradient1.Point2YPercent = 0
-        StateClicked.Background.Gradient2.StartColor = clWhite
-        StateClicked.Background.Gradient2.EndColor = clBlack
-        StateClicked.Background.Gradient2.GradientType = gtLinear
-        StateClicked.Background.Gradient2.Point1XPercent = 0
-        StateClicked.Background.Gradient2.Point1YPercent = 0
-        StateClicked.Background.Gradient2.Point2XPercent = 0
-        StateClicked.Background.Gradient2.Point2YPercent = 100
-        StateClicked.Background.Gradient1EndPercent = 100
-        StateClicked.Background.Style = bbsColor
-        StateClicked.Border.Style = bboNone
-        StateClicked.FontEx.Color = 16770790
-        StateClicked.FontEx.FontQuality = fqFineAntialiasing
-        StateClicked.FontEx.Height = 14
-        StateClicked.FontEx.Name = 'Inter'
-        StateClicked.FontEx.Shadow = False
-        StateClicked.FontEx.ShadowRadius = 2
-        StateClicked.FontEx.ShadowOffsetX = 1
-        StateClicked.FontEx.ShadowOffsetY = 1
-        StateClicked.FontEx.Style = []
-        StateClicked.FontEx.TextAlignment = bcaLeftCenter
-        StateHover.Background.Color = 2867110
-        StateHover.Background.Gradient1.StartColor = 16744448
-        StateHover.Background.Gradient1.EndColor = 8404992
-        StateHover.Background.Gradient1.GradientType = gtRadial
-        StateHover.Background.Gradient1.Point1XPercent = 50
-        StateHover.Background.Gradient1.Point1YPercent = 100
-        StateHover.Background.Gradient1.Point2XPercent = 0
-        StateHover.Background.Gradient1.Point2YPercent = 0
-        StateHover.Background.Gradient2.StartColor = clWhite
-        StateHover.Background.Gradient2.EndColor = clBlack
-        StateHover.Background.Gradient2.GradientType = gtLinear
-        StateHover.Background.Gradient2.Point1XPercent = 0
-        StateHover.Background.Gradient2.Point1YPercent = 0
-        StateHover.Background.Gradient2.Point2XPercent = 0
-        StateHover.Background.Gradient2.Point2YPercent = 100
-        StateHover.Background.Gradient1EndPercent = 100
-        StateHover.Background.Style = bbsColor
-        StateHover.Border.Style = bboNone
-        StateHover.FontEx.Color = clWhite
-        StateHover.FontEx.FontQuality = fqFineAntialiasing
-        StateHover.FontEx.Height = 14
-        StateHover.FontEx.Name = 'Inter'
-        StateHover.FontEx.Shadow = False
-        StateHover.FontEx.ShadowRadius = 2
-        StateHover.FontEx.ShadowOffsetX = 1
-        StateHover.FontEx.ShadowOffsetY = 1
-        StateHover.FontEx.Style = []
-        StateHover.FontEx.TextAlignment = bcaLeftCenter
-        StateNormal.Background.Color = 4249019
-        StateNormal.Background.Gradient1.StartColor = 4249019
-        StateNormal.Background.Gradient1.EndColor = 4249019
-        StateNormal.Background.Gradient1.GradientType = gtAngular
-        StateNormal.Background.Gradient1.Point1XPercent = 0
-        StateNormal.Background.Gradient1.Point1YPercent = 0
-        StateNormal.Background.Gradient1.Point2XPercent = 0
-        StateNormal.Background.Gradient1.Point2YPercent = 100
-        StateNormal.Background.Gradient2.StartColor = 4249019
-        StateNormal.Background.Gradient2.EndColor = 4249019
-        StateNormal.Background.Gradient2.GradientType = gtRadial
-        StateNormal.Background.Gradient2.Point1XPercent = 50
-        StateNormal.Background.Gradient2.Point1YPercent = 100
-        StateNormal.Background.Gradient2.Point2XPercent = 0
-        StateNormal.Background.Gradient2.Point2YPercent = 0
-        StateNormal.Background.Gradient1EndPercent = 1
-        StateNormal.Background.Style = bbsColor
-        StateNormal.Border.Style = bboNone
-        StateNormal.FontEx.Color = clWhite
-        StateNormal.FontEx.FontQuality = fqFineAntialiasing
-        StateNormal.FontEx.Height = 14
-        StateNormal.FontEx.Name = 'Inter'
-        StateNormal.FontEx.Shadow = False
-        StateNormal.FontEx.ShadowColor = clNone
-        StateNormal.FontEx.ShadowColorOpacity = 0
-        StateNormal.FontEx.ShadowRadius = 2
-        StateNormal.FontEx.ShadowOffsetX = 1
-        StateNormal.FontEx.ShadowOffsetY = 1
-        StateNormal.FontEx.Style = []
-        StateNormal.FontEx.TextAlignment = bcaLeftCenter
-        Caption = 'Login '
-        Color = clNone
-        DropDownWidth = 16
-        DropDownArrowSize = 8
-        GlobalOpacity = 255
-        Glyph.Data = {
-          76060000424D7606000000000000360000002800000014000000140000000100
-          2000000000004006000064000000640000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          000000000000000000000000000000000000FFFFFF1CFFFFFF33FFFFFF33FFFF
-          FF33FFFFFF33FFFFFF33FFFFFF33FFFFFF1C0000000000000000000000000000
-          000000000000000000000000000000000000000000000000000000000000FFFF
-          FF7EFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-          FFFEFFFFFF7D0000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000FFFFFFF3FFFFFF69FFFFFF11FFFFFF11FFFF
-          FF11FFFFFF11FFFFFF11FFFFFF11FFFFFF69FFFFFFF200000000000000000000
-          000000000000000000000000000000000000000000000000000000000000FFFF
-          FFFFFFFFFF40000000000000000000000000000000000000000000000000FFFF
-          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000FFFFFFFFFFFFFF4000000000000000000000
-          0000000000000000000000000000FFFFFF40FFFFFFFF00000000000000000000
-          000000000000000000000000000000000000000000000000000000000000FFFF
-          FFFFFFFFFF40FFFFFF4DFFFFFF97FFFFFF04000000000000000000000000FFFF
-          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000FFFFFF77FFFFFF1EFFFFFF27FFFFFFE9FFFF
-          FFACFFFFFF050000000000000000FFFFFF40FFFFFFFF00000000000000000000
-          00000000000000000000000000000000000000000000FFFFFF3DFFFFFF99FFFF
-          FF99FFFFFF99FFFFFF99FFFFFFC0FFFFFFFFFFFFFFA30000000000000000FFFF
-          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
-          000000000000FFFFFF3DFFFFFF99FFFFFF99FFFFFF99FFFFFF99FFFFFFC0FFFF
-          FFFFFFFFFFA30000000000000000FFFFFF40FFFFFFFF00000000000000000000
-          000000000000000000000000000000000000000000000000000000000000FFFF
-          FF77FFFFFF1EFFFFFF27FFFFFFE9FFFFFFACFFFFFF050000000000000000FFFF
-          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000FFFFFFFFFFFFFF40FFFFFF4DFFFFFF97FFFF
-          FF04000000000000000000000000FFFFFF40FFFFFFFF00000000000000000000
-          000000000000000000000000000000000000000000000000000000000000FFFF
-          FFFFFFFFFF40000000000000000000000000000000000000000000000000FFFF
-          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000FFFFFFFFFFFFFF4000000000000000000000
-          0000000000000000000000000000FFFFFF40FFFFFFFF00000000000000000000
-          000000000000000000000000000000000000000000000000000000000000FFFF
-          FFF3FFFFFF69FFFFFF11FFFFFF11FFFFFF11FFFFFF11FFFFFF11FFFFFF11FFFF
-          FF69FFFFFFF30000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000FFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFF
-          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFF7E00000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000FFFFFF1CFFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFF
-          FF1C000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000000000000000
-          0000000000000000000000000000000000000000000000000000
-        }
-        GlyphAlignment = bcaLeftCenter
-        GlyphMargin = 4
-        ParentColor = False
-        Rounding.RoundX = 5
-        Rounding.RoundY = 5
-        RoundingDropDown.RoundX = 1
-        RoundingDropDown.RoundY = 1
-        TextApplyGlobalOpacity = False
-        MemoryUsage = bmuHigh
-      end
-    end
     object pnlLoginLateralTopo: TPanel
       Left = 0
-      Height = 66
+      Height = 90
       Top = 0
       Width = 376
       Align = alTop
       BevelOuter = bvNone
-      ClientHeight = 66
+      ClientHeight = 90
       ClientWidth = 376
       ParentBackground = False
       TabOrder = 1
       object imgLogoTopo: TImage
-        Left = 16
-        Height = 26
-        Top = 8
-        Width = 112
+        Left = 24
+        Height = 40
+        Top = 24
+        Width = 200
         Picture.Data = {
           1754506F727461626C654E6574776F726B47726170686963B213000089504E47
           0D0A1A0A0000000D49484452000000C2000000280806000000AC3E25D5000000
@@ -476,6 +204,339 @@ object LoginF: TLoginF
         Proportional = True
       end
     end
+    object pnlLoginContainer: TPanel
+      Left = 0
+      Height = 368
+      Top = 88
+      Width = 376
+      Anchors = []
+      BevelOuter = bvNone
+      ClientHeight = 368
+      ClientWidth = 376
+      ParentBackground = False
+      TabOrder = 0
+      object lblLogin: TBCLabel
+        Left = 152
+        Height = 24
+        Top = 40
+        Width = 64
+        Background.Gradient1.StartColor = clWhite
+        Background.Gradient1.EndColor = clBlack
+        Background.Gradient1.GradientType = gtLinear
+        Background.Gradient1.Point1XPercent = 0
+        Background.Gradient1.Point1YPercent = 0
+        Background.Gradient1.Point2XPercent = 0
+        Background.Gradient1.Point2YPercent = 100
+        Background.Gradient2.StartColor = clWhite
+        Background.Gradient2.EndColor = clBlack
+        Background.Gradient2.GradientType = gtLinear
+        Background.Gradient2.Point1XPercent = 0
+        Background.Gradient2.Point1YPercent = 0
+        Background.Gradient2.Point2XPercent = 0
+        Background.Gradient2.Point2YPercent = 100
+        Background.Gradient1EndPercent = 35
+        Background.Style = bbsClear
+        Border.Style = bboNone
+        Caption = 'LOGIN'
+        FontEx.Color = 6250335
+        FontEx.FontQuality = fqFineAntialiasing
+        FontEx.Height = 20
+        FontEx.Name = 'inter'
+        FontEx.Shadow = False
+        FontEx.ShadowRadius = 5
+        FontEx.ShadowOffsetX = 5
+        FontEx.ShadowOffsetY = 5
+        FontEx.Style = [fsBold]
+        Rounding.RoundX = 1
+        Rounding.RoundY = 1
+      end
+      object lblDigiteUsuarioSenha: TBCLabel
+        Left = 96
+        Height = 15
+        Top = 80
+        Width = 194
+        Background.Gradient1.StartColor = clWhite
+        Background.Gradient1.EndColor = clBlack
+        Background.Gradient1.GradientType = gtLinear
+        Background.Gradient1.Point1XPercent = 0
+        Background.Gradient1.Point1YPercent = 0
+        Background.Gradient1.Point2XPercent = 0
+        Background.Gradient1.Point2YPercent = 100
+        Background.Gradient2.StartColor = clWhite
+        Background.Gradient2.EndColor = clBlack
+        Background.Gradient2.GradientType = gtLinear
+        Background.Gradient2.Point1XPercent = 0
+        Background.Gradient2.Point1YPercent = 0
+        Background.Gradient2.Point2XPercent = 0
+        Background.Gradient2.Point2YPercent = 100
+        Background.Gradient1EndPercent = 35
+        Background.Style = bbsClear
+        Border.Style = bboNone
+        Caption = 'Digite seu Usuario e Senha abaixo:'
+        FontEx.Color = 8355711
+        FontEx.FontQuality = fqSystemClearType
+        FontEx.Name = 'inter'
+        FontEx.Shadow = False
+        FontEx.ShadowRadius = 5
+        FontEx.ShadowOffsetX = 5
+        FontEx.ShadowOffsetY = 5
+        FontEx.Style = []
+        Rounding.RoundX = 1
+        Rounding.RoundY = 1
+      end
+      object edtUsuario: TBCMaterialEdit
+        Left = 64
+        Height = 42
+        Top = 112
+        Width = 258
+        Color = 16514043
+        DisabledColor = 12103592
+        AccentColor = 5126436
+      end
+      object edtSenha: TBCMaterialEdit
+        Left = 64
+        Height = 42
+        Top = 168
+        Width = 258
+        Color = 16514043
+        DisabledColor = 12103592
+        AccentColor = 5126436
+      end
+      object txtCopyright: TStaticText
+        Left = 80
+        Height = 33
+        Top = 296
+        Width = 228
+        Alignment = taCenter
+        Caption = 'Desenvolvido por Gustavo Henrique.'#13#10' Todos os Direitos Reservados'
+        Font.Color = 5126436
+        Font.Name = 'Inter'
+        Font.Quality = fqCleartypeNatural
+        ParentFont = False
+        TabOrder = 2
+      end
+      object btnLogin: TBCButton
+        Cursor = crHandPoint
+        Left = 66
+        Height = 32
+        Top = 232
+        Width = 80
+        Anchors = [akRight, akBottom]
+        StateClicked.Background.Color = 2600856
+        StateClicked.Background.Gradient1.StartColor = 8404992
+        StateClicked.Background.Gradient1.EndColor = 4194304
+        StateClicked.Background.Gradient1.GradientType = gtRadial
+        StateClicked.Background.Gradient1.Point1XPercent = 50
+        StateClicked.Background.Gradient1.Point1YPercent = 100
+        StateClicked.Background.Gradient1.Point2XPercent = 0
+        StateClicked.Background.Gradient1.Point2YPercent = 0
+        StateClicked.Background.Gradient2.StartColor = clWhite
+        StateClicked.Background.Gradient2.EndColor = clBlack
+        StateClicked.Background.Gradient2.GradientType = gtLinear
+        StateClicked.Background.Gradient2.Point1XPercent = 0
+        StateClicked.Background.Gradient2.Point1YPercent = 0
+        StateClicked.Background.Gradient2.Point2XPercent = 0
+        StateClicked.Background.Gradient2.Point2YPercent = 100
+        StateClicked.Background.Gradient1EndPercent = 100
+        StateClicked.Background.Style = bbsColor
+        StateClicked.Border.Style = bboNone
+        StateClicked.FontEx.Color = 16770790
+        StateClicked.FontEx.FontQuality = fqFineAntialiasing
+        StateClicked.FontEx.Height = 14
+        StateClicked.FontEx.Name = 'Inter'
+        StateClicked.FontEx.Shadow = False
+        StateClicked.FontEx.ShadowRadius = 2
+        StateClicked.FontEx.ShadowOffsetX = 1
+        StateClicked.FontEx.ShadowOffsetY = 1
+        StateClicked.FontEx.Style = []
+        StateClicked.FontEx.TextAlignment = bcaLeftCenter
+        StateHover.Background.Color = 2867110
+        StateHover.Background.Gradient1.StartColor = 16744448
+        StateHover.Background.Gradient1.EndColor = 8404992
+        StateHover.Background.Gradient1.GradientType = gtRadial
+        StateHover.Background.Gradient1.Point1XPercent = 50
+        StateHover.Background.Gradient1.Point1YPercent = 100
+        StateHover.Background.Gradient1.Point2XPercent = 0
+        StateHover.Background.Gradient1.Point2YPercent = 0
+        StateHover.Background.Gradient2.StartColor = clWhite
+        StateHover.Background.Gradient2.EndColor = clBlack
+        StateHover.Background.Gradient2.GradientType = gtLinear
+        StateHover.Background.Gradient2.Point1XPercent = 0
+        StateHover.Background.Gradient2.Point1YPercent = 0
+        StateHover.Background.Gradient2.Point2XPercent = 0
+        StateHover.Background.Gradient2.Point2YPercent = 100
+        StateHover.Background.Gradient1EndPercent = 100
+        StateHover.Background.Style = bbsColor
+        StateHover.Border.Style = bboNone
+        StateHover.FontEx.Color = clWhite
+        StateHover.FontEx.FontQuality = fqFineAntialiasing
+        StateHover.FontEx.Height = 14
+        StateHover.FontEx.Name = 'Inter'
+        StateHover.FontEx.Shadow = False
+        StateHover.FontEx.ShadowRadius = 2
+        StateHover.FontEx.ShadowOffsetX = 1
+        StateHover.FontEx.ShadowOffsetY = 1
+        StateHover.FontEx.Style = []
+        StateHover.FontEx.TextAlignment = bcaLeftCenter
+        StateNormal.Background.Color = 4249019
+        StateNormal.Background.Gradient1.StartColor = 4249019
+        StateNormal.Background.Gradient1.EndColor = 4249019
+        StateNormal.Background.Gradient1.GradientType = gtAngular
+        StateNormal.Background.Gradient1.Point1XPercent = 0
+        StateNormal.Background.Gradient1.Point1YPercent = 0
+        StateNormal.Background.Gradient1.Point2XPercent = 0
+        StateNormal.Background.Gradient1.Point2YPercent = 100
+        StateNormal.Background.Gradient2.StartColor = 4249019
+        StateNormal.Background.Gradient2.EndColor = 4249019
+        StateNormal.Background.Gradient2.GradientType = gtRadial
+        StateNormal.Background.Gradient2.Point1XPercent = 50
+        StateNormal.Background.Gradient2.Point1YPercent = 100
+        StateNormal.Background.Gradient2.Point2XPercent = 0
+        StateNormal.Background.Gradient2.Point2YPercent = 0
+        StateNormal.Background.Gradient1EndPercent = 1
+        StateNormal.Background.Style = bbsColor
+        StateNormal.Border.Style = bboNone
+        StateNormal.FontEx.Color = clWhite
+        StateNormal.FontEx.FontQuality = fqFineAntialiasing
+        StateNormal.FontEx.Height = 14
+        StateNormal.FontEx.Name = 'Inter'
+        StateNormal.FontEx.Shadow = False
+        StateNormal.FontEx.ShadowColor = clNone
+        StateNormal.FontEx.ShadowColorOpacity = 0
+        StateNormal.FontEx.ShadowRadius = 2
+        StateNormal.FontEx.ShadowOffsetX = 1
+        StateNormal.FontEx.ShadowOffsetY = 1
+        StateNormal.FontEx.Style = []
+        StateNormal.FontEx.TextAlignment = bcaLeftCenter
+        Caption = 'Login '
+        Color = clNone
+        DropDownWidth = 16
+        DropDownArrowSize = 8
+        GlobalOpacity = 255
+        Glyph.Data = {
+          76060000424D7606000000000000360000002800000014000000140000000100
+          2000000000004006000064000000640000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          000000000000000000000000000000000000FFFFFF1CFFFFFF33FFFFFF33FFFF
+          FF33FFFFFF33FFFFFF33FFFFFF33FFFFFF1C0000000000000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF7EFFFFFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFEFFFFFF7D0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFFF3FFFFFF69FFFFFF11FFFFFF11FFFF
+          FF11FFFFFF11FFFFFF11FFFFFF11FFFFFF69FFFFFFF200000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FFFFFFFFFF40000000000000000000000000000000000000000000000000FFFF
+          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFFFFFFFFFF4000000000000000000000
+          0000000000000000000000000000FFFFFF40FFFFFFFF00000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FFFFFFFFFF40FFFFFF4DFFFFFF97FFFFFF04000000000000000000000000FFFF
+          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF77FFFFFF1EFFFFFF27FFFFFFE9FFFF
+          FFACFFFFFF050000000000000000FFFFFF40FFFFFFFF00000000000000000000
+          00000000000000000000000000000000000000000000FFFFFF3DFFFFFF99FFFF
+          FF99FFFFFF99FFFFFF99FFFFFFC0FFFFFFFFFFFFFFA30000000000000000FFFF
+          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
+          000000000000FFFFFF3DFFFFFF99FFFFFF99FFFFFF99FFFFFF99FFFFFFC0FFFF
+          FFFFFFFFFFA30000000000000000FFFFFF40FFFFFFFF00000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FF77FFFFFF1EFFFFFF27FFFFFFE9FFFFFFACFFFFFF050000000000000000FFFF
+          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFFFFFFFFFF40FFFFFF4DFFFFFF97FFFF
+          FF04000000000000000000000000FFFFFF40FFFFFFFF00000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FFFFFFFFFF40000000000000000000000000000000000000000000000000FFFF
+          FF40FFFFFFFF0000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFFFFFFFFFF4000000000000000000000
+          0000000000000000000000000000FFFFFF40FFFFFFFF00000000000000000000
+          000000000000000000000000000000000000000000000000000000000000FFFF
+          FFF3FFFFFF69FFFFFF11FFFFFF11FFFFFF11FFFFFF11FFFFFF11FFFFFF11FFFF
+          FF69FFFFFFF30000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000FFFFFF7FFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+          FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFF7E00000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000FFFFFF1CFFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFFFF33FFFF
+          FF1C000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000
+        }
+        GlyphAlignment = bcaLeftCenter
+        GlyphMargin = 4
+        OnClick = btnLoginClick
+        ParentColor = False
+        Rounding.RoundX = 5
+        Rounding.RoundY = 5
+        RoundingDropDown.RoundX = 1
+        RoundingDropDown.RoundY = 1
+        TextApplyGlobalOpacity = False
+        MemoryUsage = bmuHigh
+      end
+      object Panel1: TPanel
+        Left = 375
+        Height = 368
+        Top = 0
+        Width = 1
+        Align = alRight
+        BevelOuter = bvNone
+        Caption = 'Panel1'
+        Color = 8355711
+        ParentColor = False
+        TabOrder = 3
+      end
+      object imgGithub: TImage
+        Left = 88
+        Height = 24
+        Top = 344
+        Width = 24
+        Picture.Data = {
+          1754506F727461626C654E6574776F726B47726170686963B102000089504E47
+          0D0A1A0A0000000D4948445200000018000000180806000000E0773DF8000000
+          097048597300000B1300000B1301009A9C180000026349444154789CDDD44B6B
+          1A5114077049A91FC6AD8EE3637CCEC39951694C186D16EEC48D086E55441111
+          4BDB80E0421014415210170A7E85160471E3468A0D295DB853820F9022A7DCA1
+          576C1D5F59E60F174691F31BEFB9F7A854AF3A9224A9699A0ED034FDE0743A47
+          76BB7D61B55AD11A592C9607B3D9ECD76834EA1715E738EE9665D91F0CC3004D
+          D3E0743AC1E17080CD6603ABD50A168B05288A02B3D93C2649F2E692B77EC3F3
+          FC2797CB052CCBC21900188D4630180C1F552AD5D5490015E7791E388E938B33
+          270093C984012049F2C3D1E28220DC0A82000848241230180C209FCFCBC511E8
+          F7FB4192241944482E97837EBF0FD1681403A0D7EBAF0F6D8D5A14C531061A8D
+          06E0CC6633D86C36DBCFE8197D87532E97B70041108F8A8DF7783C0151140103
+          A55209CE4DA150D8FD0768497B80288A5F30801A8CB6E7DCF47A3DB93806743A
+          5D4309F88E815028049726180C6E018220464AC01C03994CE66220994CEE0273
+          25608981542A7531108BC54E028F1840C771F7D49C0AFA2D3A183BC0F86493DB
+          ED369C9B66B3F9CF29526CB2DBED7E8F00AFD70B6EB75B46EAF53A2C97CB8385
+          57AB15D46A35F946EF020441F80F5DB45F81400086C321C4E3F1EDA888C562B0
+          5EAFB785D1732412916FF3CE2CC217ED49ABD5BEDD03FE6ED30DDA22844C2613
+          19F17ABD50A954F6DE3E9BCDFE3FEC8E8F0A1C4110EE51C38AC5222C160B79CD
+          E7F33D00A10A009AA8C7934EA7AF789EFF8C869BCFE78370380CAD56EB1CE0BC
+          718DC371DC35CBB23F510FAAD5EA31E0C96432BD53BD24A8590CC3DC75BBDD6F
+          B3D9EC79BD5EFF466B3A9D3E773A9DAF1445DD1D6CE8ABC91F0C2472EADACD0D
+          ED0000000049454E44AE426082
+        }
+      end
+      object lblGithub: TLabel
+        Cursor = crHandPoint
+        Left = 120
+        Height = 15
+        Top = 348
+        Width = 180
+        Caption = 'https://github.com/Gustavohps10'
+        Font.Color = 5126436
+        Font.Name = 'Inter'
+        ParentColor = False
+        ParentFont = False
+        OnClick = lblGithubClick
+        OnMouseEnter = lblGithubMouseEnter
+        OnMouseLeave = lblGithubMouseLeave
+      end
+    end
   end
   object pnlInfo: TPanel
     Left = 376
@@ -503,9 +564,9 @@ object LoginF: TLoginF
       TabOrder = 0
       object lblBemVindo: TBCLabel
         Left = 88
-        Height = 25
+        Height = 24
         Top = 40
-        Width = 213
+        Width = 210
         Background.Gradient1.StartColor = clWhite
         Background.Gradient1.EndColor = clBlack
         Background.Gradient1.GradientType = gtLinear
@@ -524,7 +585,7 @@ object LoginF: TLoginF
         Background.Style = bbsClear
         Border.Style = bboNone
         Caption = 'Bem-Vindo ao SCOPE'
-        FontEx.Color = clDefault
+        FontEx.Color = 6250335
         FontEx.FontQuality = fqFineAntialiasing
         FontEx.Height = 20
         FontEx.Name = 'inter'
@@ -542,8 +603,8 @@ object LoginF: TLoginF
         Top = 80
         Width = 212
         Alignment = taCenter
-        Caption = 'Uma forma fácil e segura de controlar seus Orcamentos'
-        Font.Color = 5126436
+        Caption = 'Uma forma fácil e segura de controlar seus Orçamentos'
+        Font.Color = 8355711
         Font.Name = 'Inter'
         Font.Quality = fqCleartypeNatural
         ParentFont = False
@@ -880,6 +941,24 @@ object LoginF: TLoginF
         }
         Proportional = True
       end
+    end
+    object imgFechar: TImage
+      Cursor = crHandPoint
+      Left = 352
+      Height = 20
+      Top = 24
+      Width = 20
+      OnClick = imgFecharClick
+      Picture.Data = {
+        1754506F727461626C654E6574776F726B47726170686963DC00000089504E47
+        0D0A1A0A0000000D49484452000000140000001408060000008D891D0D000000
+        097048597300000B1300000B1301009A9C180000008E49444154789CD5D44B0A
+        80201485E1DF5B7B6A5ABB6CD463D422A307828148D6D56AD01D159CF3A528C1
+        DFA60224212FAE13C5666054A2E2B2730CB58101D88009286F303F5B3C09AA31
+        4D2119BB2A6663C7F8C0103CA7DC84289ABDB2CF4001FAB7B62C1ED0BBF7EC43
+        31401B60671F52A1C6C3BAC8D6D4A85160496803AC0A2C4417D73D9D3AE3F765
+        3B3F9A1DCE403C67BE99C4490000000049454E44AE426082
+      }
     end
   end
 end

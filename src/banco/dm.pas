@@ -14,6 +14,10 @@ type
   TdmF = class(TDataModule)
     dsProdutos: TDataSource;
     dsClientes: TDataSource;
+    qryLoginid: TLongintField;
+    qryLoginnome_completo: TStringField;
+    qryLoginsenha: TStringField;
+    qryLoginusuario: TStringField;
     qryProdutoscategoriaprodutoid: TLongintField;
     qryProdutosds_produto: TStringField;
     qryProdutosdt_cadastro_produto: TDateTimeField;
@@ -25,6 +29,7 @@ type
     qryGenerica: TZQuery;
     qryProdutos: TZQuery;
     qryClientes: TZQuery;
+    qryLogin: TZQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure dsProdutosDataChange(Sender: TObject; Field: TField);
   private

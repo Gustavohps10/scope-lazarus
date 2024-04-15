@@ -22,8 +22,8 @@ begin
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TLoginF, LoginF);
-  Application.CreateForm(TdmF, dmF);
   Application.CreateForm(TprincipalF, principalF);
+  Application.CreateForm(TdmF, dmF);
   Application.CreateForm(TCadModeloF, CadModeloF);
   Application.CreateForm(TrelModeloF, relModeloF);
   Application.Run;
