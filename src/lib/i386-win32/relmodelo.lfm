@@ -1,7 +1,7 @@
 object relModeloF: TrelModeloF
-  Left = 472
+  Left = 752
   Height = 329
-  Top = 199
+  Top = 476
   Width = 377
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
@@ -10,7 +10,8 @@ object relModeloF: TrelModeloF
   ClientWidth = 377
   Color = 16514043
   Font.Name = 'Inter'
-  LCLVersion = '3.2.0.0'
+  Position = poMainFormCenter
+  LCLVersion = '2.2.6.0'
   object pnlTopo: TPanel
     Left = 0
     Height = 66
@@ -23,7 +24,6 @@ object relModeloF: TrelModeloF
     Font.Height = -19
     Font.Name = 'Inter'
     Font.Quality = fqAntialiased
-    Font.Style = [fsBold]
     ParentBackground = False
     ParentColor = False
     ParentFont = False
@@ -357,7 +357,7 @@ object relModeloF: TrelModeloF
     Dataset = frDBDataSetModelo
     InitialZoom = pzDefault
     Options = []
-    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit, pbSettings, pbPageSetup]
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
     DataType = dtDataSet
     Left = 320
     Top = 208

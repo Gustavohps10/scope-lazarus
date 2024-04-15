@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
   StdCtrls, BGRAImageList, BCLabel, BCExpandPanels, BCButton, BCToolBar,
   BGRAThemeButton, BCSVGButton, uCadCategoria, uCadCliente, uCadProduto,
-  uCadOrcamento, uCadUsuario, uCadModelo,
+  uCadOrcamento, uCadUsuario, uCadModelo, uSobre,
   relCategorias, relProdutos, relClientes, relUsuarios, relOrcamentos;
 
 type
@@ -69,6 +69,7 @@ type
     procedure menuRelOrcamentosClick(Sender: TObject);
     procedure menuRelProdutosClick(Sender: TObject);
     procedure menuRelUsuariosClick(Sender: TObject);
+    procedure menuSobreClick(Sender: TObject);
   private
     procedure openCadForm(form: TForm);
   public
@@ -177,6 +178,12 @@ procedure TprincipalF.menuRelUsuariosClick(Sender: TObject);
 begin
    relUsuariosF := TrelUsuariosF.Create(Self);
    relUsuariosF.Show();
+end;
+
+procedure TprincipalF.menuSobreClick(Sender: TObject);
+begin
+   SobreF := TSobreF.Create(Self);
+   SobreF.ShowModal;
 end;
 
 procedure TprincipalF.openCadForm(form: TForm);

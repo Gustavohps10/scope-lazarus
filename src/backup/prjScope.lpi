@@ -210,6 +210,14 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uLogin"/>
       </Unit>
+      <Unit>
+        <Filename Value="usobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SobreF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSobre"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

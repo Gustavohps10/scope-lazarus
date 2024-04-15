@@ -9,8 +9,8 @@
         <Filename Value="prjScope.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="12" Y="27"/>
-        <UsageCount Value="173"/>
+        <CursorPos Y="31"/>
+        <UsageCount Value="176"/>
       </Unit>
       <Unit>
         <Filename Value="uprincipal.pas"/>
@@ -19,11 +19,12 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uPrincipal"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="139"/>
-        <CursorPos X="45" Y="167"/>
-        <UsageCount Value="173"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="149"/>
+        <CursorPos X="20" Y="186"/>
+        <UsageCount Value="176"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadmodelo.pas"/>
@@ -35,7 +36,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="144"/>
         <CursorPos X="23" Y="155"/>
-        <UsageCount Value="173"/>
+        <UsageCount Value="176"/>
       </Unit>
       <Unit>
         <Filename Value="banco\dm.pas"/>
@@ -43,12 +44,10 @@
         <ComponentName Value="dmF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="51"/>
         <CursorPos X="23" Y="83"/>
-        <UsageCount Value="173"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <UsageCount Value="176"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcliente.pas"/>
@@ -60,7 +59,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="55"/>
         <CursorPos X="5" Y="56"/>
-        <UsageCount Value="173"/>
+        <UsageCount Value="176"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadcategoria.pas"/>
@@ -71,7 +70,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="51"/>
         <CursorPos Y="63"/>
-        <UsageCount Value="173"/>
+        <UsageCount Value="176"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadproduto.pas"/>
@@ -83,7 +82,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="118"/>
         <CursorPos X="5" Y="128"/>
-        <UsageCount Value="172"/>
+        <UsageCount Value="175"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadorcamento.pas"/>
@@ -93,9 +92,9 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uCadOrcamento"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="73"/>
-        <CursorPos X="14" Y="100"/>
-        <UsageCount Value="172"/>
+        <TopLine Value="237"/>
+        <CursorPos X="2" Y="141"/>
+        <UsageCount Value="175"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadusuario.pas"/>
@@ -107,7 +106,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="26"/>
         <CursorPos Y="38"/>
-        <UsageCount Value="171"/>
+        <UsageCount Value="174"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\modal\uorcmodalmodelo.pas"/>
@@ -119,7 +118,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos X="90" Y="19"/>
-        <UsageCount Value="121"/>
+        <UsageCount Value="124"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\modal\uselecionarprodutosf.pas"/>
@@ -131,7 +130,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="80"/>
         <CursorPos X="53" Y="92"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="118"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\modal\uselecionarcliente.pas"/>
@@ -143,7 +142,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="90"/>
         <CursorPos X="74" Y="103"/>
-        <UsageCount Value="97"/>
+        <UsageCount Value="100"/>
       </Unit>
       <Unit>
         <Filename Value="relatorio\relmodelo.pas"/>
@@ -153,8 +152,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relModelo"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="15"/>
-        <UsageCount Value="30"/>
+        <CursorPos X="20" Y="19"/>
+        <UsageCount Value="33"/>
       </Unit>
       <Unit>
         <Filename Value="relatorio\relcategorias.pas"/>
@@ -166,7 +165,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="15"/>
         <CursorPos X="3" Y="35"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="33"/>
       </Unit>
       <Unit>
         <Filename Value="relatorio\relprodutos.pas"/>
@@ -178,7 +177,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="19"/>
         <CursorPos X="3" Y="40"/>
-        <UsageCount Value="29"/>
+        <UsageCount Value="32"/>
       </Unit>
       <Unit>
         <Filename Value="relatorio\relclientes.pas"/>
@@ -190,7 +189,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="17"/>
         <CursorPos X="3" Y="37"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="31"/>
       </Unit>
       <Unit>
         <Filename Value="relatorio\relusuarios.pas"/>
@@ -202,7 +201,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="17"/>
         <CursorPos X="3" Y="37"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="31"/>
       </Unit>
       <Unit>
         <Filename Value="relatorio\relorcamentos.pas"/>
@@ -214,7 +213,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="20"/>
         <CursorPos Y="20"/>
-        <UsageCount Value="28"/>
+        <UsageCount Value="31"/>
       </Unit>
       <Unit>
         <Filename Value="auth\ulogin.pas"/>
@@ -223,12 +222,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="uLogin"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="52"/>
-        <CursorPos X="44" Y="69"/>
-        <UsageCount Value="25"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="54"/>
+        <CursorPos X="35" Y="68"/>
+        <UsageCount Value="28"/>
       </Unit>
       <Unit>
         <Filename Value="cadastro\ucadfiltro.pas"/>
@@ -322,78 +319,27 @@
         <UsageCount Value="2"/>
         <DefaultSyntaxHighlighter Value="LFM"/>
       </Unit>
+      <Unit>
+        <Filename Value="usobre.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SobreF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uSobre"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="4"/>
+        <CursorPos X="23" Y="34"/>
+        <UsageCount Value="23"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="17">
+    <JumpHistory HistoryIndex="1">
       <Position>
-        <Filename Value="auth\ulogin.pas"/>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="168" Column="45" TopLine="140"/>
       </Position>
       <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="17" Column="26"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="50" Column="20" TopLine="2"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="34" Column="23" TopLine="2"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="33" Column="53" TopLine="9"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="43" Column="52" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="44" Column="52" TopLine="17"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="9" Column="57"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="62" Column="24" TopLine="32"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="73" Column="37" TopLine="32"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="84" Column="15" TopLine="40"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="88" TopLine="50"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="89" TopLine="50"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="90" Column="13" TopLine="50"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="92" Column="25" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="94" Column="25" TopLine="52"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="90" Column="10" TopLine="51"/>
-      </Position>
-      <Position>
-        <Filename Value="auth\ulogin.pas"/>
-        <Caret Line="77" Column="23" TopLine="51"/>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="186" Column="20" TopLine="149"/>
       </Position>
     </JumpHistory>
     <RunParams>

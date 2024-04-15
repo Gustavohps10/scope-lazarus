@@ -19,6 +19,9 @@ inherited CadOrcamentoF: TCadOrcamentoF
         inherited btnPesquisar: TBCButton
           OnClick = btnPesquisarClick
         end
+        inherited lblFiltrarPor: TLabel
+          Width = 56
+        end
         object rbtnOrcId: TBGRAThemeRadioButton[4]
           Left = 304
           Height = 19

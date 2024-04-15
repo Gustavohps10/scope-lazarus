@@ -12,8 +12,9 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, datetimectrls, memdslaz, zcomponent, uPrincipal, uCadModelo, dm,
   uCadCliente, ucadcategoria, uCadProduto, uCadOrcamento, uCadUsuario,
-  uOrcModalModelo, uSelecionarProdutosF, uSelecionarCliente, relModelo, 
-relCategorias, relProdutos, relClientes, relUsuarios, relOrcamentos, uLogin;
+  uOrcModalModelo, uSelecionarProdutosF, uSelecionarCliente, relModelo,
+  relCategorias, relProdutos, relClientes, relUsuarios, relOrcamentos, uLogin,
+  uSobre;
 
 {$R *.res}
 

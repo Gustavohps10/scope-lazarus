@@ -1,7 +1,7 @@
 inherited CadOrcamentoF: TCadOrcamentoF
-  Left = 332
+  Left = 466
   Height = 556
-  Top = 111
+  Top = 236
   Caption = 'Orçamentos'
   ClientHeight = 556
   OnClose = FormClose
@@ -11,11 +11,16 @@ inherited CadOrcamentoF: TCadOrcamentoF
   end
   inherited pgcPrincipal: TPageControl
     Height = 492
+    ActivePage = tbPesquisa
+    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       ClientHeight = 464
       inherited pnlCabecalhoConteudo: TPanel
         inherited btnPesquisar: TBCButton
           OnClick = btnPesquisarClick
+        end
+        inherited lblFiltrarPor: TLabel
+          Width = 56
         end
         object rbtnOrcId: TBGRAThemeRadioButton[4]
           Left = 304
