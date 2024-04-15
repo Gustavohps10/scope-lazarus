@@ -8,7 +8,8 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
   StdCtrls, BGRAImageList, BCLabel, BCExpandPanels, BCButton, BCToolBar,
   BGRAThemeButton, BCSVGButton, uCadCategoria, uCadCliente, uCadProduto,
-  uCadOrcamento, relClientes, uCadUsuario, uCadModelo;
+  uCadOrcamento, uCadUsuario, uCadModelo,
+  relCategorias, relProdutos, relClientes, relUsuarios, relOrcamentos;
 
 type
 
@@ -34,6 +35,10 @@ type
     menuCadCliente: TMenuItem;
     menuCadProduto: TMenuItem;
     menuCadUsuario: TMenuItem;
+    menuRelOrcamentos: TMenuItem;
+    menuRelUsuarios: TMenuItem;
+    menuRelProdutos: TMenuItem;
+    menuRelCategorias: TMenuItem;
     menuRelClientes: TMenuItem;
     menuRelatorios: TMenuItem;
     menuSobre: TMenuItem;
@@ -46,6 +51,8 @@ type
     pnlCabecalho: TPanel;
     ScrollBox1: TScrollBox;
     Separator1: TMenuItem;
+    Separator2: TMenuItem;
+    Separator3: TMenuItem;
     procedure bnMenuSairClick(Sender: TObject);
     procedure btnMenuCategoriaClick(Sender: TObject);
     procedure btnMenuClientesClick(Sender: TObject);
@@ -57,7 +64,11 @@ type
     procedure menuCadProdutoClick(Sender: TObject);
     procedure menuCadUsuarioClick(Sender: TObject);
     procedure menuOrcamentoClick(Sender: TObject);
+    procedure menuRelCategoriasClick(Sender: TObject);
     procedure menuRelClientesClick(Sender: TObject);
+    procedure menuRelOrcamentosClick(Sender: TObject);
+    procedure menuRelProdutosClick(Sender: TObject);
+    procedure menuRelUsuariosClick(Sender: TObject);
   private
     procedure openCadForm(form: TForm);
   public
@@ -138,10 +149,34 @@ begin
   openCadForm(CadOrcamentoF);
 end;
 
+procedure TprincipalF.menuRelCategoriasClick(Sender: TObject);
+begin
+   relCategoriasF := TrelCategoriasF.Create(Self);
+   relCategoriasF.Show();
+end;
+
 procedure TprincipalF.menuRelClientesClick(Sender: TObject);
 begin
    relClientesF := TrelClientesF.Create(Self);
    relClientesF.Show();
+end;
+
+procedure TprincipalF.menuRelOrcamentosClick(Sender: TObject);
+begin
+   relOrcamentosF := TrelOrcamentosF.Create(Self);
+   relOrcamentosF.Show();
+end;
+
+procedure TprincipalF.menuRelProdutosClick(Sender: TObject);
+begin
+   relProdutosF := TrelProdutosF.Create(Self);
+   relProdutosF.Show();
+end;
+
+procedure TprincipalF.menuRelUsuariosClick(Sender: TObject);
+begin
+   relUsuariosF := TrelUsuariosF.Create(Self);
+   relUsuariosF.Show();
 end;
 
 procedure TprincipalF.openCadForm(form: TForm);

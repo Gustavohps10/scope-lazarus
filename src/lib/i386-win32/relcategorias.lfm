@@ -1,0 +1,31 @@
+inherited relCategoriasF: TrelCategoriasF
+  Caption = 'Relatório de Categorias'
+  inherited pnlTopo: TPanel
+    Caption = 'Relatório de Categorias'
+  end
+  inherited btnImprimir: TBCButton
+    OnClick = btnImprimirClick
+  end
+  inherited qryRelModelo: TZQuery
+    Active = True
+    object qryRelModelocategoriaprodutoid: TLongintField[0]
+      FieldKind = fkData
+      FieldName = 'categoriaprodutoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelModelods_categoria_produto: TStringField[1]
+      FieldKind = fkData
+      FieldName = 'ds_categoria_produto'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+  end
+end

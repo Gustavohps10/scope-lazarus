@@ -1,0 +1,54 @@
+inherited relUsuariosF: TrelUsuariosF
+  Caption = 'Relatório de Usuários'
+  inherited pnlTopo: TPanel
+    Caption = 'Relatório de Usuários'
+  end
+  inherited btnImprimir: TBCButton
+    OnClick = btnImprimirClick
+  end
+  inherited qryRelModelo: TZQuery
+    Active = True
+    SQL.Strings = (
+      'select * from usuarios'
+    )
+    object qryRelModeloid: TLongintField[0]
+      FieldKind = fkData
+      FieldName = 'id'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelModelousuario: TStringField[1]
+      FieldKind = fkData
+      FieldName = 'usuario'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object qryRelModelonome_completo: TStringField[2]
+      FieldKind = fkData
+      FieldName = 'nome_completo'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 60
+    end
+    object qryRelModelosenha: TStringField[3]
+      FieldKind = fkData
+      FieldName = 'senha'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+  end
+end

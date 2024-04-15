@@ -5,24 +5,18 @@ unit relClientes;
 interface
 
 uses
-  Classes, SysUtils, DB, Forms, Controls, Graphics, Dialogs, ZDataset, LR_DBSet,
-  LR_Class, BCButton, RLReport, dm;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, relModelo, DB;
 
 type
 
   { TrelClientesF }
 
-  TrelClientesF = class(TForm)
-    btnImprimirRelCliente: TBCButton;
-    frDBDataSet1: TfrDBDataSet;
-    frReport1: TfrReport;
-    qryRelClientes: TZQuery;
-    qryRelClientesclienteid: TLongintField;
-    qryRelClientescpf_cnpj_cliente: TStringField;
-    qryRelClientesnome_cliente: TStringField;
-    qryRelClientestipo_cliente: TStringField;
-    procedure btnImprimirRelClienteClick(Sender: TObject);
-    procedure FormShow(Sender: TObject);
+  TrelClientesF = class(TrelModeloF)
+    qryRelModeloclienteid: TLongintField;
+    qryRelModelocpf_cnpj_cliente: TStringField;
+    qryRelModelonome_cliente: TStringField;
+    qryRelModelotipo_cliente: TStringField;
+    procedure btnImprimirClick(Sender: TObject);
   private
 
   public
@@ -38,16 +32,11 @@ implementation
 
 { TrelClientesF }
 
-procedure TrelClientesF.FormShow(Sender: TObject);
+procedure TrelClientesF.btnImprimirClick(Sender: TObject);
 begin
-  qryRelClientes.Open;
-end;
-
-procedure TrelClientesF.btnImprimirRelClienteClick(Sender: TObject);
-begin
-  frReport1.LoadFromFile('../relatorio/relClientes.lrf');
-  frReport1.PrepareReport;
-  frReport1.ShowReport;
+  frReportModelo.LoadFromFile('../relatorio/relClientes.lrf');
+  frReportModelo.PrepareReport;
+  frReportModelo.ShowReport;
 end;
 
 end.

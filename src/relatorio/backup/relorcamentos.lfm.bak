@@ -1,0 +1,90 @@
+inherited relOrcamentosF: TrelOrcamentosF
+  Caption = 'Relatório de Orçamentos'
+  inherited pnlTopo: TPanel
+    Caption = 'Relatório de Orçamentos'
+  end
+  inherited frReportModelo: TfrReport
+    Left = 344
+    Top = 136
+  end
+  inherited frDBDataSetModelo: TfrDBDataSet
+    Left = 344
+    Top = 80
+  end
+  inherited qryRelModelo: TZQuery
+    Active = True
+    SQL.Strings = (
+      'select * from orcamento'
+    )
+    Left = 296
+    object qryRelModeloorcamentoid: TLongintField[0]
+      FieldKind = fkData
+      FieldName = 'orcamentoid'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelModeloclienteid: TLongintField[1]
+      FieldKind = fkData
+      FieldName = 'clienteid'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelModelodt_orcamento: TDateTimeField[2]
+      FieldKind = fkData
+      FieldName = 'dt_orcamento'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelModelodt_validade_orcamento: TDateTimeField[3]
+      FieldKind = fkData
+      FieldName = 'dt_validade_orcamento'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object qryRelModelovl_total_orcamento: TFloatField[4]
+      FieldKind = fkData
+      FieldName = 'vl_total_orcamento'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '#0.00'
+      Precision = 983042
+    end
+  end
+  object qryOrcItem: TZQuery[6]
+    Connection = dmF.ZConnection1
+    SQL.Strings = (
+      'select * from orcamento_item'
+    )
+    Params = <>
+    MasterFields = 'orcamentoid'
+    MasterSource = dsOrcamentos
+    LinkedFields = 'orcamentoid'
+    Left = 296
+    Top = 208
+  end
+  object dsOrcamentos: TDataSource[7]
+    DataSet = qryRelModelo
+    Left = 296
+    Top = 136
+  end
+  object frDBDataSetOrcItem: TfrDBDataSet[8]
+    DataSet = qryOrcItem
+    Left = 344
+    Top = 208
+  end
+end

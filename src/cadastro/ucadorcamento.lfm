@@ -11,8 +11,6 @@ inherited CadOrcamentoF: TCadOrcamentoF
   end
   inherited pgcPrincipal: TPageControl
     Height = 492
-    ActivePage = tbPesquisa
-    TabIndex = 0
     inherited tbPesquisa: TTabSheet
       ClientHeight = 464
       inherited pnlCabecalhoConteudo: TPanel

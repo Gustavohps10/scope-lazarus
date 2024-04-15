@@ -155,12 +155,52 @@
         <UnitName Value="uSelecionarCliente"/>
       </Unit>
       <Unit>
+        <Filename Value="relatorio\relmodelo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relModeloF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relModelo"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relatorio\relcategorias.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relCategoriasF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relCategorias"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relatorio\relprodutos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relProdutosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relProdutos"/>
+      </Unit>
+      <Unit>
         <Filename Value="relatorio\relclientes.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="relClientesF"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="relClientes"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relatorio\relusuarios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relUsuariosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relUsuarios"/>
+      </Unit>
+      <Unit>
+        <Filename Value="relatorio\relorcamentos.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="relOrcamentosF"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="relOrcamentos"/>
       </Unit>
     </Units>
   </ProjectOptions>

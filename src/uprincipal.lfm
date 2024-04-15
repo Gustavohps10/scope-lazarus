@@ -1892,10 +1892,36 @@ object principalF: TprincipalF
     object menuRelatorios: TMenuItem
       Caption = 'Relatórios'
       ImageIndex = 8
+      object menuRelCategorias: TMenuItem
+        Caption = 'Rel. Categorias'
+        ImageIndex = 1
+        OnClick = menuRelCategoriasClick
+      end
+      object menuRelProdutos: TMenuItem
+        Caption = 'Rel. Produtos'
+        ImageIndex = 2
+        OnClick = menuRelProdutosClick
+      end
       object menuRelClientes: TMenuItem
         Caption = 'Rel. Clientes'
         ImageIndex = 3
         OnClick = menuRelClientesClick
+      end
+      object Separator2: TMenuItem
+        Caption = '-'
+      end
+      object menuRelUsuarios: TMenuItem
+        Caption = 'Rel. Usuários'
+        ImageIndex = 4
+        OnClick = menuRelUsuariosClick
+      end
+      object Separator3: TMenuItem
+        Caption = '-'
+      end
+      object menuRelOrcamentos: TMenuItem
+        Caption = 'Rel. Orcamentos'
+        ImageIndex = 6
+        OnClick = menuRelOrcamentosClick
       end
     end
     object menuSobre: TMenuItem
