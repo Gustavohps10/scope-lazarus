@@ -21,21 +21,26 @@
 
 # :page_with_curl: Description
 <p>
-Repositório destinado ao versionamento de código e documentação do <b>Scope (Sistema de Controle de Orçamento para Empresas)</b>, projeto final do curso <a target="_blank" href="https://www.softwarebymaringa.com.br/realizacao/235/saber_ti.html">Saber TI</a> fornecido gratuitamente pela empresa <a target="_blank" href="https://accion.com.br/">Accion Sistemas</a>.
+A fim de elaborar o projeto de conclusão de curso, foi requisitado pelo professor do <a target="_blank" href="https://www.softwarebymaringa.com.br/realizacao/235/saber_ti.html">Saber TI</a> (programa desenvolvido pela empresa <a target="_blank" href="https://accion.com.br/">Accion Sistemas</a> em parceria com a associação Software By Maringá (SBM) e com apoio do Centro Tecnológico de Maringá – SENAI) o desenvolvimento de um sistema para gestão e controle de orçamentos.
+	O SCOPE (Sistema de Controle de Orçamentos para Empresas) tem como finalidade gerar e controlar os orçamentos de produtos solicitados pelos clientes de uma instituição. 
 </p>
 
 # :game_die: Features
+- [x] Controle de Acesso
 - [x] Cadastro de Usuários
 - [x] Cadastro de Categorias
 - [x] Cadastro de Produtos
 - [x] Cadastro de Clientes
 - [x] Cadastro de Orçamentos
+- [x] Gerar Relatórios 
 
 
 # :hammer_and_wrench: Technologies
 Tools:
-- Lazarus
-- PostgreSQL
+- [Lazarus](https://www.lazarus-ide.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [BGRAControls](https://github.com/bgrabitmap/bgracontrols/)
+- [Laz Report](https://wiki.freepascal.org/LazReport_Tutorial)
 
 # :adult: Author
 Made with 💜 Gustavo Henrique
