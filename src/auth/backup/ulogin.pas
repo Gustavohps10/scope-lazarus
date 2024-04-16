@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  BCLabel, BCMaterialEdit, BCButton, uPrincipal, lclintf, dm;
+  BCLabel, BCMaterialEdit, BCButton, BCListBox, BGRACustomDrawn,
+  uPrincipal, lclintf, dm;
 
 type
 
@@ -76,7 +77,9 @@ end;
 procedure TLoginF.FormCreate(Sender: TObject);
 begin
   edtUsuario.Title.Caption:='Usuario';
+  edtUsuario.Edit.Color:=$00FBFBFB;
   edtSenha.Title.Caption:='Senha';
+  edtSenha.Edit.Color:=$00FBFBFB;
   edtSenha.Edit.PasswordChar:='*';
 end;
 
@@ -89,13 +92,12 @@ begin
     SQL.Add('select * from usuarios where usuario = '+ QuotedStr(edtUsuario.Edit.Text) +' and senha =' + QuotedStr(edtSenha.Edit.Text));
     Open;
 
-    ShowMessage(SQL.Text);
     if RecordCount > 0 then
     begin
        principalF := TprincipalF.Create(Self);
        principalF.lblUsuarioNome.Caption := FieldByName('usuario').asString;
        principalF.Show;
-       Hide;
+       Close;
     end
     else MessageDlg('Falha no login', 'Usuario ou Senha incorretos, tente novamente', mtInformation,[mbOK],0);
   end;

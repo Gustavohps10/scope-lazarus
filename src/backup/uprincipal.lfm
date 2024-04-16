@@ -1,7 +1,7 @@
 object principalF: TprincipalF
-  Left = 484
+  Left = 523
   Height = 695
-  Top = 212
+  Top = 174
   Width = 974
   Caption = 'Menu Principal'
   ClientHeight = 675
