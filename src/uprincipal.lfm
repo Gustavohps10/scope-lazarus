@@ -9,6 +9,7 @@ object principalF: TprincipalF
   Color = 16514043
   Font.Name = 'Segoe UI'
   Menu = MainMenu1
+  OnCreate = FormCreate
   Position = poScreenCenter
   LCLVersion = '3.2.0.0'
   object pnlCabecalho: TPanel

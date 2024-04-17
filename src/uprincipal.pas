@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, ExtCtrls,
   StdCtrls, BGRAImageList, BCLabel, BCExpandPanels, BCButton, BCToolBar,
-  BGRAThemeButton, BCSVGButton, uCadCategoria, uCadCliente, uCadProduto,
+  BGRAThemeButton, dm, BCSVGButton, uCadCategoria, uCadCliente, uCadProduto,
   uCadOrcamento, uCadUsuario, uCadModelo, uSobre,
   relCategorias, relProdutos, relClientes, relUsuarios, relOrcamentos;
 
@@ -59,6 +59,7 @@ type
     procedure btnMenuOrcamentoClick(Sender: TObject);
     procedure btnMenuProdutosClick(Sender: TObject);
     procedure btnMenuUsuariosClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure menuCadCategoriaClick(Sender: TObject);
     procedure menuCadClienteClick(Sender: TObject);
     procedure menuCadProdutoClick(Sender: TObject);
@@ -124,6 +125,12 @@ procedure TprincipalF.btnMenuUsuariosClick(Sender: TObject);
 begin
    CadUsuarioF := TCadUsuarioF.Create(Self);
    openCadForm(CadUsuarioF);
+end;
+
+procedure TprincipalF.FormCreate(Sender: TObject);
+begin
+   lblUsuarioNome.Caption:= dmF.qryLogin.FieldByName('nome_completo').asString;
+   dmF.qryLogin.Close;
 end;
 
 procedure TprincipalF.menuCadClienteClick(Sender: TObject);

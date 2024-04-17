@@ -32,7 +32,6 @@ begin
     Application.Run;
     Exit;
   end;
-
-  Application.Terminate;
+      Application.Terminate;
 end.
 

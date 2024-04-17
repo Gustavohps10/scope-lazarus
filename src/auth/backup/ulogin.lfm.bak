@@ -242,7 +242,7 @@ object LoginF: TLoginF
         Background.Style = bbsClear
         Border.Style = bboNone
         Caption = 'LOGIN'
-        FontEx.Color = 6250335
+        FontEx.Color = 4276545
         FontEx.FontQuality = fqFineAntialiasing
         FontEx.Height = 20
         FontEx.Name = 'inter'
@@ -323,7 +323,7 @@ object LoginF: TLoginF
         Cursor = crHandPoint
         Left = 64
         Height = 32
-        Top = 247
+        Top = 232
         Width = 80
         Anchors = [akRight, akBottom]
         StateClicked.Background.Color = 2600856
@@ -589,7 +589,7 @@ object LoginF: TLoginF
         Background.Style = bbsClear
         Border.Style = bboNone
         Caption = 'Bem-Vindo ao SCOPE'
-        FontEx.Color = 6250335
+        FontEx.Color = 4276545
         FontEx.FontQuality = fqFineAntialiasing
         FontEx.Height = 20
         FontEx.Name = 'inter'

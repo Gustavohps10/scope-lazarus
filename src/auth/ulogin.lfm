@@ -323,7 +323,7 @@ object LoginF: TLoginF
         Cursor = crHandPoint
         Left = 64
         Height = 32
-        Top = 247
+        Top = 232
         Width = 80
         Anchors = [akRight, akBottom]
         StateClicked.Background.Color = 2600856

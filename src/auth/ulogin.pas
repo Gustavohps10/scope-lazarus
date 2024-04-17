@@ -94,12 +94,11 @@ begin
 
     if RecordCount > 0 then
     begin
-       principalF := TprincipalF.Create(Self);
-       principalF.lblUsuarioNome.Caption := FieldByName('usuario').asString;
-       principalF.Show;
-       Close;
-    end
-    else MessageDlg('Falha no login', 'Usuario ou Senha incorretos, tente novamente', mtInformation,[mbOK],0);
+       LoginF.ModalResult:=mrOK;
+       Exit;
+    end;
+
+    MessageDlg('Falha no login', 'Usuario ou Senha incorretos, tente novamente', mtInformation,[mbOK],0);
   end;
 end;
 

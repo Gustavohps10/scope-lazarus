@@ -1,16 +1,17 @@
 object principalF: TprincipalF
-  Left = 523
+  Left = 283
   Height = 695
-  Top = 174
+  Top = 72
   Width = 974
   Caption = 'Menu Principal'
-  ClientHeight = 675
+  ClientHeight = 695
   ClientWidth = 974
   Color = 16514043
   Font.Name = 'Segoe UI'
   Menu = MainMenu1
+  OnCreate = FormCreate
   Position = poScreenCenter
-  LCLVersion = '2.2.6.0'
+  LCLVersion = '3.2.0.0'
   object pnlCabecalho: TPanel
     Left = 0
     Height = 64
@@ -231,10 +232,10 @@ object principalF: TprincipalF
       }
     end
     object lblUsuarioNome: TBCLabel
-      Left = 850
-      Height = 23
+      Left = 849
+      Height = 25
       Top = 20
-      Width = 65
+      Width = 66
       Anchors = [akTop, akRight]
       Background.Gradient1.StartColor = clWhite
       Background.Gradient1.EndColor = clBlack
@@ -269,12 +270,12 @@ object principalF: TprincipalF
   end
   object pnlMenuLateral: TPanel
     Left = 0
-    Height = 611
+    Height = 631
     Top = 64
     Width = 170
     Align = alLeft
     BevelOuter = bvNone
-    ClientHeight = 611
+    ClientHeight = 631
     ClientWidth = 170
     Color = 5126436
     ParentBackground = False
@@ -282,7 +283,7 @@ object principalF: TprincipalF
     TabOrder = 1
     object ScrollBox1: TScrollBox
       Left = 0
-      Height = 611
+      Height = 631
       Top = 0
       Width = 170
       HorzScrollBar.Page = 1
@@ -290,18 +291,19 @@ object principalF: TprincipalF
       VertScrollBar.Page = 320
       Align = alClient
       BorderStyle = bsNone
-      ClientHeight = 611
+      ClientHeight = 631
       ClientWidth = 170
+      ParentBackground = False
       TabOrder = 0
       object pnlMenuLateralContainer: TPanel
         Left = 10
-        Height = 591
+        Height = 611
         Top = 10
         Width = 150
         Align = alClient
         BorderSpacing.Around = 10
         BevelOuter = bvNone
-        ClientHeight = 591
+        ClientHeight = 611
         ClientWidth = 150
         ParentBackground = False
         TabOrder = 0
@@ -1659,7 +1661,7 @@ object principalF: TprincipalF
         object pnlMenuRodape: TPanel
           Left = 0
           Height = 124
-          Top = 467
+          Top = 487
           Width = 150
           Align = alBottom
           BevelOuter = bvNone
@@ -1841,7 +1843,7 @@ object principalF: TprincipalF
   end
   object pnlPrincipal: TPanel
     Left = 170
-    Height = 611
+    Height = 631
     Top = 64
     Width = 804
     Align = alClient
