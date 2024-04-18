@@ -44,21 +44,31 @@ var
 
 implementation
 uses
+  IniFiles,
   uSelecionarProdutosF, uCadOrcamento;
+
+const
+  IniFile = '../scope.ini';
 
 {$R *.lfm}
 
 { TdmF }
 
 procedure TdmF.DataModuleCreate(Sender: TObject);
+var
+  Sett : TIniFile;
 begin
-  ZConnection1.HostName := 'localhost';
-  ZConnection1.DataBase := 'prjaccion';
-  ZConnection1.User     := 'postgres';
-  ZConnection1.Password := '1234';
-  ZConnection1.Port     := 5432;
-  ZConnection1.Protocol := 'postgresql';
+  Sett := TIniFile.Create(IniFile);
+
+  ZConnection1.HostName := Sett.ReadString('DB', 'DB_HOSTNAME', 'localhost');
+  ZConnection1.DataBase := Sett.ReadString('DB', 'DB_DATABASE', 'postgres');
+  ZConnection1.User     := Sett.ReadString('DB', 'DB_USER', 'postgres');
+  ZConnection1.Password := Sett.ReadString('DB', 'DB_PASSWORD', '1234');
+  ZConnection1.Port     := Sett.ReadInteger('DB', 'DB_PORT', 5432);
+  ZConnection1.Protocol := Sett.ReadString('DB', 'DB_PROTOCOL', 'postgresql');
+  ZConnection1.LibraryLocation := Sett.ReadString('DB', 'DB_LIBRARY_LOCATION', '');
   ZConnection1.Connected := True;
+  Sett.Free;
 
 end;
 
