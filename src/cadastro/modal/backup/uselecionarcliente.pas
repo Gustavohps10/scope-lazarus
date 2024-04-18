@@ -98,7 +98,8 @@ end;
 
 procedure TSelecionarClienteF.DBGridDblClick(Sender: TObject);
 begin
-
+   CadOrcamentoF.qryCad.FieldByName('clienteid').AsInteger := dmF.qryClientes.FieldByName('clienteid').AsInteger;
+   Close;
 end;
 
 end.

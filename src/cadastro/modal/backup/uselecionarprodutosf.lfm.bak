@@ -435,7 +435,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       StateNormal.FontEx.Style = []
       StateNormal.FontEx.TextAlignment = bcaLeftCenter
       BorderSpacing.InnerBorder = 1
-      Caption = 'Cancelar  '
+      Caption = 'Cancelar'
       Color = clNone
       DropDownWidth = 16
       DropDownArrowSize = 8
@@ -450,7 +450,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       RoundingDropDown.RoundX = 1
       RoundingDropDown.RoundY = 1
       TextApplyGlobalOpacity = False
-      Images = CadModeloF.imglIcons
+      Images = CadOrcamentoF.imglIcons
       ImageIndex = 6
       MemoryUsage = bmuHigh
     end

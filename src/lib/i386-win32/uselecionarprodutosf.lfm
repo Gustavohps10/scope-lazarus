@@ -450,7 +450,7 @@ inherited SelecionarProdutosF: TSelecionarProdutosF
       RoundingDropDown.RoundX = 1
       RoundingDropDown.RoundY = 1
       TextApplyGlobalOpacity = False
-      Images = CadModeloF.imglIcons
+      Images = CadOrcamentoF.imglIcons
       ImageIndex = 6
       MemoryUsage = bmuHigh
     end
