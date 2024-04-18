@@ -50,11 +50,12 @@ DB_LIBRARY_LOCATION =
 ```
 
 # :hammer_and_wrench: Technologies
-Tools:
 - [Lazarus](https://www.lazarus-ide.org/)
+- [ZeosLib](https://zeoslib.sourceforge.io/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [BGRAControls](https://github.com/bgrabitmap/bgracontrols/)
 - [Laz Report](https://wiki.freepascal.org/LazReport_Tutorial)
+- [Dbeaver](https://dbeaver.io/)
 
 # :adult: Author
 Made with 💜 Gustavo Henrique
