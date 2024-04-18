@@ -35,7 +35,11 @@ A fim de elaborar o projeto de conclusão de curso, foi requisitado pelo profess
 - [x] Gerar Relatórios 
 
 # :gear: Application settings
-⚠️ Renomeie o arquivo scope-sample.ini para scope.ini e configure o banco de dados
+## Database
+> O arquivo SQL pode ser encontrado em: [src/banco/scope.sql](https://github.com/Gustavohps10/scope-lazarus/blob/main/src/banco/scope.sql)
+
+## scope.ini file
+> ⚠️ Renomeie o arquivo "scope-sample.ini" para "scope.ini" e configure o banco de dados
 ```bash
 ; SCOPE Settings
 
