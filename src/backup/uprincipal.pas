@@ -17,6 +17,11 @@ type
 
   TprincipalF = class(TForm)
     btnMenuCategoria: TBCButton;
+    btnMenuRelCategorias: TBCButton;
+    btnMenuRelProdutos: TBCButton;
+    btnMenuRelClientes: TBCButton;
+    btnMenuRelUsuarios: TBCButton;
+    btnMenuRelOrcamentos: TBCButton;
     btnMenuUsuarios: TBCButton;
     btnMenuProdutos: TBCButton;
     btnMenuClientes: TBCButton;
@@ -54,11 +59,6 @@ type
     Separator2: TMenuItem;
     Separator3: TMenuItem;
     procedure bnMenuSairClick(Sender: TObject);
-    procedure btnMenuCategoriaClick(Sender: TObject);
-    procedure btnMenuClientesClick(Sender: TObject);
-    procedure btnMenuOrcamentoClick(Sender: TObject);
-    procedure btnMenuProdutosClick(Sender: TObject);
-    procedure btnMenuUsuariosClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure menuCadCategoriaClick(Sender: TObject);
     procedure menuCadClienteClick(Sender: TObject);
@@ -92,44 +92,13 @@ begin
   openCadForm(CadCategoriaF);
 end;
 
-procedure TprincipalF.btnMenuCategoriaClick(Sender: TObject);
-begin
-  CadCategoriaF := TCadCategoriaF.Create(Self);
-  openCadForm(CadCategoriaF);
-end;
-
 procedure TprincipalF.bnMenuSairClick(Sender: TObject);
 begin
   Application.Terminate;
 end;
 
-procedure TprincipalF.btnMenuClientesClick(Sender: TObject);
-begin
-  CadClienteF := TCadClienteF.Create(Self);
-  openCadForm(CadClienteF);
-end;
-
-procedure TprincipalF.btnMenuOrcamentoClick(Sender: TObject);
-begin
-   CadOrcamentoF := TCadOrcamentoF.Create(Self);
-  openCadForm(CadOrcamentoF);
-end;
-
-procedure TprincipalF.btnMenuProdutosClick(Sender: TObject);
-begin
-   CadProdutoF := TCadProdutoF.Create(Self);
-   openCadForm(CadProdutoF);
-end;
-
-procedure TprincipalF.btnMenuUsuariosClick(Sender: TObject);
-begin
-   CadUsuarioF := TCadUsuarioF.Create(Self);
-   openCadForm(CadUsuarioF);
-end;
-
 procedure TprincipalF.FormCreate(Sender: TObject);
 begin
-   ShowMessage(dmF.qryLogin.FieldByName('usuario').asString);
    lblUsuarioNome.Caption:= dmF.qryLogin.FieldByName('nome_completo').asString;
    dmF.qryLogin.Close;
 end;
@@ -161,31 +130,31 @@ end;
 procedure TprincipalF.menuRelCategoriasClick(Sender: TObject);
 begin
    relCategoriasF := TrelCategoriasF.Create(Self);
-   relCategoriasF.Show();
+   relCategoriasF.ShowModal();
 end;
 
 procedure TprincipalF.menuRelClientesClick(Sender: TObject);
 begin
    relClientesF := TrelClientesF.Create(Self);
-   relClientesF.Show();
+   relClientesF.ShowModal();
 end;
 
 procedure TprincipalF.menuRelOrcamentosClick(Sender: TObject);
 begin
    relOrcamentosF := TrelOrcamentosF.Create(Self);
-   relOrcamentosF.Show();
+   relOrcamentosF.ShowModal();
 end;
 
 procedure TprincipalF.menuRelProdutosClick(Sender: TObject);
 begin
    relProdutosF := TrelProdutosF.Create(Self);
-   relProdutosF.Show();
+   relProdutosF.ShowModal();
 end;
 
 procedure TprincipalF.menuRelUsuariosClick(Sender: TObject);
 begin
    relUsuariosF := TrelUsuariosF.Create(Self);
-   relUsuariosF.Show();
+   relUsuariosF.ShowModal();
 end;
 
 procedure TprincipalF.menuSobreClick(Sender: TObject);
