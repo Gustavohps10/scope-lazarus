@@ -34,6 +34,20 @@ A fim de elaborar o projeto de conclusão de curso, foi requisitado pelo profess
 - [x] Cadastro de Orçamentos
 - [x] Gerar Relatórios 
 
+# :gear: Application settings
+⚠️ Renomeie o arquivo scope-sample.ini para scope.ini e configure o banco de dados
+```bash
+; SCOPE Settings
+
+[DB]
+DB_HOSTNAME = localhost
+DB_DATABASE = postgres
+DB_USER     = postgres
+DB_PASSWORD = 1234
+DB_PORT     = 5432
+DB_PROTOCOL = postgresql
+DB_LIBRARY_LOCATION =
+```
 
 # :hammer_and_wrench: Technologies
 Tools:
