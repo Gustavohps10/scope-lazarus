@@ -7,10 +7,10 @@
 
 
 <div align="center">
-    <img src="https://img.shields.io/github/languages/top/gustavohps10/scope-lazarus?color=BBD540"/>
-    <img src="https://img.shields.io/github/commit-activity/w/Gustavohps10/scope-lazarus?color=BBD540"/>
-    <img src="https://img.shields.io/github/created-at/gustavohps10/scope-lazarus?color=24394E"/>
-    <img src="https://img.shields.io/github/license/gustavohps10/scope-lazarus?color=24394E"/>
+    <img src="https://img.shields.io/github/languages/top/gustavohps10/scope-lazarus?color=BBD540&label=Pascal&logo=lazarus&logoColor=ffffff"/>
+    <img src="https://img.shields.io/github/commit-activity/w/Gustavohps10/scope-lazarus?color=BBD540&label=Commits&logo=git&logoColor=ffffff"/>
+    <img src="https://img.shields.io/github/created-at/gustavohps10/scope-lazarus?color=24394E&label=Created%20At&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA90lEQVR4nOXUP0oDURDH8RUrQS+gvZ1nULBOISkkVbQJewdtPElKG0s7qzTWXmDZdIGYws4ixUcWZjHE/fMCNuLAwNt5v/myMzuzWfYnDWfIO+7zSpMCmqHAEus4N/k6NEWV0wUsMQ1fYdLiqw1dmQKcJPo0BViXkuLLPuAc495mf+tv+oALXGNYNzs+1LAllrcCsY9PXOIUo4iP4rkpdt8FrASVHeMC5ziK5h/Wsa2cxy7gHd7i/BJvMcAr9urYhv4AH41AnOAdt60N/pnzEBWVTZdPcTnfYWSqbXluAw62NiBlqK9Sxqb87U2Z7VBy0ftzyP6FfQHAW4RJPOeFSAAAAABJRU5ErkJggg=="/>
+    <img src="https://img.shields.io/github/license/gustavohps10/scope-lazarus?color=24394E&label=License&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJ0lEQVR4nNXTvS4EURjGcRtZ6ytBoSGhU4hOQmsLURMK0Su4AtFoNlHRuIYtuQAXoLDVFtyAgpXQkpCfnOQtxmTNWDSe5Elmnjnnf+a85z19ff9KqGKiR1e/gh3iRe96wUEetoB3bGOxR+/E3PkscBOPvyjVY2Jkgy10Mu9NXJa4mRnfSYwi4D6OS7z3bWCZUMFcuIJ1rP4ImIqPduaU258OpBsQM7mTnIl8ALc4x3T4AjfpWxHwIddr95Ev4w1jmbHjkS0VAYdzt2Eo8jpeUcuMHYxsJQusR8dPltRvNP0tTtAfPo1sJH+Hr/CM1he+xiwaUYancFKj2+o1bGC3wFM4igU2wq2UFfdG8baPYjeN8NVfAJPuwkm/Aq7hLNolOT2v/RhYpg/ppLY519mNtgAAAABJRU5ErkJggg=="/>
 </div>
 
 <div align="center">
